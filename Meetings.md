@@ -1,4 +1,5 @@
 # Meetings Log
+[Markdown Cheatsheet](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf)
 
 ## Tuesday 10/10/17:
 * Worked on cleaning up database
