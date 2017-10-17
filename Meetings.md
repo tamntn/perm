@@ -8,3 +8,14 @@
 * Task for next meeting:
   * Think of visualations, what data will the visualizations need and how different visualizations can interact with each other
   * Come up with how we preprocess the database
+  
+## Saturday 10/14/17:
+* Came up with visualization ideas
+
+## Tuesday 10/17/17:
+* Decided on which data attributes to use
+* Devide work between members
+* Next meeting: 10/24/17
+* Task for next meeting:
+  * Finish personal task
+  * Prepare for presentation
