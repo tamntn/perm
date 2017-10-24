@@ -19,3 +19,9 @@
 * Task for next meeting:
   * Finish personal task
   * Prepare for presentation
+  
+## Tuesday 10/24/17:
+* Worked on understanding each attribute of the dataset
+* Making sense of the dataset and coming up with more visualizations ideas
+* Get ready for Milestone 1
+* Next meeting: Sunday 10/29/17 (1-4pm)
