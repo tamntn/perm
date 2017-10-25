@@ -1,6 +1,6 @@
 		
 
-d3.csv("usss.csv", function(error, data) {
+d3.csv("main_visa_data.csv", function(error, data) {
 	
  var groupData= d3.nest()
    				 .key(function(d){return d['employer_state']; })
@@ -22,7 +22,7 @@ function tooltipHtml(n, d){	/* function to create html content string in tooltip
 	"CO", "NM", "OR", "ND", "SD", "NE", "IA", "MS", "IN", "IL", "MN", 
 	"WI", "MO", "AR", "OK", "KS", "LS", "VA"].forEach(function(d){ 
 			no_of_cases=groupData[count]['values'], 
-			sampleData[d]={no_of_cases, color:d3.interpolate("#ffffff", "#34000f")(no_of_cases/1000)}; 
+			sampleData[d]={no_of_cases, color:d3.interpolate("#ffffff", "#34000f")(no_of_cases/5000)}; 
 			//
 			count=count+1;
 		});
