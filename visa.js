@@ -22,10 +22,10 @@ var svg = d3.select("body").append("svg")
     .attr("transform", 
           "translate(" + margin.left + "," + margin.top + ")");
 
-d3.csv("usss.csv", function(error, data) {
+d3.csv("main_visa_data.csv", function(error, data) {
 	
   var groupData= d3.nest()
-   				 .key(function(d){return d['country_of_citzenship']; })
+   				 .key(function(d){return d['us_economic_sector']; })
 				 .rollup("len")
    				 .rollup(function(v){return v.length; })
    				 .entries(data);
