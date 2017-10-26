@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<style>
+
+.background {
+  fill: none;
+  pointer-events: all;
+}
+
+#states {
+  fill: #aaa;
+}
+
+#states .active {
+  fill: orange;
+}
+
+#state-borders {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 1.5px;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  pointer-events: none;
+}
+
+/* On mouse hover, lighten state color */
+path:hover {
+  fill-opacity: .7;
+}
+
+/* Style for Custom Tooltip */
+div.tooltip {   
+  position: absolute;           
+  text-align: center;           
+  width: 60px;                  
+  height: 28px;                 
+  padding: 2px;             
+  font: 12px sans-serif;        
+  background: white;   
+  border: 0px;      
+  border-radius: 8px;           
+  pointer-events: none;         
+}
+        
+/* Legend Font Style */
+body {
+  font: 11px sans-serif;
+}
+        
+/* Legend Position Style */
+.legend {
+  position:absolute;
+  left:800px;
+  top:350px;
+}
+
+
+/* On mouse hover, lighten state color */
+path:hover {
+  fill-opacity: .7;
+}
+
+/* Style for Custom Tooltip */
+div.tooltip {   
+  position: absolute;           
+  text-align: center;           
+  width: 60px;                  
+  height: 28px;                 
+  padding: 2px;             
+  font: 12px sans-serif;        
+  background: white;   
+  border: 0px;      
+  border-radius: 8px;           
+  pointer-events: none;         
+}
+        
+/* Legend Font Style */
+body {
+  font: 11px sans-serif;
+}
+        
+/* Legend Position Style */
+.legend {
+  position:absolute;
+  left:800px;
+  top:350px;
+}
+
+
+</style>
+<body>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="http://d3js.org/topojson.v1.min.js"></script>
+<script src="zoomMap.js"></script>
+<style type="text/css">
+
+
+</body>
+</html>
