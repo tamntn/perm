@@ -2,9 +2,31 @@ var width = window.innerWidth,
     height = window.innerHeight,
     centered;
 
+
+d3.csv('final.csv',function(error,data){
+	var dataset=data;
+	//console.log(dataset)
+
+	var num_case_status =d3.nest()
+						.key(function(id){ return id.case_status })
+						.rollup(function(num){ return {'length':num.length, 'data': num } })
+						.entries(dataset)
+
+	console.log(num_case_status)
+	
+
+	var min = d3.min(num_case_status,function(d){ return d.values })			
+
+
+
+
+
+// var min = d3.min(dataset,funciton(d){return +d.});
+
 var projection = d3.geo.albersUsa()
     .scale(1070)
     .translate([width / 2, height / 2]);
+
 
 var path = d3.geo.path()
     .projection(projection);
@@ -13,8 +35,9 @@ var svg = d3.select("body").append("svg")
     .attr("width", width)
     .attr("height", height);
 
-var color = d3.scale.linear().domain([0,40000])
-      .range(["#333333","#cccccc"]);
+var color = d3.scale.linear()
+      .domain([0,56])
+      .range(['blue','red']);
 
 svg.append("rect")
     .attr("class", "background")
@@ -23,11 +46,7 @@ svg.append("rect")
     .on("click", clicked);
 
 var g = svg.append("g");
-sc = []
 
-for (var i = 1; i<=50; i++){
-  sc.push(i);
-}
 
 
 
@@ -40,7 +59,7 @@ d3.json("https://gist.githubusercontent.com/mbostock/4090846/raw/d534aba16920754
       .data(topojson.feature(us, us.objects.states).features)
     .enter().append("path")
       .attr("d", path)
-      .style('fill', function(d){ return d.id;})
+      .style('fill', function(d){ return color(d.id);})
       .on("click", clicked);
 
   g.append("path")
@@ -73,3 +92,4 @@ function clicked(d) {
       .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + -x + "," + -y + ")")
       .style("stroke-width", 1.5 / k + "px");
 }
+});
