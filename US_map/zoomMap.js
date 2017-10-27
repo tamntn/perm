@@ -73,13 +73,16 @@ function clicked(d) {
 
   if (d && centered !== d) {
     var centroid = path.centroid(d);
+    console.log(centroid)
     x = centroid[0];
+
     y = centroid[1];
-    k = 4;
+    
+    k = 10;
     centered = d;
   } else {
-    x = width / 2;
-    y = height / 2;
+    x = width/2 ;
+    y = height/2 ;
     k = 1;
     centered = null;
   }
@@ -89,7 +92,8 @@ function clicked(d) {
 
   g.transition()
       .duration(750)
-      .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + -x + "," + -y + ")")
+      .attr("transform", "translate(" + width /2 + "," + height /2 + ")scale(" + k + ")translate(" + -x + "," + -y + ")")
       .style("stroke-width", 1.5 / k + "px");
 }
 });
+
