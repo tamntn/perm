@@ -144,13 +144,23 @@ function ready(error, us, maptemplate) {
   if (error) throw error;
 
   console.log(us, maptemplate);   
+var domain =[];
+for(var i=1; i<= maptemplate.length; i++){
+  domain.push(i);
+}
 
+  console.log(domain)
   //Sets color scale
   var numMedian = d3.median(maptemplate, function(d) { return d.num;}); 
   var quantize = d3.scale.quantize()
-    .domain([0, numMedian])
+    //.domain([0, numMedian])
+    .domain(domain)
     .range(d3.range(5).map(function(i) { return "q" + i + "-9"; }));
  
+  var color = d3.scale.linear()
+      .domain([1,50])
+      .range(['blue','red']);
+
   //Pair data with state id
   var dataByFIPS = {};
   maptemplate.forEach(function(d) { dataByFIPS[d.FIPS] = +d.num; });
@@ -173,7 +183,10 @@ function ready(error, us, maptemplate) {
     .enter().append("path")
     .attr("d", path)
     //Color states
-    .attr("class", function(d) { return quantize(dataByFIPS[d.id]); })
+    .style("fill", function(d) { return color(d.id); 
+      //quantize(dataByFIPS[d.id]); 
+
+    })
     //Hovers
     .on("mouseover", function(d) {
       var sel = d3.select(this);
