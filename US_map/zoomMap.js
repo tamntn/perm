@@ -38,7 +38,7 @@ var svg = d3.select("body").append("svg")
 
 var color = d3.scale.linear()
       .domain([0,56])
-      .range(['blue','red']);
+      .range(['red','blue']);
 
 svg.append("rect")
     .attr("class", "background")
@@ -72,26 +72,28 @@ d3.json("https://gist.githubusercontent.com/mbostock/4090846/raw/d534aba16920754
 
 	function clicked(d){
 
-		d3.select('.modal-content')
-		.selectAll('p')
-		.data(domain)
-		.enter()
-		.append('p')
-		.text('Thank you for your Time')
+		if(d){
+			d3.select('.modal-content')
+			.selectAll('p')
+			.data(domain)
+			.enter()
+			.append('p')
+			.text('Thank you for your Time')
 
 
-		modal.style.display = "block";
-		
-		// When the user clicks on <span> (x), close the modal
-		span.onclick = function() {
-		    modal.style.display = "none";
-		}
+			modal.style.display = "block";
+			
+			// When the user clicks on <span> (x), close the modal
+			span.onclick = function() {
+			    modal.style.display = "none";
+			}
 
-		// When the user clicks anywhere outside of the modal, close it
-		window.onclick = function(event) {
-		    if (event.target == modal) {
-		        modal.style.display = "none";
-		    }
+			// When the user clicks anywhere outside of the modal, close it
+			window.onclick = function(event) {
+			    if (event.target == modal) {
+			        modal.style.display = "none";
+			    }
+			}
 		}
 	}
 
