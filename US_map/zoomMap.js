@@ -73,6 +73,9 @@ d3.json("https://gist.githubusercontent.com/mbostock/4090846/raw/d534aba16920754
 	function clicked(d){
 
 		if(d){
+			var id = +d.id;
+			console.log(id);
+			
 			d3.select('.modal-content')
 			.selectAll('p')
 			.data(domain)
@@ -80,7 +83,7 @@ d3.json("https://gist.githubusercontent.com/mbostock/4090846/raw/d534aba16920754
 			.append('p')
 			.text('Thank you for your Time')
 
-
+			console.log(d);
 			modal.style.display = "block";
 			
 			// When the user clicks on <span> (x), close the modal
