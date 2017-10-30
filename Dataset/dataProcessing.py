@@ -2,11 +2,17 @@ import csv
 
 inputFile = "final.csv"
 
-acceptanceRateByCountry = "acceptanceRateByCountry.csv"
+acceptanceRateByCountryFile = "acceptanceRateByCountry.csv"
 acceptanceRateByCountryDict = {}
 
-acceptanceRateByState = "acceptanceRateByState.csv"
+acceptanceRateByStateFile = "acceptanceRateByState.csv"
 acceptanceRateByStateDict = {}
+
+acceptanceRateByJobFile = "acceptanceRateByJob.csv"
+acceptanceRateByJobDict = {}
+
+acceptanceRateByClassFile = "acceptanceRateByClass.csv"
+acceptanceRateByClassDict = {}
 
 def checkState(state):
     if state == "":
@@ -46,6 +52,23 @@ def updateAcceptanceRateByStateDict(state, status):
     elif status == "Withdrawn":
         acceptanceRateByStateDict[state] = [stateCertifiedCount, stateCertifiedExpiredCount, stateDeniedCount, stateWithdrawnCount + 1]
 
+def updateAcceptanceRateByJobDict(job, status):
+    if job not in acceptanceRateByJobDict:
+        acceptanceRateByJobDict[job] = [0, 0, 0, 0]
+    jobCertifiedCount = acceptanceRateByJobDict[job][0]
+    jobCertifiedExpiredCount = acceptanceRateByJobDict[job][1]
+    jobDeniedCount = acceptanceRateByJobDict[job][2]
+    jobWithdrawnCount = acceptanceRateByJobDict[job][3]
+    if status == "Certified":
+        acceptanceRateByJobDict[job] = [jobCertifiedCount + 1, jobCertifiedExpiredCount, jobDeniedCount, jobWithdrawnCount]
+    elif status == "Certified-Expired":
+        acceptanceRateByJobDict[job] = [jobCertifiedCount, jobCertifiedExpiredCount + 1, jobDeniedCount, jobWithdrawnCount]
+    elif status == "Denied":
+        acceptanceRateByJobDict[job] = [jobCertifiedCount, jobCertifiedExpiredCount, jobDeniedCount + 1, jobWithdrawnCount]
+    elif status == "Withdrawn":
+        acceptanceRateByJobDict[job] = [jobCertifiedCount, jobCertifiedExpiredCount, jobDeniedCount, jobWithdrawnCount + 1]
+
+
 with open(inputFile, 'rb') as inputCSV:
     reader = csv.reader(inputCSV)
     header = reader.next()
@@ -54,15 +77,15 @@ with open(inputFile, 'rb') as inputCSV:
         country = row[4]
         state = checkState(row[11])
         status = row[2]
+        job_group = row[14]
         updateAcceptanceRateByStateDict(state, status)
         updateAcceptanceRateByCountryDict(country, status)
+        updateAcceptanceRateByJobDict(job_group, status)
+    inputCSV.close()
 
-inputCSV.close()
-
-with open(acceptanceRateByState, 'wb') as csv1:
+with open(acceptanceRateByStateFile, 'wb') as csv1:
     writer = csv.writer(csv1)
-csv1.close()
-
+    csv1.close()
 
 for key in acceptanceRateByCountryDict:
     print key
