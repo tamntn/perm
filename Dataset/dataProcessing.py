@@ -83,10 +83,27 @@ with open(inputFile, 'rb') as inputCSV:
         updateAcceptanceRateByJobDict(job_group, status)
     inputCSV.close()
 
-with open(acceptanceRateByStateFile, 'wb') as csv1:
+# acceptanceRateByCountryDict = sorted(acceptanceRateByCountryDict.iterkeys())
+# acceptanceRateByStateDict = sorted(acceptanceRateByStateDict.iterkeys())
+
+with open(acceptanceRateByCountryFile, 'wb') as csv1:
     writer = csv.writer(csv1)
+    headerRow = ['Country', 'Certified', 'Certified-Expired', 'Denied', 'Withdrawn']
+    writer.writerow(headerRow)
+    for key in acceptanceRateByCountryDict:
+        inputRow =[key, acceptanceRateByCountryDict[key][0], acceptanceRateByCountryDict[key][1], acceptanceRateByCountryDict[key][2], acceptanceRateByCountryDict[key][3]]
+        writer.writerow(inputRow)
     csv1.close()
 
-for key in acceptanceRateByCountryDict:
-    print key
-    print acceptanceRateByCountryDict[key]
+with open(acceptanceRateByStateFile, 'wb') as csv2:
+    writer = csv.writer(csv2)
+    headerRow = ['State', 'Certified', 'Certified-Expired', 'Denied', 'Withdrawn']
+    writer.writerow(headerRow)
+    for key in acceptanceRateByStateDict:
+        inputRow = [key, acceptanceRateByStateDict[key][0], acceptanceRateByStateDict[key][1], acceptanceRateByStateDict[key][2], acceptanceRateByStateDict[key][3]]
+        writer.writerow(inputRow)
+    csv2.close()
+
+# for key in acceptanceRateByStateDict:
+#     print key
+#     print acceptanceRateByStateDict[key]
