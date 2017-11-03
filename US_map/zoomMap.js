@@ -38,7 +38,7 @@ var svg = d3.select("body").append("svg")
 
 var color = d3.scale.linear()
       .domain([0,56])
-      .range(['red','blue']);
+      .range(['blue','yellow']);
 
 svg.append("rect")
     .attr("class", "background")
