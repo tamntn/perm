@@ -1,4 +1,5 @@
 import csv
+import collections
 
 inputFile = "final.csv"
 
@@ -83,8 +84,9 @@ with open(inputFile, 'rb') as inputCSV:
         updateAcceptanceRateByJobDict(job_group, status)
     inputCSV.close()
 
-# acceptanceRateByCountryDict = sorted(acceptanceRateByCountryDict.iterkeys())
-# acceptanceRateByStateDict = sorted(acceptanceRateByStateDict.iterkeys())
+# sorting dictionary
+acceptanceRateByCountryDict = collections.OrderedDict(sorted(acceptanceRateByCountryDict.items()))
+acceptanceRateByStateDict = collections.OrderedDict(sorted(acceptanceRateByStateDict.items()))
 
 with open(acceptanceRateByCountryFile, 'wb') as csv1:
     writer = csv.writer(csv1)
