@@ -1,97 +1,111 @@
 import csv
-import re
+import collections
 
-currentFile = "edited.csv"
-newFile = "final.csv"
-occupationClassifications = {
-    '11': "Management Occupations",
-    '13': "Business and Financial Operations Occupations",
-    '15': "Computer and Mathematical Occupations",
-    '17': "Architecture and Engineering Occupations",
-    '19': "Life Physical and Social Science Occupations",
-    '21': "Community and Social Service Occupations",
-    '23': "Legal Occupations",
-    '25': "Education, Training, and Library Occupations",
-    '27': "Arts, Design, Entertainment, Sports, and Media Occupations",
-    '29': "Healthcare Practitioners and Technical Occupations",
-    '31': "Healthcare Support Occupations",
-    '33': "Protective Service Occupations",
-    '35': "Food Preparation and Serving Related Occupations",
-    '37': "Building and Grounds Cleaning and Maintenance Occupations",
-    '39': "Personal Care and Service Occupations",
-    '41': "Sales and Related Occupations",
-    '43': "Office and Administrative Support Occupations",
-    '45': "Farming, Fishing, and Forestry Occupations",
-    '47': "Construction and Extraction Occupations",
-    '49': "Installation, Maintenance, and Repair Occupations",
-    '51': "Production Occupations",
-    '53': "Transportation and Material Moving Occupations",
-    '55': "Military Specific Occupations"
-}
+inputFile = "final.csv"
 
-def rightFormat(code):
-    if re.search(r'\d\d\d\d', code):
-        print code
-        return True
+acceptanceRateByCountryFile = "acceptanceRateByCountry.csv"
+acceptanceRateByCountryDict = {}
+
+acceptanceRateByStateFile = "acceptanceRateByState.csv"
+acceptanceRateByStateDict = {}
+
+acceptanceRateByJobFile = "acceptanceRateByJob.csv"
+acceptanceRateByJobDict = {}
+
+acceptanceRateByClassFile = "acceptanceRateByClass.csv"
+acceptanceRateByClassDict = {}
+
+def checkState(state):
+    if state == "":
+        return "N/A"
     else:
-        return False
+        return state
 
-def occupationClassify(code):
-    shortenCode = code[:2]
-    return occupationClassifications[str(shortenCode)]
+def updateAcceptanceRateByCountryDict(country, status):
+    if country not in acceptanceRateByCountryDict:
+        acceptanceRateByCountryDict[country] = [0, 0, 0, 0]
+    countryCertifiedCount = acceptanceRateByCountryDict[country][0]
+    countryCertifiedExpiredCount = acceptanceRateByCountryDict[country][1]
+    countryDeniedCount = acceptanceRateByCountryDict[country][2]
+    countryWithdrawnCount = acceptanceRateByCountryDict[country][3]
+    if status == "Certified":
+        acceptanceRateByCountryDict[country] = [countryCertifiedCount + 1, countryCertifiedExpiredCount, countryDeniedCount, countryWithdrawnCount]
+    elif status == "Certified-Expired":
+        acceptanceRateByCountryDict[country] = [countryCertifiedCount, countryCertifiedExpiredCount + 1, countryDeniedCount, countryWithdrawnCount]
+    elif status == "Denied":
+        acceptanceRateByCountryDict[country] = [countryCertifiedCount, countryCertifiedExpiredCount, countryDeniedCount + 1, countryWithdrawnCount]
+    elif status == "Withdrawn":
+        acceptanceRateByCountryDict[country] = [countryCertifiedCount, countryCertifiedExpiredCount, countryDeniedCount, countryWithdrawnCount + 1]
 
-def normalizePayUnit(unit):
-    firstLetter = unit[:1].lower()
-    if firstLetter == 'b':
-        return "Bi-Weekly"
-    elif firstLetter == 'h':
-        return "Hourly"
-    elif firstLetter == 'm':
-        return "Monthly"
-    elif firstLetter == 'w':
-        return "Weekly"
-    elif firstLetter == 'y':
-        return "Yearly"
-    else:
-        return ""
-    
+def updateAcceptanceRateByStateDict(state, status):
+    if state not in acceptanceRateByStateDict:
+        acceptanceRateByStateDict[state] = [0, 0, 0, 0]
+    stateCertifiedCount = acceptanceRateByStateDict[state][0]
+    stateCertifiedExpiredCount = acceptanceRateByStateDict[state][1]
+    stateDeniedCount = acceptanceRateByStateDict[state][2]
+    stateWithdrawnCount = acceptanceRateByStateDict[state][3]
+    if status == "Certified":
+        acceptanceRateByStateDict[state] = [stateCertifiedCount + 1, stateCertifiedExpiredCount, stateDeniedCount, stateWithdrawnCount]
+    elif status == "Certified-Expired":
+        acceptanceRateByStateDict[state] = [stateCertifiedCount, stateCertifiedExpiredCount + 1, stateDeniedCount, stateWithdrawnCount]
+    elif status == "Denied":
+        acceptanceRateByStateDict[state] = [stateCertifiedCount, stateCertifiedExpiredCount, stateDeniedCount + 1, stateWithdrawnCount]
+    elif status == "Withdrawn":
+        acceptanceRateByStateDict[state] = [stateCertifiedCount, stateCertifiedExpiredCount, stateDeniedCount, stateWithdrawnCount + 1]
 
-with open(newFile, 'wb') as csvFinal:
-    writer = csv.writer(csvFinal)
-    with open(currentFile, 'rb') as csvData:
-        reader = csv.reader(csvData)
-        header = reader.next()
-        headerRow = [header[0], header[1], header[2], header[3], header[4], header[5], header[6], header[8], header[9], header[10], header[11], header[12], header[13], 'occupation_class', header[15], header[16], header[17], header[18], header[19], header[20]]
-        writer.writerow(headerRow)
-        rows = [row for row in reader if row]
-        print len(rows)
-        count = 0
-        for row in rows:
-            if(row[13] != ""):
-                row[13] = row[13][:7].replace("-", "")
-                occupationClass = occupationClassify(row[13])
-            else:
-                row[13] = ""
-                occupationClass = ""
-                count += 1
-            row[6] = row[6].replace(",", "") #Replacing ',' character in "Employer_city"
-            row[10] = row[10].replace(",", "")
-            row[16] = row[16].replace(",", "")
-            row[18] = row[18].replace(",", "")
-            row[17] = normalizePayUnit(row[17])
-            row[19] = row[19].replace(",", "")
-            if row[18] == "":
-                row[18] = row[21].replace(",", "")
-            if row[19] == "":
-                row[19] = row[22].replace(",", "")
-            if row[20] == "":
-                row[20] = row[23].replace(",", "")
-            row[20] = normalizePayUnit(row[20])
-            inputRow = [row[0], row[1], row[2], row[3], row[4], row[5], row[6], row[8], row[9], row[10], row[11], row[12], row[13], occupationClass, row[15], row[16], row[17], row[18], row[19], row[20]]
-            # count += 1
-            writer.writerow(inputRow)
-        print count
-    
-    # Closing csv files
-    csvData.close()
-csvFinal.close()
+def updateAcceptanceRateByJobDict(job, status):
+    if job not in acceptanceRateByJobDict:
+        acceptanceRateByJobDict[job] = [0, 0, 0, 0]
+    jobCertifiedCount = acceptanceRateByJobDict[job][0]
+    jobCertifiedExpiredCount = acceptanceRateByJobDict[job][1]
+    jobDeniedCount = acceptanceRateByJobDict[job][2]
+    jobWithdrawnCount = acceptanceRateByJobDict[job][3]
+    if status == "Certified":
+        acceptanceRateByJobDict[job] = [jobCertifiedCount + 1, jobCertifiedExpiredCount, jobDeniedCount, jobWithdrawnCount]
+    elif status == "Certified-Expired":
+        acceptanceRateByJobDict[job] = [jobCertifiedCount, jobCertifiedExpiredCount + 1, jobDeniedCount, jobWithdrawnCount]
+    elif status == "Denied":
+        acceptanceRateByJobDict[job] = [jobCertifiedCount, jobCertifiedExpiredCount, jobDeniedCount + 1, jobWithdrawnCount]
+    elif status == "Withdrawn":
+        acceptanceRateByJobDict[job] = [jobCertifiedCount, jobCertifiedExpiredCount, jobDeniedCount, jobWithdrawnCount + 1]
+
+
+with open(inputFile, 'rb') as inputCSV:
+    reader = csv.reader(inputCSV)
+    header = reader.next()
+    rows = [row for row in reader if row]
+    for row in rows:
+        country = row[4]
+        state = checkState(row[11])
+        status = row[2]
+        job_group = row[14]
+        updateAcceptanceRateByStateDict(state, status)
+        updateAcceptanceRateByCountryDict(country, status)
+        updateAcceptanceRateByJobDict(job_group, status)
+    inputCSV.close()
+
+# sorting dictionary
+acceptanceRateByCountryDict = collections.OrderedDict(sorted(acceptanceRateByCountryDict.items()))
+acceptanceRateByStateDict = collections.OrderedDict(sorted(acceptanceRateByStateDict.items()))
+
+with open(acceptanceRateByCountryFile, 'wb') as csv1:
+    writer = csv.writer(csv1)
+    headerRow = ['Country', 'Certified', 'Certified-Expired', 'Denied', 'Withdrawn']
+    writer.writerow(headerRow)
+    for key in acceptanceRateByCountryDict:
+        inputRow =[key, acceptanceRateByCountryDict[key][0], acceptanceRateByCountryDict[key][1], acceptanceRateByCountryDict[key][2], acceptanceRateByCountryDict[key][3]]
+        writer.writerow(inputRow)
+    csv1.close()
+
+with open(acceptanceRateByStateFile, 'wb') as csv2:
+    writer = csv.writer(csv2)
+    headerRow = ['State', 'Certified', 'Certified-Expired', 'Denied', 'Withdrawn']
+    writer.writerow(headerRow)
+    for key in acceptanceRateByStateDict:
+        inputRow = [key, acceptanceRateByStateDict[key][0], acceptanceRateByStateDict[key][1], acceptanceRateByStateDict[key][2], acceptanceRateByStateDict[key][3]]
+        writer.writerow(inputRow)
+    csv2.close()
+
+# for key in acceptanceRateByStateDict:
+#     print key
+#     print acceptanceRateByStateDict[key]
