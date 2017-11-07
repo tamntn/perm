@@ -2,8 +2,8 @@ import csv
 import re
 from datetime import datetime
 
-currentFile = "edited.csv"
-newFile = "final.csv"
+currentFile = "metaFiles/edited.csv"
+newFile = "metaFiles/final.csv"
 
 occupationClassifications = {
     '11': "Management Occupations",
@@ -113,7 +113,7 @@ def rightFormat(code):
 
 def getStateName(state):
     if(state in stateAbbreviations):
-        return stateAbbreviations[state]
+        return stateAbbreviations[state].title()
     else:
         return state.title() #Capitalize only the first letter of the word
 

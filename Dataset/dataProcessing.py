@@ -1,18 +1,18 @@
 import csv
 import collections
 
-inputFile = "final.csv"
+inputFile = "metaFiles/final.csv"
 
-acceptanceRateByCountryFile = "acceptanceRateByCountry.csv"
+acceptanceRateByCountryFile = "createdFiles/acceptanceRateByCountry.csv"
 acceptanceRateByCountryDict = {}
 
-acceptanceRateByStateFile = "acceptanceRateByState.csv"
+acceptanceRateByStateFile = "createdFiles/acceptanceRateByState.csv"
 acceptanceRateByStateDict = {}
 
-acceptanceRateByJobFile = "acceptanceRateByJob.csv"
+acceptanceRateByJobFile = "createdFiles/acceptanceRateByJob.csv"
 acceptanceRateByJobDict = {}
 
-acceptanceRateByClassFile = "acceptanceRateByClass.csv"
+acceptanceRateByClassFile = "createdFiles/acceptanceRateByClass.csv"
 acceptanceRateByClassDict = {}
 
 def checkState(state):
