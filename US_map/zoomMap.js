@@ -70,37 +70,55 @@ d3.json("https://gist.githubusercontent.com/mbostock/4090846/raw/d534aba16920754
 
 
 	function clicked(d){
-
+		zoom(d); //zooms in
 		if(d){
 			var id =0;
 			id = +d.id;
 			console.log(id);
 			
-			// d3.select('.modal-content')
-			// .selectAll('p')
-			// .data(domain)
-			// .enter()
-			// .append('p')
-			// .text(function(f){ return textDisplay(d); });
 			document.getElementById("contents").innerHTML= textDisplay(d);
-			//document.getElementById('modal-content').innerHTML= textDisplay(d);
-
+			
 			console.log(d);
 			modal.style.display = "block";
 			
 			// When the user clicks on <span> (x), close the modal
 			span.onclick = function() {
 			    modal.style.display = "none";
-			    id =0;
+			    zoom(d); //zooms out
 			}
 
 			// When the user clicks anywhere outside of the modal, close it
 			window.onclick = function(event) {
 			    if (event.target == modal) {
 			        modal.style.display = "none";
-			        id =0;
+			        zoom(d); //zooms out
 			    }
 			}
+		}
+		function zoom(d){
+			var x, y, k;
+
+		  if (d && centered !== d) {
+		    var centroid = path.centroid(d);
+		    x = centroid[0];
+		    y = centroid[1];
+		    k = 4;
+		    centered = d;
+		  } else {
+		    x = width / 2;
+		    y = height / 2;
+		    k = 1;
+		    centered = null;
+		  }
+		
+
+		  g.selectAll("path")
+		      .classed("active", centered && function(d) { return d === centered; });
+
+		  g.transition()
+		      .duration(750)
+		      .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + -x + "," + -y + ")")
+		      .style("stroke-width", 1.5 / k + "px");
 		}
 	}
 
