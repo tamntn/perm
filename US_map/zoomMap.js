@@ -13,8 +13,8 @@ d3.csv('acceptanceRateByState.csv',function(error,data){
 
 	console.log(data)
 
-	//var min = d3.min(num_case_status,function(d){ return d.values })			
-
+	//var min = d3.min(num_case_status,function(d){ return d.values })
+	
 for( i in num_case_status){
 	num_case_status[i].id = +num_case_status[i].key;
 	arrayHelp.push(+num_case_status[i].key);
