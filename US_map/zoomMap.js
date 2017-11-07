@@ -28,7 +28,7 @@ console.log(num_case_status)
 // var min = d3.min(dataset,funciton(d){return +d.});
 
 var projection = d3.geo.albersUsa()
-    .scale(1070)
+    .scale(1280)
     .translate([width / 2, height / 2]);
 
 var domain=[0,2,3];
@@ -42,7 +42,7 @@ var svg = d3.select("body").append("svg")
 
 var color = d3.scale.linear()
       .domain([0,56])
-      .range(['blue','yellow']);
+      .range(['blue','white']);
 
 svg.append("rect")
     .attr("class", "background")
@@ -93,7 +93,7 @@ displayChart();
 			span.onclick = function() {
 			    modal.style.display = "none";
 			    zoom(d); //zooms out
-			    location.reload();
+			    //location.reload();
 			}
 
 			// When the user clicks anywhere outside of the modal, close it
@@ -101,7 +101,7 @@ displayChart();
 			    if (event.target == modal) {
 			        modal.style.display = "none";
 			        zoom(d); //zooms out
-			        location.reload();
+			        //location.reload();
 			    }
 			}
 		}
