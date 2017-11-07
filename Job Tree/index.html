@@ -46,10 +46,10 @@
             .append("g")
             .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-        d3.json("../Dataset/createdFiles/jobTree.json", function (error, flare) {
+        d3.json("../Dataset/createdFiles/jobTree.json", function (error, data) {
             if (error) throw error;
 
-            root = flare;
+            root = data;
             root.x0 = height / 2;
             root.y0 = 0;
 
