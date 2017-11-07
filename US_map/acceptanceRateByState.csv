@@ -1,60 +1,60 @@
 Id,State,Abbreviation,Certified,Certified-Expired,Denied,Withdrawn
-1,Alabama,AL,1093,858,220,105
-2,Alaska,AK,56,45,16,5
-3,Arizona,AZ,2192,1569,359,213
-4,Arkansas,AR,591,376,145,180
-5,California,CA,43239,34880,5195,4001
-6,Colorado,CO,1467,1154,235,172
-7,Connecticut,CT,1763,1390,255,181
-8,Delaware,DE,831,680,122,65
-9,District Of Columbia,DC,448,470,132,48
-10,District of Columbia,DC,380,255,72,38
-11,Federated States Of Micronesia,FM,0,1,0,0
-12,Florida,FL,5908,4519,1190,490
-13,Georgia,GA,5841,4410,966,698
-14,Guam,GU,176,119,57,15
-15,Hawaii,HI,148,106,43,19
+,Alabama,AL,1093,858,220,105
+,Alaska,AK,56,45,16,5
+,Arizona,AZ,2192,1569,359,213
+,Arkansas,AR,591,376,145,180
+6,California,CA,43239,34880,5195,4001
+,Colorado,CO,1467,1154,235,172
+9,Connecticut,CT,1763,1390,255,181
+,Delaware,DE,831,680,122,65
+,District Of Columbia,DC,448,470,132,48
+,District of Columbia,DC,380,255,72,38
+,Federated States Of Micronesia,FM,0,1,0,0
+,Florida,FL,5908,4519,1190,490
+,Georgia,GA,5841,4410,966,698
+,Guam,GU,176,119,57,15
+,Hawaii,HI,148,106,43,19
 16,Idaho,ID,244,214,35,30
-17,Illinois,IL,7440,6140,1133,829
-18,Indiana,IN,1400,1162,128,117
-19,Iowa,IA,809,658,87,68
-20,Kansas,KS,675,600,140,68
-21,Kentucky,KY,820,627,103,75
-22,Louisiana,LA,555,496,191,53
+,Illinois,IL,7440,6140,1133,829
+,Indiana,IN,1400,1162,128,117
+,Iowa,IA,809,658,87,68
+,Kansas,KS,675,600,140,68
+,Kentucky,KY,820,627,103,75
+,Louisiana,LA,555,496,191,53
 23,Maine,ME,164,183,27,21
-24,Marshall Islands,MH,2,5,0,0
-25,Maryland,MD,2596,2273,708,321
-26,Massachusetts,MA,6456,5297,520,554
-27,Michigan,MI,6035,4540,722,480
-28,Minnesota,MN,1539,1278,136,108
-29,Mississippi,MS,256,189,198,67
-30,Missouri,MO,1546,1122,151,150
-31,Montana,MT,68,56,24,11
-32,American Samoa,AS,2,1,79,4
-33,Nebraska,NE,619,430,99,88
-34,Nevada,NV,368,249,92,43
-35,New Hampshire,NH,461,357,32,37
-36,New Jersey,NJ,13878,12570,2371,1606
-37,New Mexico,NM,348,312,102,55
-38,New York,NY,14595,11234,2250,1270
-39,North Carolina,NC,3954,3126,676,594
-40,North Dakota,ND,209,167,38,20
-41,Northern Mariana Islands,MP,35,6,27,4
-42,Ohio,OH,3363,2574,457,394
-43,Oklahoma,OK,468,377,98,50
-44,Oregon,OR,2358,1423,303,269
-45,Pennsylvania,PA,4364,3790,608,453
-46,Puerto Rico,PR,80,71,51,11
-47,Rhode Island,RI,297,237,47,28
-48,South Carolina,SC,1310,810,448,281
-49,South Dakota,SD,127,93,20,21
-50,Tennessee,TN,1053,765,181,86
-51,Texas,TX,22977,18743,2431,1945
-52,Utah,UT,648,503,126,80
-53,Vermont,VT,191,181,42,19
-54,Virgin Islands,VI,32,10,29,0
-55,Virginia,VA,5663,5175,1057,726
-56,Washington,WI,7938,8214,369,650
-57,West Virginia,WV,160,154,23,20
-58,Wisconsin,WI,1644,1291,217,250
-59,Wyoming,WY,53,49,12,4
+,Marshall Islands,MH,2,5,0,0
+,Maryland,MD,2596,2273,708,321
+25,Massachusetts,MA,6456,5297,520,554
+26,Michigan,MI,6035,4540,722,480
+27,Minnesota,MN,1539,1278,136,108
+28,Mississippi,MS,256,189,198,67
+,Missouri,MO,1546,1122,151,150
+30,Montana,MT,68,56,24,11
+,American Samoa,AS,2,1,79,4
+31,Nebraska,NE,619,430,99,88
+32,Nevada,NV,368,249,92,43
+33,New Hampshire,NH,461,357,32,37
+34,New Jersey,NJ,13878,12570,2371,1606
+,New Mexico,NM,348,312,102,55
+36,New York,NY,14595,11234,2250,1270
+,North Carolina,NC,3954,3126,676,594
+38,North Dakota,ND,209,167,38,20
+,Northern Mariana Islands,MP,35,6,27,4
+39,Ohio,OH,3363,2574,457,394
+40,Oklahoma,OK,468,377,98,50
+41,Oregon,OR,2358,1423,303,269
+42,Pennsylvania,PA,4364,3790,608,453
+,Puerto Rico,PR,80,71,51,11
+44,Rhode Island,RI,297,237,47,28
+45,South Carolina,SC,1310,810,448,281
+46,South Dakota,SD,127,93,20,21
+47,Tennessee,TN,1053,765,181,86
+48,Texas,TX,22977,18743,2431,1945
+49,Utah,UT,648,503,126,80
+50,Vermont,VT,191,181,42,19
+,Virgin Islands,VI,32,10,29,0
+51,Virginia,VA,5663,5175,1057,726
+53,Washington,WI,7938,8214,369,650
+54,West Virginia,WV,160,154,23,20
+55,Wisconsin,WI,1644,1291,217,250
+56,Wyoming,WY,53,49,12,4
