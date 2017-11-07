@@ -25,3 +25,11 @@
 * Making sense of the dataset and coming up with more visualizations ideas
 * Get ready for Milestone 1
 * Next meeting: Sunday 10/29/17 (1-4pm)
+
+## Sunday 10/29/17
+* Cancelled
+
+## Tuesday 10/31/17:
+* Continue working on visualization
+* Focused on making the visualizations easy to understand and interactive
+* Next meeting: Tuesday 11/1/17
