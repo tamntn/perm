@@ -13,8 +13,7 @@ d3.csv('acceptanceRateByState.csv',function(error,data){
 
 	console.log(data)
 
-	//var min = d3.min(num_case_status,function(d){ return d.values })
-	
+
 for( i in num_case_status){
 	num_case_status[i].id = +num_case_status[i].key;
 	arrayHelp.push(+num_case_status[i].key);
@@ -22,10 +21,6 @@ for( i in num_case_status){
 }
 
 console.log(num_case_status)
-// console.log(arrayHelp);
-// console.log(arrayHelp.indexOf(7))
-
-// var min = d3.min(dataset,funciton(d){return +d.});
 
 var projection = d3.geo.albersUsa()
     .scale(1280)
@@ -42,7 +37,7 @@ var svg = d3.select("body").append("svg")
 
 var color = d3.scale.linear()
       .domain([0,56])
-      .range(['blue','white']);
+      .range(['blue','yellow']);
 
 svg.append("rect")
     .attr("class", "background")
@@ -71,9 +66,17 @@ d3.json("https://gist.githubusercontent.com/mbostock/4090846/raw/d534aba16920754
       .datum(topojson.mesh(us, us.objects.states, function(a, b) { return a !== b; }))
       .attr("id", "state-borders")
       .attr("d", path);
+
+  // g.append("g")
+  //     .attr("id", "states")
+  //   .selectAll("path")
+  //     .data(data)
+  //   .enter().append("path")
+  //     .attr("d", path)
+  // 	.style('fill', function(d){ return color(d.id) ;})
+
 });
 
-displayChart();
 
 	function clicked(d){
 		zoom(d); //zooms in
@@ -89,6 +92,8 @@ displayChart();
 			
 			displayChart(id);
 
+
+
 			// When the user clicks on <span> (x), close the modal
 			span.onclick = function() {
 			    modal.style.display = "none";
@@ -101,7 +106,6 @@ displayChart();
 			    if (event.target == modal) {
 			        modal.style.display = "none";
 			        zoom(d); //zooms out
-			        //location.reload();
 			    }
 			}
 		}
@@ -132,9 +136,6 @@ displayChart();
 		}
 	}
 
-	function textDisplay(d){
-		return d.id;
-	}
 
 
 	var head_id = 0;
@@ -143,9 +144,16 @@ displayChart();
 	var Certified_Expired = 0;
 	var Withdrawn = 0;
 
-
-
-//////////////////////////
+var m = {top: 20, right: 30, bottom: 30, left: 40},
+    w = 500 - m.left - m.right,
+    h = 400 - m.top - m.bottom;
+    
+var chart = d3.select("svg")
+    .attr("width", w + m.left + m.right)
+    .attr("height", h + m.top + m.bottom)
+  .append("g")
+    .attr("transform", "translate(" + m.left + "," + m.top + ")");
+////////////-------------  Displays Charts  -----------------//////////////
 
 function displayChart(id){
 
@@ -155,23 +163,22 @@ if (arrayHelp.indexOf(+id)!=-1){
 
 	var index = arrayHelp.indexOf(+id);
 
-	var head_id = num_case_status[index].id
-	var Certified = +num_case_status[index].values[0].Certified;
-	var Denied = +num_case_status[index].values[0].Denied;
-	var Certified_Expired = +num_case_status[index].values[0].Certified_Expired;
-	var Withdrawn = +num_case_status[index].values[0].Withdrawn;
+	document.getElementById("select").selectedIndex = index;
+
+	head_id = num_case_status[index].id
+	Certified = +num_case_status[index].values[0].Certified;
+	Denied = +num_case_status[index].values[0].Denied;
+	Certified_Expired = +num_case_status[index].values[0].Certified_Expired;
+	Withdrawn = +num_case_status[index].values[0].Withdrawn;
+
+	total = Certified + Denied + Certified_Expired + Withdrawn;
 
 	console.log(Certified +" "+Denied+" "+ Certified_Expired+" "+Withdrawn)
 
-var data1 = [{'State':'Certified', 'Certified':Certified},
-			{'State':'Denied', 'Certified':Denied},
-			{'State':'Certified_Expired', 'Certified':Certified_Expired},
-			{'State':'Withdrawn', 'Certified':Withdrawn}]
-
-var m = {top: 20, right: 30, bottom: 30, left: 40},
-    w = 760 - m.left - m.right,
-    h = 700 - m.top - m.bottom;
-
+var data1 = [{'State':'Certified', 'Certified':(Certified/total)*100},
+			{'State':'Denied', 'Certified':(Denied/total)*100},
+			{'State':'Certified_Expired', 'Certified':(Certified_Expired/total)*100},
+			{'State':'Withdrawn', 'Certified':(Withdrawn/total)*100}]
 
 
 var x = d3.scale.ordinal()
@@ -188,7 +195,9 @@ var yAxis = d3.svg.axis()
     .scale(y)
     .orient("left");
 
-var chart = d3.select("svg")
+    chart.remove();
+
+	chart = d3.select("svg")
     .attr("width", w + m.left + m.right)
     .attr("height", h + m.top + m.bottom)
   .append("g")
@@ -215,21 +224,16 @@ var chart = d3.select("svg")
       .attr("height", function(d) { return h - y(+d.Certified); })
       .attr("width", x.rangeBand());
 
-// function type(d) {
-//   d.value = +d.value; // coerce to number
-//   return d;
-// }
 
 }
 }
-
-// function changeVariables(){
-
-// }
 
 
 //////////////////////////
 
+function updateComparasion(){
+	
+}
 
 
 
