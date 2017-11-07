@@ -93,7 +93,8 @@ displayChart();
 			span.onclick = function() {
 			    modal.style.display = "none";
 			    zoom(d); //zooms out
-			    location.reload();
+			    //location.reload();
+			    //updateDiv();
 			}
 
 			// When the user clicks anywhere outside of the modal, close it
@@ -101,7 +102,8 @@ displayChart();
 			    if (event.target == modal) {
 			        modal.style.display = "none";
 			        zoom(d); //zooms out
-			        location.reload();
+			        //updateDiv();
+			        //location.reload();
 			    }
 			}
 		}
@@ -143,8 +145,15 @@ displayChart();
 	var Certified_Expired = 0;
 	var Withdrawn = 0;
 
-
-
+var m = {top: 20, right: 30, bottom: 30, left: 40},
+    w = 760 - m.left - m.right,
+    h = 700 - m.top - m.bottom;
+    
+var chart = d3.select("svg")
+    .attr("width", w + m.left + m.right)
+    .attr("height", h + m.top + m.bottom)
+  .append("g")
+    .attr("transform", "translate(" + m.left + "," + m.top + ")");
 //////////////////////////
 
 function displayChart(id){
@@ -168,11 +177,6 @@ var data1 = [{'State':'Certified', 'Certified':Certified},
 			{'State':'Certified_Expired', 'Certified':Certified_Expired},
 			{'State':'Withdrawn', 'Certified':Withdrawn}]
 
-var m = {top: 20, right: 30, bottom: 30, left: 40},
-    w = 760 - m.left - m.right,
-    h = 700 - m.top - m.bottom;
-
-
 
 var x = d3.scale.ordinal()
     .rangeRoundBands([0, w], .1);
@@ -188,7 +192,9 @@ var yAxis = d3.svg.axis()
     .scale(y)
     .orient("left");
 
-var chart = d3.select("svg")
+    chart.remove();
+
+	chart = d3.select("svg")
     .attr("width", w + m.left + m.right)
     .attr("height", h + m.top + m.bottom)
   .append("g")
@@ -230,7 +236,10 @@ var chart = d3.select("svg")
 
 //////////////////////////
 
-
+// function updateDiv()
+// { 
+//     $( "#contents" ).load(window.location.href + " #contents" );
+// }
 
 
 
