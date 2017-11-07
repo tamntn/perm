@@ -3,19 +3,18 @@ var width = window.innerWidth,
     centered;
 
 
-d3.csv('final.csv',function(error,data){
+d3.csv('acceptanceRateByState.csv',function(error,data){
 	var dataset=data;
-	//console.log(dataset)
 
-	var num_case_status =d3.nest()
-						.key(function(id){ return id.case_status })
-						.rollup(function(num){ return {'length':num.length, 'data': num } })
-						.entries(dataset)
+	// var num_case_status =d3.nest()
+	// 					.key(function(d){ return d.Abbreviation })
+	// 					.key(function(d){ return d.Certified})
+	// 					.entries(dataset)
 
-	console.log(num_case_status)
-	
+	console.log(data)
+	//console.log(num_case_status)
 
-	var min = d3.min(num_case_status,function(d){ return d.values })			
+	//var min = d3.min(num_case_status,function(d){ return d.values })			
 
 
 
@@ -27,7 +26,7 @@ var projection = d3.geo.albersUsa()
     .scale(1070)
     .translate([width / 2, height / 2]);
 
-var domain=[0,2,3,4,5];
+var domain=[0,2,3];
 
 var path = d3.geo.path()
     .projection(projection);
@@ -73,15 +72,18 @@ d3.json("https://gist.githubusercontent.com/mbostock/4090846/raw/d534aba16920754
 	function clicked(d){
 
 		if(d){
-			var id = +d.id;
+			var id =0;
+			id = +d.id;
 			console.log(id);
 			
-			d3.select('.modal-content')
-			.selectAll('p')
-			.data(domain)
-			.enter()
-			.append('p')
-			.text('Thank you for your Time')
+			// d3.select('.modal-content')
+			// .selectAll('p')
+			// .data(domain)
+			// .enter()
+			// .append('p')
+			// .text(function(f){ return textDisplay(d); });
+			document.getElementById("contents").innerHTML= textDisplay(d);
+			//document.getElementById('modal-content').innerHTML= textDisplay(d);
 
 			console.log(d);
 			modal.style.display = "block";
@@ -89,17 +91,22 @@ d3.json("https://gist.githubusercontent.com/mbostock/4090846/raw/d534aba16920754
 			// When the user clicks on <span> (x), close the modal
 			span.onclick = function() {
 			    modal.style.display = "none";
+			    id =0;
 			}
 
 			// When the user clicks anywhere outside of the modal, close it
 			window.onclick = function(event) {
 			    if (event.target == modal) {
 			        modal.style.display = "none";
+			        id =0;
 			    }
 			}
 		}
 	}
 
+	function textDisplay(d){
+		return d.id;
+	}
 
 // function clicked(d) {
 //   var x, y, k;
