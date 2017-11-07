@@ -13,6 +13,7 @@ d3.csv('acceptanceRateByState.csv',function(error,data){
 
 	console.log(data)
 
+
 for( i in num_case_status){
 	num_case_status[i].id = +num_case_status[i].key;
 	arrayHelp.push(+num_case_status[i].key);

@@ -69,6 +69,21 @@ def updateAcceptanceRateByJobDict(job, status):
     elif status == "Withdrawn":
         acceptanceRateByJobDict[job] = [jobCertifiedCount, jobCertifiedExpiredCount, jobDeniedCount, jobWithdrawnCount + 1]
 
+def updateAcceptanceRateByClassDict(admissionClass, status):
+    if admissionClass not in acceptanceRateByClassDict:
+        acceptanceRateByClassDict[admissionClass] = [0, 0, 0, 0]
+    classCertifiedCount = acceptanceRateByClassDict[admissionClass][0]
+    classCertifiedExpiredCount = acceptanceRateByClassDict[admissionClass][1]
+    classDeniedCount = acceptanceRateByClassDict[admissionClass][2]
+    classWithdrawnCount = acceptanceRateByClassDict[admissionClass][3]
+    if status == "Certified":
+        acceptanceRateByClassDict[admissionClass] = [classCertifiedCount + 1, classCertifiedExpiredCount, classDeniedCount, classWithdrawnCount]
+    elif status == "Certified-Expired":
+        acceptanceRateByClassDict[admissionClass] = [classCertifiedCount, classCertifiedExpiredCount + 1, classDeniedCount, classWithdrawnCount]
+    elif status == "Denied":
+        acceptanceRateByClassDict[admissionClass] = [classCertifiedCount, classCertifiedExpiredCount, classDeniedCount + 1, classWithdrawnCount]
+    elif status == 'Withdrawn':
+        acceptanceRateByClassDict[admissionClass] = [classCertifiedCount, classCertifiedExpiredCount, classDeniedCount, classWithdrawnCount + 1]
 
 with open(inputFile, 'rb') as inputCSV:
     reader = csv.reader(inputCSV)
@@ -78,10 +93,12 @@ with open(inputFile, 'rb') as inputCSV:
         country = row[4]
         state = checkState(row[11])
         status = row[2]
+        admissionClass = row[3]
         job_group = row[14]
         updateAcceptanceRateByStateDict(state, status)
         updateAcceptanceRateByCountryDict(country, status)
         updateAcceptanceRateByJobDict(job_group, status)
+        updateAcceptanceRateByClassDict(admissionClass, status)
     inputCSV.close()
 
 # sorting dictionary
@@ -105,6 +122,24 @@ with open(acceptanceRateByStateFile, 'wb') as csv2:
         inputRow = [key, acceptanceRateByStateDict[key][0], acceptanceRateByStateDict[key][1], acceptanceRateByStateDict[key][2], acceptanceRateByStateDict[key][3]]
         writer.writerow(inputRow)
     csv2.close()
+
+with open(acceptanceRateByJobFile, 'wb') as csv3:
+    writer = csv.writer(csv3)
+    headerRow = ['Job', 'Certified', 'Certified-Expired', 'Denied', 'Withdrawn']
+    writer.writerow(headerRow)
+    for key in acceptanceRateByJobDict:
+        inputRow = [key, acceptanceRateByJobDict[key][0], acceptanceRateByJobDict[key][1], acceptanceRateByJobDict[key][2], acceptanceRateByJobDict[key][3]]
+        writer.writerow(inputRow)
+    csv3.close()
+
+with open(acceptanceRateByClassFile, 'wb') as csv4:
+    writer = csv.writer(csv4)
+    headerRow = ['Admission Class', 'Certified', 'Certified-Expired', 'Denied', 'Withdrawn']
+    writer.writerow(headerRow)
+    for key in acceptanceRateByClassDict:
+        inputRow = [key, acceptanceRateByClassDict[key][0], acceptanceRateByClassDict[key][1], acceptanceRateByClassDict[key][2], acceptanceRateByClassDict[key][3]]
+        writer.writerow(inputRow)
+    csv4.close()
 
 # for key in acceptanceRateByStateDict:
 #     print key
