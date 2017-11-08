@@ -32,4 +32,12 @@
 ## Tuesday 10/31/17:
 * Continue working on visualization
 * Focused on making the visualizations easy to understand and interactive
-* Next meeting: Tuesday 11/1/17
+* Next meeting: Tuesday 11/7/17
+
+## Tuesday 11/7/17:
+* Added Tree Visualization
+* Added interaction / comparation options for visualization
+  * Brushing / rearrange for stacked bar chart
+  * Modal for U.S. Map
+* Came up with more visualizations idea (trending, salary range,...)
+* Next meeting: Monday 11/13/17 (6:00 pm)
