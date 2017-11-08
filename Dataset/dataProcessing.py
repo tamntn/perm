@@ -146,7 +146,7 @@ with open(acceptanceRateByJobFile, 'wb') as csv3:
 
 with open(acceptanceRateByClassFile, 'wb') as csv4:
     writer = csv.writer(csv4)
-    headerRow = ['Admission Class', 'Certified', 'Certified-Expired', 'Denied', 'Withdrawn', 'Percentage-Certified', 'Percentage-Certified-Expired', 'Denied', 'Withdrawn']
+    headerRow = ['Admission Class', 'Certified', 'Certified-Expired', 'Denied', 'Withdrawn', 'Percentage-Certified', 'Percentage-Certified-Expired', 'Percentage-Denied', 'Percentage-Withdrawn']
     writer.writerow(headerRow)
     calculatePercentage(acceptanceRateByClassDict)
     for key in acceptanceRateByClassDict:
