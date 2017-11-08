@@ -2,7 +2,9 @@ var width = window.innerWidth,
     height = window.innerHeight,
     centered;
 
+map();
 
+function map(){
 d3.csv('acceptanceRateByState.csv',function(error,data){
 	var dataset=data;
 
@@ -14,11 +16,11 @@ d3.csv('acceptanceRateByState.csv',function(error,data){
 	console.log(data)
 
 
-for( i in num_case_status){
-	num_case_status[i].id = +num_case_status[i].key;
-	arrayHelp.push(+num_case_status[i].key);
-	delete num_case_status[i].key;
-}
+	for( i in num_case_status){
+			num_case_status[i].id = +num_case_status[i].key;
+			arrayHelp.push(+num_case_status[i].key);
+			delete num_case_status[i].key;
+	}
 
 console.log(num_case_status)
 
@@ -31,13 +33,25 @@ var domain=[0,2,3];
 var path = d3.geo.path()
     .projection(projection);
 
-var svg = d3.select("body").append("svg")
+var svg = d3.select("#svg_map").append("svg").attr('id','US_map')
     .attr("width", width)
     .attr("height", height);
 
-var color = d3.scale.linear()
-      .domain([0,56])
-      .range(['blue','yellow']);
+var colormap_P = d3.scale.linear()
+      .domain([30,55])
+      .range(['#dddddd','#000080']);
+
+var colormap_N = d3.scale.linear()
+      .domain([53,45000])
+      .range(['#dddddd','#000080']);
+
+d3.select('#svg_map').remove();
+
+var svg1 = d3.select('body').append('div').attr('id','svg_map')
+
+var svg = d3.select("#svg_map").append("svg").attr('id','US_map')
+    .attr("width", width)
+    .attr("height", height);
 
 svg.append("rect")
     .attr("class", "background")
@@ -47,19 +61,29 @@ svg.append("rect")
 
 var g = svg.append("g");
 
-
-
+var head_id = 0;
+	var Certified = 0;
+	var Denied = 0;
+	var Certified_Expired = 0;
+	var Withdrawn = 0;
+	var total=0;
+	var certified_scale = 0;
 
 d3.json("https://gist.githubusercontent.com/mbostock/4090846/raw/d534aba169207548a8a3d670c9c2cc719ff05c47/us.json", function(error, us) {
   if (error) throw error;
+
   console.log(us);
+  
+
+  //var g = svg.append("g");
+  
   g.append("g")
       .attr("id", "states")
     .selectAll("path")
       .data(topojson.feature(us, us.objects.states).features)
     .enter().append("path")
       .attr("d", path)
-      .style('fill', function(d){ return color(d.id);})
+      .style('fill', function(d){ return changeColors(d);})
       .on("click", clicked);
 
   g.append("path")
@@ -67,16 +91,52 @@ d3.json("https://gist.githubusercontent.com/mbostock/4090846/raw/d534aba16920754
       .attr("id", "state-borders")
       .attr("d", path);
 
-  // g.append("g")
-  //     .attr("id", "states")
-  //   .selectAll("path")
-  //     .data(data)
-  //   .enter().append("path")
-  //     .attr("d", path)
-  // 	.style('fill', function(d){ return color(d.id) ;})
+
 
 });
 
+	
+
+	
+
+	function changeColors(d){
+
+		var index = arrayHelp.indexOf(+d.id);
+
+		if (num_case_status[index]){
+			if(document.getElementById('p').checked) {
+  				//Percentage radio button is checked
+  				head_id = num_case_status[index].id
+				Certified = +num_case_status[index].values[0].Certified;
+				Denied = +num_case_status[index].values[0].Denied;
+				Certified_Expired = +num_case_status[index].values[0].Certified_Expired;
+				Withdrawn = +num_case_status[index].values[0].Withdrawn;
+
+				total = Certified + Denied + Certified_Expired + Withdrawn;
+				certified_scale = Certified/total*100;
+
+				return colormap_P(certified_scale);
+
+			}else if(document.getElementById('n').checked) {
+  				//Number radio button is checked
+  				head_id = num_case_status[index].id
+				Certified = +num_case_status[index].values[0].Certified;
+				Denied = +num_case_status[index].values[0].Denied;
+				Certified_Expired = +num_case_status[index].values[0].Certified_Expired;
+				Withdrawn = +num_case_status[index].values[0].Withdrawn;
+
+				total = Certified + Denied + Certified_Expired + Withdrawn;
+				certified_scale = Certified
+
+				console.log(certified_scale);
+				return colormap_N(certified_scale);
+
+			}
+
+				 
+		}
+
+	}
 
 	function clicked(d){
 		zoom(d); //zooms in
@@ -138,11 +198,7 @@ d3.json("https://gist.githubusercontent.com/mbostock/4090846/raw/d534aba16920754
 
 
 
-	var head_id = 0;
-	var Certified = 0;
-	var Denied = 0;
-	var Certified_Expired = 0;
-	var Withdrawn = 0;
+	
 
 var m = {top: 20, right: 30, bottom: 30, left: 40},
     w = 500 - m.left - m.right,
@@ -154,6 +210,8 @@ var chart = d3.select("svg")
   .append("g")
     .attr("transform", "translate(" + m.left + "," + m.top + ")");
 ////////////-------------  Displays Charts  -----------------//////////////
+
+
 
 function displayChart(id){
 
@@ -236,10 +294,19 @@ function updateComparasion(){
 }
 
 
+//d3.selectAll('.p').on("click", function(){ certified_scale = Certified/total*100; 
+										
+//d3.selectAll('.n').on("click", NumberBased())
 
+// function PercentageBased(){
+// 		certified_scale = Certified/total*100;
+// 		console.log(certified_scale);
+// }
 
-
-
+// function NumberBased(){
+// 	certified_scale = Certified;
+// 	console.log(certified_scale);
+// }
 
 
 
@@ -247,3 +314,8 @@ function updateComparasion(){
 
 });
 
+}
+
+function mapColor() {
+    map();
+}
