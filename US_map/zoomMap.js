@@ -45,7 +45,7 @@ var colormap_N = d3.scale.linear()
       .domain([53,45000])
       .range(['#dddddd','#000080']);
 
-d3.select('#svg_map').remove();
+d3.select('#svg_map').remove(); //help remove on update
 
 var svg1 = d3.select('body').append('div').attr('id','svg_map')
 
@@ -204,11 +204,7 @@ var m = {top: 20, right: 30, bottom: 30, left: 40},
     w = 500 - m.left - m.right,
     h = 400 - m.top - m.bottom;
     
-var chart = d3.select("svg")
-    .attr("width", w + m.left + m.right)
-    .attr("height", h + m.top + m.bottom)
-  .append("g")
-    .attr("transform", "translate(" + m.left + "," + m.top + ")");
+
 ////////////-------------  Displays Charts  -----------------//////////////
 
 
@@ -253,13 +249,19 @@ var yAxis = d3.svg.axis()
     .scale(y)
     .orient("left");
 
-    chart.remove();
-
-	chart = d3.select("svg")
+    var chart = d3.select("svg") // initializes the group
     .attr("width", w + m.left + m.right)
     .attr("height", h + m.top + m.bottom)
   .append("g")
-    .attr("transform", "translate(" + m.left + "," + m.top + ")");
+    .attr("transform", "translate(" + m.left + "," + m.top + ")")
+    .attr('class','helpRemove');;
+
+    d3.selectAll('.helpRemove').remove(); //remove the groug to update the scale
+
+	chart = d3.select("svg") //add group back
+    .append("g")
+    .attr("transform", "translate(" + m.left + "," + m.top + ")")
+    .attr('class','helpRemove');
 
   x.domain(data1.map(function(d) { return d.State; }));
   y.domain([0, d3.max(data1, function(d) { return +d.Certified; })]);
@@ -294,28 +296,11 @@ function updateComparasion(){
 }
 
 
-//d3.selectAll('.p').on("click", function(){ certified_scale = Certified/total*100; 
-										
-//d3.selectAll('.n').on("click", NumberBased())
-
-// function PercentageBased(){
-// 		certified_scale = Certified/total*100;
-// 		console.log(certified_scale);
-// }
-
-// function NumberBased(){
-// 	certified_scale = Certified;
-// 	console.log(certified_scale);
-// }
-
-
-
-
 
 });
 
 }
 
-function mapColor() {
+function mapColor() { // function to be called when clicked on the user input radio
     map();
 }
