@@ -142,7 +142,7 @@ with open(newFile, 'wb') as csvFinal:
     with open(currentFile, 'rb') as csvData:
         reader = csv.reader(csvData)
         header = reader.next()
-        headerRow = [header[0], header[1], header[2], header[3], header[4], header[5], 'processing_time', header[6], header[8], header[9], header[10], header[11], header[12], header[13], 'pw_occupation_group', header[15], header[16], header[17], header[18], header[19], header[20]]
+        headerRow = [header[0], header[1], header[2], header[3], header[4], header[5], 'processing_time', header[6], header[8], header[9], header[10], header[11], header[12], header[13], 'pw_occupation_group', header[14], header[15], header[16], header[17], header[18], header[19], header[20]]
         writer.writerow(headerRow)
         rows = [row for row in reader if row]
         print len(rows)
@@ -170,11 +170,11 @@ with open(newFile, 'wb') as csvFinal:
             if row[20] == "":
                 row[20] = row[23].replace(",", "")
             row[20] = normalizePayUnit(row[20])
-            inputRow = [row[0], row[1], row[2], row[3], row[4], row[5], processingTime, row[6], row[8], row[9], row[10], row[11], row[12], row[13], occupationClass, row[15], row[16], row[17], row[18], row[19], row[20]]
+            inputRow = [row[0], row[1], row[2], row[3], row[4], row[5], processingTime, row[6], row[8], row[9], row[10], row[11], row[12], row[13], occupationClass, row[14], row[15], row[16], row[17], row[18], row[19], row[20]]
             # count += 1
             writer.writerow(inputRow)
         print count
     
     # Closing csv files
-    csvData.close()
-csvFinal.close()
+        csvData.close()
+    csvFinal.close()
