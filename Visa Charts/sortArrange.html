@@ -85,13 +85,13 @@
             .property("disabled", true)
             .property("checked", false);
 
-        d3.csv("state_data.csv", function (error, data) {
+        d3.csv("sortArrange.csv", function (error, data) {
             if (error) throw error;
 
-            color.domain(d3.keys(data[0]).filter(function (key) { return key !== "Admission Class"; }));
+            color.domain(d3.keys(data[0]).filter(function (key) { return key !== "State"; }));
 
             data.forEach(function (d) {
-                var mystate = d['Admission Class']; //add to stock code
+                var mystate = d.State; //add to stock code
                 var y0 = 0;
                 //d.ages = color.domain().map(function(name) { return {name: name, y0: y0, y1: y0 += +d[name]}; });
                 d.ages = color.domain().map(function (name) {
@@ -112,7 +112,7 @@
             //Sort totals in descending order
             data.sort(function (a, b) { return b.total - a.total; });
 
-            x.domain(data.map(function (d) { return d['Admission Class']; }));
+            x.domain(data.map(function (d) { return d.State; }));
             y.domain([0, d3.max(data, function (d) { return d.total; })]);
 
             svg.append("g")
@@ -149,7 +149,7 @@
                     y_corrected = y(d.y1) + height_diff;
                     d.y_corrected = y_corrected //store in d for later use in restorePlot()
 
-                    if (d.name === "65 Years and Over") height_diff = 0; //reset for next d.mystate
+                    if (d.name === "Withdrawn") height_diff = 0; //reset for next d.mystate
 
                     return y_corrected;
                     // return y(d.y1);  //orig, but not accurate  
@@ -363,7 +363,6 @@
 
             //adapted change() fn in http://bl.ocks.org/mbostock/3885705
             function change() {
-
                 if (this.checked) sortDescending = true;
                 else sortDescending = false;
 
@@ -372,7 +371,7 @@
                 var x0 = x.domain(data.sort(sortDescending
                     ? function (a, b) { return b[colName] - a[colName]; }
                     : function (a, b) { return b.total - a.total; })
-                    .map(function (d, i) { return d['Admission Class']; }))
+                    .map(function (d, i) { return d.State; }))
                     .copy();
 
                 state.selectAll(".class" + active_link)

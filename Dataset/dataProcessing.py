@@ -85,6 +85,18 @@ def updateAcceptanceRateByClassDict(admissionClass, status):
     elif status == 'Withdrawn':
         acceptanceRateByClassDict[admissionClass] = [classCertifiedCount, classCertifiedExpiredCount, classDeniedCount, classWithdrawnCount + 1]
 
+def calculatePercentage(mydict):
+    for key in mydict:
+        total = mydict[key][0] + mydict[key][1] + mydict[key][2] + mydict[key][3]
+        certifiedPercentage = int((float(mydict[key][0]) / total * 100))
+        certifiedExpiredPercentage = int((float(mydict[key][1]) / total * 100))
+        deniedPercentage = int((float(mydict[key][3]) / total * 100))
+        withdrawnPercentage = 100 - certifiedPercentage - certifiedExpiredPercentage - deniedPercentage
+        mydict[key].append(certifiedPercentage)
+        mydict[key].append(certifiedExpiredPercentage)
+        mydict[key].append(deniedPercentage)
+        mydict[key].append(withdrawnPercentage)
+
 with open(inputFile, 'rb') as inputCSV:
     reader = csv.reader(inputCSV)
     header = reader.next()
@@ -134,10 +146,11 @@ with open(acceptanceRateByJobFile, 'wb') as csv3:
 
 with open(acceptanceRateByClassFile, 'wb') as csv4:
     writer = csv.writer(csv4)
-    headerRow = ['Admission Class', 'Certified', 'Certified-Expired', 'Denied', 'Withdrawn']
+    headerRow = ['Admission Class', 'Certified', 'Certified-Expired', 'Denied', 'Withdrawn', 'Percentage-Certified', 'Percentage-Certified-Expired', 'Denied', 'Withdrawn']
     writer.writerow(headerRow)
+    calculatePercentage(acceptanceRateByClassDict)
     for key in acceptanceRateByClassDict:
-        inputRow = [key, acceptanceRateByClassDict[key][0], acceptanceRateByClassDict[key][1], acceptanceRateByClassDict[key][2], acceptanceRateByClassDict[key][3]]
+        inputRow = [key, acceptanceRateByClassDict[key][0], acceptanceRateByClassDict[key][1], acceptanceRateByClassDict[key][2], acceptanceRateByClassDict[key][3], acceptanceRateByClassDict[key][4], acceptanceRateByClassDict[key][5], acceptanceRateByClassDict[key][6], acceptanceRateByClassDict[key][7]]
         writer.writerow(inputRow)
     csv4.close()
 
