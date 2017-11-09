@@ -104,39 +104,35 @@ d3.json("https://gist.githubusercontent.com/mbostock/4090846/raw/d534aba16920754
 		var index = arrayHelp.indexOf(+d.id);
 
 		if (num_case_status[index]){
-			if(document.getElementById('p').checked) {
-  				//Percentage radio button is checked
-  				head_id = num_case_status[index].id
+				head_id = num_case_status[index].id
 				Certified = +num_case_status[index].values[0].Certified;
 				Denied = +num_case_status[index].values[0].Denied;
 				Certified_Expired = +num_case_status[index].values[0].Certified_Expired;
 				Withdrawn = +num_case_status[index].values[0].Withdrawn;
 
 				total = Certified + Denied + Certified_Expired + Withdrawn;
+
+			if(document.getElementById('p').checked) {
+  				//Percentage radio button is checked
+  				
 				certified_scale = Certified/total*100;
 
 				return colormap_P(certified_scale);
 
 			}else if(document.getElementById('n').checked) {
   				//Number radio button is checked
-  				head_id = num_case_status[index].id
-				Certified = +num_case_status[index].values[0].Certified;
-				Denied = +num_case_status[index].values[0].Denied;
-				Certified_Expired = +num_case_status[index].values[0].Certified_Expired;
-				Withdrawn = +num_case_status[index].values[0].Withdrawn;
-
-				total = Certified + Denied + Certified_Expired + Withdrawn;
+  				
 				certified_scale = Certified
 
 				console.log(certified_scale);
 				return colormap_N(certified_scale);
 
 			}
-
 				 
 		}
 
 	}
+
 
 	function clicked(d){
 		zoom(d); //zooms in
@@ -218,21 +214,28 @@ if (arrayHelp.indexOf(+id)!=-1){
 	var index = arrayHelp.indexOf(+id);
 
 	document.getElementById("select").selectedIndex = index;
-
-	head_id = num_case_status[index].id
-	Certified = +num_case_status[index].values[0].Certified;
-	Denied = +num_case_status[index].values[0].Denied;
-	Certified_Expired = +num_case_status[index].values[0].Certified_Expired;
-	Withdrawn = +num_case_status[index].values[0].Withdrawn;
-
-	total = Certified + Denied + Certified_Expired + Withdrawn;
+			
+				head_id = num_case_status[index].id
+				Certified = +num_case_status[index].values[0].Certified;
+				Denied = +num_case_status[index].values[0].Denied;
+				Certified_Expired = +num_case_status[index].values[0].Certified_Expired;
+				Withdrawn = +num_case_status[index].values[0].Withdrawn;
+				total = Certified + Denied + Certified_Expired + Withdrawn;
+			
+			if(document.getElementById('p').checked) {
+  				//Percentage radio button is checked
+  				Certified = Certified/total*100;
+  				Denied= Denied/total*100;
+  				Certified_Expired = Certified_Expired/total*100;
+  				Withdrawn = Withdrawn/total*100;
+			}
 
 	console.log(Certified +" "+Denied+" "+ Certified_Expired+" "+Withdrawn)
 
-var data1 = [{'State':'Certified', 'Certified':(Certified/total)*100},
-			{'State':'Denied', 'Certified':(Denied/total)*100},
-			{'State':'Certified_Expired', 'Certified':(Certified_Expired/total)*100},
-			{'State':'Withdrawn', 'Certified':(Withdrawn/total)*100}]
+var data1 = [{'State':'Certified', 'Certified':Certified},
+			{'State':'Denied', 'Certified':Denied},
+			{'State':'Certified_Expired', 'Certified':Certified_Expired},
+			{'State':'Withdrawn', 'Certified':Withdrawn}]
 
 
 var x = d3.scale.ordinal()
