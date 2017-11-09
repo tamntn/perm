@@ -150,7 +150,7 @@ with open(acceptanceRateByClassFile, 'wb') as csv4:
     writer.writerow(headerRow)
     calculatePercentage(acceptanceRateByClassDict)
     for key in acceptanceRateByClassDict:
-        inputRow = [key, acceptanceRateByClassDict[key][4], acceptanceRateByClassDict[key][5], acceptanceRateByClassDict[key][6], acceptanceRateByClassDict[key][7], acceptanceRateByClassDict[key][4], acceptanceRateByClassDict[key][5], acceptanceRateByClassDict[key][6], acceptanceRateByClassDict[key][7]]
+        inputRow = [key, acceptanceRateByClassDict[key][0], acceptanceRateByClassDict[key][1], acceptanceRateByClassDict[key][2], acceptanceRateByClassDict[key][3], acceptanceRateByClassDict[key][4], acceptanceRateByClassDict[key][5], acceptanceRateByClassDict[key][6], acceptanceRateByClassDict[key][7]]
         writer.writerow(inputRow)
     csv4.close()
 
