@@ -196,6 +196,8 @@ var m = {top: 20, right: 30, bottom: 30, left: 40},
     w = 500 - m.left - m.right,
     h = 400 - m.top - m.bottom;
 
+
+
 function displayChart(id){
 
 	if (arrayHelp.indexOf(+id)!=-1){
@@ -280,7 +282,7 @@ function displayChart(id){
 		      .data(data1)
 		    .enter().append("rect")
 		   	  .transition()
-			  .duration(450)
+			  .duration(250)
 		      .attr("class", "bar")
 		      .attr("x", function(d) { return x(d.State); })
 		      .attr("y", function(d) { return y(+d.Certified); })
@@ -377,7 +379,47 @@ function displayChart(id){
 					    .attr("height", function(d) { return h - y(d.value); })
 					    .style("fill", function(d) { return color(d.name); });
 
-				}
+					var divTooltip = d3.select("#contents").append("div").attr("class", "toolTip");
+
+					bar.on("mousemove", function(d){
+					        
+					        divTooltip.style("left", d3.event.pageX+10+"px");
+					        divTooltip.style("top", d3.event.pageY-25+"px");
+					        divTooltip.style("display", "inline-block");
+					        var x1 = d3.event.pageX, y1 = d3.event.pageY
+					        var elements = document.querySelectorAll(':hover');
+					        l = elements.length
+					        l = l-1
+					        elementData = elements[l].__data__
+					        divTooltip.html((d.State)+"<br>"+elementData.name+"<br>"+elementData.value);
+					
+					});
+					bar.on("mouseout", function(d){
+					        divTooltip.style("display", "none");
+					});
+
+					var legend = chart.selectAll(".legend")
+								    .data(options.slice())
+								    .enter().append("g")
+								    .attr("class", "legend")
+								    .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
+
+					legend.append("rect")
+					    .attr("x", w - 18)
+					    .attr("width", 18)
+					    .attr("height", 18)
+					    .style("fill", color);
+
+					legend.append("text")
+					    .attr("x", w - 24)
+					    .attr("y", 9)
+					    .attr("dy", ".35em")
+					    .style("text-anchor", "end")
+					    .text(function(d) { return d; });
+
+
+
+				} //onchange ends here
 
 			} ///// --- select option on model ends here --- /////
 
