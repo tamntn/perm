@@ -29,9 +29,9 @@
     }
 
     label {
-        position: absolute;
-        top: 222px;
-        right: 35px;
+        position: relative;
+        top: 0px;
+        right: 0px;
         color: #D8D8D8;
     }
 </style>
@@ -39,13 +39,14 @@
 <body>
     <label>
         <input type="checkbox"> Sort values</label>
+    <div id="chart"></div>
 
     <script src="https://d3js.org/d3.v3.min.js"></script>
     <script>
 
-        var margin = { top: 20, right: 20, bottom: 30, left: 40 },
-            width = 1280 - margin.left - margin.right,
-            height = 600 - margin.top - margin.bottom;
+        var margin = { top: 20, right: 20, bottom: 100, left: 40 },
+            width = 960 - margin.left - margin.right,
+            height = 700 - margin.top - margin.bottom;
 
         var x = d3.scale.ordinal()
             .rangeRoundBands([0, width], .1);
@@ -65,7 +66,7 @@
             .orient("left")
             .tickFormat(d3.format(".2s"));
 
-        var svg = d3.select("body").append("svg")
+        var svg = d3.select("#chart").append("svg")
             .attr("width", width + margin.left + margin.right)
             .attr("height", height + margin.top + margin.bottom)
             .append("g")
@@ -118,7 +119,12 @@
             svg.append("g")
                 .attr("class", "x axis")
                 .attr("transform", "translate(0," + height + ")")
-                .call(xAxis);
+                .call(xAxis)
+                .selectAll("text")
+                .style("text-anchor", "end")
+                .attr("dx", "-.8em")
+                .attr("dy", "-.55em")
+                .attr("transform", "rotate(-90)");
 
             svg.append("g")
                 .attr("class", "y axis")
@@ -393,13 +399,25 @@
                 transition.select(".x.axis")
                     .call(xAxis)
                     .selectAll("g")
-                    .delay(delay);
+                    .delay(delay)
+                    .selectAll("text")
+                    .style("text-anchor", "end")
+                    .attr("dx", "-.8em")
+                    .attr("dy", "-.55em");
+
+                // transition.select("g")
+                //     .call(xAxis)
+                //     .delay(delay)
+                //     .selectAll("text")
+                //     .style("text-anchor", "end")
+                //     .attr("dx", "-.8em")
+                //     .attr("dy", "-.55em");
 
 
-                transition.select(".x.axis")
-                    .call(xAxis)
-                    .selectAll("g")
-                    .delay(delay);
+                // transition.select(".x.axis")
+                //     .call(xAxis)
+                //     .selectAll("g")
+                //     .delay(delay);
             }
 
         });

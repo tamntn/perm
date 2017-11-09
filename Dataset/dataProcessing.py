@@ -88,10 +88,10 @@ def updateAcceptanceRateByClassDict(admissionClass, status):
 def calculatePercentage(mydict):
     for key in mydict:
         total = mydict[key][0] + mydict[key][1] + mydict[key][2] + mydict[key][3]
-        certifiedPercentage = int((float(mydict[key][0]) / total * 100))
-        certifiedExpiredPercentage = int((float(mydict[key][1]) / total * 100))
-        deniedPercentage = int((float(mydict[key][3]) / total * 100))
-        withdrawnPercentage = 100 - certifiedPercentage - certifiedExpiredPercentage - deniedPercentage
+        certifiedPercentage = round((float(mydict[key][0]) / total * 100), 2)
+        certifiedExpiredPercentage = round((float(mydict[key][1]) / total * 100), 2)
+        deniedPercentage = round((float(mydict[key][3]) / total * 100), 2)
+        withdrawnPercentage = round((100 - certifiedPercentage - certifiedExpiredPercentage - deniedPercentage), 2)
         mydict[key].append(certifiedPercentage)
         mydict[key].append(certifiedExpiredPercentage)
         mydict[key].append(deniedPercentage)
