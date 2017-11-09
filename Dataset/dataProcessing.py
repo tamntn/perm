@@ -88,10 +88,10 @@ def updateAcceptanceRateByClassDict(admissionClass, status):
 def calculatePercentage(mydict):
     for key in mydict:
         total = mydict[key][0] + mydict[key][1] + mydict[key][2] + mydict[key][3]
-        certifiedPercentage = int((float(mydict[key][0]) / total * 100))
-        certifiedExpiredPercentage = int((float(mydict[key][1]) / total * 100))
-        deniedPercentage = int((float(mydict[key][3]) / total * 100))
-        withdrawnPercentage = 100 - certifiedPercentage - certifiedExpiredPercentage - deniedPercentage
+        certifiedPercentage = round((float(mydict[key][0]) / total * 100), 2)
+        certifiedExpiredPercentage = round((float(mydict[key][1]) / total * 100), 2)
+        deniedPercentage = round((float(mydict[key][3]) / total * 100), 2)
+        withdrawnPercentage = round((100 - certifiedPercentage - certifiedExpiredPercentage - deniedPercentage), 2)
         mydict[key].append(certifiedPercentage)
         mydict[key].append(certifiedExpiredPercentage)
         mydict[key].append(deniedPercentage)
@@ -150,7 +150,7 @@ with open(acceptanceRateByClassFile, 'wb') as csv4:
     writer.writerow(headerRow)
     calculatePercentage(acceptanceRateByClassDict)
     for key in acceptanceRateByClassDict:
-        inputRow = [key, acceptanceRateByClassDict[key][0], acceptanceRateByClassDict[key][1], acceptanceRateByClassDict[key][2], acceptanceRateByClassDict[key][3], acceptanceRateByClassDict[key][4], acceptanceRateByClassDict[key][5], acceptanceRateByClassDict[key][6], acceptanceRateByClassDict[key][7]]
+        inputRow = [key, acceptanceRateByClassDict[key][4], acceptanceRateByClassDict[key][5], acceptanceRateByClassDict[key][6], acceptanceRateByClassDict[key][7], acceptanceRateByClassDict[key][4], acceptanceRateByClassDict[key][5], acceptanceRateByClassDict[key][6], acceptanceRateByClassDict[key][7]]
         writer.writerow(inputRow)
     csv4.close()
 
