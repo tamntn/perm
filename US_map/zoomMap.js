@@ -1,6 +1,6 @@
 var width = window.innerWidth,
-	height = window.innerHeight,
-	centered;
+    height = window.innerHeight,
+    centered;
 
 map();
 
@@ -20,15 +20,7 @@ d3.csv('acceptanceRateByState.csv',function(error,data){
 			num_case_status[i].id = +num_case_status[i].key;
 			arrayHelp.push(+num_case_status[i].key);//pushes to 'arrayHelp' array for future references
 			delete num_case_status[i].key;
-		}
-
-		console.log(num_case_status)
-
-		var projection = d3.geo.albersUsa()
-			.scale(1280)
-			.translate([width / 2, height / 2]);
-
-		var domain = [0, 2, 3];
+	}
 
 	num_case_status = num_case_status.filter(function(d){ if(d.id){ return d } })
 
@@ -115,31 +107,26 @@ d3.csv('acceptanceRateByState.csv',function(error,data){
 
 				total = Certified + Denied + Certified_Expired + Withdrawn;
 
-				if (document.getElementById('p').checked) {
-					//Percentage radio button is checked
-
-					certified_scale = Certified / total * 100;
-
-					return colormap_P(certified_scale);
+			if(document.getElementById('p').checked) {
+  				//Percentage radio button is checked
+  				
+				certified_scale = Certified/total*100;
 
 				return colormap_P(certified_scale); //return to color scale based on Percentage
 
-					certified_scale = Certified
+			}else if(document.getElementById('n').checked) {
+  				//Number radio button is checked
+  				
+				certified_scale = Certified
 
 				return colormap_N(certified_scale); //return to color scale based on Number
 
 			}
-
+				 
 		}
 
 	}//end of changeColors()
 
-		function clicked(d) {
-			zoom(d); //zooms in
-			if (d) {
-				var id = 0;
-				id = +d.id;
-				console.log(id);
 
 	//On click function
 	function clicked(d){
@@ -152,47 +139,19 @@ d3.csv('acceptanceRateByState.csv',function(error,data){
 			
 			displayChart(id); //call function to display chart
 
-
-
-				// When the user clicks on <span> (x), close the modal
-				span.onclick = function () {
-					modal.style.display = "none";
-					zoom(d); //zooms out
-					//location.reload();
-				}
-
-				// When the user clicks anywhere outside of the modal, close it
-				window.onclick = function (event) {
-					if (event.target == modal) {
-						modal.style.display = "none";
-						zoom(d); //zooms out
-					}
-				}
+			// When the user clicks on <span> (x), close the modal
+			span.onclick = function() {
+			    modal.style.display = "none";
+			    zoom(d); //zooms out
+			    //location.reload();
 			}
-			function zoom(d) {
-				var x, y, k;
 
-				if (d && centered !== d) {
-					var centroid = path.centroid(d);
-					x = centroid[0];
-					y = centroid[1];
-					k = 4;
-					centered = d;
-				} else {
-					x = width / 2;
-					y = height / 2;
-					k = 1;
-					centered = null;
-				}
-
-
-				g.selectAll("path")
-					.classed("active", centered && function (d) { return d === centered; });
-
-				g.transition()
-					.duration(750)
-					.attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + -x + "," + -y + ")")
-					.style("stroke-width", 1.5 / k + "px");
+			// When the user clicks anywhere outside of the modal, close it
+			window.onclick = function(event) {
+			    if (event.target == modal) {
+			        modal.style.display = "none";
+			        zoom(d); //zooms out
+			    }
 			}
 		}
 
@@ -230,20 +189,14 @@ d3.csv('acceptanceRateByState.csv',function(error,data){
 
     
 
-		var m = { top: 20, right: 30, bottom: 30, left: 40 },
-			w = 500 - m.left - m.right,
-			h = 400 - m.top - m.bottom;
-
-
-		////////////-------------  Displays Charts  -----------------//////////////
-
+////////////-------------  Displays Charts  -----------------//////////////
 
 //Declare new margin, width and height for the graph inside model
 var m = {top: 20, right: 30, bottom: 30, left: 40},
     w = 500 - m.left - m.right,
     h = 400 - m.top - m.bottom;
 
-			//changeVariables(id);
+function displayChart(id){
 
 	if (arrayHelp.indexOf(+id)!=-1){
 
