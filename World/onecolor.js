@@ -27,6 +27,18 @@ usedata.forEach(function(elem){
  
 });
 
+usedata.forEach(function(elem){
+   try{
+    if(elem.id.length==3){
+        //console.log(elem.id)
+    }
+   }catch(e){
+    console.log(elem.Country)
+   }
+ 
+});
+
+
 var dataset = {};
 // We need to colorize every country based on "numberOfWhatever"
 // colors should be uniq for every value.
