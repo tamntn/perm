@@ -35,7 +35,7 @@ def updateDataTree(jobGroup, jobTitle):
             if updated == False:
                 group['children'].append({
                     "name": jobTitle,
-                    "value": 0
+                    "value": 1
                 })
             break
 

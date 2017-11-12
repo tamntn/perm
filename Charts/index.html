@@ -11,7 +11,7 @@ div.tooltip {
   position: absolute;
   text-align: center;
   width: 100px;
-  height: 87px;
+  height: 130px;
   padding: 2px;
   font: 12px sans-serif;
   background: rgba(0,0,0,.3);
@@ -21,7 +21,7 @@ div.tooltip {
 }
 
 </style>
-<svg width="960" height="500"></svg>
+<svg width="1000" height="500"></svg>
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script>
 
@@ -45,16 +45,16 @@ var z = d3.scaleOrdinal()
 var stack = d3.stack()
     .offset(d3.stackOffsetExpand);
 
-d3.csv("acceptanceRateByState.csv", type, function(error, data) {
+d3.csv("data/acceptanceRateByState.csv", type, function(error, data) {
   if (error) throw error;
 
   // data.sort(function(a, b) { return b[data.columns[1]] / b.total - a[data.columns[1]] / a.total; });
 
-  x.domain(data.map(function(d) { return d.State; }));
-  z.domain(data.columns.slice(1));
+  x.domain(data.map(function(d) { return d.Abbreviation; }));
+  z.domain(data.columns.slice(2));
 
   var serie = g.selectAll(".serie")
-    .data(stack.keys(data.columns.slice(1))(data))
+    .data(stack.keys(data.columns.slice(2))(data))
     .enter().append("g")
       .attr("class", "serie")
       .attr("fill", function(d) { return z(d.key); });
@@ -66,7 +66,7 @@ d3.csv("acceptanceRateByState.csv", type, function(error, data) {
   serie.selectAll("rect")
     .data(function(d) { return d; })
     .enter().append("rect")
-      .attr("x", function(d) { return x(d.data.State); })
+      .attr("x", function(d) { return x(d.data.Abbreviation); })
       .attr("y", function(d) { return y(d[1]); })
       .attr("height", function(d) { return y(d[0]) - y(d[1]); })
       .attr("width", x.bandwidth())
@@ -74,7 +74,8 @@ d3.csv("acceptanceRateByState.csv", type, function(error, data) {
       div.transition()
         .duration(200)
         .style("opacity", .9);
-      div.html("Total: " + parseInt(d.data.Certified + d.data.Certified_Expired+d.data.Denied+d.data.Withdrawn) +"<br/>" +
+      div.html("State: " + d.data.State + "<br/>" +
+              "Total: " + parseInt(d.data.Certified + d.data.Certified_Expired+d.data.Denied+d.data.Withdrawn) +"<br/>" +
               "Certified: " + d.data.Certified + "<br/>" +
               "Certified-Expired: " + d.data.Certified_Expired + "<br/>" +
               "Denied: " + d.data.Denied + "<br/>" +
@@ -87,7 +88,7 @@ d3.csv("acceptanceRateByState.csv", type, function(error, data) {
       div.transition()
         .duration(500)
         .style("opacity", 0);
-        //console.log(d.data);
+        console.log(d.data);
       });
 
   g.append("g")
@@ -101,7 +102,7 @@ d3.csv("acceptanceRateByState.csv", type, function(error, data) {
 
   var legend = serie.append("g")
       .attr("class", "legend")
-      .attr("transform", function(d) { var d = d[d.length - 1]; return "translate(" + (x(d.data.State) + x.bandwidth()) + "," + ((y(d[0]) + y(d[1])) / 2) + ")"; });
+      .attr("transform", function(d) { var d = d[d.length - 1]; return "translate(" + (x(d.data.Abbreviation) + x.bandwidth()) + "," + ((y(d[0]) + y(d[1])) / 2) + ")"; });
 
   legend.append("line")
       .attr("x1", -6)
@@ -117,7 +118,7 @@ d3.csv("acceptanceRateByState.csv", type, function(error, data) {
 });
 
 function type(d, i, columns) {
-  for (i = 1, t = 0; i < columns.length; ++i) t += d[columns[i]] = +d[columns[i]];
+  for (i = 2, t = 0; i < columns.length; ++i) t += d[columns[i]] = +d[columns[i]];
   d.total = t;
   return d;
 }

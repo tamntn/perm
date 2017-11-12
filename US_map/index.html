@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>  
+  <style>
+
+      .background {
+        fill: none;
+        pointer-events: all;
+      }
+
+      #states {
+        fill: #aaa;
+      }
+
+      #states .active {
+        fill: orange;
+      }
+
+      #state-borders {
+        fill: none;
+        stroke: #fff;
+        stroke-width: 1.5px;
+        stroke-linejoin: round;
+        stroke-linecap: round;
+        pointer-events: none;
+      }
+
+      /* On mouse hover, lighten state color */
+      path:hover {
+        fill-opacity: .7;
+      }
+        
+      /* Legend Font Style */
+      body {
+        font: 11px sans-serif;
+      }
+              
+
+      /*Starts here*/
+
+      /* The Modal (background) */
+      .modal {
+          display: none; /* Hidden by default */
+          position: fixed; /* Stay in place */
+          z-index: 1; /* Sit on top */
+          left: 0;
+          top: 0;
+          width: 100%; /* Full width */
+          height: 100%; /* Full height */
+          overflow: auto; /* Enable scroll if needed */
+          background-color: rgb(0,0,0); /* Fallback color */
+          background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+      }
+
+      /* Modal Content/Box */
+      .modal-content {
+          background-color: #fefefe;
+          margin: 15% auto; /* 15% from the top and centered */
+          padding: 20px;
+          border: 1px solid #888;
+          width: 80%; /* Could be more or less, depending on screen size */
+      }
+
+      /* The Close Button */
+      .close {
+          color: #aaa;
+          float: right;
+          font-size: 28px;
+          font-weight: bold;
+      }
+
+      .close:hover,
+      .close:focus {
+          color: black;
+          text-decoration: none;
+          cursor: pointer;
+      }
+
+      label {
+              position: absolute;
+              top: 222px;
+              right: 35px;
+          }
+
+      .toolTip {
+          font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+          position: absolute;
+          display: none;
+          width: auto;
+          height: auto;
+          background: none repeat scroll 0 0 white;
+          border: 0 none;
+          border-radius: 8px 8px 8px 8px;
+          box-shadow: -3px 3px 15px #888888;
+          color: black;
+          font: 12px sans-serif;
+          padding: 5px;
+          text-align: center;
+      }
+
+      .legend {
+          font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+          font-size: 60%;
+      }
+
+      rect {
+          stroke-width: 2;
+      }
+
+      text {
+        font: 10px sans-serif;
+      }
+
+      .axis text {
+        font: 10px sans-serif;
+      }
+
+      .axis path{
+        fill: none;
+        stroke: #000;
+      }
+
+      .axis line {
+        fill: none;
+        stroke: #000;
+        shape-rendering: crispEdges;
+      }
+
+      .axis .tick line {
+        stroke-width: 1;
+        stroke: rgba(0, 0, 0, 0.2);
+      }
+
+      .axisHorizontal path{
+        fill: none;
+      }
+
+      .axisHorizontal line {
+        fill: none;
+        stroke: #000;
+        shape-rendering: crispEdges;
+      }
+
+      .axisHorizontal .tick line {
+        stroke-width: 1;
+        stroke: rgba(0, 0, 0, 0.2);
+      }
+
+      .bar {
+        fill: steelblue;
+        fill-opacity: .9;
+      }
+
+
+
+    </style>
+</head>
+<body>
+      <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous"> -->
+      <script src="https://d3js.org/d3.v3.min.js"></script>
+      <script src="https://d3js.org/topojson.v1.min.js"></script>
+      <script src="zoomMap.js"></script>
+
+      <label class='changeColorMap'>
+              <input type="radio" name='arrange' id='p' onclick="mapColor()" checked> Percentage Based <br>
+              <input type="radio" name='arrange' id='n' onclick="mapColor()"> Number Based
+      </label>
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+
+          <!-- Modal content -->
+          <div class="modal-content">
+          
+            <span class="close">&times;</span>
+            <p>Graphs: </p>
+
+            <div id='for_entries'></div>
+                <p>Compare With</p>
+            
+            <div id='contents'>
+                <svg></svg>
+            </div>
+          
+          </div>
+
+      </div>
+      
+      <div id='svg_map'></div>
+      
+      <script>
+      // Get the modal
+      var modal = document.getElementById('myModal');
+
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function() {
+          modal.style.display = "none";
+      }
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+          if (event.target == modal) {
+              modal.style.display = "none";
+          }
+      }
+      </script>
+
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+</body>
+</html>
