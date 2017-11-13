@@ -70,12 +70,11 @@ var data = d3.csv('acceptanceRateByCountry.csv',function(data){
 	var value;
 	var iso;
 	dataset1.forEach(function(item){
-		if (item[0]=='-99')
-		{
+		if (item[0]=='-99'){
 			iso='CYN'
 		}else{
-	     iso = item[0];
-		}
+	     	iso = item[0];
+	 	}
 	    value = item[position];
 	    dataset2[iso] = { Percentage: item[1].toFixed(2), fillColor: paletteScale(value), 
 	    Certified:item[2], Denied:item[3], Certified_Expired:item[4],Withdrawn:item[5] };
@@ -93,9 +92,26 @@ var data = d3.csv('acceptanceRateByCountry.csv',function(data){
 	    data: dataset,
 	    height:900,
 	    responsive:true,
-	    done: function(datamap,data) {
-        datamap.svg.selectAll('.datamaps-subunit').on('click', function(geography) {
-        	alert(pie_chart()+" for "+geography.properties.name)
+	    done: function(datamap) { // On click function
+       		datamap.svg.selectAll('.datamaps-subunit').on('click', function(geography) {
+
+	        	//alert(pie_chart()+" for "+geography.id )
+	        	data.forEach(function(d){
+	        		
+	        		
+	        		if (d.id == geography.id){
+	        			console.log(d)
+	        			str = [geography.properties.name, 
+	                //'\nPercentage:', d.Percentage, 
+	                '\nNo of Certified: ', d.Certified, 
+	                '\nDenied: ', d.Denied, 
+	                '\nCertified_Expired: ', d['Certified-Expired'], 
+	                '\nWithdrawn: ', d.Withdrawn].join('');
+	        			alert(str)
+
+	        		}
+	        	});	
+        		
         	});
     	},
 	    geographyConfig: {
@@ -119,7 +135,7 @@ var data = d3.csv('acceptanceRateByCountry.csv',function(data){
 	                '<br>Denied: <strong>', data.Denied, '</strong>',
 	                '<br>Certified_Expired: <strong>', data.Certified_Expired, '</strong>',
 	                '<br>Withdrawn: <strong>', data.Withdrawn, '</strong>',
-	                '<br>color: <strong>', data.fillColor, '</strong>',
+	               // '<br>color: <strong>', data.fillColor, '</strong>',
 	                '</div>'].join('');
 	        	}
 	        	//map.updateChoropleth({{USA:}})
