@@ -70,7 +70,12 @@ var data = d3.csv('acceptanceRateByCountry.csv',function(data){
 	var value;
 	var iso;
 	dataset1.forEach(function(item){
+		if (item[0]=='-99')
+		{
+			iso='CYN'
+		}else{
 	     iso = item[0];
+		}
 	    value = item[position];
 	    dataset2[iso] = { Percentage: item[1].toFixed(2), fillColor: paletteScale(value), 
 	    Certified:item[2], Denied:item[3], Certified_Expired:item[4],Withdrawn:item[5] };
@@ -90,14 +95,12 @@ var data = d3.csv('acceptanceRateByCountry.csv',function(data){
 	    responsive:true,
 	    done: function(datamap,data) {
         datamap.svg.selectAll('.datamaps-subunit').on('click', function(geography) {
-        	alert(pie_chart())
+        	alert(pie_chart()+" for "+geography.properties.name)
         	});
     	},
 	    geographyConfig: {
 	        borderColor: '#DEDEDE',
 	        highlightBorderWidth: 2,
-
-	        
 	        // don't change color on mouse hover
 	        highlightFillColor: function(geo) {
 	            return geo['fillColor'] || '#F5F5F5';
@@ -116,37 +119,30 @@ var data = d3.csv('acceptanceRateByCountry.csv',function(data){
 	                '<br>Denied: <strong>', data.Denied, '</strong>',
 	                '<br>Certified_Expired: <strong>', data.Certified_Expired, '</strong>',
 	                '<br>Withdrawn: <strong>', data.Withdrawn, '</strong>',
+	                '<br>color: <strong>', data.fillColor, '</strong>',
 	                '</div>'].join('');
 	        	}
+	        	//map.updateChoropleth({{USA:}})
 	    }
 	});//End of DAtamap
 //map.labels({labelColor: 'blue', fontSize: 12});
 	//map.legend()
+
 document.getElementById('percent').onclick = function(e){
-	newdata=changedata()
-	//console.log(newdata)
-    map.updateChoropleth(newdata);
+    map.updateChoropleth(changedata());
 };
 document.getElementById('number').onclick = function(e){
-	newdata=changedata()
-	//console.log(newdata)
-    map.updateChoropleth(newdata);
+    map.updateChoropleth(changedata());
 };
 document.getElementById('denied').onclick = function(e){
-	newdata=changedata()
-    map.updateChoropleth(newdata);
+    map.updateChoropleth(changedata());
 };
 document.getElementById('cExpired').onclick = function(e){
-	newdata=changedata()
-    map.updateChoropleth(newdata);
-};document.getElementById('Withdrawn').onclick = function(e){
-	newdata=changedata()
-    map.updateChoropleth(newdata);
+    map.updateChoropleth(changedata());
+};document.getElementById('withdrawn').onclick = function(e){
+    map.updateChoropleth(changedata());
 };
-});
-
 function pie_chart(){
-	return "inster Pie chart here"
+    return "Insert Pie chart here";
 }
-
-console.log("End")
+});
