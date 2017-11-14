@@ -3,10 +3,6 @@ var countrylist=jsonworld.objects.world.geometries;
 var dataset1=[];
 var paletteScale;
 
-function mapColor() { 
-  world()
-}
-
 var data = d3.csv('acceptanceRateByCountry.csv',function(data){
 	    usedata=data
 	    countrylist.forEach(function(e){
@@ -37,49 +33,51 @@ var data = d3.csv('acceptanceRateByCountry.csv',function(data){
 	 
 	// });
 
-
-
-
-
 	// We need to colorize every country based on "onlyValues"
 	// For this purpose we create palette(using min/max series-value)
 	function changedata(){
-	var dataset2 = {};
-	var position;
-	if(document.getElementById('percent').checked) 	   {	position = 1}
-	else if(document.getElementById('number').checked) {	position = 2}
-	else if(document.getElementById('denied').checked) {	position =3}
-	else if(document.getElementById('cExpired').checked) {	position =4}
-	else if(document.getElementById('withdrawn').checked) {	position =5}
+		var dataset2 = {};
+		var position;
+		if(document.getElementById('percent').checked) 	   {	position = 1}
+		else if(document.getElementById('number').checked) {	position = 2}
+		// else if(document.getElementById('denied').checked) {	position =3}
+		// else if(document.getElementById('cExpired').checked) {	position =4}
+		// else if(document.getElementById('withdrawn').checked) {	position =5}
 
-	var onlyValues = dataset1.map(function(obj){ return obj[position]; });
-	var minValue = Math.min.apply(0, onlyValues),
-	    maxValue = Math.max.apply(0, onlyValues);
+		var onlyValues = dataset1.map(function(obj){ return obj[position]; });
+		var minValue = Math.min.apply(0, onlyValues),
+		    maxValue = Math.max.apply(0, onlyValues);
+		paletteScale = d3.scale.linear().domain([minValue,maxValue]).range(["#ffffff","#b304e5"]);// purple color
+		//paletteScale = d3.scale.linear().domain([minValue,maxValue]).range(["#dbfce5","#01591c"]); //Green color
+		// paletteScale = d3.scale.linear().domain([minValue,maxValue]).range(["#EFEFFF","#02386F"]) //Blue Color
 
-	if(document.getElementById('percent').checked) {
-		 paletteScale = d3.scale.linear().domain([minValue,maxValue]).range(["#dbfce5","#01591c"]);// Green color
-	}else if(document.getElementById('number').checked) {
-		 paletteScale = d3.scale.linear().domain([minValue,maxValue]).range(["#EFEFFF","#02386F"]);// blue color
-	}else if(document.getElementById('denied').checked) {
-		 paletteScale = d3.scale.linear().domain([minValue,maxValue]).range(["#ffe2e2","#fc0000"]);// red color
-	}else if(document.getElementById('cExpired').checked) {
-		 paletteScale = d3.scale.linear().domain([minValue,maxValue]).range(["#fcf5e5","#e5a104"]);// blue color
-	}else if(document.getElementById('withdrawn').checked) {
-		 paletteScale = d3.scale.linear().domain([minValue,maxValue]).range(["#d6b3e0","#b304e5"]);// red color
-	}
-	var value;
-	var iso;
-	dataset1.forEach(function(item){
-		if (item[0]=='-99'){
-			iso='CYN'
-		}else{
-	     	iso = item[0];
-	 	}
-	    value = item[position];
-	    dataset2[iso] = { Percentage: item[1].toFixed(2), fillColor: paletteScale(value), 
-	    Certified:item[2], Denied:item[3], Certified_Expired:item[4],Withdrawn:item[5] };
-	});
-	return dataset2;
+
+		// if(document.getElementById('percent').checked) {	
+		// 	 paletteScale = d3.scale.linear().domain([minValue,maxValue]).range(["#dbfce5","#01591c"]);// Green color
+		// }else if(document.getElementById('number').checked) {
+		// 	 paletteScale = d3.scale.linear().domain([minValue,maxValue]).range(["#dbfce5","#01591c"]); //Green color
+		// 	// paletteScale = d3.scale.linear().domain([minValue,maxValue]).range(["#EFEFFF","#02386F"]);// blue color
+		// }
+		// else if(document.getElementById('denied').checked) {
+		// 	 paletteScale = d3.scale.linear().domain([minValue,maxValue]).range(["#ffe2e2","#fc0000"]);// red color
+		// }else if(document.getElementById('cExpired').checked) {
+		// 	 paletteScale = d3.scale.linear().domain([minValue,maxValue]).range(["#fcf5e5","#e5a104"]);// blue color
+		// }else if(document.getElementById('withdrawn').checked) {
+		// 	 paletteScale = d3.scale.linear().domain([minValue,maxValue]).range(["#d6b3e0","#b304e5"]);// purple color
+		// }
+		var value;
+		var iso;
+		dataset1.forEach(function(item){
+			if (item[0]=='-99'){
+				iso='CYN'
+			}else{
+		     	iso = item[0];
+		 	}
+		    value = item[position];
+		    dataset2[iso] = { Percentage: item[1].toFixed(2), fillColor: paletteScale(value), 
+		    Certified:item[2], Denied:item[3], Certified_Expired:item[4],Withdrawn:item[5] };
+		});
+		return dataset2;
 	}
 
 	dataset=changedata()
@@ -90,25 +88,21 @@ var data = d3.csv('acceptanceRateByCountry.csv',function(data){
 	    // countries don't listed in dataset will be painted with this color
 	    fills: { defaultFill: 'white' },
 	    data: dataset,
-	    height:900,
+	    
 	    responsive:true,
 	    done: function(datamap) { // On click function
        		datamap.svg.selectAll('.datamaps-subunit').on('click', function(geography) {
-
 	        	//alert(pie_chart()+" for "+geography.id )
 	        	data.forEach(function(d){
-	        		
-	        		
 	        		if (d.id == geography.id){
-	        			console.log(d)
-	        			str = [geography.properties.name, 
+	        			//console.log(d)
+	        		str = [geography.properties.name, 
 	                //'\nPercentage:', d.Percentage, 
 	                '\nNo of Certified: ', d.Certified, 
 	                '\nDenied: ', d.Denied, 
 	                '\nCertified_Expired: ', d['Certified-Expired'], 
 	                '\nWithdrawn: ', d.Withdrawn].join('');
 	        			alert(str)
-
 	        		}
 	        	});	
         		
@@ -142,7 +136,7 @@ var data = d3.csv('acceptanceRateByCountry.csv',function(data){
 	    }
 	});//End of DAtamap
 //map.labels({labelColor: 'blue', fontSize: 12});
-	//map.legend()
+	map.legend()
 
 document.getElementById('percent').onclick = function(e){
     map.updateChoropleth(changedata());
@@ -150,15 +144,54 @@ document.getElementById('percent').onclick = function(e){
 document.getElementById('number').onclick = function(e){
     map.updateChoropleth(changedata());
 };
-document.getElementById('denied').onclick = function(e){
-    map.updateChoropleth(changedata());
-};
-document.getElementById('cExpired').onclick = function(e){
-    map.updateChoropleth(changedata());
-};document.getElementById('withdrawn').onclick = function(e){
-    map.updateChoropleth(changedata());
-};
-function pie_chart(){
-    return "Insert Pie chart here";
-}
+// document.getElementById('denied').onclick = function(e){
+//     map.updateChoropleth(changedata());
+// };
+// document.getElementById('cExpired').onclick = function(e){
+//     map.updateChoropleth(changedata());
+// };document.getElementById('withdrawn').onclick = function(e){
+//     map.updateChoropleth(changedata());
+// };
 });
+var headers ={
+	Country:'Country',
+	Certified: 'Certified',
+	'Certified-Expired' :'Certified-Expired',
+	Denied :'Denied',
+	id:'id'
+
+	//total=(+elem.Certified)+ (+elem.Withdrawn)+(+elem.Denied)+(+elem["Certified-Expired"])
+}
+// console.log('HEre');
+// function exportCSVFile(headers, items, fileTitle) {
+//     if (headers) {
+//         items.unshift(headers);
+//     }
+
+//     // Convert Object to JSON
+//     var jsonObject = JSON.stringify(items);
+
+//     var csv = this.convertToCSV(jsonObject);
+
+//     var exportedFilenmae = fileTitle + '.csv' || 'export.csv';
+
+//     var blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+//     if (navigator.msSaveBlob) { // IE 10+
+//         navigator.msSaveBlob(blob, exportedFilenmae);
+//     } else {
+//         var link = document.createElement("a");
+//         if (link.download !== undefined) { // feature detection
+//             // Browsers that support HTML5 download attribute
+//             var url = URL.createObjectURL(blob);
+//             link.setAttribute("href", url);
+//             link.setAttribute("download", exportedFilenmae);
+//             link.style.visibility = 'hidden';
+//             document.body.appendChild(link);
+//             link.click();
+//             document.body.removeChild(link);
+//         }
+//     }
+// }
+// exportCSVFile(headers, usedata, 'newfile');
+//  // call the exportCSVFile() function to process the JSON and trigger the download
+// console.log('End');
