@@ -1,5 +1,5 @@
 function sortChart() {
-    var margin = { top: 20, right: 20, bottom: 100, left: 40 },
+    var margin = { top: 20, right: 20, bottom: 100, left: 60 },
         chartwidth = 960 - margin.left - margin.right,
         chartheight = 700 - margin.top - margin.bottom;
 
@@ -148,7 +148,7 @@ function sortChart() {
 
             })
             .on("mouseout", function () {
-                svg.select(".tooltip").remove();
+                svg.select(".tooltip-chart").remove();
                 d3.select(this).attr("stroke", "pink").attr("stroke-width", 0.2);
 
             })

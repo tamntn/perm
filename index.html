@@ -22,7 +22,7 @@
 	<script src="https://d3js.org/d3.v3.min.js"></script>
 	<script src="https://d3js.org/topojson.v1.min.js"></script>
 	<!-- World Map Input -->
-	<script src="http://datamaps.github.io/scripts/datamaps.world.js?v=1"></script>
+	<script src="https://datamaps.github.io/scripts/datamaps.world.js?v=1"></script>
 	<script src="World/datamap.js"></script>
 	<!-- Tree Input -->
 	<link rel="stylesheet" href="Job Tree/jobTree.css" />
@@ -65,6 +65,9 @@
 								<li>
 									<a href="#job" class="scrolly">Job Sectors</a>
 								</li>
+								<li>
+									<a href="#visa" class="scrolly">Admission Class</a>
+								</li>
 							</ul>
 						</div>
 					</li>
@@ -76,8 +79,10 @@
 		<section id="banner">
 			<div class="inner">
 				<h2>U.S. Permanent Visa</h2>
-				<p>project by
-					<a href="http://html5up.net">Team ANTS</a>
+				<p>
+					<em>project by
+						<strong>Team ANTS</strong>
+					</em>
 				</p>
 				<div style="height:200px">
 					<p id="typeExample"></p>
@@ -192,6 +197,7 @@
 			<div class="row uniform">
 				<div class="1u 12u$(medium)"></div>
 				<div id="jobTree" class="10u 12u$(medium)"></div>
+				<div class="1u 12u$(medium)"></div>
 			</div>
 		</section>
 
@@ -209,9 +215,14 @@
 				<label for="sortCheckBox" style="color:black">Sort values</label>
 			</div>
 			<div class="row uniform">
-				<div class="2u 12u$(medium)"></div>
+				<div class="1u 12u$(medium)"></div>
 				<div id="visaChart" class="8u 12u$(medium)"></div>
-				<div class="2u 12u$(medium)"></div>
+				<div class="1u 12u$(medium)"></div>
+			</div>
+			<div class="row uniform">
+				<div class="1u 12u$(medium)"></div>
+				<div id="changeChart" class="8u 12u$(medium)"></div>
+				<div class="1u 12u$(medium)"></div>
 			</div>
 		</section>
 
@@ -348,8 +359,10 @@
 	<script src="Website/zoomMap.js"></script>
 	<script src="Job Tree/jobTree.js"></script>
 	<script src="Visa Charts/sortArrange.js"></script>
+	<script src="Visa Charts/changeView.js"></script>
 	<script type="text/javascript">
 		sortChart();
+		changeGraph();
 		// Get the modal
 		var modal = document.getElementById('myModal');
 
@@ -380,7 +393,7 @@
 			.tiPause(1000);
 
 		window.sr = ScrollReveal();
-		sr.reveal('#why-text', { duration: 2000 , viewFactor: 0.3 });
+		sr.reveal('#why-text', { duration: 2000, viewFactor: 0.3 });
 		sr.reveal('#jobTree', { duration: 2000, viewFactor: 0.3 });
 	</script>
 	<!--<script src="assets/js/jquery.min.js"></script>-->

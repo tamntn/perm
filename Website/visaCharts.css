@@ -21,6 +21,14 @@
     fill: black;
 }
 
+.tooltip-change-view {
+    text-anchor: middle;
+    font-family: sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    fill: green;
+}
+
 label {
     position: relative;
     top: 0px;
