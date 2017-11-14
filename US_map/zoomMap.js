@@ -4,8 +4,9 @@ var width = window.innerWidth,
 
 map();
 
-function map(){
+var DataCertifiedJob
 
+function map(){
 d3.csv('acceptanceRateByState.csv',function(error,data){
 	var dataset=data;
 
@@ -138,7 +139,7 @@ d3.csv('acceptanceRateByState.csv',function(error,data){
 			modal.style.display = "block";
 			
 			displayChart(id); //call function to display chart
-
+			displayPieChart(id);
 			// When the user clicks on <span> (x), close the modal
 			span.onclick = function() {
 			    modal.style.display = "none";
@@ -433,8 +434,99 @@ function displayChart(id){
 ///////////////////////////////////
 
 
+//////////////   Pie Chart   /////////////////////
+
+
+d3.json('jobByState.json',function(error, dataJob){
+	DataCertifiedJob = dataJob;
+	
+
+	DataCertifiedJob.states.sort(function(a, b){
+    		return b.certified - a.certified;
+	});
+
+	for (i in DataCertifiedJob.states){
+		DataCertifiedJob.states[i].jobGroup = DataCertifiedJob.states[i].jobGroup.splice(0,5);		
+	}
+
+	arrayHelp2 =[]
+	for (i in DataCertifiedJob.states){
+		arrayHelp2.push(+DataCertifiedJob.states[i].id);
+	}
+
+	console.log(DataCertifiedJob)
+	console.log(arrayHelp2)
+
+
+});
+
+function displayPieChart(id){
+	if(arrayHelp2.indexOf(+id)!=-1){
+		var index = arrayHelp2.indexOf(+id);
+		var frequency = DataCertifiedJob.states[index].jobGroup
+		console.log(frequency)
+
+		d3.select('#for_entries').append('p').style('float','right').style('margin-right','30%').append('b').text('Top 5 Jobs in the state')
+		var svgPie = d3.select("#contents")
+					.append("svg")
+					.attr("width", w)
+					.attr("height", h)
+					.append("g")
+					.attr("transform","translate(100,100)");
+
+		var pie = d3.layout.pie()
+					.sort(null)
+					.value(function(d){ return d.Certified;});
+
+		var mypie = pie(frequency);
+		console.log(mypie);
+
+		var arc = d3.svg.arc();
+		arc.outerRadius(100);
+		arc.innerRadius(0);
+
+		var color= d3.scale.category10();
+
+		console.log(pie(frequency))
+
+		var divTooltipPie = d3.select("#contents").append("div").attr("class", "toolTip");
+
+
+		var g = svgPie.selectAll(".fan")
+				.data(pie(frequency))
+				.enter()
+				.append("g")
+				.attr("class", "fan")
+				
+			g.append("path")
+				.attr("d", arc)
+				.style("fill", function(d,i) { return color(i); });
+
+			g.on("mousemove", function(d){
+					        
+					        divTooltipPie.style("left", d3.event.pageX+10+"px");
+					        divTooltipPie.style("top", d3.event.pageY-25+"px");
+					        divTooltipPie.style("display", "inline-block");
+					        var x1 = d3.event.pageX, y1 = d3.event.pageY
+					        var elements = document.querySelectorAll(':hover');
+					        l = elements.length
+					        l = l-1
+					        elementData = elements[l].__data__
+					        divTooltipPie.html((d.data.name)+"<br>"+elementData.value);
+					
+					});
+					g.on("mouseout", function(d){
+					        divTooltipPie.style("display", "none");
+					});
+	}
+}
+
+///////////////////////////////////
+
+
 
 }); //end of d3.csv
+ //end of d3.jsonJobState
 
 } //end of function map()
 
