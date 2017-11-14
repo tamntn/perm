@@ -49,7 +49,7 @@ var data = d3.csv('World/acceptanceRateByCountry.csv',function(data){
 		    maxValue = Math.max.apply(0, onlyValues);
 		//paletteScale = d3.scale.linear().domain([minValue,maxValue]).range(["#ffffff","#b304e5"]);// purple color
 		//paletteScale = d3.scale.linear().domain([minValue,maxValue]).range(["#dbfce5","#01591c"]); //Green color
-		paletteScale = d3.scale.linear().domain([minValue,maxValue]).range(["#EFEFFF","#02386F"]) //Blue Color
+		paletteScale = d3.scale.linear().domain([minValue,maxValue]).range(["#EFEFFF","#000080"]); //Blue Color
 
 
 		// if(document.getElementById('percent').checked) {	

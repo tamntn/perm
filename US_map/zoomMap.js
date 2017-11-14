@@ -41,11 +41,11 @@ d3.csv('acceptanceRateByState.csv',function(error,data){
 
 	var colormap_P = d3.scale.linear() //Calulates color domain based on percentage
 	      .domain([30,55])
-	      .range(['#dddddd','#000080']);
+	      .range(['#EFEFFF','#000080']);
 
 	var colormap_N = d3.scale.linear() ////Calulates color domain based on number
 	      .domain([0, d3.max(data, function(d) { return +d.Certified; })]) 
-	      .range(['#dddddd','#000080']);
+	      .range(['#EFEFFF','#000080']);
 
 	d3.select('#svg_map').remove(); //help remove on update
 
