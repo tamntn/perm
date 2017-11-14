@@ -77,7 +77,18 @@ function map() {
 				.enter().append("path")
 				.attr("d", path)
 				.style('fill', function (d) { return changeColors(d); })
-				.on("click", clicked);
+				.on("click", clicked)
+				.on('mouseover', function (d, i) {
+
+					var currentState = this;
+					d3.select(this).style('fill-opacity', .7);
+				})
+				.on('mouseout', function (d, i) {
+					d3.selectAll('path')
+						.style({
+							'fill-opacity': 1
+						});
+				});
 
 			g.append("path")
 				.datum(topojson.mesh(us, us.objects.states, function (a, b) { return a !== b; }))

@@ -100,7 +100,7 @@ var data = d3.csv('World/acceptanceRateByCountry.csv',function(data){
 	                //'\nPercentage:', d.Percentage, 
 	                '\nNo of Certified: ', d.Certified, 
 	                '\nDenied: ', d.Denied, 
-	                '\nCertified_Expired: ', d['Certified-Expired'], 
+	                '\nCertified-Expired: ', d['Certified-Expired'], 
 	                '\nWithdrawn: ', d.Withdrawn].join('');
 	        			alert(str)
 	        		}
@@ -124,10 +124,10 @@ var data = d3.csv('World/acceptanceRateByCountry.csv',function(data){
 	            // tooltip content
 	            return ['<div class="hoverinfo">',
 	                '<strong>', geo.properties.name, '</strong>',
-	                '<br>Percentage: <strong>', data.Percentage, '</strong>',
-	                '<br>No of Certified: <strong>', data.Certified, '</strong>',
+	                '<br>Certified Percentage: <strong>', data.Percentage, '%</strong>',
+	                '<br>Certified: <strong>', data.Certified, '</strong>',
 	                '<br>Denied: <strong>', data.Denied, '</strong>',
-	                '<br>Certified_Expired: <strong>', data.Certified_Expired, '</strong>',
+	                '<br>Certified-Expired: <strong>', data.Certified_Expired, '</strong>',
 	                '<br>Withdrawn: <strong>', data.Withdrawn, '</strong>',
 	               // '<br>color: <strong>', data.fillColor, '</strong>',
 	                '</div>'].join('');

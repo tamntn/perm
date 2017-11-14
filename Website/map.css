@@ -21,9 +21,9 @@
   }
   
   /* On mouse hover, lighten state color */
-  path:hover {
+  /* path:hover {
     fill-opacity: .7;
-  }
+  } */
           
   /* Legend Font Style */
   body {

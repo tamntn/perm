@@ -1,6 +1,6 @@
 .story {
     text-align: center;
-    padding-top: 40px;
+    padding-top: 30px;
 }
 
 .story h1{
@@ -9,6 +9,7 @@
 
 .story h2{
     color: white;
+    font-size: 32px;
 }
 
 .story h3{
