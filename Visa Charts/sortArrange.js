@@ -39,7 +39,7 @@ function sortChart() {
     d3.select("#sortCheckBox")
         .property("disabled", true)
         .property("checked", false);
-    d3.select('#visaChart')
+    d3.select('#visaChart-container')
         .select("label")
         .style("color", "#D8D8D8");
 
@@ -205,7 +205,7 @@ function sortChart() {
 
                     //enable sort checkbox
                     d3.select("#sortCheckBox").property("disabled", false)
-                    d3.select("#visaChart").select('label').style("color", "black")
+                    d3.select("#visaChart-container").select('label').style("color", "black")
                     //sort the bars if checkbox is clicked            
                     d3.select("#sortCheckBox").on("change", change);
 
@@ -226,7 +226,7 @@ function sortChart() {
                         }
 
                         //disable sort checkbox
-                        d3.select('#visaChart')
+                        d3.select('#visaChart-container')
                             .select("label")
                             .style("color", "#D8D8D8");
                         d3.select("#sortCheckBox")

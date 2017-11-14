@@ -1,5 +1,5 @@
-var margin = { top: 20, right: 120, bottom: 20, left: 120 },
-    treewidth = document.body.clientWidth - margin.right - margin.left,
+var margin = { top: 20, right: 120, bottom: 20, left: 200 },
+    treewidth = document.body.clientWidth * 10 / 12 - margin.right - margin.left,
     treeheight = window.innerHeight - $("#header").height() - margin.top - margin.bottom;
 
 var i = 0,

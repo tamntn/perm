@@ -122,7 +122,7 @@
 		</section>
 
 		<section id="worldmap-container" class="mapVisual">
-			<div class="map-option">
+			<div class="visual-option">
 				<input type="radio" name='worldOption' id='percent'>
 				<label for="percent" style="color:black">Percentage Based</label>
 				<input type="radio" name='worldOption' id='number' checked>
@@ -153,7 +153,7 @@
 		</section>
 
 		<section id="usmap" class="mapVisual">
-			<div class="map-option">
+			<div class="visual-option">
 				<input type="radio" id="p" name="arrange" onclick="mapColor()" checked>
 				<label for="p" style="color:black">Percentage Based</label>
 				<input type="radio" id="n" name="arrange" onclick="mapColor()">
@@ -188,10 +188,10 @@
 		</section>
 
 		<section id="jobTree-container" class="mapVisual">
-			<div class="row">
+			<div class="visual-option"></div>
+			<div class="row uniform">
 				<div class="1u 12u$(medium)"></div>
 				<div id="jobTree" class="10u 12u$(medium)"></div>
-				<div class="1u 12u$(medium)"></div>
 			</div>
 		</section>
 
@@ -204,14 +204,14 @@
 		</section>
 
 		<section id="visaChart-container" class="mapVisual">
+			<div class="visual-option">
+				<input type="checkbox" id="sortCheckBox">
+				<label for="sortCheckBox" style="color:black">Sort values</label>
+			</div>
 			<div class="row uniform">
-				<div class="1u 12u$(medium)"></div>
-				<div id="visaChart" class="10u 12u$(medium)">
-						<input type="checkbox" id="sortCheckBox">
-						<label for="sortCheckBox" style="color:black">Sort values</label>
-					<div id="chart"></div>
-				</div>
-				<div class="1u 12u$(medium)"></div>
+				<div class="2u 12u$(medium)"></div>
+				<div id="visaChart" class="8u 12u$(medium)"></div>
+				<div class="2u 12u$(medium)"></div>
 			</div>
 		</section>
 
@@ -356,8 +356,8 @@
 		// Get the <span> element that closes the modal
 		var span = document.getElementsByClassName("close")[0];
 
-		var sentence1 = 'over <strong>370,000</strong> foreigners have applied for an U.S. Permanent Visa.',
-			sentence2 = 'nearly <strong>60%</strong> of people who applied got certified.',
+		var sentence1 = 'more than <strong>370,000</strong> foreigners have applied for an U.S. Permanent Visa.',
+			sentence2 = 'nearly <strong>45%</strong> of people who applied got certified.',
 			sentence3 = 'We dug deep into this visa application data.'
 		$('#typeExample').typeIt({
 			speed: 40,
@@ -372,7 +372,7 @@
 			.tiType(sentence1)
 			.tiPause(2000)
 			.tiDelete(sentence1.length - 17)
-			.tiPause(750)
+			.tiPause(500)
 			.tiType(sentence2)
 			.tiPause(2000)
 			.tiDelete()
@@ -380,7 +380,7 @@
 			.tiPause(1000);
 
 		window.sr = ScrollReveal();
-		sr.reveal('#why-text', { duration: 2000 });
+		sr.reveal('#why-text', { duration: 2000 , viewFactor: 0.3 });
 		sr.reveal('#jobTree', { duration: 2000, viewFactor: 0.3 });
 	</script>
 	<!--<script src="assets/js/jquery.min.js"></script>-->
