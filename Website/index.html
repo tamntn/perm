@@ -1,0 +1,308 @@
+<!DOCTYPE HTML>
+<!--
+	Spectral by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>PERM</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+	<link rel="stylesheet" href="map.css" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="story.css" />
+	<script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/jquery.typeit/4.4.0/typeit.min.js"></script>
+	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+	<script src="https://d3js.org/d3.v3.min.js"></script>
+	<script src="https://d3js.org/topojson.v1.min.js"></script>
+</head>
+
+<body class="landing">
+
+	<!-- Page Wrapper -->
+	<div id="page-wrapper">
+
+		<!-- Header -->
+		<header id="header" class="alt">
+			<h1>
+				<a href="index.html">U.S. Permanent Visa</a>
+			</h1>
+			<nav id="nav">
+				<ul>
+					<li class="special">
+						<a href="#menu" class="menuToggle">
+							<span>Menu</span>
+						</a>
+						<div id="menu">
+							<ul>
+								<li>
+									<a href="#banner" class="scrolly">Home</a>
+								</li>
+								<li>
+									<a href='#map1' class="scrolly">World Map</a>
+								</li>
+								<li>
+									<a href="#map2" class="scrolly">U.S. Map</a>
+								</li>
+								<li>
+									<a href="#">Sign Up</a>
+								</li>
+								<li>
+									<a href="#">Log In</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+		<!-- Banner -->
+		<section id="banner">
+			<div class="inner">
+				<h2>U.S. Permanent Visa</h2>
+				<p>project by
+					<a href="http://html5up.net">Team ANTS</a>
+				</p>
+				<div style="height:200px">
+					<p id="typeExample"></p>
+				</div>
+				<!-- <ul class="actions">
+								<li><a href="#" class="button special">Predict</a></li>
+							</ul> -->
+			</div>
+			<a href="#main" class="more scrolly">Explore</a>
+		</section>
+
+		<!-- World Map -->
+		<section id="map1" class="story">
+			<h2>World Map</h2>
+		</section>
+
+		<!-- US Map -->
+		<section id="map2" class="story">
+			<h2>United States of America</h2>
+			<div class="row uniform">
+				<div class="3u 12u$(small)">
+					<input type="radio" id="p" name="arrange" onclick="mapColor()" checked>
+					<label for="p" style="color:black">Percentage Based</label>
+				</div>
+				<div class="3u 12u$(small)">
+					<input type="radio" id="n" name="arrange" onclick="mapColor()">
+					<label for="n" style="color:black">Number Based</label>
+				</div>
+			</div>
+		</section>
+
+		<section id="testMap" style="background: white">
+			<div id='svg_map'>
+			</div>
+			<!-- The Modal -->
+			<div id="myModal" class="modal">
+				<!-- Modal content -->
+				<div class="modal-content">
+					<span class="close">&times;</span>
+					<div id='for_entries'></div>
+					<p>Pick a state for comparison:</p>
+					<div id='contents'>
+						<svg></svg>
+					</div>
+				</div>
+
+			</div>
+		</section>
+
+		<!-- One -->
+		<section id="one" class="wrapper style1 special">
+			<div class="inner">
+				<header class="major">
+					<h2>Why PERM Visa?</h2>
+					<p>A permanent labor certification issued by the Department of Labor (DOL) allows an employer to hire a foreign worker
+						to work permanently in the United States. In most instances, before the U.S. employer can submit an immigration petition
+						to the Department of Homeland Security's U.S. Citizenship and Immigration Services (USCIS), the employer must obtain
+						a certified labor certification application from the DOL's Employment and Training Administration (ETA). The DOL must
+						certify to the USCIS that there are not sufficient U.S. workers able, willing, qualified and available to accept the
+						job opportunity in the area of intended employment and that employment of the foreign worker will not adversely affect
+						the wages and working conditions of similarly employed U.S. workers.</p>
+				</header>
+				<!-- <ul class="icons major">
+								<li><span class="icon fa-diamond major style1"><span class="label">Lorem</span></span></li>
+								<li><span class="icon fa-heart-o major style2"><span class="label">Ipsum</span></span></li>
+								<li><span class="icon fa-code major style3"><span class="label">Dolor</span></span></li>
+							</ul> -->
+			</div>
+		</section>
+
+		<!-- Two -->
+		<!-- <section id="two" class="wrapper alt style2">
+			<section class="spotlight">
+				<div class="image">
+					<img src="images/pic01.jpg" alt="" />
+				</div>
+				<div class="content">
+					<h2>Magna primis lobortis
+						<br /> sed ullamcorper</h2>
+					<p>Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.</p>
+				</div>
+			</section>
+			<section class="spotlight">
+				<div class="image">
+					<img src="images/pic02.jpg" alt="" />
+				</div>
+				<div class="content">
+					<h2>Tortor dolore feugiat
+						<br /> elementum magna</h2>
+					<p>Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.</p>
+				</div>
+			</section>
+			<section class="spotlight">
+				<div class="image">
+					<img src="images/pic03.jpg" alt="" />
+				</div>
+				<div class="content">
+					<h2>Augue eleifend aliquet
+						<br /> sed condimentum</h2>
+					<p>Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.</p>
+				</div>
+			</section>
+		</section> -->
+
+		<!-- Three -->
+		<!-- <section id="three" class="wrapper style3 special">
+			<div class="inner">
+				<header class="major">
+					<h2>Accumsan mus tortor nunc aliquet</h2>
+					<p>Aliquam ut ex ut augue consectetur interdum. Donec amet imperdiet eleifend
+						<br /> fringilla tincidunt. Nullam dui leo Aenean mi ligula, rhoncus ullamcorper.</p>
+				</header>
+				<ul class="features">
+					<li class="icon fa-paper-plane-o">
+						<h3>Arcu accumsan</h3>
+						<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
+					</li>
+					<li class="icon fa-laptop">
+						<h3>Ac Augue Eget</h3>
+						<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
+					</li>
+					<li class="icon fa-code">
+						<h3>Mus Scelerisque</h3>
+						<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
+					</li>
+					<li class="icon fa-headphones">
+						<h3>Mauris Imperdiet</h3>
+						<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
+					</li>
+					<li class="icon fa-heart-o">
+						<h3>Aenean Primis</h3>
+						<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
+					</li>
+					<li class="icon fa-flag-o">
+						<h3>Tortor Ut</h3>
+						<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
+					</li>
+				</ul>
+			</div>
+		</section> -->
+
+		<!-- CTA -->
+		<section id="cta" class="wrapper style4">
+			<div class="inner">
+				<header>
+					<h2>Arcue ut vel commodo</h2>
+					<p>Aliquam ut ex ut augue consectetur interdum endrerit imperdiet amet eleifend fringilla.</p>
+				</header>
+				<ul class="actions vertical">
+					<li>
+						<a href="#" class="button fit special">Activate</a>
+					</li>
+					<li>
+						<a href="#" class="button fit">Learn More</a>
+					</li>
+				</ul>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer id="footer">
+			<ul class="icons">
+				<li>
+					<a href="#" class="icon fa-github">
+						<span class="label">GitHub</span>
+					</a>
+				</li>
+				<li>
+					<a href="#" class="icon fa-twitter">
+						<span class="label">Twitter</span>
+					</a>
+				</li>
+				<li>
+					<a href="#" class="icon fa-facebook">
+						<span class="label">Facebook</span>
+					</a>
+				</li>
+				<li>
+					<a href="#" class="icon fa-instagram">
+						<span class="label">Instagram</span>
+					</a>
+				</li>
+				<li>
+					<a href="#" class="icon fa-envelope-o">
+						<span class="label">Email</span>
+					</a>
+				</li>
+			</ul>
+			<ul class="copyright">
+				<li>&copy; Nov 2017</li>
+				<li>Created by:
+					<a href="http://tamntn.com" target="_blank">Tam Nguyen</a>
+				</li>
+			</ul>
+		</footer>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="zoomMap.js"></script>
+	<script type="text/javascript">
+		// Get the modal
+		var modal = document.getElementById('myModal');
+
+		// Get the <span> element that closes the modal
+		var span = document.getElementsByClassName("close")[0];
+
+		var sentence1 = 'over <strong>370,000</strong> foreigners have applied for an U.S. Permanent Visa.',
+			sentence2 = 'nearly <strong>60%</strong> of people who applied got certified.',
+			sentence3 = 'We dug deep into this visa application data.'
+		$('#typeExample').typeIt({
+			speed: 50,
+			startDelay: 1500,
+			autoStart: false,
+			loopDelay: 3000,
+			loop: true
+		})
+			.tiType('Over the last 5 years, ')
+			.tiBreak()
+			.tiPause(100)
+			.tiType(sentence1)
+			.tiPause(1500)
+			.tiDelete(sentence1.length - 17)
+			.tiType(sentence2)
+			.tiPause(1500)
+			.tiDelete()
+			.tiType(sentence3);
+	</script>
+	<!--<script src="assets/js/jquery.min.js"></script>-->
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/skel.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+	<script src="assets/js/main.js"></script>
+</body>
+
+</html>
