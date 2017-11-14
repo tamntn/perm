@@ -1,20 +1,20 @@
 .story {
-    background: white;
     text-align: center;
+    padding-top: 40px;
 }
 
 .story h1{
-    color: black;
+    color: white;
 }
 
 .story h2{
-    color: black;
+    color: white;
 }
 
 .story h3{
-    color: black;
+    color: white;
 }
 
 .story p{
-    color: black;
+    color: white;
 }

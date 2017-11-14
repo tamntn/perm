@@ -85,30 +85,8 @@
 			<a href="#map1" class="more scrolly">Explore</a>
 		</section>
 
-		<!-- World Map -->
-		<section id="map1" class="story">
-			<h2>World Map</h2>
-			<div>
-				<input type="radio" name='worldOption' id='percent' checked>
-				<label for="percent" style="color:black">Percentage Based</label>
-				<input type="radio" name='worldOption' id='number'>
-				<label for="number" style="color:black">Number Based</label>
-				<!--   <input type="radio" name='arrange' id='denied' > Denied <br>
-					  <input type="radio" name='arrange' id='cExpired' > Certified Expired<br>
-					  <input type="radio" name='arrange' id='withdrawn' > Withdrawn<br> -->
-			</div>
-		</section>
-
-		<section id="worldmap" class="mapVisual">
-			<script type="text/javascript">
-				var worldMapHeight = window.innerHeight - $("#header").height() - $("#map1").height();
-				console.log(worldMapHeight);
-				$("#worldmap").css({ "height": worldMapHeight });
-			</script>
-		</section>
-
 		<!-- Why PERM Visa -->
-		<section id="one" class="wrapper style1 special">
+		<section id="one" class="wrapper style5">
 			<div class="inner">
 				<header class="major">
 					<h2>Why PERM Visa?</h2>
@@ -121,25 +99,59 @@
 						the wages and working conditions of similarly employed U.S. workers.</p>
 				</header>
 				<!-- <ul class="icons major">
-								<li><span class="icon fa-diamond major style1"><span class="label">Lorem</span></span></li>
-								<li><span class="icon fa-heart-o major style2"><span class="label">Ipsum</span></span></li>
-								<li><span class="icon fa-code major style3"><span class="label">Dolor</span></span></li>
-							</ul> -->
+									<li><span class="icon fa-diamond major style1"><span class="label">Lorem</span></span></li>
+									<li><span class="icon fa-heart-o major style2"><span class="label">Ipsum</span></span></li>
+									<li><span class="icon fa-code major style3"><span class="label">Dolor</span></span></li>
+								</ul> -->
 			</div>
+		</section>
+
+		<!-- World Map -->
+		<section id="map1" class="story">
+			<header>
+				<h2>India</h2>
+				<p>is the country with the most people certified.
+					<br>China is second most, with almost 90,000 less.</p>
+			</header>
+		</section>
+
+		<section id="worldmap-container" class="mapVisual">
+			<div class="map-option">
+				<input type="radio" name='worldOption' id='percent' checked>
+				<label for="percent" style="color:black">Percentage Based</label>
+				<input type="radio" name='worldOption' id='number'>
+				<label for="number" style="color:black">Number Based</label>
+				<!--   <input type="radio" name='arrange' id='denied' > Denied <br>
+							  <input type="radio" name='arrange' id='cExpired' > Certified Expired<br>
+							  <input type="radio" name='arrange' id='withdrawn' > Withdrawn<br> -->
+			</div>
+			<div class="row uniform">
+				<div class="1u 12u$(medium)"></div>
+				<div id="worldmap" class="10u 12u$(medium)"></div>
+				<div class="1u 12u$(medium)"></div>
+			</div>
+			<!-- <script type="text/javascript">
+				var worldMapHeight = window.innerHeight - $("#header").height() - $("#map1").height();
+				console.log(worldMapHeight);
+				$("#worldmap").css({ "height": worldMapHeight });
+			</script> -->
 		</section>
 
 		<!-- US Map -->
 		<section id="map2" class="story">
-			<h2>United States of America</h2>
-			<div>
+			<header>
+				<h2>California, Texas and New York</h2>
+				<p>remain the top 3 states with the most certified cases.</p>
+			</header>
+		</section>
+
+		<section id="usmap" class="mapVisual">
+			<div class="map-option">
 				<input type="radio" id="p" name="arrange" onclick="mapColor()" checked>
 				<label for="p" style="color:black">Percentage Based</label>
 				<input type="radio" id="n" name="arrange" onclick="mapColor()">
 				<label for="n" style="color:black">Number Based</label>
 			</div>
-		</section>
-
-		<section id="usmap" class="mapVisual">
 			<div id='svg_map'>
 			</div>
 			<!-- The Modal -->
