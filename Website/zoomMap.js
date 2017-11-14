@@ -2,8 +2,6 @@ var width = document.body.clientWidth, //Getting the width minus the scroll bar
 	height = window.innerHeight - $("#header").height() - $('#map2').height(),
 	centered;
 
-console.log(width);
-
 // Set width and height of modal
 $(".modal").css({ "width": window.innerWidth, "height": window.innerHeight });
 
@@ -11,7 +9,7 @@ map();
 
 function map() {
 
-	d3.csv('data/acceptanceRateByState.csv', function (error, data) {
+	d3.csv('Website/data/acceptanceRateByState.csv', function (error, data) {
 		var dataset = data;
 
 		arrayHelp = [];
@@ -54,7 +52,7 @@ function map() {
 
 		d3.select('#svg_map').remove(); //help remove on update
 
-		var svg1 = d3.select('#testMap').append('div').attr('id', 'svg_map') //add div back in
+		var svg1 = d3.select('#usmap').append('div').attr('id', 'svg_map') //add div back in
 
 		var svg = d3.select("#svg_map").append("svg").attr('id', 'US_map') //add svg with id=US_map back
 			.attr("width", width)
@@ -273,7 +271,7 @@ function map() {
 				var color = d3.scale.ordinal()
 					.range(colorRange.range());
 
-				var chart = d3.select("svg") // initializes the group
+				var chart = d3.select("#state_contents") // initializes the group
 					.attr("width", w + m.left + m.right)
 					.attr("height", h + m.top + m.bottom)
 					.append("g")
@@ -282,7 +280,7 @@ function map() {
 
 				d3.selectAll('.helpRemove').remove(); //remove the groug to update the scale
 
-				chart = d3.select("svg") //add group back
+				chart = d3.select("#state_contents") //add group back
 					.attr("width", w + m.left + m.right)
 					.attr("height", h + m.top + m.bottom)
 					.append("g")
@@ -356,7 +354,7 @@ function map() {
 
 						d3.selectAll('.helpRemove').remove(); //remove the groug to update the scale
 
-						chart = d3.select("svg") //add group back
+						chart = d3.select("#state_contents") //add group back
 							.attr("width", w + 200 + m.left + m.right)
 							.attr("height", h + m.top + m.bottom)
 							.append("g")

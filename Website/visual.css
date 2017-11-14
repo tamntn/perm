@@ -1,10 +1,10 @@
-.visual {
+.mapVisual {
     background: white;
-    text-align: center;
+    color:black;
 }
 
-#testMap p {
-    color:black;
+.mapVisual strong {
+    color: black;
 }
 
 #for_entries h3{

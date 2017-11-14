@@ -11,15 +11,19 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-	<link rel="stylesheet" href="map.css" />
-	<link rel="stylesheet" href="assets/css/main.css" />
-	<link rel="stylesheet" href="story.css" />
+	<link rel="stylesheet" href="Website/map.css" />
+	<link rel="stylesheet" href="Website/assets/css/main.css" />
+	<link rel="stylesheet" href="Website/story.css" />
+	<link rel="stylesheet" href="Website/visual.css" />
 	<script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/jquery.typeit/4.4.0/typeit.min.js"></script>
 	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 	<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 	<script src="https://d3js.org/d3.v3.min.js"></script>
 	<script src="https://d3js.org/topojson.v1.min.js"></script>
+	<!-- World Map Input -->
+	<script src="http://datamaps.github.io/scripts/datamaps.world.js?v=1"></script>
+	<script src="World/datamap.js"></script>
 </head>
 
 <body class="landing">
@@ -73,51 +77,37 @@
 					<p id="typeExample"></p>
 				</div>
 				<!-- <ul class="actions">
-								<li><a href="#" class="button special">Predict</a></li>
-							</ul> -->
+					<li>
+						<a href="#" class="button special">Predict</a>
+					</li>
+				</ul> -->
 			</div>
-			<a href="#main" class="more scrolly">Explore</a>
+			<a href="#map1" class="more scrolly">Explore</a>
 		</section>
 
 		<!-- World Map -->
 		<section id="map1" class="story">
 			<h2>World Map</h2>
-		</section>
-
-		<!-- US Map -->
-		<section id="map2" class="story">
-			<h2>United States of America</h2>
-			<div class="row uniform">
-				<div class="3u 12u$(small)">
-					<input type="radio" id="p" name="arrange" onclick="mapColor()" checked>
-					<label for="p" style="color:black">Percentage Based</label>
-				</div>
-				<div class="3u 12u$(small)">
-					<input type="radio" id="n" name="arrange" onclick="mapColor()">
-					<label for="n" style="color:black">Number Based</label>
-				</div>
+			<div>
+				<input type="radio" name='worldOption' id='percent' checked>
+				<label for="percent" style="color:black">Percentage Based</label>
+				<input type="radio" name='worldOption' id='number'>
+				<label for="number" style="color:black">Number Based</label>
+				<!--   <input type="radio" name='arrange' id='denied' > Denied <br>
+					  <input type="radio" name='arrange' id='cExpired' > Certified Expired<br>
+					  <input type="radio" name='arrange' id='withdrawn' > Withdrawn<br> -->
 			</div>
 		</section>
 
-		<section id="testMap" style="background: white">
-			<div id='svg_map'>
-			</div>
-			<!-- The Modal -->
-			<div id="myModal" class="modal">
-				<!-- Modal content -->
-				<div class="modal-content">
-					<span class="close">&times;</span>
-					<div id='for_entries'></div>
-					<p>Pick a state for comparison:</p>
-					<div id='contents'>
-						<svg></svg>
-					</div>
-				</div>
-
-			</div>
+		<section id="worldmap" class="mapVisual">
+			<script type="text/javascript">
+				var worldMapHeight = window.innerHeight - $("#header").height() - $("#map1").height();
+				console.log(worldMapHeight);
+				$("#worldmap").css({ "height": worldMapHeight });
+			</script>
 		</section>
 
-		<!-- One -->
+		<!-- Why PERM Visa -->
 		<section id="one" class="wrapper style1 special">
 			<div class="inner">
 				<header class="major">
@@ -135,6 +125,35 @@
 								<li><span class="icon fa-heart-o major style2"><span class="label">Ipsum</span></span></li>
 								<li><span class="icon fa-code major style3"><span class="label">Dolor</span></span></li>
 							</ul> -->
+			</div>
+		</section>
+
+		<!-- US Map -->
+		<section id="map2" class="story">
+			<h2>United States of America</h2>
+			<div>
+				<input type="radio" id="p" name="arrange" onclick="mapColor()" checked>
+				<label for="p" style="color:black">Percentage Based</label>
+				<input type="radio" id="n" name="arrange" onclick="mapColor()">
+				<label for="n" style="color:black">Number Based</label>
+			</div>
+		</section>
+
+		<section id="usmap" class="mapVisual">
+			<div id='svg_map'>
+			</div>
+			<!-- The Modal -->
+			<div id="myModal" class="modal">
+				<!-- Modal content -->
+				<div class="modal-content">
+					<span class="close">&times;</span>
+					<div id='for_entries'></div>
+					<p>Pick a state for comparison:</p>
+					<div id='contents'>
+						<svg id="state_contents"></svg>
+					</div>
+				</div>
+
 			</div>
 		</section>
 
@@ -267,7 +286,8 @@
 	</div>
 
 	<!-- Scripts -->
-	<script src="zoomMap.js"></script>
+	<script src="World/onecolor.js"></script>
+	<script src="Website/zoomMap.js"></script>
 	<script type="text/javascript">
 		// Get the modal
 		var modal = document.getElementById('myModal');
@@ -297,12 +317,12 @@
 			.tiType(sentence3);
 	</script>
 	<!--<script src="assets/js/jquery.min.js"></script>-->
-	<script src="assets/js/jquery.scrollex.min.js"></script>
-	<script src="assets/js/jquery.scrolly.min.js"></script>
-	<script src="assets/js/skel.min.js"></script>
-	<script src="assets/js/util.js"></script>
+	<script src="Website/assets/js/jquery.scrollex.min.js"></script>
+	<script src="Website/assets/js/jquery.scrolly.min.js"></script>
+	<script src="Website/assets/js/skel.min.js"></script>
+	<script src="Website/assets/js/util.js"></script>
 	<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-	<script src="assets/js/main.js"></script>
+	<script src="Website/assets/js/main.js"></script>
 </body>
 
 </html>

@@ -3,7 +3,7 @@ var countrylist=jsonworld.objects.world.geometries;
 var dataset1=[];
 var paletteScale;
 
-var data = d3.csv('acceptanceRateByCountry.csv',function(data){
+var data = d3.csv('World/acceptanceRateByCountry.csv',function(data){
 	    usedata=data
 	    countrylist.forEach(function(e){
 	        usedata.forEach(function(j){
@@ -47,9 +47,9 @@ var data = d3.csv('acceptanceRateByCountry.csv',function(data){
 		var onlyValues = dataset1.map(function(obj){ return obj[position]; });
 		var minValue = Math.min.apply(0, onlyValues),
 		    maxValue = Math.max.apply(0, onlyValues);
-		paletteScale = d3.scale.linear().domain([minValue,maxValue]).range(["#ffffff","#b304e5"]);// purple color
+		//paletteScale = d3.scale.linear().domain([minValue,maxValue]).range(["#ffffff","#b304e5"]);// purple color
 		//paletteScale = d3.scale.linear().domain([minValue,maxValue]).range(["#dbfce5","#01591c"]); //Green color
-		// paletteScale = d3.scale.linear().domain([minValue,maxValue]).range(["#EFEFFF","#02386F"]) //Blue Color
+		paletteScale = d3.scale.linear().domain([minValue,maxValue]).range(["#EFEFFF","#02386F"]) //Blue Color
 
 
 		// if(document.getElementById('percent').checked) {	
@@ -83,7 +83,7 @@ var data = d3.csv('acceptanceRateByCountry.csv',function(data){
 	dataset=changedata()
 	// render map
 	var map = new Datamap({
-	    element: document.getElementById('container1'),
+	    element: document.getElementById('worldmap'),
 	    projection: 'mercator', // big world map
 	    // countries don't listed in dataset will be painted with this color
 	    fills: { defaultFill: 'white' },
