@@ -437,7 +437,7 @@ function displayChart(id){
 //////////////   Pie Chart   /////////////////////
 
 
-d3.json('jobByState.json',function(error, dataJob){
+d3.json('../Dataset/createdFiles/jobByState.json',function(error, dataJob){
 	DataCertifiedJob = dataJob;
 	
 

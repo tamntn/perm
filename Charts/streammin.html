@@ -38,7 +38,7 @@ button {
 
 <script>
 
-chart("data/streamMock.csv", "orange");
+chart("data/streamMock.csv", "blue");
 
 var datearray = [];
 var colorrange = [];
@@ -185,7 +185,7 @@ var graph = d3.csv(csvpath, function(data) {
       .attr("stroke", strokecolor)
       .attr("stroke-width", "0.5px"),
       tooltip.html( "<p>" + d.key
-    //   + "<br>" + pro + "</p>"
+      // + "<br>" + pro + "</p>"
      ).style("visibility", "visible");
 
     })
