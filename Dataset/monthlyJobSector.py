@@ -12,7 +12,9 @@ data = {
 
 jobTreeData = json.load(open('createdFiles/jobTree.json'))
 
-for job in jobTreeData["children"]:
+jobList = sorted(jobTreeData['children'], key=lambda k: k['value'], reverse=True)
+
+for job in jobList:
     if job["name"] != "":
         data['jobs'].append({
             'name': job['name'],
