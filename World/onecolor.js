@@ -47,9 +47,21 @@ var data = d3.csv('World/acceptanceRateByCountry.csv',function(data){
 		var onlyValues = dataset1.map(function(obj){ return obj[position]; });
 		var minValue = Math.min.apply(0, onlyValues),
 		    maxValue = Math.max.apply(0, onlyValues);
-		//paletteScale = d3.scale.linear().domain([minValue,maxValue]).range(["#ffffff","#b304e5"]);// purple color
+		//
 		//paletteScale = d3.scale.linear().domain([minValue,maxValue]).range(["#dbfce5","#01591c"]); //Green color
-		paletteScale = d3.scale.linear().domain([minValue,maxValue]).range(["#EFEFFF","#000080"]); //Blue Color
+		
+		if(document.getElementById('percent').checked) 	   {	
+			paletteScale = d3.scale.linear().domain([minValue,maxValue]).range(["white","blue"]); //blue color
+		}
+		else if(document.getElementById('number').checked) {	
+			paletteScale = d3.scale.threshold().domain([minValue+20,100,2000,10000,maxValue]).range(["#EFEFFF",'#00B2EE','#007FFF','#1874CD','#003F87',"#26466D"]); //Blue Color
+		}
+		
+		
+
+		
+
+
 
 
 		// if(document.getElementById('percent').checked) {	
@@ -129,7 +141,7 @@ var data = d3.csv('World/acceptanceRateByCountry.csv',function(data){
 	                '<br>Denied: <strong>', data.Denied, '</strong>',
 	                '<br>Certified-Expired: <strong>', data.Certified_Expired, '</strong>',
 	                '<br>Withdrawn: <strong>', data.Withdrawn, '</strong>',
-	               // '<br>color: <strong>', data.fillColor, '</strong>',
+	               '<br>color: <strong>', data.fillColor, '</strong>',
 	                '</div>'].join('');
 	        	}
 	        	//map.updateChoropleth({{USA:}})
