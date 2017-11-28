@@ -56,27 +56,12 @@ var data = d3.csv('World/acceptanceRateByCountry.csv',function(data){
 		else if(document.getElementById('number').checked) {	
 			paletteScale = d3.scale.threshold().domain([minValue+20,100,2000,10000,maxValue]).range(["#EFEFFF",'#00B2EE','#007FFF','#1874CD','#003F87',"#26466D"]); //Blue Color
 		}
-		
-		
-
-		
-
-
-
-
-		// if(document.getElementById('percent').checked) {	
-		// 	 paletteScale = d3.scale.linear().domain([minValue,maxValue]).range(["#dbfce5","#01591c"]);// Green color
-		// }else if(document.getElementById('number').checked) {
-		// 	 paletteScale = d3.scale.linear().domain([minValue,maxValue]).range(["#dbfce5","#01591c"]); //Green color
-		// 	// paletteScale = d3.scale.linear().domain([minValue,maxValue]).range(["#EFEFFF","#02386F"]);// blue color
-		// }
-		// else if(document.getElementById('denied').checked) {
-		// 	 paletteScale = d3.scale.linear().domain([minValue,maxValue]).range(["#ffe2e2","#fc0000"]);// red color
-		// }else if(document.getElementById('cExpired').checked) {
-		// 	 paletteScale = d3.scale.linear().domain([minValue,maxValue]).range(["#fcf5e5","#e5a104"]);// blue color
-		// }else if(document.getElementById('withdrawn').checked) {
-		// 	 paletteScale = d3.scale.linear().domain([minValue,maxValue]).range(["#d6b3e0","#b304e5"]);// purple color
-		// }
+		//    legend
+		//0-20 == "#EFEFFF"
+		//21-100 == '#00B2EE'
+		//101-2000 == '#007FFF'
+		//2001-10000 =='#1874CD'
+		//10000-max =='#003F87',"#26466D"
 		var value;
 		var iso;
 		dataset1.forEach(function(item){
@@ -98,7 +83,13 @@ var data = d3.csv('World/acceptanceRateByCountry.csv',function(data){
 	    element: document.getElementById('worldmap'),
 	    projection: 'mercator', // big world map
 	    // countries don't listed in dataset will be painted with this color
-	    fills: { defaultFill: 'white' },
+	    fills: { 
+	    fst : "#EFEFFF",
+		snd : '#00B2EE',
+		thrd : '#007FFF',
+		frth :'#1874CD',
+		fifth :'#003F87',
+	    	defaultFill: 'white' },
 	    data: dataset,
 	    
 	    responsive:true,
@@ -148,13 +139,46 @@ var data = d3.csv('World/acceptanceRateByCountry.csv',function(data){
 	    }
 	});//End of DAtamap
 //map.labels({labelColor: 'blue', fontSize: 12});
-	map.legend()
+	//map.addlegend('blue');
 
+if(document.getElementById('number').checked) {	
+		 map.legend({
+    legendTitle : "Total Downloads",
+    //defaultFillName: "Legend",
+    labels: {
+      fst: "0-20",
+      snd: "20-100",
+      thrd: '100-2000',
+      frth: '2000-10000',
+      fifth: '10000-102000'
+    
+    },
+  });	
+		}
+d3.select('svg').append('text')
+.text('here');
+
+d3.select(window).on('resize', function() {
+        map.resize();
+    });
 document.getElementById('percent').onclick = function(e){
     map.updateChoropleth(changedata());
+   // map.legend({})
 };
 document.getElementById('number').onclick = function(e){
     map.updateChoropleth(changedata());
+     map.legend({
+   // legendTitle : "Total Downloads",
+    defaultFillName: "For Number",
+    labels: {
+      fst: "0-20",
+      snd: "20-100",
+      thrd: '100-2000',
+      frth: '2000-10000',
+      fifth: '10000-102000'
+    
+    },
+  });
 };
 // document.getElementById('denied').onclick = function(e){
 //     map.updateChoropleth(changedata());
