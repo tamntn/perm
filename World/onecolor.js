@@ -143,8 +143,8 @@ var data = d3.csv('World/acceptanceRateByCountry.csv',function(data){
 
 if(document.getElementById('number').checked) {	
 		 map.legend({
-    legendTitle : "Total Downloads",
-    //defaultFillName: "Legend",
+   // legendTitle : "Total Downloads",
+    defaultFillName: "For Number",
     labels: {
       fst: "0-20",
       snd: "20-100",
