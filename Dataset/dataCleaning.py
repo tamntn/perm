@@ -970,7 +970,43 @@ def normalizePayUnit(unit):
         return "Yearly"
     else:
         return ""
+
+def calculateWage(amount, unit):
+    amount = float(amount)
+    if unit == "Bi-Weekly":
+        return amount * 26
+    elif unit == "Hourly":
+        return amount * 2080
+    elif unit == "Monthly":
+        return amount * 12
+    elif unit == "Weekly":
+        return amount * 52
+    elif unit == "Yearly":
+        return amount * 1
     
+def normalizeWage(pw, pwunit, offerfrom, offerto, offerunit):
+    # if pwunit == "" and offerunit == "":
+    #     return "N/A"
+    # elif offerunit == "" and pw != "":
+    #     return calculateWage (pw, pwunit)
+    # elif offerunit != "":
+    #     if offerfrom != "":
+    #         return calculateWage(offerfrom, offerunit)
+    #     elif offerto != "":
+    #         return calculateWage(offerto, offerunit)
+    #     elif pw != "" and pwunit != "":
+    #         return calculateWage(pw, pwunit)
+    #     else:
+    #         return "N/A"
+    if offerfrom != "" and offerunit != "":
+        return calculateWage(offerfrom, offerunit)
+    elif offerto != "" and offerunit != "":
+        return calculateWage(offerto, offerunit)
+    elif pw != "" and pwunit != "":
+        return calculateWage(pw, pwunit)
+    else:
+        return "N/A"
+
 wrongTitle = []
 
 with open(newFile, 'wb') as csvFinal:
@@ -978,7 +1014,7 @@ with open(newFile, 'wb') as csvFinal:
     with open(currentFile, 'rb') as csvData:
         reader = csv.reader(csvData)
         header = reader.next()
-        headerRow = [header[1], header[2], header[3], header[4], header[5], 'processing_time', header[6], header[8], header[9], header[10], header[11], header[12], header[13], 'pw_occupation_group', header[14], header[15], header[17], header[18], header[19], header[20], header[21]]
+        headerRow = [header[1], header[2], header[3], header[4], header[5], 'processing_time', header[6], header[8], header[9], header[10], header[11], header[12], header[13], 'pw_occupation_group', header[14], header[15], header[17], header[18], header[19], header[20], header[21], "wage"]
         writer.writerow(headerRow)
         rows = [row for row in reader if row]
         print len(rows)
@@ -1013,7 +1049,10 @@ with open(newFile, 'wb') as csvFinal:
             if row[21] == "":
                 row[21] = row[24].replace(",", "")
             row[21] = normalizePayUnit(row[21])
-            inputRow = [row[1], row[2], row[3], row[4], row[5], processingTime, row[6], row[8], row[9], row[10], row[11], row[12], row[13], occupationClass, row[14], row[15], row[17], row[18], row[19], row[20], row[21]]
+
+            annualWage = normalizeWage(row[17], row[18], row[19], row[20], row[21])
+
+            inputRow = [row[1], row[2], row[3], row[4], row[5], processingTime, row[6], row[8], row[9], row[10], row[11], row[12], row[13], occupationClass, row[14], row[15], row[17], row[18], row[19], row[20], row[21], annualWage]
             # count += 1
             writer.writerow(inputRow)
         print count
