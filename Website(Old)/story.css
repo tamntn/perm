@@ -1,0 +1,21 @@
+.story {
+    text-align: center;
+    padding-top: 30px;
+}
+
+.story h1{
+    color: white;
+}
+
+.story h2{
+    color: white;
+    font-size: 32px;
+}
+
+.story h3{
+    color: white;
+}
+
+.story p{
+    color: white;
+}

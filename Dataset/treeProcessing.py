@@ -2,14 +2,18 @@ import csv
 import json
 
 treeFile = "createdFiles/jobTree.json"
-treeMapFile = "createdFiles/jobTreeMap.json"
+treeMapFile = "createdFiles/treemapTOTAL.json"
+treeMapCertFile = "createdFiles/treemapCERT.json"
+treeMapWageFile = "createdFiles/treemapWAGE.json"
 
 data = {
     "name": "Job",
     "children": []
 }
 
-treemapdata = []
+treemapTOTAL = []
+treemapCERT = []
+treemapWAGE = []
 
 with open("createdFiles/acceptanceRateByJob.csv", 'rb') as csvFile:
     reader = csv.reader(csvFile)
@@ -24,7 +28,6 @@ with open("createdFiles/acceptanceRateByJob.csv", 'rb') as csvFile:
             "children": []
         })
     csvFile.close()
-
 
 def updateDataTree(jobGroup, jobTitle):
     for group in data['children']:
@@ -42,19 +45,49 @@ def updateDataTree(jobGroup, jobTitle):
                 })
             break
 
-def updateDataTreeMap(jobGroup, jobTitle, subGroup):
+def updateTreeMapTOTAL(jobGroup, jobTitle, subGroup):
     updated = False
-    for job in treemapdata:
+    for job in treemapTOTAL:
         if job["key"] == jobTitle:
             job["value"] = job["value"] + 1
             updated = True
             break
     if updated == False:
-        treemapdata.append({
+        treemapTOTAL.append({
             "key": jobTitle,
-            "region": jobGroup,
-            "subregion": subGroup,
+            "group": jobGroup,
+            "subgroup": subGroup,
             "value": 1
+        })
+
+def updateTreeMapCERT(jobGroup, jobTitle, subGroup):
+    updated = False
+    for job in treemapCERT:
+        if job["key"] == jobTitle:
+            job["value"] = job["value"] + 1
+            updated = True
+            break
+    if updated == False:
+        treemapCERT.append({
+            "key": jobTitle,
+            "group": jobGroup,
+            "subgroup": subGroup,
+            "value": 1
+        })
+
+def updateTreeMapWAGE(jobGroup, jobTitle, subGroup, wage):
+    updated = False
+    for job in treemapWAGE:
+        if job["key"] == jobTitle:
+            job["value"] = job["value"] + int(round(float(wage)))
+            updated = True
+            break
+    if updated == False:
+        treemapWAGE.append({
+            "key": jobTitle,
+            "group": jobGroup,
+            "subgroup": subGroup,
+            "value": int(round(float(wage)))
         })
 
 with open("metaFiles/final.csv", 'rb') as csvMain:
@@ -62,11 +95,17 @@ with open("metaFiles/final.csv", 'rb') as csvMain:
     header = reader.next()
     rows = [row for row in reader if row]
     for row in rows:
+        status = row[1]
         jobGroup = row[13]
         jobTitle = row[14]
         subGroup = row[15]
+        wage = row[21]
         updateDataTree(jobGroup, jobTitle)
-        updateDataTreeMap(jobGroup, jobTitle, subGroup)
+        updateTreeMapTOTAL(jobGroup, jobTitle, subGroup)
+        if status == "Certified":
+            updateTreeMapCERT(jobGroup, jobTitle, subGroup)
+        if wage != "N/A":
+            updateTreeMapWAGE(jobGroup, jobTitle, subGroup, wage)
     csvMain.close()
 
 with open(treeFile, 'wb') as tree:
@@ -74,5 +113,13 @@ with open(treeFile, 'wb') as tree:
     tree.close()
 
 with open(treeMapFile, 'wb') as treemap:
-    json.dump(treemapdata, treemap)
+    json.dump(treemapTOTAL, treemap)
     treemap.close()
+
+with open(treeMapCertFile, 'wb') as treemapCert:
+    json.dump(treemapCERT, treemapCert)
+    treemapCert.close()
+
+with open(treeMapWageFile, 'wb') as treemapWage:
+    json.dump(treemapWAGE, treemapWage)
+    treemapWage.close()
