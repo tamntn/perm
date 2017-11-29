@@ -140,21 +140,21 @@ var data = d3.csv('World/acceptanceRateByCountry.csv',function(data){
 	    }
 	});//End of DAtamap
 
-// if(document.getElementById('number').checked) {	
-// 		 map.legend({
-//    // legendTitle : "Total Downloads",
-//     defaultFillName: "For Number",
-//     labels: {
-//       fst: "0-20",
-//       snd: "20-100",
-//       thrd: '100-2000',
-//       frth: '2000-10000',
-//       fifth: '10000-100000',
-//       sixth: '100000-Max'
+if(document.getElementById('number').checked) {	
+		 map.legend({
+   // legendTitle : "Total Downloads",
+    //defaultFillName: "For Number",
+    labels: {
+      fst: "0-20",
+      snd: "20-100",
+      thrd: '100-2000',
+      frth: '2000-10000',
+      fifth: '10000-100000',
+      sixth: '100000-Max'
     
-//     },
-//   });	
-// 		}
+    },
+  });	
+		}
 d3.select('svg').append('text')
 .text('here');
 
