@@ -89,7 +89,8 @@ var data = d3.csv('World/acceptanceRateByCountry.csv',function(data){
 		thrd : '#007FFF',
 		frth :'#1874CD',
 		fifth :'#003F87',
-	    	defaultFill: 'white' },
+		sixth: '#26466D',
+	    defaultFill: 'white' },
 	    data: dataset,
 	    
 	    responsive:true,
@@ -132,29 +133,28 @@ var data = d3.csv('World/acceptanceRateByCountry.csv',function(data){
 	                '<br>Denied: <strong>', data.Denied, '</strong>',
 	                '<br>Certified-Expired: <strong>', data.Certified_Expired, '</strong>',
 	                '<br>Withdrawn: <strong>', data.Withdrawn, '</strong>',
-	               '<br>color: <strong>', data.fillColor, '</strong>',
+	              // '<br>color: <strong>', data.fillColor, '</strong>',
 	                '</div>'].join('');
 	        	}
 	        	//map.updateChoropleth({{USA:}})
 	    }
 	});//End of DAtamap
-//map.labels({labelColor: 'blue', fontSize: 12});
-	//map.addlegend('blue');
 
-if(document.getElementById('number').checked) {	
-		 map.legend({
-   // legendTitle : "Total Downloads",
-    defaultFillName: "For Number",
-    labels: {
-      fst: "0-20",
-      snd: "20-100",
-      thrd: '100-2000',
-      frth: '2000-10000',
-      fifth: '10000-102000'
+// if(document.getElementById('number').checked) {	
+// 		 map.legend({
+//    // legendTitle : "Total Downloads",
+//     defaultFillName: "For Number",
+//     labels: {
+//       fst: "0-20",
+//       snd: "20-100",
+//       thrd: '100-2000',
+//       frth: '2000-10000',
+//       fifth: '10000-100000',
+//       sixth: '100000-Max'
     
-    },
-  });	
-		}
+//     },
+//   });	
+// 		}
 d3.select('svg').append('text')
 .text('here');
 
@@ -163,19 +163,20 @@ d3.select(window).on('resize', function() {
     });
 document.getElementById('percent').onclick = function(e){
     map.updateChoropleth(changedata());
-   // map.legend({})
+  	d3.select(".datamaps-legend").remove();
 };
 document.getElementById('number').onclick = function(e){
     map.updateChoropleth(changedata());
      map.legend({
    // legendTitle : "Total Downloads",
-    defaultFillName: "For Number",
+    //defaultFillName: "For Number",
     labels: {
       fst: "0-20",
       snd: "20-100",
       thrd: '100-2000',
       frth: '2000-10000',
-      fifth: '10000-102000'
+      fifth: '10000-100000',
+      sixth: '100000-Max'
     
     },
   });
