@@ -102,11 +102,11 @@ with open(inputFile, 'rb') as inputCSV:
     header = reader.next()
     rows = [row for row in reader if row]
     for row in rows:
-        country = row[4]
-        state = checkState(row[11])
-        status = row[2]
-        admissionClass = row[3]
-        job_group = row[14]
+        country = row[3]
+        state = checkState(row[10])
+        status = row[1]
+        admissionClass = row[2]
+        job_group = row[13]
         updateAcceptanceRateByStateDict(state, status)
         updateAcceptanceRateByCountryDict(country, status)
         updateAcceptanceRateByJobDict(job_group, status)

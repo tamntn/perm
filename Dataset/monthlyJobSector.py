@@ -42,9 +42,9 @@ with open('metaFiles/final.csv', 'rb') as csvMain:
     header = reader.next()
     rows = [row for row in reader if row]
     for row in rows:
-        dateString = row[5]
-        status = row[2]
-        jobGroup = row[14]
+        dateString = row[4]
+        status = row[1]
+        jobGroup = row[13]
         if status == "Certified":
             updateData(jobGroup, dateString)
 

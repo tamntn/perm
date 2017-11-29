@@ -107,7 +107,7 @@
     var divWidth = obj.offsetWidth;
 
     var margin = { top: 30, right: 0, bottom: 20, left: 0 },
-        width = divWidth - 25,
+        width = divWidth,
         height = 540 - margin.top - margin.bottom,
         formatNumber = d3.format(",%"),
         colorDomain = [-.1, 0, .1],
@@ -291,10 +291,10 @@
                     return '' +
                         ' <p class="title"> ' + d.name + '</p>' +
                         ' <p> 2011-2016 : ' + d.value + ' Certified Cases </p>' +
-                        ' <p> Percentage (Over all sectors): ' + d3.round((d.value/370000), 5) + '%</p>' +
+                        ' <p> Percentage (Over all sectors): ' + d3.round((d.value / 370000), 5) + '%</p>' +
                         ' <p> Percentage (Certified): ';
-                    ;                
-})
+                    ;
+                })
                 .attr("class", "textdiv"); //textdiv class allows us to style the text easily with CSS
 
             function transition(d) {
