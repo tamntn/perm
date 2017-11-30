@@ -523,7 +523,6 @@ function map() {
 
 				var divTooltipPie = d3.select("#contents").append("div").attr("class", "toolTip");
 
-
 				var g = svgPie.selectAll(".fan")
 					.data(pie(frequency))
 					.enter()

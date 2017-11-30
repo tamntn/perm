@@ -336,6 +336,7 @@ Generic treemap, based on http://bost.ocks.org/mike/treemap/
                     .call(rect)
                     .append("title")
                     .text(function (d) { return d.key + " (" + formatNumber(d.value) + ")"; }); // Creating hover text
+                    
                 children.append("text")
                     .attr("class", "ctext")
                     .text(function (d) { return d.key; })
