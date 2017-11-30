@@ -1,0 +1,51 @@
+#streamgraph {
+    background: #fff;
+    font: 11px sans-serif;
+}
+
+/*TIP*/
+
+.tip {
+    background-color: hsla(0, 0%, 97%, .9);
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    width: 200px;
+}
+
+.tip .year {
+    font-weight: 900;
+    font-size: 1.25em;
+    margin-bottom: 10px;
+}
+
+.tip .swatch {
+    width: 11px;
+    height: 11px;
+    float: left;
+    margin-top: 2px;
+    margin-right: 4px;
+}
+
+/* .remove {
+    display: none;
+} */
+
+.streamaxis path,
+.streamaxis line {
+    fill: none;
+    stroke: #000;
+    stroke-width: 1px;
+    shape-rendering: crispEdges;
+}
+
+.streamlegend rect {
+    fill: white;
+    stroke: grey;
+    opacity: 0.8;
+    /*transform: translate(-430px);*/
+}
+
+.streamlegend {
+    transform: translate(-330px, 20px);
+}

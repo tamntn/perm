@@ -1,0 +1,892 @@
+[
+    {
+        "count": 67306,
+        "average": 166,
+        "name": "INDIA"
+    },
+    {
+        "count": 8596,
+        "average": 201,
+        "name": "SOUTH KOREA"
+    },
+    {
+        "count": 1047,
+        "average": 165,
+        "name": "BRAZIL"
+    },
+    {
+        "count": 10542,
+        "average": 173,
+        "name": "CHINA"
+    },
+    {
+        "count": 169,
+        "average": 184,
+        "name": "BELARUS"
+    },
+    {
+        "count": 720,
+        "average": 165,
+        "name": "GERMANY"
+    },
+    {
+        "count": 1197,
+        "average": 172,
+        "name": "PAKISTAN"
+    },
+    {
+        "count": 79,
+        "average": 339,
+        "name": "GUATEMALA"
+    },
+    {
+        "count": 459,
+        "average": 173,
+        "name": "COLOMBIA"
+    },
+    {
+        "count": 1050,
+        "average": 164,
+        "name": "FRANCE"
+    },
+    {
+        "count": 916,
+        "average": 198,
+        "name": "JAPAN"
+    },
+    {
+        "count": 4211,
+        "average": 170,
+        "name": "CANADA"
+    },
+    {
+        "count": 567,
+        "average": 157,
+        "name": "UKRAINE"
+    },
+    {
+        "count": 2031,
+        "average": 234,
+        "name": "PHILIPPINES"
+    },
+    {
+        "count": 565,
+        "average": 156,
+        "name": "AUSTRALIA"
+    },
+    {
+        "count": 552,
+        "average": 173,
+        "name": "ISRAEL"
+    },
+    {
+        "count": 247,
+        "average": 185,
+        "name": "SOUTH AFRICA"
+    },
+    {
+        "count": 2336,
+        "average": 199,
+        "name": "MEXICO"
+    },
+    {
+        "count": 1454,
+        "average": 178,
+        "name": "UNITED KINGDOM"
+    },
+    {
+        "count": 27,
+        "average": 155,
+        "name": "TANZANIA"
+    },
+    {
+        "count": 23,
+        "average": 184,
+        "name": "GRENADA"
+    },
+    {
+        "count": 183,
+        "average": 291,
+        "name": "ECUADOR"
+    },
+    {
+        "count": 784,
+        "average": 166,
+        "name": "RUSSIA"
+    },
+    {
+        "count": 782,
+        "average": 188,
+        "name": "TURKEY"
+    },
+    {
+        "count": 47,
+        "average": 214,
+        "name": "UZBEKISTAN"
+    },
+    {
+        "count": 106,
+        "average": 189,
+        "name": "DOMINICAN REPUBLIC"
+    },
+    {
+        "count": 87,
+        "average": 206,
+        "name": "HONDURAS"
+    },
+    {
+        "count": 959,
+        "average": 160,
+        "name": "IRAN"
+    },
+    {
+        "count": 113,
+        "average": 186,
+        "name": "PORTUGAL"
+    },
+    {
+        "count": 219,
+        "average": 186,
+        "name": "PERU"
+    },
+    {
+        "count": 256,
+        "average": 182,
+        "name": "ROMANIA"
+    },
+    {
+        "count": 258,
+        "average": 153,
+        "name": "SINGAPORE"
+    },
+    {
+        "count": 180,
+        "average": 156,
+        "name": "JORDAN"
+    },
+    {
+        "count": 27,
+        "average": 204,
+        "name": "NICARAGUA"
+    },
+    {
+        "count": 432,
+        "average": 190,
+        "name": "POLAND"
+    },
+    {
+        "count": 904,
+        "average": 153,
+        "name": "VENEZUELA"
+    },
+    {
+        "count": 1230,
+        "average": 168,
+        "name": "TAIWAN"
+    },
+    {
+        "count": 200,
+        "average": 163,
+        "name": "GREECE"
+    },
+    {
+        "count": 389,
+        "average": 175,
+        "name": "ARGENTINA"
+    },
+    {
+        "count": 191,
+        "average": 183,
+        "name": "BULGARIA"
+    },
+    {
+        "count": 11,
+        "average": 211,
+        "name": "ZAMBIA"
+    },
+    {
+        "count": 461,
+        "average": 167,
+        "name": "SPAIN"
+    },
+    {
+        "count": 377,
+        "average": 151,
+        "name": "BANGLADESH"
+    },
+    {
+        "count": 997,
+        "average": 170,
+        "name": "NEPAL"
+    },
+    {
+        "count": 64,
+        "average": 168,
+        "name": "CZECH REPUBLIC"
+    },
+    {
+        "count": 126,
+        "average": 164,
+        "name": "NEW ZEALAND"
+    },
+    {
+        "count": 30,
+        "average": 331,
+        "name": "PANAMA"
+    },
+    {
+        "count": 601,
+        "average": 171,
+        "name": "ITALY"
+    },
+    {
+        "count": 277,
+        "average": 181,
+        "name": "THAILAND"
+    },
+    {
+        "count": 203,
+        "average": 215,
+        "name": "SRI LANKA"
+    },
+    {
+        "count": 86,
+        "average": 179,
+        "name": "MONGOLIA"
+    },
+    {
+        "count": 61,
+        "average": 171,
+        "name": "DENMARK"
+    },
+    {
+        "count": 1118,
+        "average": 124,
+        "name": "VIETNAM"
+    },
+    {
+        "count": 73,
+        "average": 174,
+        "name": "FINLAND"
+    },
+    {
+        "count": 158,
+        "average": 168,
+        "name": "LEBANON"
+    },
+    {
+        "count": 70,
+        "average": 167,
+        "name": "AUSTRIA"
+    },
+    {
+        "count": 125,
+        "average": 209,
+        "name": "EL SALVADOR"
+    },
+    {
+        "count": 160,
+        "average": 181,
+        "name": "NETHERLANDS"
+    },
+    {
+        "count": 54,
+        "average": 192,
+        "name": "MOROCCO"
+    },
+    {
+        "count": 12,
+        "average": 163,
+        "name": "AFGHANISTAN"
+    },
+    {
+        "count": 235,
+        "average": 187,
+        "name": "INDONESIA"
+    },
+    {
+        "count": 111,
+        "average": 151,
+        "name": "GHANA"
+    },
+    {
+        "count": 106,
+        "average": 163,
+        "name": "HUNGARY"
+    },
+    {
+        "count": 25,
+        "average": 185,
+        "name": "MACEDONIA"
+    },
+    {
+        "count": 36,
+        "average": 229,
+        "name": "LITHUANIA"
+    },
+    {
+        "count": 321,
+        "average": 165,
+        "name": "NIGERIA"
+    },
+    {
+        "count": 12,
+        "average": 175,
+        "name": "ALGERIA"
+    },
+    {
+        "count": 45,
+        "average": 150,
+        "name": "URUGUAY"
+    },
+    {
+        "count": 97,
+        "average": 199,
+        "name": "TRINIDAD AND TOBAGO"
+    },
+    {
+        "count": 136,
+        "average": 160,
+        "name": "CHILE"
+    },
+    {
+        "count": 146,
+        "average": 180,
+        "name": "UNITED STATES OF AMERICA"
+    },
+    {
+        "count": 51,
+        "average": 158,
+        "name": "ARMENIA"
+    },
+    {
+        "count": 137,
+        "average": 243,
+        "name": "JAMAICA"
+    },
+    {
+        "count": 143,
+        "average": 155,
+        "name": "SWEDEN"
+    },
+    {
+        "count": 43,
+        "average": 169,
+        "name": "KAZAKHSTAN"
+    },
+    {
+        "count": 305,
+        "average": 173,
+        "name": "MALAYSIA"
+    },
+    {
+        "count": 313,
+        "average": 158,
+        "name": "IRELAND"
+    },
+    {
+        "count": 4,
+        "average": 241,
+        "name": "PALESTINIAN TERRITORIES"
+    },
+    {
+        "count": 22,
+        "average": 189,
+        "name": "BURMA (MYANMAR)"
+    },
+    {
+        "count": 294,
+        "average": 165,
+        "name": "EGYPT"
+    },
+    {
+        "count": 34,
+        "average": 162,
+        "name": "BAHAMAS"
+    },
+    {
+        "count": 14,
+        "average": 153,
+        "name": "PARAGUAY"
+    },
+    {
+        "count": 202,
+        "average": 166,
+        "name": "HONG KONG"
+    },
+    {
+        "count": 6,
+        "average": 198,
+        "name": "SURINAME"
+    },
+    {
+        "count": 21,
+        "average": 170,
+        "name": "CAMBODIA"
+    },
+    {
+        "count": 135,
+        "average": 139,
+        "name": "SYRIA"
+    },
+    {
+        "count": 124,
+        "average": 185,
+        "name": "KENYA"
+    },
+    {
+        "count": 63,
+        "average": 185,
+        "name": "BELGIUM"
+    },
+    {
+        "count": 4,
+        "average": 208,
+        "name": "SERBIA AND MONTENEGRO"
+    },
+    {
+        "count": 90,
+        "average": 164,
+        "name": "SERBIA"
+    },
+    {
+        "count": 77,
+        "average": 154,
+        "name": "COSTA RICA"
+    },
+    {
+        "count": 8,
+        "average": 197,
+        "name": "KOSOVO"
+    },
+    {
+        "count": 51,
+        "average": 175,
+        "name": "ZIMBABWE"
+    },
+    {
+        "count": 3,
+        "average": 414,
+        "name": "GUINEA-BISSAU"
+    },
+    {
+        "count": 32,
+        "average": 180,
+        "name": "NORWAY"
+    },
+    {
+        "count": 10,
+        "average": 215,
+        "name": "TAJIKISTAN"
+    },
+    {
+        "count": 6,
+        "average": 211,
+        "name": "MONTENEGRO"
+    },
+    {
+        "count": 61,
+        "average": 183,
+        "name": "BOLIVIA"
+    },
+    {
+        "count": 85,
+        "average": 155,
+        "name": "SWITZERLAND"
+    },
+    {
+        "count": 17,
+        "average": 254,
+        "name": "GUYANA"
+    },
+    {
+        "count": 17,
+        "average": 162,
+        "name": "SLOVENIA"
+    },
+    {
+        "count": 5,
+        "average": 192,
+        "name": "BAHRAIN"
+    },
+    {
+        "count": 12,
+        "average": 177,
+        "name": "DOMINICA"
+    },
+    {
+        "count": 16,
+        "average": 192,
+        "name": "PALESTINE"
+    },
+    {
+        "count": 25,
+        "average": 153,
+        "name": "AZERBAIJAN"
+    },
+    {
+        "count": 17,
+        "average": 168,
+        "name": "BOSNIA AND HERZEGOVINA"
+    },
+    {
+        "count": 3,
+        "average": 267,
+        "name": "GAMBIA"
+    },
+    {
+        "count": 15,
+        "average": 145,
+        "name": "SENEGAL"
+    },
+    {
+        "count": 37,
+        "average": 160,
+        "name": "CROATIA"
+    },
+    {
+        "count": 47,
+        "average": 140,
+        "name": "ETHIOPIA"
+    },
+    {
+        "count": 21,
+        "average": 155,
+        "name": "SAUDI ARABIA"
+    },
+    {
+        "count": 14,
+        "average": 197,
+        "name": "BARBADOS"
+    },
+    {
+        "count": 7,
+        "average": 236,
+        "name": "BURKINA FASO"
+    },
+    {
+        "count": 26,
+        "average": 197,
+        "name": "LATVIA"
+    },
+    {
+        "count": 5,
+        "average": 227,
+        "name": "TOGO"
+    },
+    {
+        "count": 13,
+        "average": 223,
+        "name": "KYRGYZSTAN"
+    },
+    {
+        "count": 44,
+        "average": 148,
+        "name": "LIBYA"
+    },
+    {
+        "count": 14,
+        "average": 217,
+        "name": "ST LUCIA"
+    },
+    {
+        "count": 18,
+        "average": 170,
+        "name": "ESTONIA"
+    },
+    {
+        "count": 48,
+        "average": 200,
+        "name": "ALBANIA"
+    },
+    {
+        "count": 21,
+        "average": 164,
+        "name": "ICELAND"
+    },
+    {
+        "count": 26,
+        "average": 254,
+        "name": "CAMEROON"
+    },
+    {
+        "count": 3,
+        "average": 216,
+        "name": "BERMUDA"
+    },
+    {
+        "count": 29,
+        "average": 133,
+        "name": "GEORGIA"
+    },
+    {
+        "count": 8,
+        "average": 247,
+        "name": "MALAWI"
+    },
+    {
+        "count": 1,
+        "average": 479,
+        "name": "KIRIBATI"
+    },
+    {
+        "count": 5,
+        "average": 168,
+        "name": "MADAGASCAR"
+    },
+    {
+        "count": 2,
+        "average": 138,
+        "name": "LAOS"
+    },
+    {
+        "count": 48,
+        "average": 140,
+        "name": "MOLDOVA"
+    },
+    {
+        "count": 8,
+        "average": 147,
+        "name": "COTE d'IVOIRE"
+    },
+    {
+        "count": 5,
+        "average": 139,
+        "name": "ANGOLA"
+    },
+    {
+        "count": 9,
+        "average": 152,
+        "name": "BOTSWANA"
+    },
+    {
+        "count": 20,
+        "average": 152,
+        "name": "HAITI"
+    },
+    {
+        "count": 9,
+        "average": 130,
+        "name": "YEMEN"
+    },
+    {
+        "count": 7,
+        "average": 132,
+        "name": "BENIN"
+    },
+    {
+        "count": 1,
+        "average": 193,
+        "name": "EQUATORIAL GUINEA"
+    },
+    {
+        "count": 2,
+        "average": 200,
+        "name": "MARSHALL ISLANDS"
+    },
+    {
+        "count": 16,
+        "average": 121,
+        "name": "MACAU"
+    },
+    {
+        "count": 5,
+        "average": 105,
+        "name": "DEMOCRATIC REPUBLIC OF CONGO"
+    },
+    {
+        "count": 15,
+        "average": 190,
+        "name": "BELIZE"
+    },
+    {
+        "count": 26,
+        "average": 115,
+        "name": "SLOVAKIA"
+    },
+    {
+        "count": 17,
+        "average": 116,
+        "name": "UGANDA"
+    },
+    {
+        "count": 1,
+        "average": 167,
+        "name": "UNITED ARAB EMIRATES"
+    },
+    {
+        "count": 7,
+        "average": 177,
+        "name": "TURKMENISTAN"
+    },
+    {
+        "count": 18,
+        "average": 110,
+        "name": "TUNISIA"
+    },
+    {
+        "count": 11,
+        "average": 114,
+        "name": "MAURITIUS"
+    },
+    {
+        "count": 4,
+        "average": 174,
+        "name": "ANTIGUA AND BARBUDA"
+    },
+    {
+        "count": 16,
+        "average": 116,
+        "name": "CYPRUS"
+    },
+    {
+        "count": 6,
+        "average": 421,
+        "name": "ST KITTS AND NEVIS"
+    },
+    {
+        "count": 6,
+        "average": 122,
+        "name": "LUXEMBOURG"
+    },
+    {
+        "count": 3,
+        "average": 302,
+        "name": "GABON"
+    },
+    {
+        "count": 10,
+        "average": 138,
+        "name": "SUDAN"
+    },
+    {
+        "count": 3,
+        "average": 134,
+        "name": "NIGER"
+    },
+    {
+        "count": 8,
+        "average": 122,
+        "name": "IRAQ"
+    },
+    {
+        "count": 4,
+        "average": 148,
+        "name": "NAMIBIA"
+    },
+    {
+        "count": 3,
+        "average": 127,
+        "name": "BHUTAN"
+    },
+    {
+        "count": 1,
+        "average": 203,
+        "name": "BRITISH VIRGIN ISLANDS"
+    },
+    {
+        "count": 1,
+        "average": 182,
+        "name": "SAO TOME AND PRINCIPE"
+    },
+    {
+        "count": 9,
+        "average": 125,
+        "name": "KUWAIT"
+    },
+    {
+        "count": 1,
+        "average": 197,
+        "name": "BURUNDI"
+    },
+    {
+        "count": 1,
+        "average": 198,
+        "name": "MAURITANIA"
+    },
+    {
+        "count": 1,
+        "average": 179,
+        "name": "SOUTH SUDAN"
+    },
+    {
+        "count": 3,
+        "average": 173,
+        "name": "SAINT VINCENT AND THE GRENADINES"
+    },
+    {
+        "count": 3,
+        "average": 112,
+        "name": "MALI"
+    },
+    {
+        "count": 3,
+        "average": 114,
+        "name": "BRUNEI"
+    },
+    {
+        "count": 1,
+        "average": 141,
+        "name": "SIERRA LEONE"
+    },
+    {
+        "count": 2,
+        "average": 114,
+        "name": "GUINEA"
+    },
+    {
+        "count": 8,
+        "average": 88,
+        "name": "RWANDA"
+    },
+    {
+        "count": 1,
+        "average": 103,
+        "name": "TURKS AND CAICOS ISLANDS"
+    },
+    {
+        "count": 5,
+        "average": 97,
+        "name": "FIJI"
+    },
+    {
+        "count": 2,
+        "average": 150,
+        "name": "IVORY COAST"
+    },
+    {
+        "count": 3,
+        "average": 67,
+        "name": "ERITREA"
+    },
+    {
+        "count": 1,
+        "average": 219,
+        "name": "CAPE VERDE"
+    },
+    {
+        "count": 2,
+        "average": 87,
+        "name": "LIBERIA"
+    },
+    {
+        "count": 1,
+        "average": 66,
+        "name": "SEYCHELLES"
+    },
+    {
+        "count": 1,
+        "average": 94,
+        "name": "SWAZILAND"
+    },
+    {
+        "count": 1,
+        "average": 87,
+        "name": "ST VINCENT"
+    },
+    {
+        "count": 1,
+        "average": 227,
+        "name": "VANUATU"
+    }
+]

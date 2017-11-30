@@ -1,0 +1,5192 @@
+[
+    {
+        "group": "Computer and Mathematical Occupations",
+        "value": 40151379376,
+        "key": "Computer Software Engineers, Applications",
+        "subgroup": "Computer Specialists"
+    },
+    {
+        "group": "Construction and Extraction Occupations",
+        "value": 731640,
+        "key": "Hazardous Materials Removal Workers",
+        "subgroup": "Other Construction and Related Workers"
+    },
+    {
+        "group": "Architecture and Engineering Occupations",
+        "value": 400009668,
+        "key": "Civil Engineers",
+        "subgroup": "Engineers"
+    },
+    {
+        "group": "Office and Administrative Support Occupations",
+        "value": 2719275,
+        "key": "File Clerks",
+        "subgroup": "Information and Record Clerks"
+    },
+    {
+        "group": "Sales and Related Occupations",
+        "value": 568958856,
+        "key": "Sales Engineers",
+        "subgroup": "Other Sales and Related Workers"
+    },
+    {
+        "group": "Education, Training, and Library Occupations",
+        "value": 153477697,
+        "key": "Secondary School Teachers, Except Special and Vocational Education",
+        "subgroup": "Primary, Secondary, and Special Education School Teachers"
+    },
+    {
+        "group": "Business and Financial Operations Occupations",
+        "value": 29962844,
+        "key": "Cost Estimators",
+        "subgroup": "Business Operations Specialists"
+    },
+    {
+        "group": "Computer and Mathematical Occupations",
+        "value": 8381568603,
+        "key": "Computer Systems Analysts",
+        "subgroup": "Computer Specialists"
+    },
+    {
+        "group": "Sales and Related Occupations",
+        "value": 2686708,
+        "key": "First-Line Supervisors/Managers of Retail Sales Workers",
+        "subgroup": "Supervisors, Sales Workers"
+    },
+    {
+        "group": "Computer and Mathematical Occupations",
+        "value": 213804974,
+        "key": "Computer Programmers",
+        "subgroup": "Computer Specialists"
+    },
+    {
+        "group": "Arts, Design, Entertainment, Sports, and Media Occupations",
+        "value": 27184750,
+        "key": "Public Relations Specialists",
+        "subgroup": "Media and Communication Workers"
+    },
+    {
+        "group": "Architecture and Engineering Occupations",
+        "value": 142597352,
+        "key": "Electrical and Electronic Engineering Technicians",
+        "subgroup": "Drafters, Engineering, and Mapping Technicians"
+    },
+    {
+        "group": "Computer and Mathematical Occupations",
+        "value": 9944575,
+        "key": "Network Systems and Data Communications Analysts",
+        "subgroup": "Computer Specialists"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 110801,
+        "key": "Extruding, Forming, Pressing, and Compacting Machine Setters, Operators, and Tenders",
+        "subgroup": "Other Production Occupations"
+    },
+    {
+        "group": "Construction and Extraction Occupations",
+        "value": 2389686,
+        "key": "Painters, Construction and Maintenance",
+        "subgroup": "Construction Trades Workers"
+    },
+    {
+        "group": "Sales and Related Occupations",
+        "value": 1794874,
+        "key": "Retail Salespersons",
+        "subgroup": "Retail Sales Workers"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 272709,
+        "key": "Bakers, Bread and Pastry",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 4564537,
+        "key": "Welders, Cutters, Solderers, and Brazers",
+        "subgroup": "Metal Workers and Plastic Workers"
+    },
+    {
+        "group": "Management Occupations",
+        "value": 588391369,
+        "key": "Engineering Managers",
+        "subgroup": "Other Management Occupations"
+    },
+    {
+        "group": "Management Occupations",
+        "value": 9662165,
+        "key": "Lodging Managers",
+        "subgroup": "Other Management Occupations"
+    },
+    {
+        "group": "Food Preparation and Serving Related Occupations",
+        "value": 242064094,
+        "key": "Chefs and Head Cooks",
+        "subgroup": "Supervisors, Food Preparation and Serving Workers"
+    },
+    {
+        "group": "Architecture and Engineering Occupations",
+        "value": 26283243,
+        "key": "Environmental Engineers",
+        "subgroup": "Engineers"
+    },
+    {
+        "group": "Business and Financial Operations Occupations",
+        "value": 562295656,
+        "key": "Accountants and Auditors",
+        "subgroup": "Financial Specialists"
+    },
+    {
+        "group": "Construction and Extraction Occupations",
+        "value": 312334,
+        "key": "Rotary Drill Operators, Oil and Gas",
+        "subgroup": "Extraction Workers"
+    },
+    {
+        "group": "Food Preparation and Serving Related Occupations",
+        "value": 422665522,
+        "key": "Cooks, Restaurant",
+        "subgroup": "Cooks and Food Preparation Workers"
+    },
+    {
+        "group": "Computer and Mathematical Occupations",
+        "value": 123808111,
+        "key": "Operations Research Analysts",
+        "subgroup": "Mathematical Science Occupations"
+    },
+    {
+        "group": "Construction and Extraction Occupations",
+        "value": 707450,
+        "key": "Construction Carpenters",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Farming, Fishing, and Forestry Occupations",
+        "value": 25438,
+        "key": "First-Line Supervisors and Manager/Supervisors - Logging Workers",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Architecture and Engineering Occupations",
+        "value": 1325641561,
+        "key": "Electronics Engineers, Except Computer",
+        "subgroup": "Engineers"
+    },
+    {
+        "group": "Sales and Related Occupations",
+        "value": 20007604,
+        "key": "Sales Representatives, Wholesale and Manufacturing, Except Technical and Scientific Products",
+        "subgroup": "Sales Representatives, Wholesale and Manufacturing"
+    },
+    {
+        "group": "Food Preparation and Serving Related Occupations",
+        "value": 50503937,
+        "key": "Cooks, Fast Food",
+        "subgroup": "Cooks and Food Preparation Workers"
+    },
+    {
+        "group": "Construction and Extraction Occupations",
+        "value": 420320,
+        "key": "Insulation Workers, Floor, Ceiling, and Wall",
+        "subgroup": "Construction Trades Workers"
+    },
+    {
+        "group": "Construction and Extraction Occupations",
+        "value": 200854198,
+        "key": "Carpenters",
+        "subgroup": "Construction Trades Workers"
+    },
+    {
+        "group": "Building and Grounds Cleaning and Maintenance Occupations",
+        "value": 86077209,
+        "key": "Landscaping and Groundskeeping Workers",
+        "subgroup": "Grounds Maintenance Workers"
+    },
+    {
+        "group": "Building and Grounds Cleaning and Maintenance Occupations",
+        "value": 156500036,
+        "key": "Janitors and Cleaners, Except Maids and Housekeeping Cleaners",
+        "subgroup": "Building Cleaning and Pest Control Workers"
+    },
+    {
+        "group": "Personal Care and Service Occupations",
+        "value": 165838,
+        "key": "Personal Care and Service Workers, All Other",
+        "subgroup": "Other Personal Care and Service Workers"
+    },
+    {
+        "group": "Office and Administrative Support Occupations",
+        "value": 108611094,
+        "key": "Executive Secretaries and Administrative Assistants",
+        "subgroup": "Secretaries and Administrative Assistants"
+    },
+    {
+        "group": "Life Physical and Social Science Occupations",
+        "value": 111189539,
+        "key": "Market Research Analysts",
+        "subgroup": "Social Scientists and Related Workers"
+    },
+    {
+        "group": "Construction and Extraction Occupations",
+        "value": 1531297,
+        "key": "Brickmasons and Blockmasons",
+        "subgroup": "Construction Trades Workers"
+    },
+    {
+        "group": "Healthcare Practitioners and Technical Occupations",
+        "value": 1551173016,
+        "key": "Medical and Clinical Laboratory Technologists",
+        "subgroup": "Health Technologists and Technicians"
+    },
+    {
+        "group": "Farming, Fishing, and Forestry Occupations",
+        "value": 49223078,
+        "key": "Farmworkers, Farm and Ranch Animals",
+        "subgroup": "Agricultural Workers"
+    },
+    {
+        "group": "Education, Training, and Library Occupations",
+        "value": 181778292,
+        "key": "Elementary School Teachers, Except Special Education",
+        "subgroup": "Primary, Secondary, and Special Education School Teachers"
+    },
+    {
+        "group": "Construction and Extraction Occupations",
+        "value": 1555668,
+        "key": "First-Line Supervisors/Managers of Construction Trades and Extraction Workers",
+        "subgroup": "Supervisors, Construction and Extraction Workers"
+    },
+    {
+        "group": "Management Occupations",
+        "value": 3204749346,
+        "key": "Computer and Information Systems Managers",
+        "subgroup": "Operations Specialties Managers"
+    },
+    {
+        "group": "Computer and Mathematical Occupations",
+        "value": 222061219,
+        "key": "Computer and Information Scientists, Research",
+        "subgroup": "Computer Specialists"
+    },
+    {
+        "group": "Farming, Fishing, and Forestry Occupations",
+        "value": 175725695,
+        "key": "Agricultural Equipment Operators",
+        "subgroup": "Agricultural Workers"
+    },
+    {
+        "group": "Computer and Mathematical Occupations",
+        "value": 2998299974,
+        "key": "Computer Software Engineers, Systems Software",
+        "subgroup": "Computer Specialists"
+    },
+    {
+        "group": "",
+        "value": 20363652,
+        "key": "",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Sales and Related Occupations",
+        "value": 20456515,
+        "key": "Sales Representatives, Wholesale and Manufacturing, Technical and Scientific Products",
+        "subgroup": "Sales Representatives, Wholesale and Manufacturing"
+    },
+    {
+        "group": "Healthcare Practitioners and Technical Occupations",
+        "value": 2467448505,
+        "key": "Internists, General",
+        "subgroup": "Health Diagnosing and Treating Practitioners"
+    },
+    {
+        "group": "Food Preparation and Serving Related Occupations",
+        "value": 5332866,
+        "key": "Food Preparation Workers",
+        "subgroup": "Cooks and Food Preparation Workers"
+    },
+    {
+        "group": "Architecture and Engineering Occupations",
+        "value": 3963622,
+        "key": "Nuclear Engineers",
+        "subgroup": "Engineers"
+    },
+    {
+        "group": "Construction and Extraction Occupations",
+        "value": 10996290,
+        "key": "Stonemasons",
+        "subgroup": "Construction Trades Workers"
+    },
+    {
+        "group": "Building and Grounds Cleaning and Maintenance Occupations",
+        "value": 161621964,
+        "key": "Maids and Housekeeping Cleaners",
+        "subgroup": "Building Cleaning and Pest Control Workers"
+    },
+    {
+        "group": "Business and Financial Operations Occupations",
+        "value": 44468832,
+        "key": "Credit Analysts",
+        "subgroup": "Financial Specialists"
+    },
+    {
+        "group": "Food Preparation and Serving Related Occupations",
+        "value": 79811428,
+        "key": "First-Line Supervisors/Managers of Food Preparation and Serving Workers",
+        "subgroup": "Supervisors, Food Preparation and Serving Workers"
+    },
+    {
+        "group": "Healthcare Support Occupations",
+        "value": 262847,
+        "key": "Nursing Aides, Orderlies, and Attendants",
+        "subgroup": "Nursing, Psychiatric, and Home Health Aides"
+    },
+    {
+        "group": "Management Occupations",
+        "value": 143416463,
+        "key": "Sales Managers",
+        "subgroup": "Advertising, Marketing, Promotions, Public Relations, and Sales Managers"
+    },
+    {
+        "group": "Architecture and Engineering Occupations",
+        "value": 455463971,
+        "key": "Mechanical Engineers",
+        "subgroup": "Engineers"
+    },
+    {
+        "group": "Management Occupations",
+        "value": 114581806,
+        "key": "Chief Executives",
+        "subgroup": "Top Executives"
+    },
+    {
+        "group": "Management Occupations",
+        "value": 190608270,
+        "key": "Food Service Managers",
+        "subgroup": "Other Management Occupations"
+    },
+    {
+        "group": "Arts, Design, Entertainment, Sports, and Media Occupations",
+        "value": 164517858,
+        "key": "Commercial and Industrial Designers",
+        "subgroup": "Art and Design Workers"
+    },
+    {
+        "group": "Management Occupations",
+        "value": 439000937,
+        "key": "Medical and Health Services Managers",
+        "subgroup": "Other Management Occupations"
+    },
+    {
+        "group": "Office and Administrative Support Occupations",
+        "value": 106815325,
+        "key": "Bookkeeping, Accounting, and Auditing Clerks",
+        "subgroup": "Financial Clerks"
+    },
+    {
+        "group": "Business and Financial Operations Occupations",
+        "value": 478018521,
+        "key": "Financial Analysts",
+        "subgroup": "Financial Specialists"
+    },
+    {
+        "group": "Installation, Maintenance, and Repair Occupations",
+        "value": 233208,
+        "key": "Heating and Air Conditioning Mechanics",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Construction and Extraction Occupations",
+        "value": 3238502,
+        "key": "Construction Laborers",
+        "subgroup": "Construction Trades Workers"
+    },
+    {
+        "group": "Construction and Extraction Occupations",
+        "value": 102260080,
+        "key": "Septic Tank Servicers and Sewer Pipe Cleaners",
+        "subgroup": "Other Construction and Related Workers"
+    },
+    {
+        "group": "Management Occupations",
+        "value": 65453397,
+        "key": "Purchasing Managers",
+        "subgroup": "Operations Specialties Managers"
+    },
+    {
+        "group": "Installation, Maintenance, and Repair Occupations",
+        "value": 92954389,
+        "key": "Maintenance and Repair Workers, General",
+        "subgroup": "Other Installation, Maintenance, and Repair Occupations"
+    },
+    {
+        "group": "Computer and Mathematical Occupations",
+        "value": 999017,
+        "key": "Software Quality Assurance Engineers and Testers",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Life Physical and Social Science Occupations",
+        "value": 70627536,
+        "key": "Chemists",
+        "subgroup": "Physical Scientists"
+    },
+    {
+        "group": "Arts, Design, Entertainment, Sports, and Media Occupations",
+        "value": 35335987,
+        "key": "Art Directors",
+        "subgroup": "Art and Design Workers"
+    },
+    {
+        "group": "Computer and Mathematical Occupations",
+        "value": 31549226,
+        "key": "Web Developers",
+        "subgroup": "Computer Specialists"
+    },
+    {
+        "group": "Computer and Mathematical Occupations",
+        "value": 1251302904,
+        "key": "Network and Computer Systems Administrators",
+        "subgroup": "Computer Specialists"
+    },
+    {
+        "group": "Construction and Extraction Occupations",
+        "value": 746885,
+        "key": "Structural Iron and Steel Workers",
+        "subgroup": "Construction Trades Workers"
+    },
+    {
+        "group": "Computer and Mathematical Occupations",
+        "value": 166628155,
+        "key": "Computer Specialists, All Other",
+        "subgroup": "Computer Specialists"
+    },
+    {
+        "group": "Construction and Extraction Occupations",
+        "value": 489195,
+        "key": "Construction and Related Workers, All Other",
+        "subgroup": "Other Construction and Related Workers"
+    },
+    {
+        "group": "Management Occupations",
+        "value": 13751048,
+        "key": "Administrative Services Managers",
+        "subgroup": "Operations Specialties Managers"
+    },
+    {
+        "group": "Management Occupations",
+        "value": 12123668,
+        "key": "Treasurers, Controllers, and Chief Financial Officers",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 4033076,
+        "key": "Cabinetmakers and Bench Carpenters",
+        "subgroup": "Woodworkers"
+    },
+    {
+        "group": "Construction and Extraction Occupations",
+        "value": 2954012,
+        "key": "Roofers",
+        "subgroup": "Construction Trades Workers"
+    },
+    {
+        "group": "Personal Care and Service Occupations",
+        "value": 741690,
+        "key": "Personal and Home Care Aides",
+        "subgroup": "Other Personal Care and Service Workers"
+    },
+    {
+        "group": "Community and Social Service Occupations",
+        "value": 2208738,
+        "key": "Child, Family, and School Social Workers",
+        "subgroup": "Social Service Specialists"
+    },
+    {
+        "group": "Healthcare Practitioners and Technical Occupations",
+        "value": 6131761,
+        "key": "Chiropractors",
+        "subgroup": "Health Diagnosing and Treating Practitioners"
+    },
+    {
+        "group": "Management Occupations",
+        "value": 295735946,
+        "key": "General and Operations Managers",
+        "subgroup": "Top Executives"
+    },
+    {
+        "group": "Education, Training, and Library Occupations",
+        "value": 8727712,
+        "key": "Preschool Teachers, Except Special Education",
+        "subgroup": "Primary, Secondary, and Special Education School Teachers"
+    },
+    {
+        "group": "Education, Training, and Library Occupations",
+        "value": 2822404,
+        "key": "Middle School Teachers, Except Special and Vocational Education",
+        "subgroup": "Primary, Secondary, and Special Education School Teachers"
+    },
+    {
+        "group": "Healthcare Practitioners and Technical Occupations",
+        "value": 792678594,
+        "key": "Speech-Language Pathologists",
+        "subgroup": "Health Diagnosing and Treating Practitioners"
+    },
+    {
+        "group": "Arts, Design, Entertainment, Sports, and Media Occupations",
+        "value": 7117664,
+        "key": "Multi-Media Artists and Animators",
+        "subgroup": "Art and Design Workers"
+    },
+    {
+        "group": "Sales and Related Occupations",
+        "value": 1694484,
+        "key": "Sales Agents, Securities and Commodities",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Architecture and Engineering Occupations",
+        "value": 261850715,
+        "key": "Industrial Engineers",
+        "subgroup": "Engineers"
+    },
+    {
+        "group": "Architecture and Engineering Occupations",
+        "value": 1086974,
+        "key": "Electrical and Electronics Drafters",
+        "subgroup": "Drafters, Engineering, and Mapping Technicians"
+    },
+    {
+        "group": "Healthcare Practitioners and Technical Occupations",
+        "value": 3703470387,
+        "key": "Occupational Therapists",
+        "subgroup": "Health Diagnosing and Treating Practitioners"
+    },
+    {
+        "group": "Construction and Extraction Occupations",
+        "value": 90000351,
+        "key": "Tile and Marble Setters",
+        "subgroup": "Construction Trades Workers"
+    },
+    {
+        "group": "Education, Training, and Library Occupations",
+        "value": 176202223,
+        "key": "Business Teachers, Postsecondary",
+        "subgroup": "Postsecondary Teachers"
+    },
+    {
+        "group": "Management Occupations",
+        "value": 583603927,
+        "key": "Marketing Managers",
+        "subgroup": "Advertising, Marketing, Promotions, Public Relations, and Sales Managers"
+    },
+    {
+        "group": "Architecture and Engineering Occupations",
+        "value": 525777486,
+        "key": "Electrical Engineers",
+        "subgroup": "Engineers"
+    },
+    {
+        "group": "Healthcare Practitioners and Technical Occupations",
+        "value": 1093559143,
+        "key": "Pharmacists",
+        "subgroup": "Health Diagnosing and Treating Practitioners"
+    },
+    {
+        "group": "Construction and Extraction Occupations",
+        "value": 74964853,
+        "key": "Operating Engineers and Other Construction Equipment Operators",
+        "subgroup": "Construction Trades Workers"
+    },
+    {
+        "group": "Office and Administrative Support Occupations",
+        "value": 1099719,
+        "key": "Computer Operators",
+        "subgroup": "Other Office and Administrative Support Workers"
+    },
+    {
+        "group": "Education, Training, and Library Occupations",
+        "value": 18876665,
+        "key": "Special Education Teachers, Secondary School",
+        "subgroup": "Primary, Secondary, and Special Education School Teachers"
+    },
+    {
+        "group": "Management Occupations",
+        "value": 2033481,
+        "key": "Public Relations Managers",
+        "subgroup": "Advertising, Marketing, Promotions, Public Relations, and Sales Managers"
+    },
+    {
+        "group": "Computer and Mathematical Occupations",
+        "value": 1738563156,
+        "key": "Database Administrators",
+        "subgroup": "Computer Specialists"
+    },
+    {
+        "group": "Personal Care and Service Occupations",
+        "value": 529192,
+        "key": "Child Care Workers",
+        "subgroup": "Other Personal Care and Service Workers"
+    },
+    {
+        "group": "Community and Social Service Occupations",
+        "value": 2920109,
+        "key": "Mental Health and Substance Abuse Social Workers",
+        "subgroup": "Social Service Specialists"
+    },
+    {
+        "group": "Education, Training, and Library Occupations",
+        "value": 48868954,
+        "key": "Foreign Language and Literature Teachers, Postsecondary",
+        "subgroup": "Postsecondary Teachers"
+    },
+    {
+        "group": "Healthcare Support Occupations",
+        "value": 22383092,
+        "key": "Home Health Aides",
+        "subgroup": "Nursing, Psychiatric, and Home Health Aides"
+    },
+    {
+        "group": "Arts, Design, Entertainment, Sports, and Media Occupations",
+        "value": 314557,
+        "key": "Music Directors",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Construction and Extraction Occupations",
+        "value": 88109,
+        "key": "Pipe Fitters",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Architecture and Engineering Occupations",
+        "value": 59447099,
+        "key": "Computer Hardware Engineers",
+        "subgroup": "Engineers"
+    },
+    {
+        "group": "Arts, Design, Entertainment, Sports, and Media Occupations",
+        "value": 1030782,
+        "key": "Designers, All Other",
+        "subgroup": "Art and Design Workers"
+    },
+    {
+        "group": "Education, Training, and Library Occupations",
+        "value": 19056556,
+        "key": "Art, Drama, and Music Teachers, Postsecondary",
+        "subgroup": "Postsecondary Teachers"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 9158711,
+        "key": "Bakers",
+        "subgroup": "Food Processing Workers"
+    },
+    {
+        "group": "Food Preparation and Serving Related Occupations",
+        "value": 10101405,
+        "key": "Cooks, Private Household",
+        "subgroup": "Cooks and Food Preparation Workers"
+    },
+    {
+        "group": "Arts, Design, Entertainment, Sports, and Media Occupations",
+        "value": 10899615,
+        "key": "Reporters and Correspondents",
+        "subgroup": "Media and Communication Workers"
+    },
+    {
+        "group": "Construction and Extraction Occupations",
+        "value": 87567,
+        "key": "Fence Erectors",
+        "subgroup": "Other Construction and Related Workers"
+    },
+    {
+        "group": "Computer and Mathematical Occupations",
+        "value": 304062155,
+        "key": "Statisticians",
+        "subgroup": "Mathematical Science Occupations"
+    },
+    {
+        "group": "Healthcare Practitioners and Technical Occupations",
+        "value": 91792356,
+        "key": "Health Diagnosing and Treating Practitioners, All Other",
+        "subgroup": "Health Diagnosing and Treating Practitioners"
+    },
+    {
+        "group": "Management Occupations",
+        "value": 446885943,
+        "key": "Financial Managers",
+        "subgroup": "Operations Specialties Managers"
+    },
+    {
+        "group": "Business and Financial Operations Occupations",
+        "value": 12623679,
+        "key": "Wholesale and Retail Buyers, Except Farm Products",
+        "subgroup": "Business Operations Specialists"
+    },
+    {
+        "group": "Management Occupations",
+        "value": 20715350,
+        "key": "Education Administrators, Postsecondary",
+        "subgroup": "Other Management Occupations"
+    },
+    {
+        "group": "Education, Training, and Library Occupations",
+        "value": 6537652,
+        "key": "Kindergarten Teachers, Except Special Education",
+        "subgroup": "Primary, Secondary, and Special Education School Teachers"
+    },
+    {
+        "group": "Education, Training, and Library Occupations",
+        "value": 15514368,
+        "key": "Chemistry Teachers, Postsecondary",
+        "subgroup": "Postsecondary Teachers"
+    },
+    {
+        "group": "Life Physical and Social Science Occupations",
+        "value": 6782384,
+        "key": "Urban and Regional Planners",
+        "subgroup": "Social Scientists and Related Workers"
+    },
+    {
+        "group": "Business and Financial Operations Occupations",
+        "value": 547365028,
+        "key": "Management Analysts",
+        "subgroup": "Business Operations Specialists"
+    },
+    {
+        "group": "Education, Training, and Library Occupations",
+        "value": 295481805,
+        "key": "Instructional Coordinators",
+        "subgroup": "Other Education, Training, and Library Occupations"
+    },
+    {
+        "group": "Life Physical and Social Science Occupations",
+        "value": 47540,
+        "key": "City Planning Aides",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Installation, Maintenance, and Repair Occupations",
+        "value": 409162,
+        "key": "Security and Fire Alarm Systems Installers",
+        "subgroup": "Electrical and Electronic Equipment Mechanics, Installers, and Repairers"
+    },
+    {
+        "group": "Personal Care and Service Occupations",
+        "value": 48608914,
+        "key": "Nannies",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Construction and Extraction Occupations",
+        "value": 88379,
+        "key": "Plumbers",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Architecture and Engineering Occupations",
+        "value": 12071581,
+        "key": "Architectural and Civil Drafters",
+        "subgroup": "Drafters, Engineering, and Mapping Technicians"
+    },
+    {
+        "group": "Education, Training, and Library Occupations",
+        "value": 16683507,
+        "key": "Physics Teachers, Postsecondary",
+        "subgroup": "Postsecondary Teachers"
+    },
+    {
+        "group": "Life Physical and Social Science Occupations",
+        "value": 11582987,
+        "key": "Physicists",
+        "subgroup": "Physical Scientists"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 1730473,
+        "key": "First-Line Supervisors/Managers of Production and Operating Workers",
+        "subgroup": "Supervisors, Production Workers"
+    },
+    {
+        "group": "Installation, Maintenance, and Repair Occupations",
+        "value": 227004336,
+        "key": "Automotive Service Technicians and Mechanics",
+        "subgroup": "Vehicle and Mobile Equipment Mechanics, Installers, and Repairers"
+    },
+    {
+        "group": "Construction and Extraction Occupations",
+        "value": 409676,
+        "key": "Pipelayers",
+        "subgroup": "Construction Trades Workers"
+    },
+    {
+        "group": "Legal Occupations",
+        "value": 716017,
+        "key": "Paralegals and Legal Assistants",
+        "subgroup": "Legal Support Workers"
+    },
+    {
+        "group": "Business and Financial Operations Occupations",
+        "value": 24997940,
+        "key": "Training and Development Specialists",
+        "subgroup": "Business Operations Specialists"
+    },
+    {
+        "group": "Installation, Maintenance, and Repair Occupations",
+        "value": 131684447,
+        "key": "Maintenance Workers, Machinery",
+        "subgroup": "Other Installation, Maintenance, and Repair Occupations"
+    },
+    {
+        "group": "Installation, Maintenance, and Repair Occupations",
+        "value": 856500,
+        "key": "Automotive Master Mechanics",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Construction and Extraction Occupations",
+        "value": 124238142,
+        "key": "Cement Masons and Concrete Finishers",
+        "subgroup": "Construction Trades Workers"
+    },
+    {
+        "group": "Life Physical and Social Science Occupations",
+        "value": 2704477,
+        "key": "Biological Scientists, All Other",
+        "subgroup": "Life Scientists"
+    },
+    {
+        "group": "Installation, Maintenance, and Repair Occupations",
+        "value": 848751,
+        "key": "Mobile Heavy Equipment Mechanics, Except Engines",
+        "subgroup": "Vehicle and Mobile Equipment Mechanics, Installers, and Repairers"
+    },
+    {
+        "group": "Education, Training, and Library Occupations",
+        "value": 6894556,
+        "key": "Special Education Teachers, Middle School",
+        "subgroup": "Primary, Secondary, and Special Education School Teachers"
+    },
+    {
+        "group": "Management Occupations",
+        "value": 147972,
+        "key": "Farmers and Ranchers",
+        "subgroup": "Other Management Occupations"
+    },
+    {
+        "group": "Healthcare Practitioners and Technical Occupations",
+        "value": 80996669,
+        "key": "Pediatricians, General",
+        "subgroup": "Health Diagnosing and Treating Practitioners"
+    },
+    {
+        "group": "Office and Administrative Support Occupations",
+        "value": 704003,
+        "key": "First-Line Supervisors/Managers of Office and Administrative Support Workers",
+        "subgroup": "Supervisors, Office and Administrative Support Workers"
+    },
+    {
+        "group": "Installation, Maintenance, and Repair Occupations",
+        "value": 494712,
+        "key": "First-Line Supervisors/Managers of Mechanics, Installers, and Repairers",
+        "subgroup": "Supervisors of Installation, Maintenance, and Repair Workers"
+    },
+    {
+        "group": "Architecture and Engineering Occupations",
+        "value": 58559427,
+        "key": "Architects, Except Landscape and Naval",
+        "subgroup": "Architects, Surveyors, and Cartographers"
+    },
+    {
+        "group": "Arts, Design, Entertainment, Sports, and Media Occupations",
+        "value": 119752734,
+        "key": "Interpreters and Translators",
+        "subgroup": "Media and Communication Workers"
+    },
+    {
+        "group": "Installation, Maintenance, and Repair Occupations",
+        "value": 504738,
+        "key": "Electric Motor, Power Tool, and Related Repairers",
+        "subgroup": "Electrical and Electronic Equipment Mechanics, Installers, and Repairers"
+    },
+    {
+        "group": "Office and Administrative Support Occupations",
+        "value": 41682,
+        "key": "Stock Clerks- Stockroom, Warehouse, or Storage Yard",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Construction and Extraction Occupations",
+        "value": 293020,
+        "key": "Helpers--Electricians",
+        "subgroup": "Helpers, Construction Trades"
+    },
+    {
+        "group": "Management Occupations",
+        "value": 85933012,
+        "key": "Industrial Production Managers",
+        "subgroup": "Operations Specialties Managers"
+    },
+    {
+        "group": "Sales and Related Occupations",
+        "value": 845505,
+        "key": "Sales Representatives, Services, All Other",
+        "subgroup": "Sales Representatives, Services"
+    },
+    {
+        "group": "Business and Financial Operations Occupations",
+        "value": 1111227,
+        "key": "Business Operations Specialists, All Other",
+        "subgroup": "Business Operations Specialists"
+    },
+    {
+        "group": "Sales and Related Occupations",
+        "value": 1260593,
+        "key": "Travel Agents",
+        "subgroup": "Sales Representatives, Services"
+    },
+    {
+        "group": "Computer and Mathematical Occupations",
+        "value": 88421,
+        "key": "Web Administrators",
+        "subgroup": "Computer Specialists"
+    },
+    {
+        "group": "Farming, Fishing, and Forestry Occupations",
+        "value": 976075,
+        "key": "First-Line Supervisors/Managers of Farming, Fishing, and Forestry Workers",
+        "subgroup": "Supervisors, Farming, Fishing, and Forestry Workers"
+    },
+    {
+        "group": "Business and Financial Operations Occupations",
+        "value": 22886106,
+        "key": "Budget Analysts",
+        "subgroup": "Financial Specialists"
+    },
+    {
+        "group": "Education, Training, and Library Occupations",
+        "value": 195685,
+        "key": "Education, Training, and Library Workers, All Other",
+        "subgroup": "Other Education, Training, and Library Occupations"
+    },
+    {
+        "group": "Community and Social Service Occupations",
+        "value": 547760,
+        "key": "Substance Abuse and Behavioral Disorder Counselors",
+        "subgroup": "Social Service Specialists"
+    },
+    {
+        "group": "Life Physical and Social Science Occupations",
+        "value": 401037,
+        "key": "Forensic Science Technicians",
+        "subgroup": "Life, Physical, and Social Science Technicians"
+    },
+    {
+        "group": "Management Occupations",
+        "value": 10475755,
+        "key": "Social and Community Service Managers",
+        "subgroup": "Other Management Occupations"
+    },
+    {
+        "group": "Life Physical and Social Science Occupations",
+        "value": 173686642,
+        "key": "Biochemists and Biophysicists",
+        "subgroup": "Life Scientists"
+    },
+    {
+        "group": "Construction and Extraction Occupations",
+        "value": 326645,
+        "key": "Sheet Metal Workers",
+        "subgroup": "Construction Trades Workers"
+    },
+    {
+        "group": "Life Physical and Social Science Occupations",
+        "value": 236124100,
+        "key": "Medical Scientists, Except Epidemiologists",
+        "subgroup": "Life Scientists"
+    },
+    {
+        "group": "Life Physical and Social Science Occupations",
+        "value": 8262374,
+        "key": "Animal Scientists",
+        "subgroup": "Life Scientists"
+    },
+    {
+        "group": "Arts, Design, Entertainment, Sports, and Media Occupations",
+        "value": 336606,
+        "key": "Craft Artists",
+        "subgroup": "Art and Design Workers"
+    },
+    {
+        "group": "Office and Administrative Support Occupations",
+        "value": 201281,
+        "key": "Secretaries, Except Legal, Medical, and Executive",
+        "subgroup": "Secretaries and Administrative Assistants"
+    },
+    {
+        "group": "Life Physical and Social Science Occupations",
+        "value": 2896830,
+        "key": "Atmospheric and Space Scientists",
+        "subgroup": "Physical Scientists"
+    },
+    {
+        "group": "Office and Administrative Support Occupations",
+        "value": 523404,
+        "key": "Order Clerks",
+        "subgroup": "Information and Record Clerks"
+    },
+    {
+        "group": "Education, Training, and Library Occupations",
+        "value": 51549049,
+        "key": "Mathematical Science Teachers, Postsecondary",
+        "subgroup": "Postsecondary Teachers"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 13046777,
+        "key": "Tailors, Dressmakers, and Custom Sewers",
+        "subgroup": "Textile, Apparel, and Furnishings Workers"
+    },
+    {
+        "group": "Life Physical and Social Science Occupations",
+        "value": 2341169,
+        "key": "Hydrologists",
+        "subgroup": "Physical Scientists"
+    },
+    {
+        "group": "Food Preparation and Serving Related Occupations",
+        "value": 539093,
+        "key": "Hosts and Hostesses, Restaurant, Lounge, and Coffee Shop",
+        "subgroup": "Other Food Preparation and Serving Related Workers"
+    },
+    {
+        "group": "Legal Occupations",
+        "value": 156501666,
+        "key": "Lawyers",
+        "subgroup": "Lawyers, Judges, and Related Workers"
+    },
+    {
+        "group": "Community and Social Service Occupations",
+        "value": 99654388,
+        "key": "Directors, Religious Activities and Education",
+        "subgroup": "Religious Workers"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 1630786,
+        "key": "Inspectors, Testers, Sorters, Samplers, and Weighers",
+        "subgroup": "Other Production Occupations"
+    },
+    {
+        "group": "Management Occupations",
+        "value": 1189368,
+        "key": "Private Sector Executives",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Business and Financial Operations Occupations",
+        "value": 206381579,
+        "key": "Logisticians",
+        "subgroup": "Business Operations Specialists"
+    },
+    {
+        "group": "Arts, Design, Entertainment, Sports, and Media Occupations",
+        "value": 401252,
+        "key": "Floral Designers",
+        "subgroup": "Art and Design Workers"
+    },
+    {
+        "group": "Healthcare Practitioners and Technical Occupations",
+        "value": 194395875,
+        "key": "Physician Assistants",
+        "subgroup": "Health Diagnosing and Treating Practitioners"
+    },
+    {
+        "group": "Education, Training, and Library Occupations",
+        "value": 7380347,
+        "key": "Recreation and Fitness Studies Teachers, Postsecondary",
+        "subgroup": "Postsecondary Teachers"
+    },
+    {
+        "group": "Architecture and Engineering Occupations",
+        "value": 350740,
+        "key": "Marine Architects",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Management Occupations",
+        "value": 10834875,
+        "key": "Financial Managers, Branch or Department",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Food Preparation and Serving Related Occupations",
+        "value": 877176,
+        "key": "Cooks, All Other",
+        "subgroup": "Cooks and Food Preparation Workers"
+    },
+    {
+        "group": "Architecture and Engineering Occupations",
+        "value": 228984461,
+        "key": "Chemical Engineers",
+        "subgroup": "Engineers"
+    },
+    {
+        "group": "Transportation and Material Moving Occupations",
+        "value": 454792,
+        "key": "First-Line Supervisors/Managers of Transportation and Material-Moving Machine and Vehicle Operators",
+        "subgroup": "Supervisors, Transportation and Material Moving Workers"
+    },
+    {
+        "group": "Installation, Maintenance, and Repair Occupations",
+        "value": 88634409,
+        "key": "Bus and Truck Mechanics and Diesel Engine Specialists",
+        "subgroup": "Vehicle and Mobile Equipment Mechanics, Installers, and Repairers"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 1858048,
+        "key": "Fabric and Apparel Patternmakers",
+        "subgroup": "Textile, Apparel, and Furnishings Workers"
+    },
+    {
+        "group": "Sales and Related Occupations",
+        "value": 4231385,
+        "key": "Cashiers",
+        "subgroup": "Retail Sales Workers"
+    },
+    {
+        "group": "Office and Administrative Support Occupations",
+        "value": 623365,
+        "key": "Medical Secretaries",
+        "subgroup": "Secretaries and Administrative Assistants"
+    },
+    {
+        "group": "Transportation and Material Moving Occupations",
+        "value": 207583,
+        "key": "Truck Drivers, Heavy and Tractor-Trailer",
+        "subgroup": "Motor Vehicle Operators"
+    },
+    {
+        "group": "Construction and Extraction Occupations",
+        "value": 563204,
+        "key": "Carpet Installers",
+        "subgroup": "Construction Trades Workers"
+    },
+    {
+        "group": "Office and Administrative Support Occupations",
+        "value": 2867093,
+        "key": "Production, Planning, and Expediting Clerks",
+        "subgroup": "Material Recording, Scheduling, Dispatching, and Distributing Workers"
+    },
+    {
+        "group": "Transportation and Material Moving Occupations",
+        "value": 114983,
+        "key": "Parking Lot Attendants",
+        "subgroup": "Other Transportation Workers"
+    },
+    {
+        "group": "Office and Administrative Support Occupations",
+        "value": 6932359,
+        "key": "Procurement Clerks",
+        "subgroup": "Financial Clerks"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 100462188,
+        "key": "Butchers and Meat Cutters",
+        "subgroup": "Food Processing Workers"
+    },
+    {
+        "group": "Education, Training, and Library Occupations",
+        "value": 2528457,
+        "key": "Special Education Teachers, Preschool, Kindergarten, and Elementary School",
+        "subgroup": "Primary, Secondary, and Special Education School Teachers"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 51708,
+        "key": "Extruding and Drawing Machine Setters, Operators, and Tenders, Metal and Plastic",
+        "subgroup": "Metal Workers and Plastic Workers"
+    },
+    {
+        "group": "Farming, Fishing, and Forestry Occupations",
+        "value": 1145652,
+        "key": "Animal Breeders",
+        "subgroup": "Agricultural Workers"
+    },
+    {
+        "group": "Arts, Design, Entertainment, Sports, and Media Occupations",
+        "value": 66195797,
+        "key": "Coaches and Scouts",
+        "subgroup": "Entertainers and Performers, Sports and Related Workers"
+    },
+    {
+        "group": "Healthcare Practitioners and Technical Occupations",
+        "value": 31995038,
+        "key": "Obstetricians and Gynecologists",
+        "subgroup": "Health Diagnosing and Treating Practitioners"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 371697,
+        "key": "Jewelers",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Healthcare Practitioners and Technical Occupations",
+        "value": 140485512,
+        "key": "Veterinarians",
+        "subgroup": "Health Diagnosing and Treating Practitioners"
+    },
+    {
+        "group": "Healthcare Practitioners and Technical Occupations",
+        "value": 2876442,
+        "key": "Occupational Health and Safety Specialists",
+        "subgroup": "Other Healthcare Practitioners and Technical Occupations"
+    },
+    {
+        "group": "Healthcare Practitioners and Technical Occupations",
+        "value": 7161307,
+        "key": "Orthodontists",
+        "subgroup": "Health Diagnosing and Treating Practitioners"
+    },
+    {
+        "group": "Architecture and Engineering Occupations",
+        "value": 13751741,
+        "key": "Mining and Geological Engineers, Including Mining Safety Engineers",
+        "subgroup": "Engineers"
+    },
+    {
+        "group": "Building and Grounds Cleaning and Maintenance Occupations",
+        "value": 536760,
+        "key": "First-Line Supervisors/Managers of Housekeeping and Janitorial Workers",
+        "subgroup": "Supervisors, Building and Grounds Cleaning and Maintenance Workers"
+    },
+    {
+        "group": "Building and Grounds Cleaning and Maintenance Occupations",
+        "value": 502237,
+        "key": "First-Line Supervisors/Managers of Landscaping, Lawn Service, and Groundskeeping Workers",
+        "subgroup": "Supervisors, Building and Grounds Cleaning and Maintenance Workers"
+    },
+    {
+        "group": "Arts, Design, Entertainment, Sports, and Media Occupations",
+        "value": 119482178,
+        "key": "Graphic Designers",
+        "subgroup": "Art and Design Workers"
+    },
+    {
+        "group": "Management Occupations",
+        "value": 10964899,
+        "key": "Managers, All Other",
+        "subgroup": "Other Management Occupations"
+    },
+    {
+        "group": "Healthcare Practitioners and Technical Occupations",
+        "value": 506775232,
+        "key": "Dentists, General",
+        "subgroup": "Health Diagnosing and Treating Practitioners"
+    },
+    {
+        "group": "Education, Training, and Library Occupations",
+        "value": 86788473,
+        "key": "Engineering Teachers, Postsecondary",
+        "subgroup": "Postsecondary Teachers"
+    },
+    {
+        "group": "Architecture and Engineering Occupations",
+        "value": 234773515,
+        "key": "Materials Engineers",
+        "subgroup": "Engineers"
+    },
+    {
+        "group": "Personal Care and Service Occupations",
+        "value": 11534331,
+        "key": "Hairdressers, Hairstylists, and Cosmetologists",
+        "subgroup": "Personal Appearance Workers"
+    },
+    {
+        "group": "Education, Training, and Library Occupations",
+        "value": 11580129,
+        "key": "Self-Enrichment Education Teachers",
+        "subgroup": "Other Teachers and Instructors"
+    },
+    {
+        "group": "Education, Training, and Library Occupations",
+        "value": 4337219,
+        "key": "Librarians",
+        "subgroup": "Librarians, Curators, and Archivists"
+    },
+    {
+        "group": "Building and Grounds Cleaning and Maintenance Occupations",
+        "value": 140270933,
+        "key": "Tree Trimmers and Pruners",
+        "subgroup": "Grounds Maintenance Workers"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 593850,
+        "key": "Upholsterers",
+        "subgroup": "Textile, Apparel, and Furnishings Workers"
+    },
+    {
+        "group": "Management Occupations",
+        "value": 57881081,
+        "key": "Natural Sciences Managers",
+        "subgroup": "Other Management Occupations"
+    },
+    {
+        "group": "Food Preparation and Serving Related Occupations",
+        "value": 582094,
+        "key": "Food Servers, Nonrestaurant",
+        "subgroup": "Food and Beverage Serving Workers"
+    },
+    {
+        "group": "Education, Training, and Library Occupations",
+        "value": 45658884,
+        "key": "Computer Science Teachers, Postsecondary",
+        "subgroup": "Postsecondary Teachers"
+    },
+    {
+        "group": "Business and Financial Operations Occupations",
+        "value": 3621468,
+        "key": "Loan Officers",
+        "subgroup": "Financial Specialists"
+    },
+    {
+        "group": "Education, Training, and Library Occupations",
+        "value": 88733558,
+        "key": "Health Specialties Teachers, Postsecondary",
+        "subgroup": "Postsecondary Teachers"
+    },
+    {
+        "group": "Education, Training, and Library Occupations",
+        "value": 23579175,
+        "key": "Biological Science Teachers, Postsecondary",
+        "subgroup": "Postsecondary Teachers"
+    },
+    {
+        "group": "Education, Training, and Library Occupations",
+        "value": 1420969,
+        "key": "Teachers and Instructors, All Other",
+        "subgroup": "Other Teachers and Instructors"
+    },
+    {
+        "group": "Construction and Extraction Occupations",
+        "value": 1012494,
+        "key": "Plasterers and Stucco Masons",
+        "subgroup": "Construction Trades Workers"
+    },
+    {
+        "group": "Management Occupations",
+        "value": 17509032,
+        "key": "Training and Development Managers",
+        "subgroup": "Operations Specialties Managers"
+    },
+    {
+        "group": "Management Occupations",
+        "value": 13474613,
+        "key": "Education Administrators, Elementary and Secondary School",
+        "subgroup": "Other Management Occupations"
+    },
+    {
+        "group": "Architecture and Engineering Occupations",
+        "value": 2772408,
+        "key": "Agricultural Engineers",
+        "subgroup": "Engineers"
+    },
+    {
+        "group": "Office and Administrative Support Occupations",
+        "value": 259499,
+        "key": "Loan Interviewers and Clerks",
+        "subgroup": "Information and Record Clerks"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 254720,
+        "key": "Shop and Alteration Tailors",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Transportation and Material Moving Occupations",
+        "value": 16254745,
+        "key": "Packers and Packagers, Hand",
+        "subgroup": "Material Moving Workers"
+    },
+    {
+        "group": "Personal Care and Service Occupations",
+        "value": 550404,
+        "key": "First-Line Supervisors/Managers of Personal Service Workers",
+        "subgroup": "Supervisors, Personal Care and Service Workers"
+    },
+    {
+        "group": "Office and Administrative Support Occupations",
+        "value": 1251912,
+        "key": "Shipping, Receiving, and Traffic Clerks",
+        "subgroup": "Material Recording, Scheduling, Dispatching, and Distributing Workers"
+    },
+    {
+        "group": "Life Physical and Social Science Occupations",
+        "value": 84911704,
+        "key": "Economists",
+        "subgroup": "Social Scientists and Related Workers"
+    },
+    {
+        "group": "Management Occupations",
+        "value": 5448830,
+        "key": "Compensation and Benefits Managers",
+        "subgroup": "Operations Specialties Managers"
+    },
+    {
+        "group": "Education, Training, and Library Occupations",
+        "value": 21906169,
+        "key": "Education Teachers, Postsecondary",
+        "subgroup": "Postsecondary Teachers"
+    },
+    {
+        "group": "Personal Care and Service Occupations",
+        "value": 706540,
+        "key": "Residential Advisors",
+        "subgroup": "Other Personal Care and Service Workers"
+    },
+    {
+        "group": "Management Occupations",
+        "value": 767098,
+        "key": "Education Administrators, Preschool and Child Care Center/Program",
+        "subgroup": "Other Management Occupations"
+    },
+    {
+        "group": "Healthcare Practitioners and Technical Occupations",
+        "value": 813767569,
+        "key": "Family and General Practitioners",
+        "subgroup": "Health Diagnosing and Treating Practitioners"
+    },
+    {
+        "group": "Business and Financial Operations Occupations",
+        "value": 6175165,
+        "key": "Compensation, Benefits, and Job Analysis Specialists",
+        "subgroup": "Business Operations Specialists"
+    },
+    {
+        "group": "Architecture and Engineering Occupations",
+        "value": 50929620,
+        "key": "Aerospace Engineers",
+        "subgroup": "Engineers"
+    },
+    {
+        "group": "Construction and Extraction Occupations",
+        "value": 3072090,
+        "key": "Electricians",
+        "subgroup": "Construction Trades Workers"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 794982,
+        "key": "Numerical Tool and Process Control Programmers",
+        "subgroup": "Metal Workers and Plastic Workers"
+    },
+    {
+        "group": "Personal Care and Service Occupations",
+        "value": 1884373,
+        "key": "Fitness Trainers and Aerobics Instructors",
+        "subgroup": "Other Personal Care and Service Workers"
+    },
+    {
+        "group": "Healthcare Support Occupations",
+        "value": 1724891,
+        "key": "Dental Assistants",
+        "subgroup": "Other Healthcare Support Occupations"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 528362,
+        "key": "Painters, Transportation Equipment",
+        "subgroup": "Other Production Occupations"
+    },
+    {
+        "group": "Personal Care and Service Occupations",
+        "value": 1727875,
+        "key": "Manicurists and Pedicurists",
+        "subgroup": "Personal Appearance Workers"
+    },
+    {
+        "group": "Community and Social Service Occupations",
+        "value": 564194,
+        "key": "Educational, Vocational, and School Counselors",
+        "subgroup": "Social Service Specialists"
+    },
+    {
+        "group": "Education, Training, and Library Occupations",
+        "value": 62967058,
+        "key": "Economics Teachers, Postsecondary",
+        "subgroup": "Postsecondary Teachers"
+    },
+    {
+        "group": "Personal Care and Service Occupations",
+        "value": 1690090,
+        "key": "Nonfarm Animal Caretakers",
+        "subgroup": "Animal Care and Service Workers"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 103893483,
+        "key": "Meat, Poultry, and Fish Cutters and Trimmers",
+        "subgroup": "Food Processing Workers"
+    },
+    {
+        "group": "Farming, Fishing, and Forestry Occupations",
+        "value": 86258,
+        "key": "First-Line Supervisors and Manager/Supervisors - Horticultural Workers",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Business and Financial Operations Occupations",
+        "value": 458338,
+        "key": "Personnel Recruiters",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Office and Administrative Support Occupations",
+        "value": 120016,
+        "key": "Billing, Cost, and Rate Clerks",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Architecture and Engineering Occupations",
+        "value": 62402329,
+        "key": "Biomedical Engineers",
+        "subgroup": "Engineers"
+    },
+    {
+        "group": "Computer and Mathematical Occupations",
+        "value": 20209171,
+        "key": "Computer Support Specialists",
+        "subgroup": "Computer Specialists"
+    },
+    {
+        "group": "Life Physical and Social Science Occupations",
+        "value": 1373170,
+        "key": "Zoologists and Wildlife Biologists",
+        "subgroup": "Life Scientists"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 4851779,
+        "key": "Jewelers and Precious Stone and Metal Workers",
+        "subgroup": "Other Production Occupations"
+    },
+    {
+        "group": "Healthcare Practitioners and Technical Occupations",
+        "value": 4170048,
+        "key": "Dietitians and Nutritionists",
+        "subgroup": "Health Diagnosing and Treating Practitioners"
+    },
+    {
+        "group": "Office and Administrative Support Occupations",
+        "value": 2280455,
+        "key": "Stock Clerks and Order Fillers",
+        "subgroup": "Material Recording, Scheduling, Dispatching, and Distributing Workers"
+    },
+    {
+        "group": "Arts, Design, Entertainment, Sports, and Media Occupations",
+        "value": 12737892,
+        "key": "Interior Designers",
+        "subgroup": "Art and Design Workers"
+    },
+    {
+        "group": "Building and Grounds Cleaning and Maintenance Occupations",
+        "value": 264230,
+        "key": "Grounds Maintenance Workers, All Other",
+        "subgroup": "Grounds Maintenance Workers"
+    },
+    {
+        "group": "Community and Social Service Occupations",
+        "value": 91366449,
+        "key": "Health Educators",
+        "subgroup": "Social Service Specialists"
+    },
+    {
+        "group": "Life Physical and Social Science Occupations",
+        "value": 1541273,
+        "key": "Social Science Research Assistants",
+        "subgroup": "Life, Physical, and Social Science Technicians"
+    },
+    {
+        "group": "Architecture and Engineering Occupations",
+        "value": 343188860,
+        "key": "Landscape Architects",
+        "subgroup": "Architects, Surveyors, and Cartographers"
+    },
+    {
+        "group": "Healthcare Support Occupations",
+        "value": 1362805,
+        "key": "Medical Assistants",
+        "subgroup": "Other Healthcare Support Occupations"
+    },
+    {
+        "group": "Office and Administrative Support Occupations",
+        "value": 2535678,
+        "key": "Customer Service Representatives",
+        "subgroup": "Information and Record Clerks"
+    },
+    {
+        "group": "Architecture and Engineering Occupations",
+        "value": 10042112,
+        "key": "Mechanical Engineering Technicians",
+        "subgroup": "Drafters, Engineering, and Mapping Technicians"
+    },
+    {
+        "group": "Architecture and Engineering Occupations",
+        "value": 3718991,
+        "key": "Industrial Engineering Technicians",
+        "subgroup": "Drafters, Engineering, and Mapping Technicians"
+    },
+    {
+        "group": "Architecture and Engineering Occupations",
+        "value": 800200,
+        "key": "Surveyors",
+        "subgroup": "Architects, Surveyors, and Cartographers"
+    },
+    {
+        "group": "Management Occupations",
+        "value": 25763685,
+        "key": "Advertising and Promotions Managers",
+        "subgroup": "Advertising, Marketing, Promotions, Public Relations, and Sales Managers"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 84600,
+        "key": "Gem and Diamond Workers",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Construction and Extraction Occupations",
+        "value": 440797,
+        "key": "Helpers--Carpenters",
+        "subgroup": "Helpers, Construction Trades"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 40269,
+        "key": "Printing Machine Operators",
+        "subgroup": "Printing Workers"
+    },
+    {
+        "group": "Architecture and Engineering Occupations",
+        "value": 637370,
+        "key": "Marine Engineers",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Education, Training, and Library Occupations",
+        "value": 2538695,
+        "key": "Law Teachers, Postsecondary",
+        "subgroup": "Postsecondary Teachers"
+    },
+    {
+        "group": "Construction and Extraction Occupations",
+        "value": 332528,
+        "key": "First-Line Supervisors and Manager/Supervisors- Construction Trades Workers",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Education, Training, and Library Occupations",
+        "value": 11417675,
+        "key": "History Teachers, Postsecondary",
+        "subgroup": "Postsecondary Teachers"
+    },
+    {
+        "group": "Sales and Related Occupations",
+        "value": 141710,
+        "key": "Sales Representatives, Electrical/Electronic",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Protective Service Occupations",
+        "value": 61107,
+        "key": "Lifeguards, Ski Patrol, and Other Recreational Protective Service Workers",
+        "subgroup": "Other Protective Service Workers"
+    },
+    {
+        "group": "Management Occupations",
+        "value": 96682,
+        "key": "Nursery and Greenhouse Managers",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Sales and Related Occupations",
+        "value": 831160,
+        "key": "First-Line Supervisors/Managers of Non-Retail Sales Workers",
+        "subgroup": "Supervisors, Sales Workers"
+    },
+    {
+        "group": "Arts, Design, Entertainment, Sports, and Media Occupations",
+        "value": 30000,
+        "key": "Technical Directors/Managers",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Office and Administrative Support Occupations",
+        "value": 3977853,
+        "key": "Office Clerks, General",
+        "subgroup": "Other Office and Administrative Support Workers"
+    },
+    {
+        "group": "Office and Administrative Support Occupations",
+        "value": 1258063,
+        "key": "Cargo and Freight Agents",
+        "subgroup": "Material Recording, Scheduling, Dispatching, and Distributing Workers"
+    },
+    {
+        "group": "Community and Social Service Occupations",
+        "value": 2467391,
+        "key": "Rehabilitation Counselors",
+        "subgroup": "Social Service Specialists"
+    },
+    {
+        "group": "Arts, Design, Entertainment, Sports, and Media Occupations",
+        "value": 12706914,
+        "key": "Technical Writers",
+        "subgroup": "Media and Communication Workers"
+    },
+    {
+        "group": "Healthcare Support Occupations",
+        "value": 139600,
+        "key": "Physical Therapist Aides",
+        "subgroup": "Occupational and Physical Therapist Assistants and Aides"
+    },
+    {
+        "group": "Sales and Related Occupations",
+        "value": 620160,
+        "key": "Real Estate Sales Agents",
+        "subgroup": "Other Sales and Related Workers"
+    },
+    {
+        "group": "Community and Social Service Occupations",
+        "value": 22257776,
+        "key": "Clergy",
+        "subgroup": "Religious Workers"
+    },
+    {
+        "group": "Life Physical and Social Science Occupations",
+        "value": 3308458,
+        "key": "Political Scientists",
+        "subgroup": "Social Scientists and Related Workers"
+    },
+    {
+        "group": "Healthcare Practitioners and Technical Occupations",
+        "value": 586040931,
+        "key": "Physicians and Surgeons, All Other",
+        "subgroup": "Health Diagnosing and Treating Practitioners"
+    },
+    {
+        "group": "Life Physical and Social Science Occupations",
+        "value": 41923397,
+        "key": "Geoscientists, Except Hydrologists and Geographers",
+        "subgroup": "Physical Scientists"
+    },
+    {
+        "group": "Construction and Extraction Occupations",
+        "value": 315182,
+        "key": "Segmental Pavers",
+        "subgroup": "Other Construction and Related Workers"
+    },
+    {
+        "group": "Life Physical and Social Science Occupations",
+        "value": 25505068,
+        "key": "Food Scientists and Technologists",
+        "subgroup": "Life Scientists"
+    },
+    {
+        "group": "Farming, Fishing, and Forestry Occupations",
+        "value": 116301333,
+        "key": "Farmworkers and Laborers, Crop, Nursery, and Greenhouse",
+        "subgroup": "Agricultural Workers"
+    },
+    {
+        "group": "Installation, Maintenance, and Repair Occupations",
+        "value": 646885,
+        "key": "Helpers--Installation, Maintenance, and Repair Workers",
+        "subgroup": "Other Installation, Maintenance, and Repair Occupations"
+    },
+    {
+        "group": "Installation, Maintenance, and Repair Occupations",
+        "value": 130232,
+        "key": "All other vehicle and mobile equipment mechanics, installers, and repairers",
+        "subgroup": "Vehicle and Mobile Equipment Mechanics, Installers, and Repairers"
+    },
+    {
+        "group": "Life Physical and Social Science Occupations",
+        "value": 4361531,
+        "key": "Industrial-Organizational Psychologists",
+        "subgroup": "Social Scientists and Related Workers"
+    },
+    {
+        "group": "Computer and Mathematical Occupations",
+        "value": 56923595,
+        "key": "Actuaries",
+        "subgroup": "Mathematical Science Occupations"
+    },
+    {
+        "group": "Education, Training, and Library Occupations",
+        "value": 4232124,
+        "key": "Social Work Teachers, Postsecondary",
+        "subgroup": "Postsecondary Teachers"
+    },
+    {
+        "group": "Building and Grounds Cleaning and Maintenance Occupations",
+        "value": 113693,
+        "key": "Janitorial Supervisors",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Arts, Design, Entertainment, Sports, and Media Occupations",
+        "value": 13913347,
+        "key": "Editors",
+        "subgroup": "Media and Communication Workers"
+    },
+    {
+        "group": "Architecture and Engineering Occupations",
+        "value": 2370544,
+        "key": "Electro-Mechanical Technicians",
+        "subgroup": "Drafters, Engineering, and Mapping Technicians"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 158285,
+        "key": "Production Inspectors, Testers, Graders, Sorters, Samplers, Weighers",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Business and Financial Operations Occupations",
+        "value": 21311242,
+        "key": "Personal Financial Advisors",
+        "subgroup": "Financial Specialists"
+    },
+    {
+        "group": "Architecture and Engineering Occupations",
+        "value": 1039818,
+        "key": "Engineering Technicians, Except Drafters, All Other",
+        "subgroup": "Drafters, Engineering, and Mapping Technicians"
+    },
+    {
+        "group": "Installation, Maintenance, and Repair Occupations",
+        "value": 2540955,
+        "key": "Automotive Body and Related Repairers",
+        "subgroup": "Vehicle and Mobile Equipment Mechanics, Installers, and Repairers"
+    },
+    {
+        "group": "Transportation and Material Moving Occupations",
+        "value": 209686,
+        "key": "Excavating and Loading Machine and Dragline Operators",
+        "subgroup": "Material Moving Workers"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 78458,
+        "key": "Bakers, Manufacturing",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Office and Administrative Support Occupations",
+        "value": 124271589,
+        "key": "Hotel, Motel, and Resort Desk Clerks",
+        "subgroup": "Information and Record Clerks"
+    },
+    {
+        "group": "Education, Training, and Library Occupations",
+        "value": 2634385,
+        "key": "Criminal Justice and Law Enforcement Teachers, Postsecondary",
+        "subgroup": "Postsecondary Teachers"
+    },
+    {
+        "group": "Food Preparation and Serving Related Occupations",
+        "value": 676219,
+        "key": "Cooks, Short Order",
+        "subgroup": "Cooks and Food Preparation Workers"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 926699,
+        "key": "Sewing Machine Operators",
+        "subgroup": "Textile, Apparel, and Furnishings Workers"
+    },
+    {
+        "group": "Education, Training, and Library Occupations",
+        "value": 12704453,
+        "key": "English Language and Literature Teachers, Postsecondary",
+        "subgroup": "Postsecondary Teachers"
+    },
+    {
+        "group": "Education, Training, and Library Occupations",
+        "value": 5394453,
+        "key": "Geography Teachers, Postsecondary",
+        "subgroup": "Postsecondary Teachers"
+    },
+    {
+        "group": "Arts, Design, Entertainment, Sports, and Media Occupations",
+        "value": 27457839,
+        "key": "Fashion Designers",
+        "subgroup": "Art and Design Workers"
+    },
+    {
+        "group": "Management Occupations",
+        "value": 105024133,
+        "key": "Transportation, Storage, and Distribution Managers",
+        "subgroup": "Operations Specialties Managers"
+    },
+    {
+        "group": "Installation, Maintenance, and Repair Occupations",
+        "value": 163241,
+        "key": "Camera and Photographic Equipment Repairers",
+        "subgroup": "Other Installation, Maintenance, and Repair Occupations"
+    },
+    {
+        "group": "Life Physical and Social Science Occupations",
+        "value": 2757852,
+        "key": "Geographers",
+        "subgroup": "Social Scientists and Related Workers"
+    },
+    {
+        "group": "Life Physical and Social Science Occupations",
+        "value": 10291634,
+        "key": "Environmental Scientists and Specialists, Including Health",
+        "subgroup": "Physical Scientists"
+    },
+    {
+        "group": "Arts, Design, Entertainment, Sports, and Media Occupations",
+        "value": 344575,
+        "key": "Producers",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Business and Financial Operations Occupations",
+        "value": 405887,
+        "key": "Employment, Recruitment, and Placement Specialists",
+        "subgroup": "Business Operations Specialists"
+    },
+    {
+        "group": "Office and Administrative Support Occupations",
+        "value": 91852,
+        "key": "Marking Clerks",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Life Physical and Social Science Occupations",
+        "value": 25009180,
+        "key": "Materials Scientists",
+        "subgroup": "Physical Scientists"
+    },
+    {
+        "group": "Community and Social Service Occupations",
+        "value": 368349,
+        "key": "Religious Workers, All Other",
+        "subgroup": "Religious Workers"
+    },
+    {
+        "group": "Food Preparation and Serving Related Occupations",
+        "value": 1250159,
+        "key": "Waiters and Waitresses",
+        "subgroup": "Food and Beverage Serving Workers"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 34736,
+        "key": "Stone Cutters and Carvers",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 962183,
+        "key": "Laundry and Dry-Cleaning Workers",
+        "subgroup": "Textile, Apparel, and Furnishings Workers"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 63315,
+        "key": "Lathe and Turning Machine Tool Setters, Operators, and Tenders, Metal and Plastic",
+        "subgroup": "Metal Workers and Plastic Workers"
+    },
+    {
+        "group": "Office and Administrative Support Occupations",
+        "value": 966409,
+        "key": "Human Resources Assistants, Except Payroll and Timekeeping",
+        "subgroup": "Information and Record Clerks"
+    },
+    {
+        "group": "Management Occupations",
+        "value": 1433551,
+        "key": "Human Resources Managers, All Other",
+        "subgroup": "Operations Specialties Managers"
+    },
+    {
+        "group": "Management Occupations",
+        "value": 47295450,
+        "key": "Construction Managers",
+        "subgroup": "Other Management Occupations"
+    },
+    {
+        "group": "Education, Training, and Library Occupations",
+        "value": 29578,
+        "key": "Audio-Visual Collections Specialists",
+        "subgroup": "Other Education, Training, and Library Occupations"
+    },
+    {
+        "group": "Arts, Design, Entertainment, Sports, and Media Occupations",
+        "value": 1955566,
+        "key": "Set and Exhibit Designers",
+        "subgroup": "Art and Design Workers"
+    },
+    {
+        "group": "Business and Financial Operations Occupations",
+        "value": 105000,
+        "key": "Claims Examiners, Property and Casualty Insurance",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Transportation and Material Moving Occupations",
+        "value": 21341,
+        "key": "Service Station Attendants",
+        "subgroup": "Other Transportation Workers"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 254010,
+        "key": "Grinding, Lapping, Polishing, and Buffing Machine Tool Setters, Operators, and Tenders, Metal and Plastic",
+        "subgroup": "Metal Workers and Plastic Workers"
+    },
+    {
+        "group": "Management Occupations",
+        "value": 6589962,
+        "key": "Property, Real Estate, and Community Association Managers",
+        "subgroup": "Other Management Occupations"
+    },
+    {
+        "group": "Healthcare Practitioners and Technical Occupations",
+        "value": 251201,
+        "key": "Nuclear Medicine Technologists",
+        "subgroup": "Health Technologists and Technicians"
+    },
+    {
+        "group": "Sales and Related Occupations",
+        "value": 2515989,
+        "key": "Advertising Sales Agents",
+        "subgroup": "Sales Representatives, Services"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 440063,
+        "key": "Painting, Coating, and Decorating Workers",
+        "subgroup": "Other Production Occupations"
+    },
+    {
+        "group": "Legal Occupations",
+        "value": 1181622,
+        "key": "Law Clerks",
+        "subgroup": "Legal Support Workers"
+    },
+    {
+        "group": "Building and Grounds Cleaning and Maintenance Occupations",
+        "value": 154261,
+        "key": "Pest Control Workers",
+        "subgroup": "Building Cleaning and Pest Control Workers"
+    },
+    {
+        "group": "Business and Financial Operations Occupations",
+        "value": 3180688,
+        "key": "Financial Specialists, All Other",
+        "subgroup": "Financial Specialists"
+    },
+    {
+        "group": "Education, Training, and Library Occupations",
+        "value": 7311280,
+        "key": "Agricultural Sciences Teachers, Postsecondary",
+        "subgroup": "Postsecondary Teachers"
+    },
+    {
+        "group": "Transportation and Material Moving Occupations",
+        "value": 131664,
+        "key": "Ship and Boat Captains",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Transportation and Material Moving Occupations",
+        "value": 216362,
+        "key": "First-Line Supervisors/Managers of Helpers, Laborers, and Material Movers, Hand",
+        "subgroup": "Supervisors, Transportation and Material Moving Workers"
+    },
+    {
+        "group": "Construction and Extraction Occupations",
+        "value": 299354,
+        "key": "Helpers--Pipelayers, Plumbers, Pipefitters, and Steamfitters",
+        "subgroup": "Helpers, Construction Trades"
+    },
+    {
+        "group": "Education, Training, and Library Occupations",
+        "value": 13127772,
+        "key": "Communications Teachers, Postsecondary",
+        "subgroup": "Postsecondary Teachers"
+    },
+    {
+        "group": "Computer and Mathematical Occupations",
+        "value": 19374733,
+        "key": "Mathematicians",
+        "subgroup": "Mathematical Science Occupations"
+    },
+    {
+        "group": "Healthcare Practitioners and Technical Occupations",
+        "value": 43744918,
+        "key": "Anesthesiologists",
+        "subgroup": "Health Diagnosing and Treating Practitioners"
+    },
+    {
+        "group": "Sales and Related Occupations",
+        "value": 122845,
+        "key": "Sales Representatives, Chemical and Pharmaceutical",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Education, Training, and Library Occupations",
+        "value": 50750,
+        "key": "Vocational Education Teachers, Secondary School",
+        "subgroup": "Primary, Secondary, and Special Education School Teachers"
+    },
+    {
+        "group": "Arts, Design, Entertainment, Sports, and Media Occupations",
+        "value": 7433369,
+        "key": "Music Directors and Composers",
+        "subgroup": "Entertainers and Performers, Sports and Related Workers"
+    },
+    {
+        "group": "Healthcare Support Occupations",
+        "value": 278106,
+        "key": "Physical Therapist Assistants",
+        "subgroup": "Occupational and Physical Therapist Assistants and Aides"
+    },
+    {
+        "group": "Healthcare Practitioners and Technical Occupations",
+        "value": 98963087,
+        "key": "Surgeons",
+        "subgroup": "Health Diagnosing and Treating Practitioners"
+    },
+    {
+        "group": "Business and Financial Operations Occupations",
+        "value": 9199476,
+        "key": "Financial Examiners",
+        "subgroup": "Financial Specialists"
+    },
+    {
+        "group": "Education, Training, and Library Occupations",
+        "value": 4321189,
+        "key": "Nursing Instructors and Teachers, Postsecondary",
+        "subgroup": "Postsecondary Teachers"
+    },
+    {
+        "group": "Transportation and Material Moving Occupations",
+        "value": 178212,
+        "key": "Industrial Truck and Tractor Operators",
+        "subgroup": "Material Moving Workers"
+    },
+    {
+        "group": "Transportation and Material Moving Occupations",
+        "value": 674694,
+        "key": "Cleaners of Vehicles and Equipment",
+        "subgroup": "Material Moving Workers"
+    },
+    {
+        "group": "Personal Care and Service Occupations",
+        "value": 91707,
+        "key": "Tour Guides and Escorts",
+        "subgroup": "Transportation, Tourism, and Lodging Attendants"
+    },
+    {
+        "group": "Life Physical and Social Science Occupations",
+        "value": 4110056,
+        "key": "Biological Technicians",
+        "subgroup": "Life, Physical, and Social Science Technicians"
+    },
+    {
+        "group": "Healthcare Practitioners and Technical Occupations",
+        "value": 2046280,
+        "key": "Podiatrists",
+        "subgroup": "Health Diagnosing and Treating Practitioners"
+    },
+    {
+        "group": "Business and Financial Operations Occupations",
+        "value": 49171,
+        "key": "Insurance Appraisers, Auto Damage",
+        "subgroup": "Business Operations Specialists"
+    },
+    {
+        "group": "Arts, Design, Entertainment, Sports, and Media Occupations",
+        "value": 291818,
+        "key": "Copy Writers",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Business and Financial Operations Occupations",
+        "value": 1304963,
+        "key": "Compliance Officers, Except Agriculture, Construction, Health and Safety, and Transportation",
+        "subgroup": "Business Operations Specialists"
+    },
+    {
+        "group": "Office and Administrative Support Occupations",
+        "value": 277149,
+        "key": "Payroll and Timekeeping Clerks",
+        "subgroup": "Financial Clerks"
+    },
+    {
+        "group": "Installation, Maintenance, and Repair Occupations",
+        "value": 84740,
+        "key": "Farm Equipment Mechanics",
+        "subgroup": "Vehicle and Mobile Equipment Mechanics, Installers, and Repairers"
+    },
+    {
+        "group": "Architecture and Engineering Occupations",
+        "value": 6113210,
+        "key": "Engineers, All Other",
+        "subgroup": "Engineers"
+    },
+    {
+        "group": "Life Physical and Social Science Occupations",
+        "value": 7256121,
+        "key": "Clinical, Counseling, and School Psychologists",
+        "subgroup": "Social Scientists and Related Workers"
+    },
+    {
+        "group": "Personal Care and Service Occupations",
+        "value": 81523,
+        "key": "Skin Care Specialists",
+        "subgroup": "Personal Appearance Workers"
+    },
+    {
+        "group": "Healthcare Practitioners and Technical Occupations",
+        "value": 552817,
+        "key": "Licensed Practical and Licensed Vocational Nurses",
+        "subgroup": "Health Technologists and Technicians"
+    },
+    {
+        "group": "Building and Grounds Cleaning and Maintenance Occupations",
+        "value": 459329,
+        "key": "First-Line Supervisors and Manager/Supervisors - Landscaping Workers",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Food Preparation and Serving Related Occupations",
+        "value": 789583,
+        "key": "Cooks, Institution and Cafeteria",
+        "subgroup": "Cooks and Food Preparation Workers"
+    },
+    {
+        "group": "Office and Administrative Support Occupations",
+        "value": 45198,
+        "key": "New Accounts Clerks",
+        "subgroup": "Information and Record Clerks"
+    },
+    {
+        "group": "Transportation and Material Moving Occupations",
+        "value": 2411123,
+        "key": "Driver/Sales Workers",
+        "subgroup": "Motor Vehicle Operators"
+    },
+    {
+        "group": "Business and Financial Operations Occupations",
+        "value": 155459,
+        "key": "Purchasing Agents and Buyers, Farm Products",
+        "subgroup": "Business Operations Specialists"
+    },
+    {
+        "group": "Construction and Extraction Occupations",
+        "value": 108703814,
+        "key": "Plumbers, Pipefitters, and Steamfitters",
+        "subgroup": "Construction Trades Workers"
+    },
+    {
+        "group": "Transportation and Material Moving Occupations",
+        "value": 1152303,
+        "key": "Transportation Inspectors",
+        "subgroup": "Other Transportation Workers"
+    },
+    {
+        "group": "Architecture and Engineering Occupations",
+        "value": 918794,
+        "key": "Civil Engineering Technicians",
+        "subgroup": "Drafters, Engineering, and Mapping Technicians"
+    },
+    {
+        "group": "Arts, Design, Entertainment, Sports, and Media Occupations",
+        "value": 3101814,
+        "key": "Film and Video Editors",
+        "subgroup": "Media and Communication Equipment Workers"
+    },
+    {
+        "group": "Farming, Fishing, and Forestry Occupations",
+        "value": 100401,
+        "key": "First-Line Supervisors and Manager/Supervisors - Animal Care Workers, Except Livestock",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Education, Training, and Library Occupations",
+        "value": 2589562,
+        "key": "Adult Literacy, Remedial Education, and GED Teachers and Instructors",
+        "subgroup": "Other Teachers and Instructors"
+    },
+    {
+        "group": "Construction and Extraction Occupations",
+        "value": 119486,
+        "key": "Helpers, Construction Trades, All Other",
+        "subgroup": "Helpers, Construction Trades"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 6185528,
+        "key": "Dental Laboratory Technicians",
+        "subgroup": "Other Production Occupations"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 243255,
+        "key": "Coating, Painting, and Spraying Machine Setters, Operators, and Tenders",
+        "subgroup": "Other Production Occupations"
+    },
+    {
+        "group": "Installation, Maintenance, and Repair Occupations",
+        "value": 66581,
+        "key": "Mechanical Door Repairers",
+        "subgroup": "Other Installation, Maintenance, and Repair Occupations"
+    },
+    {
+        "group": "Community and Social Service Occupations",
+        "value": 1190934,
+        "key": "Marriage and Family Therapists",
+        "subgroup": "Social Service Specialists"
+    },
+    {
+        "group": "Architecture and Engineering Occupations",
+        "value": 26225390,
+        "key": "Marine Engineers and Naval Architects",
+        "subgroup": "Engineers"
+    },
+    {
+        "group": "Architecture and Engineering Occupations",
+        "value": 55744,
+        "key": "Civil Drafters",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 261665,
+        "key": "Cutting, Punching, and Press Machine Setters, Operators, and Tenders, Metal and Plastic",
+        "subgroup": "Metal Workers and Plastic Workers"
+    },
+    {
+        "group": "Education, Training, and Library Occupations",
+        "value": 9220182,
+        "key": "Atmospheric, Earth, Marine, and Space Sciences Teachers, Postsecondary",
+        "subgroup": "Postsecondary Teachers"
+    },
+    {
+        "group": "Management Occupations",
+        "value": 992379,
+        "key": "Transportation Managers",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Computer and Mathematical Occupations",
+        "value": 909282,
+        "key": "Computer Systems Engineers/Architects",
+        "subgroup": "Computer Specialists"
+    },
+    {
+        "group": "Healthcare Practitioners and Technical Occupations",
+        "value": 721896,
+        "key": "Diagnostic Medical Sonographers",
+        "subgroup": "Health Technologists and Technicians"
+    },
+    {
+        "group": "Education, Training, and Library Occupations",
+        "value": 6920588,
+        "key": "Architecture Teachers, Postsecondary",
+        "subgroup": "Postsecondary Teachers"
+    },
+    {
+        "group": "Business and Financial Operations Occupations",
+        "value": 10899707,
+        "key": "Purchasing Agents, Except Wholesale, Retail, and Farm Products",
+        "subgroup": "Business Operations Specialists"
+    },
+    {
+        "group": "Food Preparation and Serving Related Occupations",
+        "value": 41257175,
+        "key": "Counter Attendants, Cafeteria, Food Concession, and Coffee Shop",
+        "subgroup": "Food and Beverage Serving Workers"
+    },
+    {
+        "group": "Community and Social Service Occupations",
+        "value": 272938,
+        "key": "Community and Social Service Specialists, All Other",
+        "subgroup": "Social Service Specialists"
+    },
+    {
+        "group": "Education, Training, and Library Occupations",
+        "value": 1285763,
+        "key": "Farm and Home Management Advisors",
+        "subgroup": "Other Education, Training, and Library Occupations"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 150051,
+        "key": "Patternmakers, Wood",
+        "subgroup": "Woodworkers"
+    },
+    {
+        "group": "Life Physical and Social Science Occupations",
+        "value": 5196689,
+        "key": "Survey Researchers",
+        "subgroup": "Social Scientists and Related Workers"
+    },
+    {
+        "group": "Management Occupations",
+        "value": 236765,
+        "key": "Farm, Ranch, and Other Agricultural Managers",
+        "subgroup": "Other Management Occupations"
+    },
+    {
+        "group": "Education, Training, and Library Occupations",
+        "value": 16730195,
+        "key": "Political Science Teachers, Postsecondary",
+        "subgroup": "Postsecondary Teachers"
+    },
+    {
+        "group": "Arts, Design, Entertainment, Sports, and Media Occupations",
+        "value": 1778589,
+        "key": "Fine Artists, Including Painters, Sculptors, and Illustrators",
+        "subgroup": "Art and Design Workers"
+    },
+    {
+        "group": "Arts, Design, Entertainment, Sports, and Media Occupations",
+        "value": 120077,
+        "key": "Sculptors",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Transportation and Material Moving Occupations",
+        "value": 21174,
+        "key": "Truck Drivers, Light or Delivery Services",
+        "subgroup": "Motor Vehicle Operators"
+    },
+    {
+        "group": "Life Physical and Social Science Occupations",
+        "value": 9932971,
+        "key": "Soil and Plant Scientists",
+        "subgroup": "Life Scientists"
+    },
+    {
+        "group": "Management Occupations",
+        "value": 66248,
+        "key": "Storage and Distribution Managers",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Healthcare Practitioners and Technical Occupations",
+        "value": 75670417,
+        "key": "Psychiatrists",
+        "subgroup": "Health Diagnosing and Treating Practitioners"
+    },
+    {
+        "group": "Healthcare Practitioners and Technical Occupations",
+        "value": 214781,
+        "key": "Pharmacy Technicians",
+        "subgroup": "Health Technologists and Technicians"
+    },
+    {
+        "group": "Healthcare Practitioners and Technical Occupations",
+        "value": 4032881,
+        "key": "Optometrists",
+        "subgroup": "Health Diagnosing and Treating Practitioners"
+    },
+    {
+        "group": "Community and Social Service Occupations",
+        "value": 934773,
+        "key": "Social and Human Service Assistants",
+        "subgroup": "Social Service Specialists"
+    },
+    {
+        "group": "Education, Training, and Library Occupations",
+        "value": 1981753,
+        "key": "Postsecondary Teachers, All Other",
+        "subgroup": "Postsecondary Teachers"
+    },
+    {
+        "group": "Education, Training, and Library Occupations",
+        "value": 182371,
+        "key": "Vocational Education Teachers Postsecondary",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Installation, Maintenance, and Repair Occupations",
+        "value": 41288,
+        "key": "Stringed Instrument Repairers and Tuners",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 498110,
+        "key": "Sewers, Hand",
+        "subgroup": "Textile, Apparel, and Furnishings Workers"
+    },
+    {
+        "group": "Transportation and Material Moving Occupations",
+        "value": 875346,
+        "key": "Laborers and Freight, Stock, and Material Movers, Hand",
+        "subgroup": "Material Moving Workers"
+    },
+    {
+        "group": "Education, Training, and Library Occupations",
+        "value": 13996643,
+        "key": "Philosophy and Religion Teachers, Postsecondary",
+        "subgroup": "Postsecondary Teachers"
+    },
+    {
+        "group": "Architecture and Engineering Occupations",
+        "value": 72000,
+        "key": "Fire-Prevention and Protection Engineers",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 170414,
+        "key": "Packaging and Filling Machine Operators and Tenders",
+        "subgroup": "Other Production Occupations"
+    },
+    {
+        "group": "Installation, Maintenance, and Repair Occupations",
+        "value": 477132,
+        "key": "Telecommunications Line Installers and Repairers",
+        "subgroup": "Other Installation, Maintenance, and Repair Occupations"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 988551,
+        "key": "Tool and Die Makers",
+        "subgroup": "Metal Workers and Plastic Workers"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 62421,
+        "key": "Custom Tailors",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Sales and Related Occupations",
+        "value": 863325,
+        "key": "Real Estate Brokers",
+        "subgroup": "Other Sales and Related Workers"
+    },
+    {
+        "group": "Architecture and Engineering Occupations",
+        "value": 68195881,
+        "key": "Petroleum Engineers",
+        "subgroup": "Engineers"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 105643,
+        "key": "Milling and Planing Machine Setters, Operators, and Tenders, Metal and Plastic",
+        "subgroup": "Metal Workers and Plastic Workers"
+    },
+    {
+        "group": "Installation, Maintenance, and Repair Occupations",
+        "value": 82720699,
+        "key": "Industrial Machinery Mechanics",
+        "subgroup": "Other Installation, Maintenance, and Repair Occupations"
+    },
+    {
+        "group": "Installation, Maintenance, and Repair Occupations",
+        "value": 147139,
+        "key": "Tire Repairers and Changers",
+        "subgroup": "Vehicle and Mobile Equipment Mechanics, Installers, and Repairers"
+    },
+    {
+        "group": "Personal Care and Service Occupations",
+        "value": 3010706,
+        "key": "Animal Trainers",
+        "subgroup": "Animal Care and Service Workers"
+    },
+    {
+        "group": "Education, Training, and Library Occupations",
+        "value": 2202798,
+        "key": "Library Science Teachers, Postsecondary",
+        "subgroup": "Postsecondary Teachers"
+    },
+    {
+        "group": "Farming, Fishing, and Forestry Occupations",
+        "value": 83500,
+        "key": "First-Line Supervisors and Manager/Supervisors - Animal Husbandry Workers",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Construction and Extraction Occupations",
+        "value": 5053462,
+        "key": "Helpers--Brickmasons, Blockmasons, Stonemasons, and Tile and Marble Setters",
+        "subgroup": "Helpers, Construction Trades"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 173494,
+        "key": "Chemical Equipment Operators and Tenders",
+        "subgroup": "Other Production Occupations"
+    },
+    {
+        "group": "Farming, Fishing, and Forestry Occupations",
+        "value": 67371,
+        "key": "Nursery Workers",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Community and Social Service Occupations",
+        "value": 57320929,
+        "key": "Mental Health Counselors",
+        "subgroup": "Social Service Specialists"
+    },
+    {
+        "group": "Installation, Maintenance, and Repair Occupations",
+        "value": 82327,
+        "key": "Home Appliance Repairers",
+        "subgroup": "Other Installation, Maintenance, and Repair Occupations"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 251239,
+        "key": "Grinding and Polishing Workers, Hand",
+        "subgroup": "Other Production Occupations"
+    },
+    {
+        "group": "Life Physical and Social Science Occupations",
+        "value": 5328403,
+        "key": "Microbiologists",
+        "subgroup": "Life Scientists"
+    },
+    {
+        "group": "Life Physical and Social Science Occupations",
+        "value": 7171662,
+        "key": "Epidemiologists",
+        "subgroup": "Life Scientists"
+    },
+    {
+        "group": "Food Preparation and Serving Related Occupations",
+        "value": 17069123,
+        "key": "Combined Food Preparation and Serving Workers, Including Fast Food",
+        "subgroup": "Food and Beverage Serving Workers"
+    },
+    {
+        "group": "Education, Training, and Library Occupations",
+        "value": 13353348,
+        "key": "Psychology Teachers, Postsecondary",
+        "subgroup": "Postsecondary Teachers"
+    },
+    {
+        "group": "Installation, Maintenance, and Repair Occupations",
+        "value": 481590,
+        "key": "Telecommunications Equipment Installers and Repairers, Except Line Installers",
+        "subgroup": "Electrical and Electronic Equipment Mechanics, Installers, and Repairers"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 29099,
+        "key": "Buffing and Polishing Set-Up Operators",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Architecture and Engineering Occupations",
+        "value": 45000,
+        "key": "Calibration and Instrumentation Technicians",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Arts, Design, Entertainment, Sports, and Media Occupations",
+        "value": 80840,
+        "key": "Directors- Stage, Motion Pictures, Television, and Radio",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 677296,
+        "key": "Furniture Finishers",
+        "subgroup": "Woodworkers"
+    },
+    {
+        "group": "Education, Training, and Library Occupations",
+        "value": 731979,
+        "key": "Archivists",
+        "subgroup": "Librarians, Curators, and Archivists"
+    },
+    {
+        "group": "Community and Social Service Occupations",
+        "value": 316814,
+        "key": "Medical and Public Health Social Workers",
+        "subgroup": "Social Service Specialists"
+    },
+    {
+        "group": "Healthcare Practitioners and Technical Occupations",
+        "value": 1343468,
+        "key": "Athletic Trainers",
+        "subgroup": "Other Healthcare Practitioners and Technical Occupations"
+    },
+    {
+        "group": "Transportation and Material Moving Occupations",
+        "value": 246159,
+        "key": "Aviation Inspectors",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Architecture and Engineering Occupations",
+        "value": 694222,
+        "key": "Aerospace Engineering and Operations Technicians",
+        "subgroup": "Drafters, Engineering, and Mapping Technicians"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 92810,
+        "key": "Aircraft Structure, Surfaces, Rigging, and Systems Assemblers",
+        "subgroup": "Assemblers and Fabricators"
+    },
+    {
+        "group": "Education, Training, and Library Occupations",
+        "value": 3887163,
+        "key": "Anthropology and Archeology Teachers, Postsecondary",
+        "subgroup": "Postsecondary Teachers"
+    },
+    {
+        "group": "Healthcare Practitioners and Technical Occupations",
+        "value": 2056306,
+        "key": "Physical Therapists",
+        "subgroup": "Health Diagnosing and Treating Practitioners"
+    },
+    {
+        "group": "Architecture and Engineering Occupations",
+        "value": 167024,
+        "key": "Product Safety Engineers",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Business and Financial Operations Occupations",
+        "value": 121338,
+        "key": "Loan Counselors",
+        "subgroup": "Financial Specialists"
+    },
+    {
+        "group": "Education, Training, and Library Occupations",
+        "value": 7691084,
+        "key": "Area, Ethnic, and Cultural Studies Teachers, Postsecondary",
+        "subgroup": "Postsecondary Teachers"
+    },
+    {
+        "group": "Education, Training, and Library Occupations",
+        "value": 5768758,
+        "key": "Sociology Teachers, Postsecondary",
+        "subgroup": "Postsecondary Teachers"
+    },
+    {
+        "group": "Life Physical and Social Science Occupations",
+        "value": 110664,
+        "key": "Social Scientists and Related Workers, All Other",
+        "subgroup": "Social Scientists and Related Workers"
+    },
+    {
+        "group": "Business and Financial Operations Occupations",
+        "value": 52500,
+        "key": "Employment Interviewers, Private or Public Employment Service",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Architecture and Engineering Occupations",
+        "value": 322207,
+        "key": "Surveying and Mapping Technicians",
+        "subgroup": "Drafters, Engineering, and Mapping Technicians"
+    },
+    {
+        "group": "Life Physical and Social Science Occupations",
+        "value": 49858,
+        "key": "Educational Psychologists",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Community and Social Service Occupations",
+        "value": 102323,
+        "key": "Counselors, All Other",
+        "subgroup": "Social Service Specialists"
+    },
+    {
+        "group": "Installation, Maintenance, and Repair Occupations",
+        "value": 133630845,
+        "key": "Electrical and Electronics Repairers, Commercial and Industrial Equipment",
+        "subgroup": "Electrical and Electronic Equipment Mechanics, Installers, and Repairers"
+    },
+    {
+        "group": "Life Physical and Social Science Occupations",
+        "value": 227334,
+        "key": "Counseling Psychologists",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Education, Training, and Library Occupations",
+        "value": 1022259,
+        "key": "Forestry and Conservation Science Teachers, Postsecondary",
+        "subgroup": "Postsecondary Teachers"
+    },
+    {
+        "group": "Life Physical and Social Science Occupations",
+        "value": 365048,
+        "key": "Biochemists",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 92560,
+        "key": "Lay-Out Workers, Metal and Plastic",
+        "subgroup": "Metal Workers and Plastic Workers"
+    },
+    {
+        "group": "Architecture and Engineering Occupations",
+        "value": 372745,
+        "key": "Electrical Engineering Technicians",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Education, Training, and Library Occupations",
+        "value": 89250,
+        "key": "Graduate Teaching Assistants",
+        "subgroup": "Postsecondary Teachers"
+    },
+    {
+        "group": "Computer and Mathematical Occupations",
+        "value": 211693,
+        "key": "Mathematical Technicians",
+        "subgroup": "Mathematical Science Occupations"
+    },
+    {
+        "group": "Installation, Maintenance, and Repair Occupations",
+        "value": 144914,
+        "key": "Outdoor Power Equipment and Other Small Engine Mechanics",
+        "subgroup": "Vehicle and Mobile Equipment Mechanics, Installers, and Repairers"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 84032,
+        "key": "Screen Printing Machine Setters and Set-Up Operators",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Sales and Related Occupations",
+        "value": 98959586,
+        "key": "Securities, Commodities, and Financial Services Sales Agents",
+        "subgroup": "Sales Representatives, Services"
+    },
+    {
+        "group": "Installation, Maintenance, and Repair Occupations",
+        "value": 26686,
+        "key": "Coin, Vending, and Amusement Machine Servicers and Repairers",
+        "subgroup": "Other Installation, Maintenance, and Repair Occupations"
+    },
+    {
+        "group": "Education, Training, and Library Occupations",
+        "value": 812720,
+        "key": "Social Sciences Teachers, Postsecondary, All Other",
+        "subgroup": "Postsecondary Teachers"
+    },
+    {
+        "group": "Healthcare Practitioners and Technical Occupations",
+        "value": 1327247,
+        "key": "Recreational Therapists",
+        "subgroup": "Health Diagnosing and Treating Practitioners"
+    },
+    {
+        "group": "Life Physical and Social Science Occupations",
+        "value": 407715,
+        "key": "Clinical Psychologists",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Education, Training, and Library Occupations",
+        "value": 3436362,
+        "key": "Curators",
+        "subgroup": "Librarians, Curators, and Archivists"
+    },
+    {
+        "group": "Architecture and Engineering Occupations",
+        "value": 2049830,
+        "key": "Cartographers and Photogrammetrists",
+        "subgroup": "Architects, Surveyors, and Cartographers"
+    },
+    {
+        "group": "Education, Training, and Library Occupations",
+        "value": 2504989,
+        "key": "Environmental Science Teachers, Postsecondary",
+        "subgroup": "Postsecondary Teachers"
+    },
+    {
+        "group": "Education, Training, and Library Occupations",
+        "value": 1767335,
+        "key": "Home Economics Teachers, Postsecondary",
+        "subgroup": "Postsecondary Teachers"
+    },
+    {
+        "group": "Arts, Design, Entertainment, Sports, and Media Occupations",
+        "value": 414960,
+        "key": "Program Directors",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Arts, Design, Entertainment, Sports, and Media Occupations",
+        "value": 545520,
+        "key": "Merchandise Displayers and Window Trimmers",
+        "subgroup": "Art and Design Workers"
+    },
+    {
+        "group": "Business and Financial Operations Occupations",
+        "value": 103729,
+        "key": "Meeting and Convention Planners",
+        "subgroup": "Business Operations Specialists"
+    },
+    {
+        "group": "Construction and Extraction Occupations",
+        "value": 425360,
+        "key": "Floor Layers, Except Carpet, Wood, and Hard Tiles",
+        "subgroup": "Construction Trades Workers"
+    },
+    {
+        "group": "Building and Grounds Cleaning and Maintenance Occupations",
+        "value": 48631544,
+        "key": "Pesticide Handlers, Sprayers, and Applicators, Vegetation",
+        "subgroup": "Grounds Maintenance Workers"
+    },
+    {
+        "group": "Business and Financial Operations Occupations",
+        "value": 4453698,
+        "key": "Insurance Underwriters",
+        "subgroup": "Financial Specialists"
+    },
+    {
+        "group": "Arts, Design, Entertainment, Sports, and Media Occupations",
+        "value": 18200,
+        "key": "Musicians, Instrumental",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Life Physical and Social Science Occupations",
+        "value": 56680,
+        "key": "Geological Data Technicians",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Healthcare Practitioners and Technical Occupations",
+        "value": 468424,
+        "key": "Radiologic Technologists",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Arts, Design, Entertainment, Sports, and Media Occupations",
+        "value": 3673747,
+        "key": "Writers and Authors",
+        "subgroup": "Media and Communication Workers"
+    },
+    {
+        "group": "Healthcare Support Occupations",
+        "value": 121763,
+        "key": "Veterinary Assistants and Laboratory Animal Caretakers",
+        "subgroup": "Other Healthcare Support Occupations"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 718783,
+        "key": "Structural Metal Fabricators and Fitters",
+        "subgroup": "Assemblers and Fabricators"
+    },
+    {
+        "group": "Construction and Extraction Occupations",
+        "value": 53250,
+        "key": "First-Line Supervisors and Manager/Supervisors- Extractive Workers",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Life Physical and Social Science Occupations",
+        "value": 471334,
+        "key": "Psychologists, All Other",
+        "subgroup": "Social Scientists and Related Workers"
+    },
+    {
+        "group": "Healthcare Practitioners and Technical Occupations",
+        "value": 209185,
+        "key": "Surgical Technologists",
+        "subgroup": "Health Technologists and Technicians"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 70000,
+        "key": "Power Distributors and Dispatchers",
+        "subgroup": "Plant and System Operators"
+    },
+    {
+        "group": "Transportation and Material Moving Occupations",
+        "value": 28621,
+        "key": "Freight, Stock, and Material Movers, Hand",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Office and Administrative Support Occupations",
+        "value": 606499,
+        "key": "Legal Secretaries",
+        "subgroup": "Secretaries and Administrative Assistants"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 477941,
+        "key": "Medical Appliance Technicians",
+        "subgroup": "Other Production Occupations"
+    },
+    {
+        "group": "Arts, Design, Entertainment, Sports, and Media Occupations",
+        "value": 123333783,
+        "key": "Broadcast Technicians",
+        "subgroup": "Media and Communication Equipment Workers"
+    },
+    {
+        "group": "Healthcare Practitioners and Technical Occupations",
+        "value": 283300073,
+        "key": "Dentists, All Other Specialists",
+        "subgroup": "Health Diagnosing and Treating Practitioners"
+    },
+    {
+        "group": "Office and Administrative Support Occupations",
+        "value": 402386,
+        "key": "Desktop Publishers",
+        "subgroup": "Other Office and Administrative Support Workers"
+    },
+    {
+        "group": "Installation, Maintenance, and Repair Occupations",
+        "value": 38293,
+        "key": "Electric Home Appliance and Power Tool Repairers",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Business and Financial Operations Occupations",
+        "value": 513241,
+        "key": "Claims Adjusters, Examiners, and Investigators",
+        "subgroup": "Business Operations Specialists"
+    },
+    {
+        "group": "Life Physical and Social Science Occupations",
+        "value": 1286236,
+        "key": "Chemical Technicians",
+        "subgroup": "Life, Physical, and Social Science Technicians"
+    },
+    {
+        "group": "Architecture and Engineering Occupations",
+        "value": 217045,
+        "key": "Mechanical Engineers, R&D",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 579462,
+        "key": "Food Batchmakers",
+        "subgroup": "Food Processing Workers"
+    },
+    {
+        "group": "Healthcare Practitioners and Technical Occupations",
+        "value": 519865,
+        "key": "Opticians, Dispensing",
+        "subgroup": "Health Technologists and Technicians"
+    },
+    {
+        "group": "Life Physical and Social Science Occupations",
+        "value": 574478,
+        "key": "Environmental Science and Protection Technicians, Including Health",
+        "subgroup": "Life, Physical, and Social Science Technicians"
+    },
+    {
+        "group": "Life Physical and Social Science Occupations",
+        "value": 327879,
+        "key": "Anthropologists and Archeologists",
+        "subgroup": "Social Scientists and Related Workers"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 1678668,
+        "key": "Machinists",
+        "subgroup": "Metal Workers and Plastic Workers"
+    },
+    {
+        "group": "Business and Financial Operations Occupations",
+        "value": 72821,
+        "key": "Licensing Examiners and Inspectors",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Business and Financial Operations Occupations",
+        "value": 80400,
+        "key": "Coroners",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Architecture and Engineering Occupations",
+        "value": 128379,
+        "key": "Mechanical Engineers, Non R&D",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Office and Administrative Support Occupations",
+        "value": 31200,
+        "key": "Court Clerks",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Life Physical and Social Science Occupations",
+        "value": 437112,
+        "key": "Life Scientists, R&D (ACWIA only)",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Architecture and Engineering Occupations",
+        "value": 157563,
+        "key": "Industrial Safety and Health Engineers",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 62400,
+        "key": "Electromechanical Equipment Assemblers",
+        "subgroup": "Assemblers and Fabricators"
+    },
+    {
+        "group": "Arts, Design, Entertainment, Sports, and Media Occupations",
+        "value": 11182854,
+        "key": "Producers and Directors",
+        "subgroup": "Entertainers and Performers, Sports and Related Workers"
+    },
+    {
+        "group": "Architecture and Engineering Occupations",
+        "value": 1023513,
+        "key": "Mechanical Drafters",
+        "subgroup": "Drafters, Engineering, and Mapping Technicians"
+    },
+    {
+        "group": "Business and Financial Operations Occupations",
+        "value": 306615,
+        "key": "Human Resources, Training, and Labor Relations Specialists, All Other",
+        "subgroup": "Business Operations Specialists"
+    },
+    {
+        "group": "Management Occupations",
+        "value": 34442137,
+        "key": "Human Resources Managers",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Personal Care and Service Occupations",
+        "value": 843507,
+        "key": "Recreation Workers",
+        "subgroup": "Other Personal Care and Service Workers"
+    },
+    {
+        "group": "Healthcare Practitioners and Technical Occupations",
+        "value": 589212,
+        "key": "Medical and Clinical Laboratory Technicians",
+        "subgroup": "Health Technologists and Technicians"
+    },
+    {
+        "group": "Architecture and Engineering Occupations",
+        "value": 69285,
+        "key": "Electrical Engineers, Non R&D",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Architecture and Engineering Occupations",
+        "value": 17803117,
+        "key": "Health and Safety Engineers, Except Mining Safety Engineers and Inspectors",
+        "subgroup": "Engineers"
+    },
+    {
+        "group": "Architecture and Engineering Occupations",
+        "value": 15600,
+        "key": "Surveying Technicians",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Sales and Related Occupations",
+        "value": 120000,
+        "key": "Sales and Related Workers, All Other",
+        "subgroup": "Other Sales and Related Workers"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 62400,
+        "key": "Coating, Painting, and Spraying Machine Operators and Tenders",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Healthcare Practitioners and Technical Occupations",
+        "value": 107000,
+        "key": "Dentists",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Farming, Fishing, and Forestry Occupations",
+        "value": 270820,
+        "key": "Agricultural Workers, All Other",
+        "subgroup": "Agricultural Workers"
+    },
+    {
+        "group": "Installation, Maintenance, and Repair Occupations",
+        "value": 4184189,
+        "key": "Aircraft Mechanics and Service Technicians",
+        "subgroup": "Vehicle and Mobile Equipment Mechanics, Installers, and Repairers"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 77936,
+        "key": "Production Workers, All Other",
+        "subgroup": "Other Production Occupations"
+    },
+    {
+        "group": "Farming, Fishing, and Forestry Occupations",
+        "value": 13562,
+        "key": "General Farmworkers",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Construction and Extraction Occupations",
+        "value": 73033166,
+        "key": "Drywall and Ceiling Tile Installers",
+        "subgroup": "Construction Trades Workers"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 49275,
+        "key": "Woodworkers, All Other",
+        "subgroup": "Woodworkers"
+    },
+    {
+        "group": "Computer and Mathematical Occupations",
+        "value": 704450546,
+        "key": "Information Security Analysts, Web Developers, and Computer Network Architects",
+        "subgroup": "Computer Specialists"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 19011,
+        "key": "Pressers, Delicate Fabrics",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Business and Financial Operations Occupations",
+        "value": 439449551,
+        "key": "Market Research Analysts and Marketing Specialists*",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Business and Financial Operations Occupations",
+        "value": 28011109,
+        "key": "Compliance Officers",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Personal Care and Service Occupations",
+        "value": 52923204,
+        "key": "Childcare Workers",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Business and Financial Operations Occupations",
+        "value": 6996678,
+        "key": "Human Resources, Training, and Labor Relations Specialists, All Other*",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Construction and Extraction Occupations",
+        "value": 7562845,
+        "key": "First-Line Supervisors of Construction Trades and Extraction Workers",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Sales and Related Occupations",
+        "value": 24352145,
+        "key": "First-Line Supervisors of Retail Sales Workers",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Installation, Maintenance, and Repair Occupations",
+        "value": 328068,
+        "key": "Musical Instrument Repairers and Tuners",
+        "subgroup": "Other Installation, Maintenance, and Repair Occupations"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 318794,
+        "key": "Multiple Machine Tool Setters, Operators, and Tenders, Metal and Plastic",
+        "subgroup": "Metal Workers and Plastic Workers"
+    },
+    {
+        "group": "Computer and Mathematical Occupations",
+        "value": 74006,
+        "key": "Network Designers",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Education, Training, and Library Occupations",
+        "value": 21979852,
+        "key": "Middle School Teachers, Except Special and Career/Technical Education",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Personal Care and Service Occupations",
+        "value": 3277633,
+        "key": "First-Line Supervisors of Personal Service Workers",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Installation, Maintenance, and Repair Occupations",
+        "value": 897686,
+        "key": "Fabric Menders, Except Garment",
+        "subgroup": "Other Installation, Maintenance, and Repair Occupations"
+    },
+    {
+        "group": "Life Physical and Social Science Occupations",
+        "value": 1756629,
+        "key": "Sociologists",
+        "subgroup": "Social Scientists and Related Workers"
+    },
+    {
+        "group": "Healthcare Practitioners and Technical Occupations",
+        "value": 676486,
+        "key": "Dental Hygienists",
+        "subgroup": "Health Technologists and Technicians"
+    },
+    {
+        "group": "Transportation and Material Moving Occupations",
+        "value": 471734,
+        "key": "Captains, Mates, and Pilots of Water Vessels",
+        "subgroup": "Water Transportation Workers"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 202088,
+        "key": "Plating and Coating Machine Setters, Operators, and Tenders, Metal and Plastic",
+        "subgroup": "Metal Workers and Plastic Workers"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 300741,
+        "key": "Pressers, Textile, Garment, and Related Materials",
+        "subgroup": "Textile, Apparel, and Furnishings Workers"
+    },
+    {
+        "group": "Arts, Design, Entertainment, Sports, and Media Occupations",
+        "value": 338846,
+        "key": "Choreographers",
+        "subgroup": "Entertainers and Performers, Sports and Related Workers"
+    },
+    {
+        "group": "Installation, Maintenance, and Repair Occupations",
+        "value": 7503392,
+        "key": "Heating, Air Conditioning, and Refrigeration Mechanics and Installers",
+        "subgroup": "Other Installation, Maintenance, and Repair Occupations"
+    },
+    {
+        "group": "Management Occupations",
+        "value": 28780083,
+        "key": "Public Relations and Fundraising Managers",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Arts, Design, Entertainment, Sports, and Media Occupations",
+        "value": 53017316,
+        "key": "Multimedia Artists and Animators",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Office and Administrative Support Occupations",
+        "value": 76960,
+        "key": "Reservation and Transportation Ticket Agents and Travel Clerks",
+        "subgroup": "Information and Record Clerks"
+    },
+    {
+        "group": "Management Occupations",
+        "value": 485266,
+        "key": "Emergency Management Directors",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 180995,
+        "key": "Engine and Other Machine Assemblers",
+        "subgroup": "Assemblers and Fabricators"
+    },
+    {
+        "group": "Food Preparation and Serving Related Occupations",
+        "value": 5271391,
+        "key": "First-Line Supervisors of Food Preparation and Serving Workers",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 10920293,
+        "key": "Helpers--Production Workers",
+        "subgroup": "Other Production Occupations"
+    },
+    {
+        "group": "Construction and Extraction Occupations",
+        "value": 679782,
+        "key": "Helpers--Painters, Paperhangers, Plasterers, and Stucco Masons",
+        "subgroup": "Helpers, Construction Trades"
+    },
+    {
+        "group": "Healthcare Practitioners and Technical Occupations",
+        "value": 138049322,
+        "key": "Audiologists",
+        "subgroup": "Health Diagnosing and Treating Practitioners"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 88379,
+        "key": "Assemblers and Fabricators, All Other",
+        "subgroup": "Assemblers and Fabricators"
+    },
+    {
+        "group": "Sales and Related Occupations",
+        "value": 244005,
+        "key": "Counter and Rental Clerks",
+        "subgroup": "Retail Sales Workers"
+    },
+    {
+        "group": "Sales and Related Occupations",
+        "value": 2226080,
+        "key": "Insurance Sales Agents",
+        "subgroup": "Sales Representatives, Services"
+    },
+    {
+        "group": "Education, Training, and Library Occupations",
+        "value": 230702133,
+        "key": "Secondary School Teachers, Except Special and Career/Technical Education",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Legal Occupations",
+        "value": 102110180,
+        "key": "Paralegals and Legal Assistants*",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Office and Administrative Support Occupations",
+        "value": 3725495,
+        "key": "Proofreaders and Copy Markers",
+        "subgroup": "Other Office and Administrative Support Workers"
+    },
+    {
+        "group": "Construction and Extraction Occupations",
+        "value": 230794,
+        "key": "Helpers--Roofers",
+        "subgroup": "Helpers, Construction Trades"
+    },
+    {
+        "group": "Office and Administrative Support Occupations",
+        "value": 7513835,
+        "key": "First-Line Supervisors of Office and Administrative Support Workers",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Education, Training, and Library Occupations",
+        "value": 8642181,
+        "key": "Special Education Teachers, Preschool, Kindergarten, and Elementary School*",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Building and Grounds Cleaning and Maintenance Occupations",
+        "value": 3424835,
+        "key": "First-Line Supervisors of Housekeeping and Janitorial Workers",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Arts, Design, Entertainment, Sports, and Media Occupations",
+        "value": 199890,
+        "key": "Athletes and Sports Competitors",
+        "subgroup": "Entertainers and Performers, Sports and Related Workers"
+    },
+    {
+        "group": "Transportation and Material Moving Occupations",
+        "value": 1878318,
+        "key": "First-Line Supervisors of Helpers, Laborers, and Material Movers, Hand",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Community and Social Service Occupations",
+        "value": 5380213,
+        "key": "Educational, Guidance, School, and Vocational Counselors",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Transportation and Material Moving Occupations",
+        "value": 1499679,
+        "key": "Heavy and Tractor-Trailer Truck Drivers",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Office and Administrative Support Occupations",
+        "value": 9359741,
+        "key": "Executive Secretaries and Executive Administrative Assistants",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Education, Training, and Library Occupations",
+        "value": 437282,
+        "key": "Audio-Visual and Multimedia Collections Specialists",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Business and Financial Operations Occupations",
+        "value": 1730665,
+        "key": "Appraisers and Assessors of Real Estate",
+        "subgroup": "Financial Specialists"
+    },
+    {
+        "group": "Installation, Maintenance, and Repair Occupations",
+        "value": 6887024,
+        "key": "First-Line Supervisors of Mechanics, Installers, and Repairers",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Personal Care and Service Occupations",
+        "value": 100255,
+        "key": "Travel Guides",
+        "subgroup": "Transportation, Tourism, and Lodging Attendants"
+    },
+    {
+        "group": "Transportation and Material Moving Occupations",
+        "value": 738440,
+        "key": "First-Line Supervisors of Transportation and Material-Moving Machine and Vehicle Operators",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 6997784,
+        "key": "First-Line Supervisors of Production and Operating Workers",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Business and Financial Operations Occupations",
+        "value": 1971736,
+        "key": "Agents and Business Managers of Artists, Performers, and Athletes",
+        "subgroup": "Business Operations Specialists"
+    },
+    {
+        "group": "Arts, Design, Entertainment, Sports, and Media Occupations",
+        "value": 582289,
+        "key": "Sound Engineering Technicians",
+        "subgroup": "Media and Communication Equipment Workers"
+    },
+    {
+        "group": "Architecture and Engineering Occupations",
+        "value": 490751,
+        "key": "Civil Engineers, R&D (ACWIA Only)",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Business and Financial Operations Occupations",
+        "value": 5195594,
+        "key": "Buyers and Purchasing Agents, Farm Products",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 37149,
+        "key": "Heat Treating Equipment Setters, Operators, and Tenders, Metal and Plastic",
+        "subgroup": "Metal Workers and Plastic Workers"
+    },
+    {
+        "group": "Office and Administrative Support Occupations",
+        "value": 3489060,
+        "key": "Billing and Posting Clerks",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 207626,
+        "key": "Print Binding and Finishing Workers",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Installation, Maintenance, and Repair Occupations",
+        "value": 1074197,
+        "key": "Medical Equipment Repairers",
+        "subgroup": "Other Installation, Maintenance, and Repair Occupations"
+    },
+    {
+        "group": "Management Occupations",
+        "value": 8295765,
+        "key": "Farmers, Ranchers, and Other Agricultural Managers",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Healthcare Practitioners and Technical Occupations",
+        "value": 708571,
+        "key": "Medical Records and Health Information Technicians",
+        "subgroup": "Health Technologists and Technicians"
+    },
+    {
+        "group": "Transportation and Material Moving Occupations",
+        "value": 4931786,
+        "key": "Commercial Pilots",
+        "subgroup": "Air Transportation Workers"
+    },
+    {
+        "group": "Architecture and Engineering Occupations",
+        "value": 130320,
+        "key": "Drafters, All Other",
+        "subgroup": "Drafters, Engineering, and Mapping Technicians"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 34258,
+        "key": "Cooling and Freezing Equipment Operators and Tenders",
+        "subgroup": "Other Production Occupations"
+    },
+    {
+        "group": "Personal Care and Service Occupations",
+        "value": 65723,
+        "key": "Funeral Attendants",
+        "subgroup": "Funeral Service Workers"
+    },
+    {
+        "group": "Legal Occupations",
+        "value": 553639,
+        "key": "Judicial Law Clerks",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Business and Financial Operations Occupations",
+        "value": 2808130,
+        "key": "Business Operations Specialists, All Other*",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Arts, Design, Entertainment, Sports, and Media Occupations",
+        "value": 332418,
+        "key": "Camera Operators, Television, Video, and Motion Picture",
+        "subgroup": "Media and Communication Equipment Workers"
+    },
+    {
+        "group": "Office and Administrative Support Occupations",
+        "value": 177562216,
+        "key": "Bill and Account Collectors",
+        "subgroup": "Financial Clerks"
+    },
+    {
+        "group": "Healthcare Support Occupations",
+        "value": 475021,
+        "key": "Massage Therapists",
+        "subgroup": "Other Healthcare Support Occupations"
+    },
+    {
+        "group": "Installation, Maintenance, and Repair Occupations",
+        "value": 604233,
+        "key": "Watch Repairers",
+        "subgroup": "Other Installation, Maintenance, and Repair Occupations"
+    },
+    {
+        "group": "Construction and Extraction Occupations",
+        "value": 530566,
+        "key": "Paving, Surfacing, and Tamping Equipment Operators",
+        "subgroup": "Construction Trades Workers"
+    },
+    {
+        "group": "Personal Care and Service Occupations",
+        "value": 2421257,
+        "key": "Personal Care Aides",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Installation, Maintenance, and Repair Occupations",
+        "value": 454208,
+        "key": "Computer, Automated Teller, and Office Machine Repairers",
+        "subgroup": "Electrical and Electronic Equipment Mechanics, Installers, and Repairers"
+    },
+    {
+        "group": "Architecture and Engineering Occupations",
+        "value": 2464437,
+        "key": "Mechanical Engineers, R&D (ACWIA Only)",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Business and Financial Operations Occupations",
+        "value": 4232160,
+        "key": "Meeting, Convention, and Event Planners*",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Transportation and Material Moving Occupations",
+        "value": 121776761,
+        "key": "Pump Operators, Except Wellhead Pumpers",
+        "subgroup": "Material Moving Workers"
+    },
+    {
+        "group": "Architecture and Engineering Occupations",
+        "value": 1288503,
+        "key": "Electrical Engineers, R&D (ACWIA Only)",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Transportation and Material Moving Occupations",
+        "value": 142065,
+        "key": "Light Truck or Delivery Services Drivers",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Installation, Maintenance, and Repair Occupations",
+        "value": 1509664,
+        "key": "Electronic Equipment Installers and Repairers, Motor Vehicles",
+        "subgroup": "Electrical and Electronic Equipment Mechanics, Installers, and Repairers"
+    },
+    {
+        "group": "Healthcare Practitioners and Technical Occupations",
+        "value": 5721395,
+        "key": "Prosthodontists",
+        "subgroup": "Health Diagnosing and Treating Practitioners"
+    },
+    {
+        "group": "Farming, Fishing, and Forestry Occupations",
+        "value": 50031174,
+        "key": "Farmworkers, Farm, Ranch, and Aquacultural Animals",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Healthcare Practitioners and Technical Occupations",
+        "value": 4814125,
+        "key": "Oral and Maxillofacial Surgeons",
+        "subgroup": "Health Diagnosing and Treating Practitioners"
+    },
+    {
+        "group": "Education, Training, and Library Occupations",
+        "value": 1925879,
+        "key": "Vocational Education Teachers, Postsecondary",
+        "subgroup": "Postsecondary Teachers"
+    },
+    {
+        "group": "Life Physical and Social Science Occupations",
+        "value": 626380,
+        "key": "Agricultural and Food Science Technicians",
+        "subgroup": "Life, Physical, and Social Science Technicians"
+    },
+    {
+        "group": "Management Occupations",
+        "value": 1616283,
+        "key": "Education Administrators, All Other",
+        "subgroup": "Other Management Occupations"
+    },
+    {
+        "group": "Healthcare Practitioners and Technical Occupations",
+        "value": 370216,
+        "key": "Health Technologists and Technicians, All Other*",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Management Occupations",
+        "value": 3615105,
+        "key": "Education Administrators, Preschool and Childcare Center/Program",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 243630,
+        "key": "Welding, Soldering, and Brazing Machine Setters, Operators, and Tenders",
+        "subgroup": "Metal Workers and Plastic Workers"
+    },
+    {
+        "group": "Community and Social Service Occupations",
+        "value": 318811,
+        "key": "Social Workers, All Other",
+        "subgroup": "Social Service Specialists"
+    },
+    {
+        "group": "Computer and Mathematical Occupations",
+        "value": 134056,
+        "key": "Mathematical Science Occupations, All Other",
+        "subgroup": "Mathematical Science Occupations"
+    },
+    {
+        "group": "Building and Grounds Cleaning and Maintenance Occupations",
+        "value": 76710,
+        "key": "Building Cleaning Workers, All Other",
+        "subgroup": "Building Cleaning and Pest Control Workers"
+    },
+    {
+        "group": "Arts, Design, Entertainment, Sports, and Media Occupations",
+        "value": 488015,
+        "key": "Musicians and Singers",
+        "subgroup": "Entertainers and Performers, Sports and Related Workers"
+    },
+    {
+        "group": "Healthcare Practitioners and Technical Occupations",
+        "value": 530913,
+        "key": "Radiation Therapists",
+        "subgroup": "Health Diagnosing and Treating Practitioners"
+    },
+    {
+        "group": "Building and Grounds Cleaning and Maintenance Occupations",
+        "value": 909592816,
+        "key": "First-Line Supervisors of Landscaping, Lawn Service, and Groundskeeping Workers",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Life Physical and Social Science Occupations",
+        "value": 158309,
+        "key": "Life, Physical, and Social Science Technicians, All Other",
+        "subgroup": "Life, Physical, and Social Science Technicians"
+    },
+    {
+        "group": "Architecture and Engineering Occupations",
+        "value": 242465,
+        "key": "Mechanical Engineers, Non R&D (ACWIA Only)",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 14331611,
+        "key": "Slaughterers and Meat Packers",
+        "subgroup": "Food Processing Workers"
+    },
+    {
+        "group": "Legal Occupations",
+        "value": 558593,
+        "key": "Legal Support Workers, All Other",
+        "subgroup": "Legal Support Workers"
+    },
+    {
+        "group": "Legal Occupations",
+        "value": 203450,
+        "key": "Arbitrators, Mediators, and Conciliators",
+        "subgroup": "Lawyers, Judges, and Related Workers"
+    },
+    {
+        "group": "Community and Social Service Occupations",
+        "value": 2414947,
+        "key": "Healthcare Social Workers",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Arts, Design, Entertainment, Sports, and Media Occupations",
+        "value": 791133,
+        "key": "Photographers",
+        "subgroup": "Media and Communication Equipment Workers"
+    },
+    {
+        "group": "Architecture and Engineering Occupations",
+        "value": 492887,
+        "key": "Environmental Engineering Technicians",
+        "subgroup": "Drafters, Engineering, and Mapping Technicians"
+    },
+    {
+        "group": "Arts, Design, Entertainment, Sports, and Media Occupations",
+        "value": 303493,
+        "key": "Artists and Related Workers, All Other",
+        "subgroup": "Art and Design Workers"
+    },
+    {
+        "group": "Business and Financial Operations Occupations",
+        "value": 916064,
+        "key": "Credit Counselors",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Sales and Related Occupations",
+        "value": 135626,
+        "key": "Telemarketers",
+        "subgroup": "Other Sales and Related Workers"
+    },
+    {
+        "group": "Farming, Fishing, and Forestry Occupations",
+        "value": 116323761,
+        "key": "First-Line Supervisors of Farming, Fishing, and Forestry Workers",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 476933,
+        "key": "Molders, Shapers, and Casters, Except Metal and Plastic",
+        "subgroup": "Other Production Occupations"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 47070,
+        "key": "Stationary Engineers and Boiler Operators",
+        "subgroup": "Plant and System Operators"
+    },
+    {
+        "group": "Construction and Extraction Occupations",
+        "value": 91354,
+        "key": "Earth Drillers, Except Oil and Gas",
+        "subgroup": "Extraction Workers"
+    },
+    {
+        "group": "Office and Administrative Support Occupations",
+        "value": 83779,
+        "key": "Police, Fire, and Ambulance Dispatchers",
+        "subgroup": "Material Recording, Scheduling, Dispatching, and Distributing Workers"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 215841,
+        "key": "Mixing and Blending Machine Setters, Operators, and Tenders",
+        "subgroup": "Other Production Occupations"
+    },
+    {
+        "group": "Arts, Design, Entertainment, Sports, and Media Occupations",
+        "value": 1155883,
+        "key": "Audio and Video Equipment Technicians",
+        "subgroup": "Media and Communication Equipment Workers"
+    },
+    {
+        "group": "Sales and Related Occupations",
+        "value": 1954253,
+        "key": "First-Line Supervisors of Non-Retail Sales Workers",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Healthcare Support Occupations",
+        "value": 387210,
+        "key": "Nursing Aides, Orderlies, and Attendants*",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 542781,
+        "key": "Computer-Controlled Machine Tool Operators, Metal and Plastic",
+        "subgroup": "Metal Workers and Plastic Workers"
+    },
+    {
+        "group": "Transportation and Material Moving Occupations",
+        "value": 88192,
+        "key": "Automotive and Watercraft Service Attendants",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Transportation and Material Moving Occupations",
+        "value": 2472538,
+        "key": "Motor Vehicle Operators, All Other",
+        "subgroup": "Motor Vehicle Operators"
+    },
+    {
+        "group": "Installation, Maintenance, and Repair Occupations",
+        "value": 211953,
+        "key": "Commercial Divers",
+        "subgroup": "Other Installation, Maintenance, and Repair Occupations"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 156251,
+        "key": "Etchers and Engravers",
+        "subgroup": "Other Production Occupations"
+    },
+    {
+        "group": "Food Preparation and Serving Related Occupations",
+        "value": 248330,
+        "key": "Dining Room and Cafeteria Attendants and Bartender Helpers",
+        "subgroup": "Other Food Preparation and Serving Related Workers"
+    },
+    {
+        "group": "Food Preparation and Serving Related Occupations",
+        "value": 161539,
+        "key": "Bartenders",
+        "subgroup": "Food and Beverage Serving Workers"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 268956,
+        "key": "Prepress Technicians and Workers",
+        "subgroup": "Printing Workers"
+    },
+    {
+        "group": "Office and Administrative Support Occupations",
+        "value": 8488086,
+        "key": "Secretaries and Administrative Assistants, Except Legal, Medical, and Executive",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Education, Training, and Library Occupations",
+        "value": 133492,
+        "key": "Teachers and Instructors, All Other*",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Construction and Extraction Occupations",
+        "value": 52187,
+        "key": "Service Unit Operators, Oil, Gas, and Mining",
+        "subgroup": "Extraction Workers"
+    },
+    {
+        "group": "Office and Administrative Support Occupations",
+        "value": 2940991,
+        "key": "Receptionists and Information Clerks",
+        "subgroup": "Information and Record Clerks"
+    },
+    {
+        "group": "Life Physical and Social Science Occupations",
+        "value": 120931,
+        "key": "Geologists",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Healthcare Practitioners and Technical Occupations",
+        "value": 123864,
+        "key": "Therapists, All Other*",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Construction and Extraction Occupations",
+        "value": 131040000,
+        "key": "Derrick Operators, Oil and Gas",
+        "subgroup": "Extraction Workers"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 265218,
+        "key": "Molding, Coremaking, and Casting Machine Setters, Operators, and Tenders, Metal and Plastic",
+        "subgroup": "Metal Workers and Plastic Workers"
+    },
+    {
+        "group": "Education, Training, and Library Occupations",
+        "value": 388665,
+        "key": "Teacher Assistants",
+        "subgroup": "Other Education, Training, and Library Occupations"
+    },
+    {
+        "group": "Healthcare Practitioners and Technical Occupations",
+        "value": 29578,
+        "key": "Occupational Health and Safety Technicians",
+        "subgroup": "Other Healthcare Practitioners and Technical Occupations"
+    },
+    {
+        "group": "Construction and Extraction Occupations",
+        "value": 679146,
+        "key": "Glaziers",
+        "subgroup": "Construction Trades Workers"
+    },
+    {
+        "group": "Protective Service Occupations",
+        "value": 257920,
+        "key": "Security Guards",
+        "subgroup": "Other Protective Service Workers"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 25958,
+        "key": "Cutting and Slicing Machine Setters, Operators, and Tenders",
+        "subgroup": "Other Production Occupations"
+    },
+    {
+        "group": "Office and Administrative Support Occupations",
+        "value": 507049,
+        "key": "Statistical Assistants",
+        "subgroup": "Other Office and Administrative Support Workers"
+    },
+    {
+        "group": "Healthcare Support Occupations",
+        "value": 175614,
+        "key": "Medical Equipment Preparers",
+        "subgroup": "Other Healthcare Support Occupations"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 94059,
+        "key": "Extruding and Forming Machine Setters, Operators, and Tenders, Synthetic and Glass Fibers",
+        "subgroup": "Textile, Apparel, and Furnishings Workers"
+    },
+    {
+        "group": "Installation, Maintenance, and Repair Occupations",
+        "value": 133869,
+        "key": "Motorboat Mechanics and Service Technicians",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Healthcare Practitioners and Technical Occupations",
+        "value": 51144705,
+        "key": "Veterinary Technologists and Technicians",
+        "subgroup": "Health Technologists and Technicians"
+    },
+    {
+        "group": "Office and Administrative Support Occupations",
+        "value": 31200,
+        "key": "Information and Record Clerks, All Other",
+        "subgroup": "Information and Record Clerks"
+    },
+    {
+        "group": "Arts, Design, Entertainment, Sports, and Media Occupations",
+        "value": 89240,
+        "key": "Media and Communication Workers, All Other",
+        "subgroup": "Media and Communication Workers"
+    },
+    {
+        "group": "Transportation and Material Moving Occupations",
+        "value": 807011,
+        "key": "Airline Pilots, Copilots, and Flight Engineers",
+        "subgroup": "Air Transportation Workers"
+    },
+    {
+        "group": "Installation, Maintenance, and Repair Occupations",
+        "value": 421429,
+        "key": "Farm Equipment Mechanics and Service Technicians",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Business and Financial Operations Occupations",
+        "value": 29076,
+        "key": "Farm Labor Contractors",
+        "subgroup": "Supervisors, Farming, Fishing, and Forestry Workers"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 52354,
+        "key": "Water and Liquid Waste Treatment Plant and System Operators",
+        "subgroup": "Plant and System Operators"
+    },
+    {
+        "group": "Healthcare Practitioners and Technical Occupations",
+        "value": 1076413,
+        "key": "Orthotists and Prosthetists",
+        "subgroup": "Health Technologists and Technicians"
+    },
+    {
+        "group": "Personal Care and Service Occupations",
+        "value": 62400,
+        "key": "Funeral Service Managers, Directors, Morticians, and Undertakers",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Construction and Extraction Occupations",
+        "value": 67954,
+        "key": "Construction and Related Workers, All Other*",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Healthcare Practitioners and Technical Occupations",
+        "value": 65021,
+        "key": "Registered Nurses*",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Business and Financial Operations Occupations",
+        "value": 364000,
+        "key": "Tax Preparers",
+        "subgroup": "Financial Specialists"
+    },
+    {
+        "group": "Life Physical and Social Science Occupations",
+        "value": 564549,
+        "key": "Astronomers",
+        "subgroup": "Physical Scientists"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 174159,
+        "key": "Cutters and Trimmers, Hand",
+        "subgroup": "Other Production Occupations"
+    },
+    {
+        "group": "Arts, Design, Entertainment, Sports, and Media Occupations",
+        "value": 601229,
+        "key": "Broadcast News Analysts",
+        "subgroup": "Media and Communication Workers"
+    },
+    {
+        "group": "Life Physical and Social Science Occupations",
+        "value": 408510,
+        "key": "Foresters",
+        "subgroup": "Life Scientists"
+    },
+    {
+        "group": "Life Physical and Social Science Occupations",
+        "value": 1080833,
+        "key": "Geological and Petroleum Technicians",
+        "subgroup": "Life, Physical, and Social Science Technicians"
+    },
+    {
+        "group": "Education, Training, and Library Occupations",
+        "value": 76277,
+        "key": "Library Technicians",
+        "subgroup": "Librarians, Curators, and Archivists"
+    },
+    {
+        "group": "Education, Training, and Library Occupations",
+        "value": 522174,
+        "key": "Museum Technicians and Conservators",
+        "subgroup": "Librarians, Curators, and Archivists"
+    },
+    {
+        "group": "Arts, Design, Entertainment, Sports, and Media Occupations",
+        "value": 295301,
+        "key": "Radio and Television Announcers",
+        "subgroup": "Media and Communication Workers"
+    },
+    {
+        "group": "Installation, Maintenance, and Repair Occupations",
+        "value": 313672,
+        "key": "Radio, Cellular, and Tower Equipment Installers and Repairs",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 72259,
+        "key": "Rolling Machine Setters, Operators, and Tenders, Metal and Plastic",
+        "subgroup": "Metal Workers and Plastic Workers"
+    },
+    {
+        "group": "Architecture and Engineering Occupations",
+        "value": 157798,
+        "key": "Civil Engineers, Non R&D (ACWIA Only)",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Sales and Related Occupations",
+        "value": 166413,
+        "key": "Demonstrators and Product Promoters",
+        "subgroup": "Other Sales and Related Workers"
+    },
+    {
+        "group": "Installation, Maintenance, and Repair Occupations",
+        "value": 178776,
+        "key": "Millwrights",
+        "subgroup": "Other Installation, Maintenance, and Repair Occupations"
+    },
+    {
+        "group": "Sales and Related Occupations",
+        "value": 41205,
+        "key": "Sales and Related Workers, All Other*",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Architecture and Engineering Occupations",
+        "value": 348510,
+        "key": "Electrical Engineers, Non R&D (ACWIA Only)",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Life Physical and Social Science Occupations",
+        "value": 57907,
+        "key": "Nuclear Technicians",
+        "subgroup": "Life, Physical, and Social Science Technicians"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 30306,
+        "key": "Adhesive Bonding Machine Operators and Tenders",
+        "subgroup": "Other Production Occupations"
+    },
+    {
+        "group": "Healthcare Practitioners and Technical Occupations",
+        "value": 265812,
+        "key": "Healthcare Practitioners and Technical Workers, All Other*",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Farming, Fishing, and Forestry Occupations",
+        "value": 402163,
+        "key": "Agricultural Inspectors",
+        "subgroup": "Agricultural Workers"
+    },
+    {
+        "group": "Construction and Extraction Occupations",
+        "value": 21174,
+        "key": "Roustabouts, Oil and Gas",
+        "subgroup": "Extraction Workers"
+    },
+    {
+        "group": "Office and Administrative Support Occupations",
+        "value": 147282,
+        "key": "Credit Authorizers, Checkers, and Clerks",
+        "subgroup": "Information and Record Clerks"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 300945,
+        "key": "Model Makers, Metal and Plastic",
+        "subgroup": "Metal Workers and Plastic Workers"
+    },
+    {
+        "group": "Transportation and Material Moving Occupations",
+        "value": 436230,
+        "key": "Transportation Workers, All Other",
+        "subgroup": "Other Transportation Workers"
+    },
+    {
+        "group": "Construction and Extraction Occupations",
+        "value": 720986,
+        "key": "Construction and Building Inspectors",
+        "subgroup": "Other Construction and Related Workers"
+    },
+    {
+        "group": "Architecture and Engineering Occupations",
+        "value": 72000,
+        "key": "Civil Engineers, R&D",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Education, Training, and Library Occupations",
+        "value": 116747,
+        "key": "Career/Technical Education Teachers, Middle School",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Legal Occupations",
+        "value": 55869,
+        "key": "Administrative Law Judges, Adjudicators, and Hearing Officers",
+        "subgroup": "Lawyers, Judges, and Related Workers"
+    },
+    {
+        "group": "Office and Administrative Support Occupations",
+        "value": 322582,
+        "key": "Brokerage Clerks",
+        "subgroup": "Information and Record Clerks"
+    },
+    {
+        "group": "Office and Administrative Support Occupations",
+        "value": 138154,
+        "key": "Office and Administrative Support Workers, All Other*",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Healthcare Practitioners and Technical Occupations",
+        "value": 350307,
+        "key": "Respiratory Therapists",
+        "subgroup": "Health Diagnosing and Treating Practitioners"
+    },
+    {
+        "group": "Healthcare Practitioners and Technical Occupations",
+        "value": 185536,
+        "key": "Cardiovascular Technologists and Technicians",
+        "subgroup": "Health Technologists and Technicians"
+    },
+    {
+        "group": "Office and Administrative Support Occupations",
+        "value": 123041,
+        "key": "Office and Administrative Support Workers, All Other",
+        "subgroup": "Other Office and Administrative Support Workers"
+    },
+    {
+        "group": "Personal Care and Service Occupations",
+        "value": 680482,
+        "key": "Skincare Specialists",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 333707,
+        "key": "Drilling and Boring Machine Tool Setters, Operators, and Tenders, Metal and Plastic",
+        "subgroup": "Metal Workers and Plastic Workers"
+    },
+    {
+        "group": "Management Occupations",
+        "value": 110000,
+        "key": "Government Service Executives",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Healthcare Support Occupations",
+        "value": 1440481,
+        "key": "Nursing Assistants",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 149695,
+        "key": "Layout Workers, Metal and Plastic",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Farming, Fishing, and Forestry Occupations",
+        "value": 41974,
+        "key": "First-Line Supervisors and Manager/Supervisors - Agricultural Crop Workers",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 36276,
+        "key": "Molding and Casting Workers",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Installation, Maintenance, and Repair Occupations",
+        "value": 136261,
+        "key": "Avionics Technicians",
+        "subgroup": "Electrical and Electronic Equipment Mechanics, Installers, and Repairers"
+    },
+    {
+        "group": "Arts, Design, Entertainment, Sports, and Media Occupations",
+        "value": 220584,
+        "key": "Entertainers and Performers, Sports and Related Workers, All Other",
+        "subgroup": "Entertainers and Performers, Sports and Related Workers"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 82971,
+        "key": "Semiconductor Processors",
+        "subgroup": "Other Production Occupations"
+    },
+    {
+        "group": "Healthcare Practitioners and Technical Occupations",
+        "value": 137010,
+        "key": "Radiologic Technologists and Technicians*",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Sales and Related Occupations",
+        "value": 62400,
+        "key": "Models",
+        "subgroup": "Other Sales and Related Workers"
+    },
+    {
+        "group": "Construction and Extraction Occupations",
+        "value": 58240,
+        "key": "Rock Splitters, Quarry",
+        "subgroup": "Extraction Workers"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 123200,
+        "key": "Metal Workers and Plastic Workers, All Other",
+        "subgroup": "Metal Workers and Plastic Workers"
+    },
+    {
+        "group": "Office and Administrative Support Occupations",
+        "value": 369189,
+        "key": "Dispatchers, Except Police, Fire, and Ambulance",
+        "subgroup": "Material Recording, Scheduling, Dispatching, and Distributing Workers"
+    },
+    {
+        "group": "Office and Administrative Support Occupations",
+        "value": 24586,
+        "key": "Postal Service Clerks",
+        "subgroup": "Material Recording, Scheduling, Dispatching, and Distributing Workers"
+    },
+    {
+        "group": "Community and Social Service Occupations",
+        "value": 68619,
+        "key": "Community and Social Service Specialists, All Other*",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 269229,
+        "key": "Shoe and Leather Workers and Repairers",
+        "subgroup": "Textile, Apparel, and Furnishings Workers"
+    },
+    {
+        "group": "Life Physical and Social Science Occupations",
+        "value": 614058,
+        "key": "Conservation Scientists",
+        "subgroup": "Life Scientists"
+    },
+    {
+        "group": "Healthcare Support Occupations",
+        "value": 352060,
+        "key": "Occupational Therapy Assistants",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Computer and Mathematical Occupations",
+        "value": 74913315,
+        "key": "Computer Network Architects",
+        "subgroup": "Computer Specialists"
+    },
+    {
+        "group": "Computer and Mathematical Occupations",
+        "value": 64337417,
+        "key": "Information Security Analysts",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Life Physical and Social Science Occupations",
+        "value": 111301,
+        "key": "Physical Scientists, All Other",
+        "subgroup": "Physical Scientists"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 223995,
+        "key": "Ophthalmic Laboratory Technicians",
+        "subgroup": "Other Production Occupations"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 43992,
+        "key": "Welder-Fitters",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Business and Financial Operations Occupations",
+        "value": 19923560,
+        "key": "Human Resources Specialists",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Building and Grounds Cleaning and Maintenance Occupations",
+        "value": 69410,
+        "key": "Housekeeping Supervisors",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 59987,
+        "key": "Welders, Cutters, and Welder Fitters",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 22859,
+        "key": "Precision Mold and Pattern Casters, except Nonferrous Metals",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 65000,
+        "key": "Model Makers, Wood",
+        "subgroup": "Woodworkers"
+    },
+    {
+        "group": "Personal Care and Service Occupations",
+        "value": 56514,
+        "key": "Costume Attendants",
+        "subgroup": "Entertainment Attendants and Related Workers"
+    },
+    {
+        "group": "Transportation and Material Moving Occupations",
+        "value": 112596,
+        "key": "Refuse and Recyclable Material Collectors",
+        "subgroup": "Material Moving Workers"
+    },
+    {
+        "group": "Construction and Extraction Occupations",
+        "value": 55000,
+        "key": "Terrazzo Workers and Finishers",
+        "subgroup": "Construction Trades Workers"
+    },
+    {
+        "group": "Food Preparation and Serving Related Occupations",
+        "value": 266031,
+        "key": "Dishwashers",
+        "subgroup": "Other Food Preparation and Serving Related Workers"
+    },
+    {
+        "group": "Construction and Extraction Occupations",
+        "value": 61236,
+        "key": "Paperhangers",
+        "subgroup": "Construction Trades Workers"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 432771,
+        "key": "Printing Press Operators",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Construction and Extraction Occupations",
+        "value": 85196,
+        "key": "Insulation Workers, Mechanical",
+        "subgroup": "Construction Trades Workers"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 20384,
+        "key": "Textile Winding, Twisting, and Drawing Out Machine Setters, Operators, and Tenders",
+        "subgroup": "Textile, Apparel, and Furnishings Workers"
+    },
+    {
+        "group": "Personal Care and Service Occupations",
+        "value": 55099,
+        "key": "Barbers",
+        "subgroup": "Personal Appearance Workers"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 33301,
+        "key": "Sawing Machine Setters, Operators, and Tenders, Wood",
+        "subgroup": "Woodworkers"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 34341,
+        "key": "Coil Winders, Tapers, and Finishers",
+        "subgroup": "Assemblers and Fabricators"
+    },
+    {
+        "group": "Construction and Extraction Occupations",
+        "value": 155980,
+        "key": "Floor Sanders and Finishers",
+        "subgroup": "Construction Trades Workers"
+    },
+    {
+        "group": "Installation, Maintenance, and Repair Occupations",
+        "value": 198682,
+        "key": "Installation, Maintenance, and Repair Workers, All Other",
+        "subgroup": "Other Installation, Maintenance, and Repair Occupations"
+    },
+    {
+        "group": "Installation, Maintenance, and Repair Occupations",
+        "value": 39520,
+        "key": "Installation, Maintenance, and Repair Workers, All Other*",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 22901,
+        "key": "Textile Knitting and Weaving Machine Setters, Operators, and Tenders",
+        "subgroup": "Textile, Apparel, and Furnishings Workers"
+    },
+    {
+        "group": "Installation, Maintenance, and Repair Occupations",
+        "value": 129252,
+        "key": "Motorcycle Mechanics",
+        "subgroup": "Vehicle and Mobile Equipment Mechanics, Installers, and Repairers"
+    },
+    {
+        "group": "Education, Training, and Library Occupations",
+        "value": 3066499,
+        "key": "Special Education Teachers, Kindergarten and Elementary School",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Education, Training, and Library Occupations",
+        "value": 242725,
+        "key": "Special Education Teachers, All Other",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 26520,
+        "key": "Textile, Apparel, and Furnishings Workers, All Other",
+        "subgroup": "Textile, Apparel, and Furnishings Workers"
+    },
+    {
+        "group": "Healthcare Practitioners and Technical Occupations",
+        "value": 1765561,
+        "key": "Registered Nurses",
+        "subgroup": "Health Diagnosing and Treating Practitioners"
+    },
+    {
+        "group": "Office and Administrative Support Occupations",
+        "value": 43430,
+        "key": "Library Assistants, Clerical",
+        "subgroup": "Information and Record Clerks"
+    },
+    {
+        "group": "Computer and Mathematical Occupations",
+        "value": 4035108,
+        "key": "Computer Network Support Specialists",
+        "subgroup": "Computer Specialists"
+    },
+    {
+        "group": "Computer and Mathematical Occupations",
+        "value": 13800830,
+        "key": "Computer User Support Specialists",
+        "subgroup": "Computer Specialists"
+    },
+    {
+        "group": "Healthcare Practitioners and Technical Occupations",
+        "value": 728312,
+        "key": "Nurse Practitioners",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Installation, Maintenance, and Repair Occupations",
+        "value": 148686,
+        "key": "Electronic Home Entertainment Equipment Installers and Repairers",
+        "subgroup": "Electrical and Electronic Equipment Mechanics, Installers, and Repairers"
+    },
+    {
+        "group": "Office and Administrative Support Occupations",
+        "value": 71011,
+        "key": "Correspondence Clerks",
+        "subgroup": "Information and Record Clerks"
+    },
+    {
+        "group": "Life Physical and Social Science Occupations",
+        "value": 286238,
+        "key": "Life Scientists, All Other",
+        "subgroup": "Life Scientists"
+    },
+    {
+        "group": "Transportation and Material Moving Occupations",
+        "value": 25210,
+        "key": "Wellhead Pumpers",
+        "subgroup": "Material Moving Workers"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 181607,
+        "key": "Water and Wastewater Treatment Plant and System Operators",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Healthcare Practitioners and Technical Occupations",
+        "value": 638791,
+        "key": "Health Technologists and Technicians, All Other",
+        "subgroup": "Health Technologists and Technicians"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 399205,
+        "key": "Electrical and Electronic Equipment Assemblers",
+        "subgroup": "Assemblers and Fabricators"
+    },
+    {
+        "group": "Office and Administrative Support Occupations",
+        "value": 93975,
+        "key": "Interviewers, Except Eligibility and Loan",
+        "subgroup": "Information and Record Clerks"
+    },
+    {
+        "group": "Management Occupations",
+        "value": 172000,
+        "key": "Funeral Service Managers",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Healthcare Support Occupations",
+        "value": 547360,
+        "key": "Healthcare Support Workers, All Other",
+        "subgroup": "Other Healthcare Support Occupations"
+    },
+    {
+        "group": "Arts, Design, Entertainment, Sports, and Media Occupations",
+        "value": 171217,
+        "key": "Dancers",
+        "subgroup": "Entertainers and Performers, Sports and Related Workers"
+    },
+    {
+        "group": "Education, Training, and Library Occupations",
+        "value": 273503,
+        "key": "Career/Technical Education Teachers, Secondary School",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Personal Care and Service Occupations",
+        "value": 239993,
+        "key": "Concierges",
+        "subgroup": "Transportation, Tourism, and Lodging Attendants"
+    },
+    {
+        "group": "Education, Training, and Library Occupations",
+        "value": 1107966,
+        "key": "Special Education Teachers, Preschool",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 31179,
+        "key": "Fiberglass Laminators and Fabricators",
+        "subgroup": "Assemblers and Fabricators"
+    },
+    {
+        "group": "Farming, Fishing, and Forestry Occupations",
+        "value": 195834,
+        "key": "Fishers and Related Fishing Workers",
+        "subgroup": "Fishing and Hunting Workers"
+    },
+    {
+        "group": "Life Physical and Social Science Occupations",
+        "value": 50000,
+        "key": "Historians",
+        "subgroup": "Social Scientists and Related Workers"
+    },
+    {
+        "group": "Healthcare Practitioners and Technical Occupations",
+        "value": 35942,
+        "key": "Psychiatric Technicians",
+        "subgroup": "Health Technologists and Technicians"
+    },
+    {
+        "group": "Transportation and Material Moving Occupations",
+        "value": 65729,
+        "key": "Machine Feeders and Offbearers",
+        "subgroup": "Material Moving Workers"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 50420,
+        "key": "Food Processing Workers, All Other",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Transportation and Material Moving Occupations",
+        "value": 161243,
+        "key": "Crane and Tower Operators",
+        "subgroup": "Material Moving Workers"
+    },
+    {
+        "group": "Healthcare Practitioners and Technical Occupations",
+        "value": 60320,
+        "key": "Magnetic Resonance Imaging Technologists",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Personal Care and Service Occupations",
+        "value": 73050,
+        "key": "Shampooers",
+        "subgroup": "Personal Appearance Workers"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 55000,
+        "key": "Metal-Refining Furnace Operators and Tenders",
+        "subgroup": "Metal Workers and Plastic Workers"
+    },
+    {
+        "group": "Healthcare Support Occupations",
+        "value": 23064,
+        "key": "Psychiatric Aides",
+        "subgroup": "Nursing, Psychiatric, and Home Health Aides"
+    },
+    {
+        "group": "Installation, Maintenance, and Repair Occupations",
+        "value": 89683,
+        "key": "Locksmiths and Safe Repairers",
+        "subgroup": "Other Installation, Maintenance, and Repair Occupations"
+    },
+    {
+        "group": "Food Preparation and Serving Related Occupations",
+        "value": 48460,
+        "key": "Food Preparation and Serving Related Workers, All Other",
+        "subgroup": "Other Food Preparation and Serving Related Workers"
+    },
+    {
+        "group": "Healthcare Practitioners and Technical Occupations",
+        "value": 113014,
+        "key": "Genetic Counselors",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Healthcare Support Occupations",
+        "value": 67537,
+        "key": "Occupational Therapy Aides",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Construction and Extraction Occupations",
+        "value": 242029,
+        "key": "Elevator Installers and Repairers",
+        "subgroup": "Other Construction and Related Workers"
+    },
+    {
+        "group": "Personal Care and Service Occupations",
+        "value": 146141,
+        "key": "Morticians, Undertakers and Funeral Directors",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Business and Financial Operations Occupations",
+        "value": 305020,
+        "key": "Fundraisers",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Installation, Maintenance, and Repair Occupations",
+        "value": 35360,
+        "key": "Automotive Glass Installers and Repairers",
+        "subgroup": "Vehicle and Mobile Equipment Mechanics, Installers, and Repairers"
+    },
+    {
+        "group": "Installation, Maintenance, and Repair Occupations",
+        "value": 50836,
+        "key": "Bicycle Repairers",
+        "subgroup": "Vehicle and Mobile Equipment Mechanics, Installers, and Repairers"
+    },
+    {
+        "group": "Community and Social Service Occupations",
+        "value": 146578,
+        "key": "Community Health Workers",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Transportation and Material Moving Occupations",
+        "value": 27706,
+        "key": "Tank Car, Truck, and Ship Loaders",
+        "subgroup": "Material Moving Workers"
+    },
+    {
+        "group": "Farming, Fishing, and Forestry Occupations",
+        "value": 51293,
+        "key": "Graders and Sorters, Agricultural Products",
+        "subgroup": "Agricultural Workers"
+    },
+    {
+        "group": "Construction and Extraction Occupations",
+        "value": 106912,
+        "key": "Tapers",
+        "subgroup": "Construction Trades Workers"
+    },
+    {
+        "group": "Office and Administrative Support Occupations",
+        "value": 40830,
+        "key": "Financial Clerks, All Other",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Healthcare Practitioners and Technical Occupations",
+        "value": 34632,
+        "key": "Emergency Medical Technicians and Paramedics",
+        "subgroup": "Health Technologists and Technicians"
+    },
+    {
+        "group": "Transportation and Material Moving Occupations",
+        "value": 53560,
+        "key": "Taxi Drivers and Chauffeurs",
+        "subgroup": "Motor Vehicle Operators"
+    },
+    {
+        "group": "Personal Care and Service Occupations",
+        "value": 21403,
+        "key": "Amusement and Recreation Attendants",
+        "subgroup": "Entertainment Attendants and Related Workers"
+    },
+    {
+        "group": "Arts, Design, Entertainment, Sports, and Media Occupations",
+        "value": 45344,
+        "key": "Radio Operators",
+        "subgroup": "Media and Communication Equipment Workers"
+    },
+    {
+        "group": "Transportation and Material Moving Occupations",
+        "value": 70325,
+        "key": "Ship Engineers",
+        "subgroup": "Water Transportation Workers"
+    },
+    {
+        "group": "Transportation and Material Moving Occupations",
+        "value": 60000,
+        "key": "Flight Attendants",
+        "subgroup": "Transportation, Tourism, and Lodging Attendants"
+    },
+    {
+        "group": "Office and Administrative Support Occupations",
+        "value": 27851,
+        "key": "Tellers",
+        "subgroup": "Financial Clerks"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 43160,
+        "key": "Crushing, Grinding, and Polishing Machine Setters, Operators, and Tenders",
+        "subgroup": "Other Production Occupations"
+    },
+    {
+        "group": "Architecture and Engineering Occupations",
+        "value": 70000,
+        "key": "Electrical Engineers, R&D",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Transportation and Material Moving Occupations",
+        "value": 1113322,
+        "key": "Bus Drivers, Transit and Intercity",
+        "subgroup": "Motor Vehicle Operators"
+    },
+    {
+        "group": "Arts, Design, Entertainment, Sports, and Media Occupations",
+        "value": 60000,
+        "key": "Actors",
+        "subgroup": "Entertainers and Performers, Sports and Related Workers"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 20800,
+        "key": "Team Assemblers",
+        "subgroup": "Assemblers and Fabricators"
+    },
+    {
+        "group": "Transportation and Material Moving Occupations",
+        "value": 105372,
+        "key": "Airfield Operations Specialists",
+        "subgroup": "Air Transportation Workers"
+    },
+    {
+        "group": "Construction and Extraction Occupations",
+        "value": 480962,
+        "key": "Reinforcing Iron and Rebar Workers",
+        "subgroup": "Construction Trades Workers"
+    },
+    {
+        "group": "Construction and Extraction Occupations",
+        "value": 42162,
+        "key": "Highway Maintenance Workers",
+        "subgroup": "Other Construction and Related Workers"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 217290,
+        "key": "Separating, Filtering, Clarifying, Precipitating, and Still Machine Setters, Operators, and Tenders",
+        "subgroup": "Other Production Occupations"
+    },
+    {
+        "group": "Transportation and Material Moving Occupations",
+        "value": 61630,
+        "key": "Freight Inspectors",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Arts, Design, Entertainment, Sports, and Media Occupations",
+        "value": 176783,
+        "key": "Umpires, Referees, and Other Sports Officials",
+        "subgroup": "Entertainers and Performers, Sports and Related Workers"
+    },
+    {
+        "group": "Healthcare Practitioners and Technical Occupations",
+        "value": 151760,
+        "key": "Therapists, All Other",
+        "subgroup": "Health Diagnosing and Treating Practitioners"
+    },
+    {
+        "group": "Healthcare Support Occupations",
+        "value": 52432,
+        "key": "Pharmacy Aides",
+        "subgroup": "Other Healthcare Support Occupations"
+    },
+    {
+        "group": "Office and Administrative Support Occupations",
+        "value": 310146,
+        "key": "Data Entry Keyers",
+        "subgroup": "Other Office and Administrative Support Workers"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 79581,
+        "key": "Textile Bleaching and Dyeing Machine Operators and Tenders",
+        "subgroup": "Textile, Apparel, and Furnishings Workers"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 70000,
+        "key": "Textile Cutting Machine Setters, Operators, and Tenders",
+        "subgroup": "Textile, Apparel, and Furnishings Workers"
+    },
+    {
+        "group": "Business and Financial Operations Occupations",
+        "value": 104947,
+        "key": "Tax Examiners and Collectors, and Revenue Agents",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Construction and Extraction Occupations",
+        "value": 84115,
+        "key": "Solar Photovoltaic Installers",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Farming, Fishing, and Forestry Occupations",
+        "value": 29016,
+        "key": "Log Graders and Scalers",
+        "subgroup": "Forest, Conservation, and Logging Workers"
+    },
+    {
+        "group": "Production Occupations",
+        "value": 97592,
+        "key": "Food and Tobacco Roasting, Baking, and Drying Machine Operators and Tenders",
+        "subgroup": "Food Processing Workers"
+    },
+    {
+        "group": "Healthcare Practitioners and Technical Occupations",
+        "value": 45302,
+        "key": "Ophthalmic Medical Technicians",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Sales and Related Occupations",
+        "value": 57200,
+        "key": "Parts Salespersons",
+        "subgroup": "Retail Sales Workers"
+    },
+    {
+        "group": "Office and Administrative Support Occupations",
+        "value": 79120,
+        "key": "Insurance Claims and Policy Processing Clerks",
+        "subgroup": "Other Office and Administrative Support Workers"
+    },
+    {
+        "group": "Office and Administrative Support Occupations",
+        "value": 21341,
+        "key": "Office Machine Operators, Except Computer",
+        "subgroup": "Other Office and Administrative Support Workers"
+    },
+    {
+        "group": "Healthcare Support Occupations",
+        "value": 33200,
+        "key": "Medical Transcriptionists",
+        "subgroup": "Other Healthcare Support Occupations"
+    },
+    {
+        "group": "Office and Administrative Support Occupations",
+        "value": 44699,
+        "key": "First-Line Supervisors, Customer Service",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Office and Administrative Support Occupations",
+        "value": 32000,
+        "key": "Weighers, Measurers, Checkers, and Samplers, Recordkeeping",
+        "subgroup": "Material Recording, Scheduling, Dispatching, and Distributing Workers"
+    },
+    {
+        "group": "Protective Service Occupations",
+        "value": 40000,
+        "key": "Protective Service Workers, All Other *",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Healthcare Support Occupations",
+        "value": 30950,
+        "key": "Phlebotomists",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Office and Administrative Support Occupations",
+        "value": 23442,
+        "key": "Order Fillers, Wholesale and Retail Sales",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Healthcare Practitioners and Technical Occupations",
+        "value": 55000,
+        "key": "Healthcare Practitioners and Technical Workers, All Other",
+        "subgroup": "Other Healthcare Practitioners and Technical Occupations"
+    },
+    {
+        "group": "Transportation and Material Moving Occupations",
+        "value": 53560,
+        "key": "Gas Compressor and Gas Pumping Station Operators",
+        "subgroup": "Material Moving Workers"
+    },
+    {
+        "group": "Arts, Design, Entertainment, Sports, and Media Occupations",
+        "value": 56638,
+        "key": "Singers",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Construction and Extraction Occupations",
+        "value": 36941,
+        "key": "Carpenter Assemblers and Repairers",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Healthcare Practitioners and Technical Occupations",
+        "value": 19573,
+        "key": "Exercise Physiologists",
+        "subgroup": "N/A"
+    },
+    {
+        "group": "Sales and Related Occupations",
+        "value": 21778,
+        "key": "Door-to-Door Sales Workers, News and Street Vendors, and Related Workers",
+        "subgroup": "Other Sales and Related Workers"
+    }
+]

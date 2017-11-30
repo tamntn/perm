@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!--
+Generic treemap, based on http://bost.ocks.org/mike/treemap/
+
+-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Zoomable treemap template</title>
+    <link rel="stylesheet" href="treemap.css"/>
+</head>
+
+<body>
+    <label class='changeColorMap'>
+        <input type="radio" name='arrange' id='p' onclick="updateTreeMap()" checked> Total Based
+        <br>
+        <input type="radio" name='arrange' id='n' onclick="updateTreeMap()"> Certified Based
+        <br>
+        <input type="radio" name='arrange' id='w' onclick="updateTreeMap()"> Wage Based
+    </label>
+
+    <div id="treemap"></div>
+
+    <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="treemap.js"></script>
+</body>
+
+</html>

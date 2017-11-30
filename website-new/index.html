@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>PERM</title>
+
+    <!-- Import D3 Library (Version 3) -->
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <!-- Typeit! Library -->
+    <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.typeit/4.4.0/typeit.min.js"></script>
+    <!-- Font Awesome Library -->
+    <script src="https://use.fontawesome.com/ec7c0f9206.js"></script>
+    <!-- Import map js libraries -->
+    <script src="http://d3js.org/topojson.v1.min.js"></script>
+    <script src="http://datamaps.github.io/scripts/datamaps.world.js?v=1"></script>
+    <script src="World/datamap.js"></script>
+    <!-- Import US Map files -->
+    <link rel="stylesheet" href="USmap/zoomMap.css" />
+    <!-- Import Streamgraph files -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.map"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.0/moment.min.js"></script>
+    <script src="Streamgraph/d3.legend.js"></script>
+    <link rel="stylesheet" href="Streamgraph/streamgraph.css" />
+    <!-- Import Treemap files -->
+    <link rel="stylesheet" href="Treemap/treemap.css" />
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- Brushable Bar Chart -->
+    <link href="World/CountryProcessingTime/barchart.css" rel="stylesheet" />
+
+    <style>
+        .box {
+            color: #fff;
+            padding: 20px;
+            display: none;
+            margin-top: 20px;
+        }
+
+        .red {
+            background: #ff0000;
+        }
+
+        .green {
+            background: #228B22;
+        }
+
+        .blue {
+            background: #0000ff;
+        }
+    </style>
+</head>
+
+<!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+    <!-- <nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="mainNav">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">PERM</a>
+            </div>
+
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a class="page-scroll" href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#world">World Map</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#usmap">U.S. Map</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#footer">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav> -->
+
+    <!-- ################################################################################### -->
+    <!-- ###################################### INTRO ###################################### -->
+    <!-- ################################################################################### -->
+    <!-- Intro Section -->
+    <section id="intro" class="top-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8">
+                    <h1 class="title">U.S. Permanent Visa</h1>
+                    <h3>Project by
+                        <a href="https://github.com/tamntn/VisaDataVisualization" target="_blank" class="link-white">
+                            <strong>Team ANTS</strong>
+                        </a>
+                    </h3>
+                    <p>
+                        <small>for</small>
+                        <strong>CSCI 444 - Data Visualization</strong>
+                    </p>
+                    <br/>
+                    <div style="height:50px">
+                        <code id="typeExample"></code>
+                    </div>
+                    <!-- <p>
+                        <strong>Usage Instructions:</strong> Make sure to include the
+                        <code>scrolling-nav.js</code>,
+                        <code>jquery.easing.min.js</code>, and
+                        <code>scrolling-nav.css</code> files. To make a link smooth scroll to another section on the page, give the link the
+                        <code>.page-scroll</code> class and set the link target to a corresponding ID on the page.</p> -->
+                    <br/>
+                    <br/>
+                    <i class="fa fa-long-arrow-down fa-2x" aria-hidden="true"></i>
+                    <p style="font-style: italic;">Keep reading or</p>
+                    <a class="link-white page-scroll" style="font-style: italic;" href="#world">Explore visualizations</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="text-sub-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8">
+                    <p class="paragraph">For the past 6 years, more and more foreigners have been coming to the US to work and reside. In order
+                        for a foreigner to work in the US legally, they need to obtain a permanent work visa.
+                    </p>
+                    <h3>Why?</h3>
+                    <p class="paragraph">A permanent labor certification issued by the Department of Labor (DOL) allows an employer to hire a
+                        foreign worker to work permanently in the United States. In most instances, before the U.S. employer
+                        can submit an immigration petition to the Department of Homeland Security's U.S. Citizenship and
+                        Immigration Services (USCIS), the employer must obtain a certified labor certification application
+                        from the DOL's Employment and Training Administration (ETA). The DOL must certify to the USCIS that
+                        there are not sufficient U.S. workers able, willing, qualified and available to accept the job opportunity
+                        in the area of intended employment and that employment of the foreign worker will not adversely affect
+                        the wages and working conditions of similarly employed U.S. workers.
+                    </p>
+                    <h3>Questions we're trying to answer:</h3>
+                    <p class="paragraph">Which country, state have the highest acceptance rate?
+                        <br/> What is the average processing time for each country? average salary for each job?
+                        <br/> What is the most demanded job?
+                        <br/>
+                    </p>
+                    <h3>How?</h3>
+                    <p class="paragraph">We are going to answer the above questions by providing visualizations regarding each country (
+                        <a href="#world" class="page-scroll link-black">world map</a>), state (
+                        <a href="#usmap-top" class="page-scroll link-black">U.S. map</a>), job and job sectors (
+                        <a href="#job" class="page-scroll link-black">stream graph & tree map</a>), and admission class / visa types (
+                        <a href="#visa" class="page-scroll link-black">brushable bar chart</a>).
+                    </p>
+                    <br/>
+                    <br/>
+                </div>
+                <div class="col-lg-2"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ################################################################################### -->
+    <!-- ################################### WORLD MAP ##################################### -->
+    <!-- ################################################################################### -->
+    <section id="world" class="text-main-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>World Map</h1>
+                    <h4>India tops the total number of certified cases at 101,906
+                        <br/>China comes second with ...
+                        <strong>87,259 less</strong>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Text Sub -->
+    <section class="text-sub-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8">
+                    <p class="paragraph">This heat world map shows data regarding the case status of all people from each country who applied
+                        to be certified over the past 6 years (2011 - 2016). Once a person applies for a permanent labor
+                        certification, his/her case status will be decided as "Certified", "Certified-Expired", "Denied"
+                        or "Withdrawn".
+                    </p>
+                    <p class="paragraph">This map provides 2 color scale: one is for the percentage of certified cases in each country, and one
+                        is for the total number of certified cases. Hover over each country for details.
+                        <br/>
+                        <br/>
+                    </p>
+                </div>
+                <div class="col-lg-2"></div>
+            </div>
+
+            <!-- Radio Button -->
+            <div class="row">
+                <div class="col-lg-12" style="text-align: center">
+                    <div class="radio-inline">
+                        <input type="radio" name='worldOption' id='percent'>
+                        <label for="percent" style="color:black">Certified Percentage</label>
+                    </div>
+                    <div class="radio-inline">
+                        <input type="radio" name='worldOption' id='number' checked>
+                        <label for="number" style="color:black">Certified Total</label>
+                    </div>
+                </div>
+            </div>
+            <!-- End Radio Button -->
+
+        </div>
+    </section>
+
+    <!-- Visualization -->
+    <section class="visualization-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8">
+                    <div id="worldmap-container">
+                        <div id="worldmap">
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- Text Sub -->
+    <section class="text-sub-section" style="padding-top: 20px">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8">
+                    <p class="paragraph">
+                        As we can see, most countries' certified rate is around 30-50%. India is the country with the most certifed cases (as well
+                        as total cases). China comes second, but still almost 90,000 cases less than India. This might seem
+                        unrealistic. However, it is a reasonable number as we will later on discover that "Computer and Mathematical
+                        Occupations" account for the most of the economy job sectors, and India is known for having many
+                        people who are good in this area.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="visualization-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-5"></div>
+                <div class="col-lg-2" style="text-align: center">
+                    <!-- <div class="form-group">
+                        <label for="sel1">Select an option:</label>
+                        <select class="form-control" id="sel1">
+                            <option value="worldChart1">Total cases</option>
+                            <option value="worldChart2">Certified cases</option>
+                            <option value="worldChart3">Average Processing Time - All Cases</option>
+                            <option value="worldChart4" selected>Average Processing Time - Certified Cases</option>
+                        </select>
+                    </div> -->
+                </div>
+                <div class="col-lg-5"></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2">
+                </div>
+                <div class="col-lg-8" style="text-align: center" id="barchart-container">
+                    <div id="worldChart1"></div>
+                    <h4>
+                        <strong>Average processing time in days (certified cases)</strong>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8">
+                    <p class="paragraph">The chart above shows the average processing time in days for each country, where
+                        <strong>only certified cases</strong> were taken into consideration. You can see more or less of the total
+                        bar chart on the left by either dragging the box in the mini chart on the right or by scrolling your
+                        mouse. You can also click anywhere in the mini chart to center the box on that region. And you can
+                        increase and decrease the size of the box by dragging the top or bottom handle up or down.</p>
+                    <br/>
+                    <br/>
+                    <br/>
+                </div>
+                <div class="col-lg-2"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ################################################################################### -->
+    <!-- ################################### U.S.A MAP ##################################### -->
+    <!-- ################################################################################### -->
+    <section id="usmap-top" class="text-main-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>U.S.A - Nation of Immigrants</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3"></div>
+                <div class="col-lg-6">
+                    <blockquote>
+                        <p>My fellow Americans, we are and always will be a nation of immigrants. We were strangers once, too.</p>
+                        <footer style="color:white; font-size: 24px;">
+                            <a class="link-white" href="https://obamawhitehouse.archives.gov/the-press-office/2014/11/20/remarks-president-address-nation-immigration"
+                                target="_blank">Barack Obama</a>
+                        </footer>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Text Sub -->
+    <section class="text-sub-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8">
+                    <p class="paragraph">
+                        Let's now take a look at the overview of different U.S States.
+                    </p>
+                    <p class="paragraph">
+                        This heat map works just as how the world map works. It also provides 2 different scales, one for the percentage of certified
+                        cases over all cases, the one is for the total number of certified cases in each state. You can click
+                        into one of the state to view a correspoding bar graph of that state. You also have the option to
+                        compare the total number of diffrent case status between the "clicked" state and any other state.
+                    </p>
+                </div>
+                <div class="col-lg-2"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- US Map Visualization -->
+    <section class="visualization-section">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- <div class="col-lg-2"></div> -->
+                <div class="col-lg-12" style="text-align: center">
+                    <div id="usmap-container">
+                        <div class="radio-inline">
+                            <input type="radio" name='usmap-radio' id='usmap-radio-percent' onclick="mapColor()" checked>
+                            <label for="usmap-radio-percent" style="color: black">Certified Percentage</label>
+                        </div>
+                        <div class="radio-inline">
+                            <input type="radio" name='usmap-radio' id='usmap-radio-number' onclick="mapColor()">
+                            <label for="usmap-radio-number" style="color: black">Certified Total</label>
+                        </div>
+                        <!-- The Modal -->
+                        <div id="myModal" class="modal">
+
+                            <!-- Modal content -->
+                            <div class="modal-content">
+
+                                <span class="close">&times;</span>
+
+                                <div id='for_entries'></div>
+                                <p>Pick a state from the dropdown box to compare.</p>
+
+                                <div id='contents'>
+                                    <svg id='modal-content'></svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- <div id='svg_map'></div> -->
+
+                        <div id="usmap">
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- Text Sub -->
+    <section class="text-sub-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8">
+                    <p class="paragraph">
+                        As we can clearly see, Mississippi has the lowest certified rate at just above 35%, while state like 
+                        New Hampshire, Oregon and Missouri top the category, all of which have over 50% certified rate.
+                    </p>
+                    <p class="paragraph">
+                        Regarding the total number certified cases, California accounts for a huge amount, at about 43,000 
+                        certified cases. Texas comes second at about 23,000 certified cases and the state of New York is third 
+                        with just over 14,000 cases.
+                    </p>
+                    <br/><br/>
+                </div>
+                <div class="col-lg-2"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ################################################################################### -->
+    <!-- ################################### JOB SECTION ################################### -->
+    <!-- ################################################################################### -->
+    <section id="job" class="text-main-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Job Overview</h1>
+                    <h4>Computer and Mathematical Occupations accounts for
+                        <br/>more than half the total number of certified cases.</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="text-sub-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8">
+                </div>
+                <div class="col-lg-2"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="visualization-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-1"></div>
+                <div class="col-lg-10" id="streamgraph-container">
+                    <div class="streamchart" id="streamgraph"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="visualization-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8" id="treemap-container" style="text-align: center">
+                    <div class="radio-inline">
+                        <input type="radio" name='treemap-radio' id='treemap-radio-total' onclick="updateTreeMap()" checked>
+                        <label for="treemap-radio-total" style="color: black"> Total Cases</label>
+                    </div>
+                    <div class="radio-inline">
+                        <input type="radio" name='treemap-radio' id='treemap-radio-certified' onclick="updateTreeMap()">
+                        <label for="treemap-radio-certified" style="color: black"> Total Certified Cases</label>
+                    </div>
+                    <div class="radio-inline">
+                        <input type="radio" name='treemap-radio' id='treemap-radio-wage' onclick="updateTreeMap()">
+                        <label for="treemap-radio-wage" style="color: black"> Total Annual Wage</label>
+                    </div>
+                    <div id="treemap"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="text-sub-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8">
+                    <p class="paragraph">
+                        One interesting observation from the "Total Annual Wage" tree map is that: even though Engineering, Management and 
+                        Business & Financial Occupations all have a higher number of certified cases, <strong>Healthcare related occupations</strong> 
+                        account for a much larger amount of annual wage (double the amount of Management Occupations which come right after it).
+                    </p>
+                    <br/><br/>
+                </div>
+                <div class="col-lg-2"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ################################################################################### -->
+    <!-- ################################### VISA SECTION ################################## -->
+    <!-- ################################################################################### -->
+    <section id="visa" class="text-main-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Visa Overview</h1>
+                    <h4>H-1B visa is the key to the American dream</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="text-sub-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-3"></div>
+                <div class="col-lg-6">
+                </div>
+                <div class="col-lg-3"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ################################################################################### -->
+    <!-- ################################### PREDICTION #################################### -->
+    <!-- ################################################################################### -->
+    <section id="visa" class="text-main-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>What's your chance?</h1>
+                    <h4>Find out how many people like you have applied in the past!</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="text-sub-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8">
+                    <p class="paragraph">Provided information regarding country of citizenship, job, offered salary and state of job position,
+                        we will query our dataset to find out how many cases have the same data as you, and what the certified
+                        rate is. This can potentially help you figure out the best way to apply for a permanent labor certification
+                        with the highest chance to be certified.
+                        <br/>
+                        <br/>
+                    </p>
+                </div>
+                <div class="col-lg-2"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ################################################################################### -->
+    <!-- #################################### FOOTER ####################################### -->
+    <!-- ################################################################################### -->
+    <section id="footer" class="footer-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-2">
+                    <h2>Team</h4>
+                        <br/>
+                        <h4>
+                            <a href="https://www.tamntn.com" class="link-white">Tam Nguyen</a>
+                        </h4>
+                        <h4>Aishwant Ghimire</h4>
+                        <h4>Sameer Djohu</h4>
+                        <h4>Nikita Drozdovskii</h4>
+                </div>
+                <div class="col-sm-2">
+                    <h2>Resources</h2>
+                    <br/>
+                    <h4>
+                        <a href="#" class="link-white">Documentation</a>
+                    </h4>
+                </div>
+                <div class="col-sm-2">
+                    <h2>Contact</h2>
+                    <br/>
+                    <a href="https://github.com/tamntn" class="icon">
+                        <i class="fa fa-github fa-2x" aria-hidden="true"></i>
+                    </a>
+                    &nbsp;&nbsp;&nbsp;
+                    <a href="#" class="icon">
+                        <i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i>
+                    </a>
+                    &nbsp;&nbsp;&nbsp;
+                    <a href="#" class="icon">
+                        <i class="fa fa-facebook fa-2x" aria-hidden="true"></i>
+                    </a>
+                    &nbsp;&nbsp;&nbsp;
+                    <a href="#" class="icon">
+                        <i class="fa fa-linkedin fa-2x" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- jQuery -->
+    <!-- <script src="js/jquery.js"></script> -->
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Scrolling Nav JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <!-- <script src="jquery-easing/jquery.easing.min.js"></script> -->
+    <script src="js/scrolling-nav.js"></script>
+
+    <!-- World Map Script -->
+    <script src="World/onecolor.js"></script>
+
+    <!-- World Map - Bar chart script -->
+    <script src="World/CountryProcessingTime/barchart.js"></script>
+
+    <!-- ZoomMap Script -->
+    <script src="USmap/zoomMap.js"></script>
+
+    <!-- Streamgraph Script -->
+    <script src="Streamgraph/streamgraph.js"></script>
+
+    <!-- Treemap Script -->
+    <script src="Treemap/treemap.js"></script>
+
+    <script>
+        var sentence1 = ' more than <strong>374,000</strong> foreigners have applied to be certified for an U.S. Permanent Visa.',
+            sentence2 = ' nearly <strong>45%</strong> of people who applied got certified.',
+            sentence3 = ' <strong>93 and a half billion </strong> U.S Dollars of annual salary were offered to certified employees.',
+            sentence4 = ' the total number of Permanent Labor Certifications given out to employees by the U.S. Department of Labor have been <strong>considerably increasing every year.</strong>'
+            lastSentence = 'We dug deep into this visa application data.'
+        $('#typeExample').typeIt({
+            speed: 40,
+            startDelay: 500,
+            autoStart: false,
+            loopDelay: 3000,
+            loop: true
+        })
+            .tiType('Over the last 6 years, ')
+            .tiBreak()
+            .tiPause(100)
+            .tiType(sentence1)
+            .tiPause(2000)
+            .tiDelete(sentence1.length - 17)
+            .tiPause(500)
+            .tiType(sentence2)
+            .tiPause(2000)
+            .tiDelete(sentence2.length - 17)
+            .tiPause(500)
+            .tiType(sentence3)
+            .tiPause(2500)
+            .tiDelete(sentence3.length - 17)
+            .tiPause(500)
+            .tiType(sentence4)
+            .tiPause(2500)
+            .tiDelete()
+            .tiType(lastSentence)
+            .tiPause(1000);
+
+        // Get the modal
+        var modal = document.getElementById('myModal');
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        // Call world bar chart
+        drawBarChart("#worldChart1", "World/CountryProcessingTime/countryProcessingTimeCertified.json", "name", "average");
+        // d3.selectAll('.brush').remove();
+        // d3.select('#worldChart1').remove();
+        // d3.select('#barchart-container').append('div').attr('id', 'worldChart2');
+        // setTimeout(
+        //     drawBarChart("#worldChart2", "World/CountryProcessingTime/countryProcessingTimeCertified.json", "name", "average"), 2000);
+
+        // Call Streamgraph function
+        createStreamGraph();
+
+        $("select").change(function () {
+            $(this).find("option:selected").each(function () {
+                var optionValue = $(this).attr("value");
+                if (optionValue) {
+                    $(".box").not("#" + optionValue).hide();
+                    $("#" + optionValue).show();
+                } else {
+                    $(".box").hide();
+                }
+            });
+        }).change();
+    </script>
+</body>
+
+</html>

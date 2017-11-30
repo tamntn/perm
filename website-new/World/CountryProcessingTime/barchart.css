@@ -1,0 +1,27 @@
+/* .y.axis line {
+    fill: none;
+  }
+
+  .x.axis line {
+    fill: none;
+    stroke: #e0e0e0;
+    shape-rendering: crispEdges;
+  }
+
+  .axis path {
+    display: none;
+  }
+   */
+.brush .extent {
+    fill-opacity: .125;
+    shape-rendering: crispEdges;
+  }
+
+  .resize {
+    display: inline !important;
+    /* show when empty */
+    fill: #7A7A7A;
+    fill-opacity: 1;
+    stroke: #7A7A7A;
+    stroke-width: 2px;
+  }

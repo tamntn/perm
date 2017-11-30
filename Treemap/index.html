@@ -328,7 +328,7 @@ Generic treemap, based on http://bost.ocks.org/mike/treemap/
                     .on("click", transition);
 
                 var children = g.selectAll(".child")
-                    .data(function (d) { return [d]; })
+                    .data(function (d) { return d._children || [d]; })
                     .enter().append("g");
 
                 children.append("rect")
