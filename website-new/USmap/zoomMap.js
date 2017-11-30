@@ -40,13 +40,17 @@ function map() {
 			.attr("width", width)
 			.attr("height", height);
 
-		var colormap_P = d3.scale.linear() //Calulates color domain based on percentage
+		var colormap_P = d3.scale.quantile() //Calulates color domain based on percentage
 			.domain([30, 55])
-			.range(['#EFEFFF', '#000080']);
 
-		var colormap_N = d3.scale.linear() ////Calulates color domain based on number
-			.domain([0, d3.max(data, function (d) { return +d.Certified; })])
-			.range(['#EFEFFF', '#000080']);
+			.range(['#deebf7','#c6dbef','#9ecae1','#6baed6','#4292c6','#2171b5','#08519c','#08306b']);
+			// .range(['#EFEFFF', '#000080']);
+
+		var colormap_N = d3.scale.quantile() ////Calulates color domain based on number
+		.domain([d3.min(data, function(d) { return +d.Certified; }), d3.max(data, function(d) { return +d.Certified; })]) 
+		.range(['#deebf7','#c6dbef','#AFE4FD','#9DE1FF','#AEDFF2','#9ecae1','#6baed6','#54CBFF','#42C0FB','#0BB5FF','#2171b5','#08519c','#08306b']);
+			// .domain([0, d3.max(data, function (d) { return +d.Certified; })])
+			// .range(['#EFEFFF', '#000080']);
 
 		d3.select('#usmap').remove(); //help remove on update
 
@@ -420,7 +424,7 @@ function map() {
 
 							divTooltip.style("left", d3.event.pageX + 10 + "px");
 							divTooltip.style("top", d3.event.pageY - 25 + "px");
-							// divTooltip.style("display", "inline-block");
+							divTooltip.style("display", "inline-block");
 							var x1 = d3.event.pageX, y1 = d3.event.pageY
 							var elements = document.querySelectorAll(':hover');
 							l = elements.length
@@ -500,15 +504,12 @@ function map() {
 				var frequency = DataCertifiedJob.states[index].jobGroup
 				console.log(frequency)
 
-				d3.selectAll('.removePie').remove();
-
 				var svgPie = d3.select("#contents")
 					.append("svg")
 					.attr("width", w)
 					.attr("height", h)
 					.append("g")
-					.attr("transform", "translate(100,100)")
-					.attr('class', 'removePie');
+					.attr("transform", "translate(100,100)");
 
 				var pie = d3.layout.pie()
 					.sort(null)
