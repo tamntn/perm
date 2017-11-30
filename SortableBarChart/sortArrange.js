@@ -1,3 +1,4 @@
+sortChart();
 function sortChart() {
     var margin = { top: 20, right: 20, bottom: 100, left: 60 },
         chartwidth = 960 - margin.left - margin.right,
@@ -43,7 +44,7 @@ function sortChart() {
         .select("label")
         .style("color", "#D8D8D8");
 
-    d3.csv("Visa Charts/sortArrange.csv", function (error, data) {
+    d3.csv("sortArrange.csv", function (error, data) {
         if (error) throw error;
 
         color.domain(d3.keys(data[0]).filter(function (key) { return key !== "State"; }));

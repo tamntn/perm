@@ -1,6 +1,6 @@
 var margin = { top: 20, right: 120, bottom: 20, left: 200 },
     treewidth = document.body.clientWidth * 10 / 12 - margin.right - margin.left,
-    treeheight = window.innerHeight - $("#header").height() - margin.top - margin.bottom;
+    treeheight = window.innerHeight - margin.top - margin.bottom;
 
 var i = 0,
     duration = 750,
@@ -18,11 +18,11 @@ var svgTree = d3.select("#jobTree").append("svg")
     .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-d3.json("Dataset/createdFiles/jobTree.json", function (error, data) {
+d3.json("../Dataset/createdFiles/jobTree.json", function (error, data) {
     if (error) throw error;
 
     root = data;
-    root.x0 = height / 2;
+    root.x0 = treeheight / 2;
     root.y0 = 0;
 
     function collapse(d) {

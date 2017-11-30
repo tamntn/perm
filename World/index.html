@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
+
 <body>
   <script src="http://d3js.org/d3.v3.min.js"></script>
   <script src="http://d3js.org/topojson.v1.min.js"></script>
@@ -11,21 +12,29 @@
   <script src="datamap.js"></script>
 
 
-   <!--  <script src="world.js" ></script> -->
+  <!--  <script src="world.js" ></script> -->
 
- 
-   <div id="container1" style=" width: 100%; height: 72%; position: relative;">
-        <label class='changeColorMap'>
-              <input type="radio" name='arrange' id='percent' checked> Certified Percentage <br>
-              <input type="radio" name='arrange' id='number'> Certifed Number of People<br>
-            <!--   <input type="radio" name='arrange' id='denied' > Denied <br>
+  <section id="worldmap-container" class="mapVisual">
+    <div class="visual-option">
+      <input type="radio" name='worldOption' id='percent'>
+      <label for="percent" style="color:black">Percentage Based</label>
+      <input type="radio" name='worldOption' id='number' checked>
+      <label for="number" style="color:black">Number Based</label>
+      <!--   <input type="radio" name='arrange' id='denied' > Denied <br>
               <input type="radio" name='arrange' id='cExpired' > Certified Expired<br>
               <input type="radio" name='arrange' id='withdrawn' > Withdrawn<br> -->
-              
-
-      </label>
-      <script src="onecolor.js" ></script>
-   </div>
-    
+    </div>
+    <div class="row uniform">
+      <div class="1u 12u$(medium)"></div>
+      <div id="worldmap" class="10u 12u$(medium)"></div>
+      <div class="1u 12u$(medium)"></div>
+    </div>
+    <!-- <script type="text/javascript">
+      var worldMapHeight = window.innerHeight - $("#header").height() - $("#map1").height();
+      console.log(worldMapHeight);
+      $("#worldmap").css({ "height": worldMapHeight });
+    </script> -->
+  </section>
+  <script src="onecolor.js"></script>
   <!--   <script src="countryid.js" ></script> -->
 </body>

@@ -38,7 +38,7 @@ function changeGraph() {
         .append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-    d3.csv("Visa Charts/changeView.csv", function (error, data) {
+    d3.csv("changeView.csv", function (error, data) {
         color.domain(d3.keys(data[0]).filter(function (key) { return key !== "State"; }));
 
 
