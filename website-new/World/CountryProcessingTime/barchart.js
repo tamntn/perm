@@ -48,10 +48,10 @@ function drawBarChart(id, file, key, value) {
 
             var main_margin = { top: 10, right: 10, bottom: 30, left: 150 },
                 main_width = 500 - main_margin.left - main_margin.right,
-                main_height = 400 - main_margin.top - main_margin.bottom;
+                main_height = 600 - main_margin.top - main_margin.bottom;
 
             var mini_margin = { top: 10, right: 10, bottom: 30, left: 10 },
-                mini_height = 400 - mini_margin.top - mini_margin.bottom;
+                mini_height = 600 - mini_margin.top - mini_margin.bottom;
             mini_width = 100 - mini_margin.left - mini_margin.right;
 
             // d3.select(id).remove();
