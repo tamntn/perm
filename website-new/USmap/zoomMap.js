@@ -48,7 +48,7 @@ function map() {
 
 		var colormap_N = d3.scale.quantile() ////Calulates color domain based on number
 			.domain([d3.min(data, function (d) { return +d.Certified; }), d3.max(data, function (d) { return +d.Certified; })])
-			.range(['#deebf7', '#c6dbef', '#9ecae1', '#6baed6', '#4292c6', '#2171b5', '#08519c', '#08306b']);
+			.range(['#c6dbef', '#9ecae1', '#6baed6', '#4292c6', '#2171b5', '#08519c', '#08306b']);
 			// .range(['#deebf7', '#c6dbef', '#AFE4FD', '#9DE1FF', '#AEDFF2', '#9ecae1', '#6baed6', '#54CBFF', '#42C0FB', '#0BB5FF', '#2171b5', '#08519c', '#08306b']);
 		// .domain([0, d3.max(data, function (d) { return +d.Certified; })])
 		// .range(['#EFEFFF', '#000080']);

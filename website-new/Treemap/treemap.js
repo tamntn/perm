@@ -180,31 +180,40 @@ function main(o, data) {
         data.values.forEach(function(element){
             if(element.key == id) {
                 value = element.value.toString();
-                groupType = "Main Sector";
+                groupType = "<strong style='color:red'>Main Sector </strong><i class='fa fa-long-arrow-right' aria-hidden='true'></i> Sub Sector <i class='fa fa-long-arrow-right' aria-hidden='true'></i> Jobs";
             }
             element._children.forEach(function(subgroup){
                 if(subgroup.key == id && subgroup.key != "N/A") {
                     value = subgroup.value.toString();
-                    groupType = "Sub Sector";
+                    groupType = "Main Sector <i class='fa fa-long-arrow-right' aria-hidden='true'></i><strong style='color:red'> Sub Sector </strong><i class='fa fa-long-arrow-right' aria-hidden='true'></i> Jobs";
                 }
                 subgroup._children.forEach(function(jobTitle){
                     if(jobTitle.key == id && jobTitle.key != "N/A") {
                         value = jobTitle.value.toString();
-                        groupType = "Job Title";
+                        groupType = "Main Sector <i class='fa fa-long-arrow-right' aria-hidden='true'></i> Sub Sector <i class='fa fa-long-arrow-right' aria-hidden='true'></i><strong style='color:red'> Jobs</strong>";
                     }
                 })
             });
         })
+
+        if(id == "") {
+            id = "-BLANK-";
+            groupType =  "<strong style='color:red'>All Cases With Missing Job Title</strong>";
+        }
+        if(id == "N/A"){
+            groupType = "<strong style='color:red'>N/A is a <strong>sub sector</strong> containing jobs that are not categorized into sub-sectors in our dataset due to inconsistency in job titles.</strong>"
+        }
+
         if (document.getElementById('treemap-radio-total').checked) {
             radioOptionString = "<br>Total cases: <strong>";
         } else if (document.getElementById('treemap-radio-certified').checked) {
             radioOptionString = "<br>Total certified cases: <strong>";
         } else if (document.getElementById('treemap-radio-wage').checked) {
-            radioOptionString = "<br>Total amount of annual wage <br>offered to all certified cases: <strong>$";
+            radioOptionString = "<br>Total amount of annual wage: <strong>$";
         };
 
         var output = "<strong style='font-size: 16px'>" + id + "</strong>"
-                    + "<small style='color:red'><br>" + groupType + "</small>"
+                    + "<small><br>" + groupType + "</small>"
                     + radioOptionString + formatNumber(value) + "</strong>";
         return output;
     }
@@ -376,7 +385,7 @@ if (document.getElementById('treemap-radio-total').checked) {
             if (!err) {
                 console.log(res);
                 var data = d3.nest().key(function (d) { return d.group; }).key(function (d) { return d.subgroup; }).entries(res);
-                main({ title: "Distribution of Total " }, { key: "All Jobs", values: data });
+                main({ title: "Job Distribution - All Cases (2011 - 2016)" }, { key: "All Jobs", values: data });
             }
         });
     }
@@ -387,7 +396,7 @@ if (document.getElementById('treemap-radio-total').checked) {
             if (!err) {
                 console.log(res);
                 var data = d3.nest().key(function (d) { return d.group; }).key(function (d) { return d.subgroup; }).entries(res);
-                main({ title: "Job Overview" }, { key: "All Jobs", values: data });
+                main({ title: "Job Distribution - All Certified Cases (2011 - 2016)" }, { key: "All Jobs", values: data });
             }
         });
     }
@@ -398,7 +407,7 @@ if (document.getElementById('treemap-radio-total').checked) {
             if (!err) {
                 console.log(res);
                 var data = d3.nest().key(function (d) { return d.group; }).key(function (d) { return d.subgroup; }).entries(res);
-                main({ title: "Job Overview" }, { key: "All Jobs", values: data });
+                main({ title: "Annual Wage Distribution - All Certified Cases (2011-2016)" }, { key: "All Jobs", values: data });
             }
         });
     }
@@ -413,7 +422,7 @@ function updateTreeMap() {
                 if (!err) {
                     console.log(res);
                     var data = d3.nest().key(function (d) { return d.group; }).key(function (d) { return d.subgroup; }).entries(res);
-                    main({ title: "Job Overview" }, { key: "All Jobs", values: data });
+                    main({ title: "Job Distribution - All Cases (2011 - 2016)" }, { key: "All Jobs", values: data });
                 }
             });
         }
@@ -424,7 +433,7 @@ function updateTreeMap() {
                 if (!err) {
                     console.log(res);
                     var data = d3.nest().key(function (d) { return d.group; }).key(function (d) { return d.subgroup; }).entries(res);
-                    main({ title: "Job Overview" }, { key: "All Jobs", values: data });
+                    main({ title: "Job Distribution - All Certified Cases (2011 - 2016)" }, { key: "All Jobs", values: data });
                 }
             });
         }
@@ -435,7 +444,7 @@ function updateTreeMap() {
                 if (!err) {
                     console.log(res);
                     var data = d3.nest().key(function (d) { return d.group; }).key(function (d) { return d.subgroup; }).entries(res);
-                    main({ title: "Job Overview" }, { key: "All Jobs", values: data });
+                    main({ title: "Annual Wage Distribution - All Certified Cases (2011 - 2016)" }, { key: "All Jobs", values: data });
                 }
             });
         }
