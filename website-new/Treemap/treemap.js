@@ -74,9 +74,9 @@ function main(o, data) {
         .attr("dy", ".75em");
 
     // Add Treemap Title
-    // if (opts.title) {
-    //     $("#treemap").prepend("<p class='title'>" + opts.title + "</p>");
-    // }
+    if (opts.title) {
+        $("#treemap").prepend("<h3>" + opts.title + "</h3>");
+    }
     if (data instanceof Array) {
         root = { key: rname, values: data };
     } else {
@@ -311,7 +311,7 @@ if (document.getElementById('treemap-radio-total').checked) {
             if (!err) {
                 console.log(res);
                 var data = d3.nest().key(function (d) { return d.group; }).key(function (d) { return d.subgroup; }).entries(res);
-                main({ title: "Job Overview" }, { key: "All Jobs", values: data });
+                main({ title: "Distribution of Total " }, { key: "All Jobs", values: data });
             }
         });
     }

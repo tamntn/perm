@@ -42,15 +42,14 @@ function map() {
 
 		var colormap_P = d3.scale.quantile() //Calulates color domain based on percentage
 			.domain([30, 55])
-
-			.range(['#deebf7','#c6dbef','#9ecae1','#6baed6','#4292c6','#2171b5','#08519c','#08306b']);
-			// .range(['#EFEFFF', '#000080']);
+			.range(['#deebf7', '#c6dbef', '#9ecae1', '#6baed6', '#4292c6', '#2171b5', '#08519c', '#08306b']);
+		// .range(['#EFEFFF', '#000080']);
 
 		var colormap_N = d3.scale.quantile() ////Calulates color domain based on number
-		.domain([d3.min(data, function(d) { return +d.Certified; }), d3.max(data, function(d) { return +d.Certified; })]) 
-		.range(['#deebf7','#c6dbef','#AFE4FD','#9DE1FF','#AEDFF2','#9ecae1','#6baed6','#54CBFF','#42C0FB','#0BB5FF','#2171b5','#08519c','#08306b']);
-			// .domain([0, d3.max(data, function (d) { return +d.Certified; })])
-			// .range(['#EFEFFF', '#000080']);
+			.domain([d3.min(data, function (d) { return +d.Certified; }), d3.max(data, function (d) { return +d.Certified; })])
+			.range(['#deebf7', '#c6dbef', '#AFE4FD', '#9DE1FF', '#AEDFF2', '#9ecae1', '#6baed6', '#54CBFF', '#42C0FB', '#0BB5FF', '#2171b5', '#08519c', '#08306b']);
+		// .domain([0, d3.max(data, function (d) { return +d.Certified; })])
+		// .range(['#EFEFFF', '#000080']);
 
 		d3.select('#usmap').remove(); //help remove on update
 
@@ -68,6 +67,8 @@ function map() {
 
 		var g = svg.append("g");
 
+		var mapTooltip = d3.select('body').append("div").attr("class", "toolTip");
+
 		//import data for drawing the US MAP
 		d3.json("https://gist.githubusercontent.com/mbostock/4090846/raw/d534aba169207548a8a3d670c9c2cc719ff05c47/us.json", function (error, us) {
 			if (error) throw error;
@@ -80,13 +81,21 @@ function map() {
 				.attr("d", path)
 				.style('fill', function (d) { return changeColors(d); })
 				.on("click", clicked)
-				.on('mouseover', function (d, i) {
-
+				.on('mousemove', function (d, i) {
+					mapTooltip.style("left", d3.event.pageX + 10 + "px");
+					mapTooltip.style("top", d3.event.pageY - 25 + "px");
+					mapTooltip.style("display", "inline");
+					mapTooltip.html(viewMapTooltip(d));
 					var currentState = this;
-					d3.select(this).style('fill-opacity', .7);
+					d3.select(this)
+						.style('fill-opacity', .7)
+						.style('cursor', 'pointer');
 				})
 				.on('mouseout', function (d, i) {
-					d3.selectAll('path')
+					mapTooltip.style("display", "none");
+					d3.select(this)
+						.transition()
+						.duration(200)
 						.style({
 							'fill-opacity': 1
 						});
@@ -108,10 +117,9 @@ function map() {
 		var total = 0;
 		var certified_scale = 0;
 
-
 		//function to help change color scale across map on user request based on Percentage or number
 		function changeColors(d) {
-
+			console.log(d);
 			var index = arrayHelp.indexOf(+d.id); //gets the index of the id
 
 			if (num_case_status[index]) { //if present
@@ -143,9 +151,48 @@ function map() {
 
 		}//end of changeColors()
 
+		function viewMapTooltip(d) {
+			var index = arrayHelp.indexOf(+d.id); //gets the index of the id
+
+			if (num_case_status[index]) { //if present
+				head_id = num_case_status[index].id
+				state = num_case_status[index].values[0].State;
+				Certified = +num_case_status[index].values[0].Certified;
+				Denied = +num_case_status[index].values[0].Denied;
+				Certified_Expired = +num_case_status[index].values[0].Certified_Expired;
+				Withdrawn = +num_case_status[index].values[0].Withdrawn;
+				total = Certified + Denied + Certified_Expired + Withdrawn;
+
+				if (document.getElementById('usmap-radio-percent').checked) {
+					//Percentage radio button is checked
+					Certified = (Certified / total * 100).toFixed(2);
+					Certified_Expired = (Certified_Expired / total * 100).toFixed(2);
+					Denied = (Denied / total * 100).toFixed(2);
+					Withdrawn = (100 - Certified - Denied - Certified_Expired).toFixed(2);
+
+					output = "<p style='font-size: 20px;'><strong>" + state + "</strong></p>"
+						+ "<br>Certified: <strong>" + Certified + "%</strong>"
+						+ "<br>Certified-Expired: <strong>" + Certified_Expired + "%</strong>"
+						+ "<br>Denied: <strong>" + Denied + "%</strong>"
+						+ "<br>Withdrawn: <strong>" + Withdrawn + "%</strong>";
+					return output; //return to color scale based on Percentage
+
+				} else if (document.getElementById('usmap-radio-number').checked) {
+					//Number radio button is checked
+					output = "<p style='font-size: 20px;'><strong>" + state + "</strong></p>"
+						+ "<br>Certified: <strong>" + Certified + "</strong>"
+						+ "<br>Certified-Expired: <strong>" + Certified_Expired + "</strong>"
+						+ "<br>Denied: <strong>" + Denied + "</strong>"
+						+ "<br>Withdrawn: <strong>" + Withdrawn + "</strong>";
+					return output;
+
+				}
+			}
+		}
 
 		//On click function
 		function clicked(d) {
+			mapTooltip.style("display", "none"); // Make tooltip disappear
 			zoom(d); //zooms in
 
 			// Set timeout to wait for zoom to finish
@@ -156,6 +203,7 @@ function map() {
 						var id = 0;
 						id = +d.id;
 
+						// d3.select('.modal').transition().duration(1000).style('display', 'block');
 						modal.style.display = "block";
 
 						displayChart(id); //call function to display chart
@@ -245,8 +293,7 @@ function map() {
 				d3.select('#for_entries').selectAll('p').remove();
 				d3.select('#for_entries').selectAll('p').data(['a']).enter().append('p').append('h3').text('State: ' + num_case_status[index].values[0].State);
 
-				console.log(num_case_status[index].values[0].State);
-
+				// console.log(num_case_status[index].values[0].State);
 
 				head_id = num_case_status[index].id
 				Certified = +num_case_status[index].values[0].Certified;
@@ -418,13 +465,13 @@ function map() {
 							.attr("height", function (d) { return h - y(d.value); })
 							.style("fill", function (d) { return color(d.name); });
 
-						var divTooltip = d3.select("#contents").append("div").attr("class", "toolTip");
+						var divTooltip = d3.select("body").append("div").attr("class", "toolTip");
 
 						bar.on("mousemove", function (d) {
 
 							divTooltip.style("left", d3.event.pageX + 10 + "px");
 							divTooltip.style("top", d3.event.pageY - 25 + "px");
-							divTooltip.style("display", "inline-block");
+							divTooltip.style("display", "inline");
 							var x1 = d3.event.pageX, y1 = d3.event.pageY
 							var elements = document.querySelectorAll(':hover');
 							l = elements.length
@@ -542,7 +589,7 @@ function map() {
 
 					divTooltipPie.style("left", d3.event.pageX + 10 + "px");
 					divTooltipPie.style("top", d3.event.pageY - 25 + "px");
-					divTooltipPie.style("display", "inline-block");
+					divTooltipPie.style("display", "inline");
 					var x1 = d3.event.pageX, y1 = d3.event.pageY
 					var elements = document.querySelectorAll(':hover');
 					l = elements.length

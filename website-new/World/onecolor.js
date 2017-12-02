@@ -113,20 +113,20 @@ var data = d3.csv('World/acceptanceRateByCountry.csv', function (data) {
 		},
 		geographyConfig: {
 			borderColor: '#DEDEDE',
-			highlightBorderWidth: 2,
+			highlightBorderWidth: 1.5,
 			// don't change color on mouse hover
 			highlightFillColor: function (geo) {
 				return geo['fillColor'] || '#F5F5F5';
 			},
 			// only change border
-			highlightBorderColor: '#B7B7B7',
+			highlightBorderColor: 'red',
 			// show desired information in tooltip
 			popupTemplate: function (geo, data) {
 				// don't show tooltip if country don't present in dataset
 
 				// tooltip content
 				return ['<div class="hoverinfo">',
-					'<strong>', geo.properties.name, '</strong>',
+					'<strong style="font-size: 20px">', geo.properties.name, '</strong>',
 					'<br>Certified Percentage: <strong>', data.Percentage, '%</strong>',
 					'<br>Certified: <strong>', data.Certified, '</strong>',
 					'<br>Denied: <strong>', data.Denied, '</strong>',
@@ -171,8 +171,8 @@ var data = d3.csv('World/acceptanceRateByCountry.csv', function (data) {
 		});
 	}
 
-	d3.select('svg').append('text')
-		.text('here');
+	// d3.select('svg').append('text')
+	// 	.text('here');
 
 	// Resize map on window resize - Mobile Responsive
 	d3.select(window).on('resize', function () {
