@@ -171,6 +171,44 @@ function main(o, data) {
         }
     }
 
+    // Function to get value from an id
+    function getValue(id){
+        var value = "N/A";
+        var groupType = "";
+        var radioOptionString = "";
+
+        data.values.forEach(function(element){
+            if(element.key == id) {
+                value = element.value.toString();
+                groupType = "Main Sector";
+            }
+            element._children.forEach(function(subgroup){
+                if(subgroup.key == id && subgroup.key != "N/A") {
+                    value = subgroup.value.toString();
+                    groupType = "Sub Sector";
+                }
+                subgroup._children.forEach(function(jobTitle){
+                    if(jobTitle.key == id && jobTitle.key != "N/A") {
+                        value = jobTitle.value.toString();
+                        groupType = "Job Title";
+                    }
+                })
+            });
+        })
+        if (document.getElementById('treemap-radio-total').checked) {
+            radioOptionString = "<br>Total cases: <strong>";
+        } else if (document.getElementById('treemap-radio-certified').checked) {
+            radioOptionString = "<br>Total certified cases: <strong>";
+        } else if (document.getElementById('treemap-radio-wage').checked) {
+            radioOptionString = "<br>Total amount of annual wage <br>offered to all certified cases: <strong>$";
+        };
+
+        var output = "<strong style='font-size: 16px'>" + id + "</strong>"
+                    + "<small style='color:red'><br>" + groupType + "</small>"
+                    + radioOptionString + formatNumber(value) + "</strong>";
+        return output;
+    }
+
     function display(d) {
         grandparent
             .datum(d.parent)
@@ -183,17 +221,17 @@ function main(o, data) {
             .attr("class", "depth");
 
         // mousemove function
-        var mousemove = function (d) {
-            var xPosition = d3.event.pageX + 5;
-            var yPosition = d3.event.pageY + 5;
+        // var mousemove = function (d) {
+        //     var xPosition = d3.event.pageX + 5;
+        //     var yPosition = d3.event.pageY + 5;
 
-            d3.select("#tooltip")
-                .style("left", xPosition + "px")
-                .style("top", yPosition + "px");
-            d3.select("#tooltip #heading")
-                .text("Hello");
-            d3.select("#tooltip").classed("hidden", false);
-        };
+        //     d3.select("#tooltip")
+        //         .style("left", xPosition + "px")
+        //         .style("top", yPosition + "px");
+        //     d3.select("#tooltip #heading")
+        //         .text("Hello");
+        //     d3.select("#tooltip").classed("hidden", false);
+        // };
 
         var g = g1.selectAll("g")
             .data(d._children)
@@ -220,11 +258,35 @@ function main(o, data) {
 
         g.append("rect")
             .attr("class", "parent")
+            .attr("id", function (d) { return d.key; })
+            .attr("number", function (d) { return d.value; })
             .call(rect);
 
         var t = g.append("text")
             .attr("class", "ptext")
             .attr("dy", ".75em")
+
+        var treeTooltip = d3.select('body').append('div').attr('class', 'toolTip');
+        var tooltipString = "";
+
+        d3.selectAll('.parent')
+            .on('mouseover', function (d, i) {
+                treeTooltip.style("left", d3.event.pageX + 15 + "px");
+                treeTooltip.style("top", d3.event.pageY + 5 + "px");
+                treeTooltip.style("display", "inline");
+                var tooltipKey = this.id;
+                tooltipString = getValue(tooltipKey);
+                treeTooltip.html(tooltipString);
+            })
+            .on('mousemove', function(d, i) {
+                treeTooltip.style("left", d3.event.pageX + 15 + "px");
+                treeTooltip.style("top", d3.event.pageY + 5 + "px");
+                treeTooltip.style("display", "inline");
+                treeTooltip.html(tooltipString);
+            })
+            .on('mouseout', function (d, i) {
+                treeTooltip.style("display", "none");
+            });
 
         t.append("tspan")
             .text(function (d) { return d.key; });
@@ -237,6 +299,9 @@ function main(o, data) {
             .style("fill", function (d) { return pickcolor(d.key); });
 
         function transition(d) {
+            // Clear tooltip when first enter transition
+            treeTooltip.style("display", "none");
+
             if (transitioning || !d) return;
             transitioning = true;
 

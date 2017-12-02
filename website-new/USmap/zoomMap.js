@@ -42,12 +42,14 @@ function map() {
 
 		var colormap_P = d3.scale.quantile() //Calulates color domain based on percentage
 			.domain([30, 55])
+			// .range(['red', 'red', '#ffc107', '#ffeb3b', '#8bc34a', '#259b24']);
 			.range(['#deebf7', '#c6dbef', '#9ecae1', '#6baed6', '#4292c6', '#2171b5', '#08519c', '#08306b']);
 		// .range(['#EFEFFF', '#000080']);
 
 		var colormap_N = d3.scale.quantile() ////Calulates color domain based on number
 			.domain([d3.min(data, function (d) { return +d.Certified; }), d3.max(data, function (d) { return +d.Certified; })])
-			.range(['#deebf7', '#c6dbef', '#AFE4FD', '#9DE1FF', '#AEDFF2', '#9ecae1', '#6baed6', '#54CBFF', '#42C0FB', '#0BB5FF', '#2171b5', '#08519c', '#08306b']);
+			.range(['#deebf7', '#c6dbef', '#9ecae1', '#6baed6', '#4292c6', '#2171b5', '#08519c', '#08306b']);
+			// .range(['#deebf7', '#c6dbef', '#AFE4FD', '#9DE1FF', '#AEDFF2', '#9ecae1', '#6baed6', '#54CBFF', '#42C0FB', '#0BB5FF', '#2171b5', '#08519c', '#08306b']);
 		// .domain([0, d3.max(data, function (d) { return +d.Certified; })])
 		// .range(['#EFEFFF', '#000080']);
 
@@ -82,13 +84,13 @@ function map() {
 				.style('fill', function (d) { return changeColors(d); })
 				.on("click", clicked)
 				.on('mousemove', function (d, i) {
-					mapTooltip.style("left", d3.event.pageX + 10 + "px");
-					mapTooltip.style("top", d3.event.pageY - 25 + "px");
+					mapTooltip.style("left", d3.event.pageX + 15 + "px");
+					mapTooltip.style("top", d3.event.pageY + 5 + "px");
 					mapTooltip.style("display", "inline");
 					mapTooltip.html(viewMapTooltip(d));
 					var currentState = this;
 					d3.select(this)
-						.style('fill-opacity', .7)
+						.style('fill-opacity', .5)
 						.style('cursor', 'pointer');
 				})
 				.on('mouseout', function (d, i) {
@@ -170,7 +172,7 @@ function map() {
 					Denied = (Denied / total * 100).toFixed(2);
 					Withdrawn = (100 - Certified - Denied - Certified_Expired).toFixed(2);
 
-					output = "<p style='font-size: 20px;'><strong>" + state + "</strong></p>"
+					output = "<strong style='font-size: 20px; line-height: 32px'>" + state + "</strong>"
 						+ "<br>Certified: <strong>" + Certified + "%</strong>"
 						+ "<br>Certified-Expired: <strong>" + Certified_Expired + "%</strong>"
 						+ "<br>Denied: <strong>" + Denied + "%</strong>"
@@ -179,7 +181,7 @@ function map() {
 
 				} else if (document.getElementById('usmap-radio-number').checked) {
 					//Number radio button is checked
-					output = "<p style='font-size: 20px;'><strong>" + state + "</strong></p>"
+					output = "<strong style='font-size: 20px; line-height: 32px'>" + state + "</strong>"
 						+ "<br>Certified: <strong>" + Certified + "</strong>"
 						+ "<br>Certified-Expired: <strong>" + Certified_Expired + "</strong>"
 						+ "<br>Denied: <strong>" + Denied + "</strong>"
@@ -445,7 +447,7 @@ function map() {
 							.attr("y", 6)
 							.attr("dy", ".71em")
 							.style("text-anchor", "end")
-							.text("Number");
+							.text("Number of cases");
 
 						var bar = chart.selectAll(".bar")
 							.data(new_data)

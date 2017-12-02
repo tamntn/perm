@@ -48,7 +48,7 @@ function createStreamGraph() {
         if (breakpoint == 'xs') {
             x > winWidth - tipWidth - 20 ? y = x - tipWidth : y = x;
         } else {
-            x > winWidth - tipWidth - 500 ? y = x + 420 - tipWidth : y = x + 450;
+            x > winWidth - tipWidth - 510 ? y = x + 420 - tipWidth : y = x + 450;
         }
         return y;
     }
@@ -73,7 +73,7 @@ function createStreamGraph() {
 
     var format = d3.time.format("%m/%d/%y");
 
-    var margin = { top: 20, right: 40, bottom: 80, left: 350 };
+    var margin = { top: 20, right: 45, bottom: 80, left: 350 };
     var width = document.getElementById('streamgraph-container').offsetWidth - 30 - margin.left - margin.right;
     var height = 480 - margin.top - margin.bottom;
 
@@ -207,7 +207,7 @@ function createStreamGraph() {
                     if (xDate == date) {
                         tooltip
                             .style("left", tipX(mousex) - 85 + "px")
-                            .html("<div class='year'>" + dateToString(date) + "</div><div class='key'><div style='background: " + color + "' class='swatch'>&nbsp;</div>" + f.key + "</div><div class='value'>" + f.value + " " + awardPlural((f.value)) + "</div>")
+                            .html("<div class='year'>" + dateToString(date) + "</div><div class='key'><div style='background: " + color + "' class='swatch'>&nbsp;</div>" + f.key + "</div><div class='value'><strong>" + f.value + " certified " + awardPlural((f.value)) + "</strong></div>")
                             .style("visibility", "visible");
                     }
                 })

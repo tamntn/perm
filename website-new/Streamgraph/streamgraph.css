@@ -1,21 +1,23 @@
 #streamgraph {
     background: #fff;
-    font: 11px sans-serif;
+    font-family: 'Raleway', sans-serif;
+    font-size: 11px;
 }
 
 /*TIP*/
 
 .tip {
-    background-color: hsla(0, 0%, 97%, .9);
+    background-color: hsla(0, 0%, 97%, .8);
     padding: 10px;
     border-radius: 5px;
-    font-size: 1.2em;
+    font-size: 14px;
     width: 200px;
+    pointer-events: none;
 }
 
 .tip .year {
     font-weight: 900;
-    font-size: 1.25em;
+    font-size: 20px;
     margin-bottom: 10px;
 }
 
@@ -23,7 +25,7 @@
     width: 11px;
     height: 11px;
     float: left;
-    margin-top: 2px;
+    margin-top: 5px;
     margin-right: 4px;
 }
 
@@ -47,5 +49,5 @@
 }
 
 .streamlegend {
-    transform: translate(-330px, 20px);
+    transform: translate(-335px, 20px);
 }
