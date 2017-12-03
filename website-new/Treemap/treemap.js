@@ -14,7 +14,7 @@ var defaults = {
     format: ",d",
     title: "",
     width: divWidth,
-    height: divWidth * 1 / 2
+    height: divWidth * 6 / 10
 };
 
 function main(o, data) {
@@ -212,7 +212,7 @@ function main(o, data) {
             radioOptionString = "<br>Total amount of annual wage: <strong>$";
         };
 
-        var output = "<strong style='font-size: 16px'>" + id + "</strong>"
+        var output = "<strong style='font-size: 18px'>" + id + "</strong>"
                     + "<small><br>" + groupType + "</small>"
                     + radioOptionString + formatNumber(value) + "</strong>";
         return output;
