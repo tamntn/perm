@@ -1,1 +1,0 @@
-* Fix tooltip for US Map
