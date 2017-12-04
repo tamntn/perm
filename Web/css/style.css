@@ -151,6 +151,7 @@ of those sections to manage the look and feel of the site. */
 }
 
 .text-documentation h2{
+  text-align: center;
   color: black;
 }
 
