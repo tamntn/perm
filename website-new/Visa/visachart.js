@@ -1,4 +1,4 @@
-function drawBarChart(id, file, key, value) {
+function drawVisaChart(id, file, key, value) {
     if (file.indexOf("json") >= 0) {
         d3.json(file, function (csvData) {
             var data = [],
@@ -47,8 +47,8 @@ function drawBarChart(id, file, key, value) {
                 var zoomer = d3.behavior.zoom()
                     .on("zoom", null);
 
-                var main_margin = { top: 10, right: 10, bottom: 30, left: 150 },
-                    main_width = 550 - main_margin.left - main_margin.right,
+                var main_margin = { top: 10, right: 10, bottom: 30, left: 80 },
+                    main_width = 500 - main_margin.left - main_margin.right,
                     main_height = 600 - main_margin.top - main_margin.bottom;
 
                 var mini_margin = { top: 10, right: 50, bottom: 30, left: 10 },
@@ -59,7 +59,7 @@ function drawBarChart(id, file, key, value) {
                 // d3.select('#barchart-container').append('div').attr('id', id);
 
                 svg = d3.select(id).append("svg")
-                    .attr("class", "svgWrapper")
+                    .attr("class", "visaSVG")
                     .attr("width", main_width + main_margin.left + main_margin.right + mini_width + mini_margin.left + mini_margin.right)
                     .attr("height", main_height + main_margin.top + main_margin.bottom)
                     .call(zoomer)
@@ -73,21 +73,21 @@ function drawBarChart(id, file, key, value) {
                     .on("touchmove.zoom", null)
                     .on("touchend.zoom", null);
 
-                var mainGroup = svg.append("g")
-                    .attr("class", "mainGroupWrapper")
+                var mainVisaGroup = svg.append("g")
+                    .attr("class", "mainVisaGroupWrapper")
                     .attr("transform", "translate(" + main_margin.left + "," + main_margin.top + ")")
                     .append("g") //another one for the clip path - due to not wanting to clip the labels
                     .attr("clip-path", "url(#clip)")
                     .style("clip-path", "url(#clip)")
-                    .attr("class", "mainGroup");
+                    .attr("class", "mainVisaGroup");
 
-                var miniGroup = svg.append("g")
-                    .attr("class", "miniGroup")
+                var miniVisaGroup = svg.append("g")
+                    .attr("class", "miniVisaGroup")
                     .attr("transform", "translate(" + (main_margin.left + main_width + main_margin.right + mini_margin.left) + "," + mini_margin.top + ")");
 
-                d3.selectAll('.brushGroup').remove();
-                var brushGroup = svg.append("g")
-                    .attr("class", "brushGroup")
+                d3.selectAll('.visaBrushGroup').remove();
+                var visaBrushGroup = svg.append("g")
+                    .attr("class", "visaBrushGroup")
                     .attr("transform", "translate(" + (main_margin.left + main_width + main_margin.right + mini_margin.left) + "," + mini_margin.top + ")");
 
                 /////////////////////////////////////////////////////////////
@@ -114,21 +114,21 @@ function drawBarChart(id, file, key, value) {
                     .outerTickSize(0);
 
                 //Add group for the x axis
-                d3.select(".mainGroupWrapper")
+                d3.select(".mainVisaGroupWrapper")
                     .append("g")
                     .attr("class", "x axis")
                     .attr("transform", "translate(" + 0 + "," + (main_height + 5) + ")");
 
-                //Create y axis object
+                //Create y visaaxis object
                 main_yAxis = d3.svg.axis()
                     .scale(main_yScale)
                     .orient("left")
                     .tickSize(0)
                     .outerTickSize(0);
 
-                //Add group for the y axis
-                mainGroup.append("g")
-                    .attr("class", "y axis")
+                //Add group for the y visaaxis
+                mainVisaGroup.append("g")
+                    .attr("class", "y visaaxis")
                     .attr("transform", "translate(-5,0)");
 
                 /////////////////////////////////////////////////////////////
@@ -142,8 +142,8 @@ function drawBarChart(id, file, key, value) {
                 main_yScale.domain(data.map(function (d) { return d[key]; }));
                 mini_yScale.domain(data.map(function (d) { return d[key]; }));
 
-                //Create the visual part of the y axis
-                d3.select(".mainGroup").select(".y.axis").call(main_yAxis);
+                //Create the visual part of the y visaaxis
+                d3.select(".mainVisaGroup").select(".y.visaaxis").call(main_yAxis);
 
                 /////////////////////////////////////////////////////////////
                 ///////////////////// Label axis scales /////////////////////
@@ -159,7 +159,7 @@ function drawBarChart(id, file, key, value) {
                 /////////////////////////////////////////////////////////////
 
                 //What should the first extent of the brush become - a bit arbitrary this
-                var brushExtent = Math.max(1, Math.min(20, Math.round(data.length * 0.2)));
+                var brushExtent = Math.max(1, Math.min(20, Math.round(5)));
 
                 brush = d3.svg.brush()
                     .y(mini_yScale)
@@ -168,7 +168,7 @@ function drawBarChart(id, file, key, value) {
                 //.on("brushend", brushend);
 
                 //Set up the visual part of the brush
-                gBrush = d3.select(".brushGroup").append("g")
+                gBrush = d3.select(".visaBrushGroup").append("g")
                     .attr("class", "brush")
                     .call(brush);
 
@@ -215,7 +215,7 @@ function drawBarChart(id, file, key, value) {
 
                 //The mini brushable bar
                 //DATA JOIN
-                var mini_bar = d3.select(".miniGroup").selectAll(".bar")
+                var mini_bar = d3.select(".miniVisaGroup").selectAll(".visaBar")
                     .data(data, function (d) { return d[key]; });
 
                 //UDPATE
@@ -226,7 +226,7 @@ function drawBarChart(id, file, key, value) {
 
                 //ENTER
                 mini_bar.enter().append("rect")
-                    .attr("class", "bar")
+                    .attr("class", "visaBar")
                     .attr("x", 0)
                     .attr("width", function (d) { return mini_xScale(d[value]); })
                     .attr("y", function (d, i) { return mini_yScale(d[key]); })
@@ -250,7 +250,7 @@ function drawBarChart(id, file, key, value) {
                 /////////////////////////////////////////////////////////////
 
                 //DATA JOIN
-                var bar = d3.select(".mainGroup").selectAll(".bar")
+                var bar = d3.select(".mainVisaGroup").selectAll(".visaBar")
                     .data(data, function (d) { return d[key]; });
 
                 //UPDATE
@@ -263,7 +263,7 @@ function drawBarChart(id, file, key, value) {
 
                 //ENTER
                 bar.enter().append("rect")
-                    .attr("class", "bar")
+                    .attr("class", "visaBar")
                     .style("fill", "url(#gradient-rainbow-main)")
                     .attr("y", function (d, i) { return main_yScale(d[key]); })
                     .attr("height", main_yScale.rangeBand())
@@ -290,11 +290,11 @@ function drawBarChart(id, file, key, value) {
                 var selected = mini_yScale.domain()
                     .filter(function (d) { return (extent[0] - mini_yScale.rangeBand() + 1e-2 <= mini_yScale(d)) && (mini_yScale(d) <= extent[1] - 1e-2); });
                 //Update the colors of the mini chart - Make everything outside the brush grey
-                d3.select(".miniGroup").selectAll(".bar")
+                d3.select(".miniVisaGroup").selectAll(".visaBar")
                     .style("fill", function (d, i) { return selected.indexOf(d[key]) > -1 ? "url(#gradient-rainbow-mini)" : "#e0e0e0"; });
 
                 //Update the label size
-                d3.selectAll(".y.axis text")
+                d3.selectAll(".y.visaaxis text")
                     .style("font-size", textScale(selected.length));
 
                 /////////////////////////////////////////////////////////////
@@ -309,9 +309,9 @@ function drawBarChart(id, file, key, value) {
                 main_yScale.domain(data.map(function (d) { return d[key]; }));
                 main_yScale.rangeBands([main_yZoom(originalRange[0]), main_yZoom(originalRange[1])], 0.4, 0);
 
-                //Update the y axis of the big chart
-                d3.select(".mainGroup")
-                    .select(".y.axis")
+                //Update the y visaaxis of the big chart
+                d3.select(".mainVisaGroup")
+                    .select(".y.visaaxis")
                     .call(main_yAxis);
 
                 //Find the new max of the bars to update the x scale
@@ -319,7 +319,7 @@ function drawBarChart(id, file, key, value) {
                 main_xScale.domain([0, newMaxXScale]);
 
                 //Update the x axis of the big chart
-                d3.select(".mainGroupWrapper")
+                d3.select(".mainVisaGroupWrapper")
                     .select(".x.axis")
                     .transition().duration(500)
                     .call(main_xAxis);
@@ -452,8 +452,8 @@ function drawBarChart(id, file, key, value) {
                 var zoomer = d3.behavior.zoom()
                     .on("zoom", null);
 
-                var main_margin = { top: 10, right: 10, bottom: 30, left: 150 },
-                    main_width = 550 - main_margin.left - main_margin.right,
+                var main_margin = { top: 10, right: 10, bottom: 30, left: 80 },
+                    main_width = 500 - main_margin.left - main_margin.right,
                     main_height = 600 - main_margin.top - main_margin.bottom;
 
                 var mini_margin = { top: 10, right: 50, bottom: 30, left: 10 },
@@ -464,7 +464,7 @@ function drawBarChart(id, file, key, value) {
                 // d3.select('#barchart-container').append('div').attr('id', id);
 
                 svg = d3.select(id).append("svg")
-                    .attr("class", "svgWrapper")
+                    .attr("class", "visaSVG")
                     .attr("width", main_width + main_margin.left + main_margin.right + mini_width + mini_margin.left + mini_margin.right)
                     .attr("height", main_height + main_margin.top + main_margin.bottom)
                     .call(zoomer)
@@ -478,21 +478,21 @@ function drawBarChart(id, file, key, value) {
                     .on("touchmove.zoom", null)
                     .on("touchend.zoom", null);
 
-                var mainGroup = svg.append("g")
-                    .attr("class", "mainGroupWrapper")
+                var mainVisaGroup = svg.append("g")
+                    .attr("class", "mainVisaGroupWrapper")
                     .attr("transform", "translate(" + main_margin.left + "," + main_margin.top + ")")
                     .append("g") //another one for the clip path - due to not wanting to clip the labels
                     .attr("clip-path", "url(#clip)")
                     .style("clip-path", "url(#clip)")
-                    .attr("class", "mainGroup");
+                    .attr("class", "mainVisaGroup");
 
-                var miniGroup = svg.append("g")
-                    .attr("class", "miniGroup")
+                var miniVisaGroup = svg.append("g")
+                    .attr("class", "miniVisaGroup")
                     .attr("transform", "translate(" + (main_margin.left + main_width + main_margin.right + mini_margin.left) + "," + mini_margin.top + ")");
 
-                d3.selectAll('.brushGroup').remove();
-                var brushGroup = svg.append("g")
-                    .attr("class", "brushGroup")
+                d3.selectAll('.visaBrushGroup').remove();
+                var visaBrushGroup = svg.append("g")
+                    .attr("class", "visaBrushGroup")
                     .attr("transform", "translate(" + (main_margin.left + main_width + main_margin.right + mini_margin.left) + "," + mini_margin.top + ")");
 
                 /////////////////////////////////////////////////////////////
@@ -519,21 +519,21 @@ function drawBarChart(id, file, key, value) {
                     .outerTickSize(0);
 
                 //Add group for the x axis
-                d3.select(".mainGroupWrapper")
+                d3.select(".mainVisaGroupWrapper")
                     .append("g")
                     .attr("class", "x axis")
                     .attr("transform", "translate(" + 0 + "," + (main_height + 5) + ")");
 
-                //Create y axis object
+                //Create y visaaxis object
                 main_yAxis = d3.svg.axis()
                     .scale(main_yScale)
                     .orient("left")
                     .tickSize(0)
                     .outerTickSize(0);
 
-                //Add group for the y axis
-                mainGroup.append("g")
-                    .attr("class", "y axis")
+                //Add group for the y visaaxis
+                mainVisaGroup.append("g")
+                    .attr("class", "y visaaxis")
                     .attr("transform", "translate(-5,0)");
 
                 /////////////////////////////////////////////////////////////
@@ -547,8 +547,8 @@ function drawBarChart(id, file, key, value) {
                 main_yScale.domain(data.map(function (d) { return d[key]; }));
                 mini_yScale.domain(data.map(function (d) { return d[key]; }));
 
-                //Create the visual part of the y axis
-                d3.select(".mainGroup").select(".y.axis").call(main_yAxis);
+                //Create the visual part of the y visaaxis
+                d3.select(".mainVisaGroup").select(".y.visaaxis").call(main_yAxis);
 
                 /////////////////////////////////////////////////////////////
                 ///////////////////// Label axis scales /////////////////////
@@ -564,7 +564,7 @@ function drawBarChart(id, file, key, value) {
                 /////////////////////////////////////////////////////////////
 
                 //What should the first extent of the brush become - a bit arbitrary this
-                var brushExtent = Math.max(1, Math.min(20, Math.round(data.length * 0.2)));
+                var brushExtent = Math.max(1, Math.min(20, Math.round(data.length * 0.5)));
 
                 brush = d3.svg.brush()
                     .y(mini_yScale)
@@ -573,7 +573,7 @@ function drawBarChart(id, file, key, value) {
                 //.on("brushend", brushend);
 
                 //Set up the visual part of the brush
-                gBrush = d3.select(".brushGroup").append("g")
+                gBrush = d3.select(".visaBrushGroup").append("g")
                     .attr("class", "brush")
                     .call(brush);
 
@@ -620,7 +620,7 @@ function drawBarChart(id, file, key, value) {
 
                 //The mini brushable bar
                 //DATA JOIN
-                var mini_bar = d3.select(".miniGroup").selectAll(".bar")
+                var mini_bar = d3.select(".miniVisaGroup").selectAll(".visaBar")
                     .data(data, function (d) { return d[key]; });
 
                 //UDPATE
@@ -631,7 +631,7 @@ function drawBarChart(id, file, key, value) {
 
                 //ENTER
                 mini_bar.enter().append("rect")
-                    .attr("class", "bar")
+                    .attr("class", "visaBar")
                     .attr("x", 0)
                     .attr("width", function (d) { return mini_xScale(d[value]); })
                     .attr("y", function (d, i) { return mini_yScale(d[key]); })
@@ -655,7 +655,7 @@ function drawBarChart(id, file, key, value) {
                 /////////////////////////////////////////////////////////////
 
                 //DATA JOIN
-                var bar = d3.select(".mainGroup").selectAll(".bar")
+                var bar = d3.select(".mainVisaGroup").selectAll(".visaBar")
                     .data(data, function (d) { return d[key]; });
 
                 //UPDATE
@@ -668,7 +668,7 @@ function drawBarChart(id, file, key, value) {
 
                 //ENTER
                 bar.enter().append("rect")
-                    .attr("class", "bar")
+                    .attr("class", "visaBar")
                     .style("fill", "url(#gradient-rainbow-main)")
                     .attr("y", function (d, i) { return main_yScale(d[key]); })
                     .attr("height", main_yScale.rangeBand())
@@ -695,11 +695,11 @@ function drawBarChart(id, file, key, value) {
                 var selected = mini_yScale.domain()
                     .filter(function (d) { return (extent[0] - mini_yScale.rangeBand() + 1e-2 <= mini_yScale(d)) && (mini_yScale(d) <= extent[1] - 1e-2); });
                 //Update the colors of the mini chart - Make everything outside the brush grey
-                d3.select(".miniGroup").selectAll(".bar")
+                d3.select(".miniVisaGroup").selectAll(".visaBar")
                     .style("fill", function (d, i) { return selected.indexOf(d[key]) > -1 ? "url(#gradient-rainbow-mini)" : "#e0e0e0"; });
 
                 //Update the label size
-                d3.selectAll(".y.axis text")
+                d3.selectAll(".y.visaaxis text")
                     .style("font-size", textScale(selected.length));
 
                 /////////////////////////////////////////////////////////////
@@ -714,9 +714,9 @@ function drawBarChart(id, file, key, value) {
                 main_yScale.domain(data.map(function (d) { return d[key]; }));
                 main_yScale.rangeBands([main_yZoom(originalRange[0]), main_yZoom(originalRange[1])], 0.4, 0);
 
-                //Update the y axis of the big chart
-                d3.select(".mainGroup")
-                    .select(".y.axis")
+                //Update the y visaaxis of the big chart
+                d3.select(".mainVisaGroup")
+                    .select(".y.visaaxis")
                     .call(main_yAxis);
 
                 //Find the new max of the bars to update the x scale
@@ -724,7 +724,7 @@ function drawBarChart(id, file, key, value) {
                 main_xScale.domain([0, newMaxXScale]);
 
                 //Update the x axis of the big chart
-                d3.select(".mainGroupWrapper")
+                d3.select(".mainVisaGroupWrapper")
                     .select(".x.axis")
                     .transition().duration(500)
                     .call(main_xAxis);

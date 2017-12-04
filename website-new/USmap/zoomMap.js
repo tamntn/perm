@@ -385,14 +385,14 @@ function map() {
 
 					var select = d3.select('#for_entries')
 						.append('select')
-						.attr('id', 'select')
+						.attr('id', 'stateCompare')
 						.on('change', onchange);
 
-					d3.selectAll('#select').remove(); //removes the previously created select option
+					d3.selectAll('#stateCompare').remove(); //removes the previously created select option
 
 					var select = d3.select('#for_entries') //creates a new select option
 						.append('select')
-						.attr('id', 'select')
+						.attr('id', 'stateCompare')
 						.on('change', onchange);
 
 					var options = select.selectAll('option')
@@ -403,7 +403,8 @@ function map() {
 
 					// when a new value is selected
 					function onchange() {
-						selectValue = d3.select('select').property('value')
+						selectValue = d3.select('#stateCompare').property('value')
+						console.log(selectValue);
 						var new_data = [num_case_status[index].values[0], num_case_status[arrayHelp.indexOf(+selectValue)].values[0]]
 						// delete new_data[0].Id;
 						// delete new_data[1].Id;
@@ -511,7 +512,7 @@ function map() {
 
 				} ///// --- select option on model ends here --- /////
 
-				document.getElementById("select").selectedIndex = index;
+				document.getElementById("stateCompare").selectedIndex = index;
 
 
 			}

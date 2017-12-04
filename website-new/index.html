@@ -261,7 +261,7 @@
                 <div class="col-lg-5"></div>
                 <div class="col-lg-2" style="text-align: center">
                     <div class="form-group">
-                        <label for="sel1">Select an option:</label>
+                        <label for="worldChartOption">Select an option:</label>
                         <select class="form-control" id="worldChartOption">
                             <option value="worldChart1">Total Certified Cases</option>
                             <option value="worldChart2">Average Processing Time - All Cases</option>
@@ -275,9 +275,9 @@
                 <div class="col-lg-2">
                 </div>
                 <div class="col-lg-8" style="text-align: center" id="barchart-container">
-                    <div id="worldChart1"></div>
-                    <div id="worldChart2"></div>
-                    <div id="worldChart3"></div>
+                    <div id="worldChart1" style="height: 600"></div>
+                    <div id="worldChart2" style="height: 600"></div>
+                    <div id="worldChart3" style="height: 600"></div>
                     <h4>
                         <strong id="barchartTitle"></strong>
                     </h4>
@@ -523,7 +523,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h1>Visa Overview</h1>
-                    <h4>H-1B visa is the key to the American dream</h4>
+                    <h4><strong>H-1B</strong> visa is the key to the American dream</h4>
                 </div>
             </div>
         </div>
@@ -539,6 +539,36 @@
                     </p>
                 </div>
                 <div class="col-lg-2"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="visualization-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-5"></div>
+                <div class="col-lg-2" style="text-align: center">
+                    <div class="form-group">
+                        <label for="visaChartOption">Select an option:</label>
+                        <select class="form-control" id="visaChartOption">
+                            <option value="visaChart1">Total Certified Cases</option>
+                            <option value="visaChart2">Total Denied Cases</option>
+                            <option value="visaChart3" selected>Certified Percentage</option>
+                            <option value="visaChart4">Denied Percentage</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-lg-5"></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2">
+                </div>
+                <div class="col-lg-8" style="text-align: center" id="visa-container">
+                    <div id="visaChart" style="height: 600"></div>
+                    <h4>
+                        <strong id="visaChartTitle"></strong>
+                    </h4>
+                </div>
             </div>
         </div>
     </section>
@@ -662,6 +692,9 @@
     <!-- Treemap Script -->
     <script src="Treemap/treemap.js"></script>
 
+    <!-- Visa Script -->
+    <script src="Visa/visachart.js"></script>
+
     <script>
         var sentence1 = ' more than <strong>374,000</strong> foreigners have applied to be certified for an U.S. Permanent Visa.',
             sentence2 = ' nearly <strong>45%</strong> of people who applied got certified.',
@@ -749,6 +782,45 @@
                         setTimeout(
                             drawBarChart("#worldChart3", "World/CountryProcessingTime/countryProcessingTimeCertified.json", "name", "average"), 1000);
                         document.getElementById("barchartTitle").innerHTML = "Average Processing Time in Days (Certified Cases)";
+                    }
+                } else {
+                    // $(".box").hide();
+                }
+            });
+        }).change();
+
+        // Call Visa Chart Function
+        // drawVisaChart("#visaChart", "Visa/acceptanceRateByClass.csv", "Admission Class", "Percentage-Certified");
+        $("#visaChartOption").change(function () {
+            d3.select('#visaChart').remove();
+
+            $(this).find("option:selected").each(function () {
+                var optionValue = $(this).attr("value");
+                console.log(optionValue);
+                if (optionValue) {
+                    if (optionValue == 'visaChart1') {
+                        d3.select('#visa-container').append('div').attr('id', 'visaChart');
+                        setTimeout(
+                            drawVisaChart("#visaChart", "Visa/acceptanceRateByClass.csv", "Admission Class", "Certified"), 1000);
+                        document.getElementById("visaChartTitle").innerHTML = "Total Certified Cases for All Admission Classes (2011-2016)";
+                    }
+                    else if (optionValue == 'visaChart2') {
+                        d3.select('#visa-container').append('div').attr('id', 'visaChart');
+                        setTimeout(
+                            drawVisaChart("#visaChart", "Visa/acceptanceRateByClass.csv", "Admission Class", "Denied"), 1000);
+                        document.getElementById("visaChartTitle").innerHTML = "Total Denied Cases for All Admission Classes (2011-2016)";
+                    }
+                    else if (optionValue == 'visaChart3') {
+                        d3.select('#visa-container').append('div').attr('id', 'visaChart');
+                        setTimeout(
+                            drawVisaChart("#visaChart", "Visa/acceptanceRateByClass.csv", "Admission Class", "Percentage-Certified"), 1000);
+                        document.getElementById("visaChartTitle").innerHTML = "Certified Percentage for All Admission Classes (2011-2016)";
+                    }
+                    else if (optionValue == 'visaChart4') {
+                        d3.select('#visa-container').append('div').attr('id', 'visaChart');
+                        setTimeout(
+                            drawVisaChart("#visaChart", "Visa/acceptanceRateByClass.csv", "Admission Class", "Percentage-Denied"), 1000);
+                        document.getElementById("visaChartTitle").innerHTML = "Denied Percentage for All Admission Classes (2011-2016)";
                     }
                 } else {
                     // $(".box").hide();
