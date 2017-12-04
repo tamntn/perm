@@ -113,7 +113,10 @@
                     </h3>
                     <p>
                         <small>for</small>
-                        <strong>CSCI 444 - Data Visualization</strong>
+                        <strong>Dr. Naeemul Hassan</strong>'s
+                        <a class="link-white" href="https://john.cs.olemiss.edu/~nhassan/teaching/csci444/fall2017/#top" target="_blank">
+                            <strong>CSCI 444 - Data Visualization</strong>
+                        </a>
                     </p>
                     <br/>
                     <div style="height:50px">
@@ -417,6 +420,30 @@
         </div>
     </section>
 
+    <section class="visualization-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-5"></div>
+                <div class="col-lg-2" style="text-align: center">
+                    <div class="form-group">
+                        <label for="jobRankOption">Select a state:</label>
+                        <select class="form-control" id="jobRankOption">
+                        </select>
+                    </div>
+                </div>
+                <div class="col-lg-5"></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12" style="text-align: center" id="jobRank-container">
+                    <div id="jobRank" style="height: 600"></div>
+                    <h4>
+                        <strong id="jobRankTitle"></strong>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- ################################################################################### -->
     <!-- ################################### JOB SECTION ################################### -->
     <!-- ################################################################################### -->
@@ -523,7 +550,8 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h1>Visa Overview</h1>
-                    <h4><strong>H-1B</strong> visa is the key to the American dream</h4>
+                    <h4>
+                        <strong>H-1B</strong> visa is the key to the American dream</h4>
                 </div>
             </div>
         </div>
@@ -686,6 +714,9 @@
     <!-- ZoomMap Script -->
     <script src="USmap/zoomMap.js"></script>
 
+    <!-- Job By State Script -->
+    <script src="USMap/JobByState/jobchart.js"></script>
+
     <!-- Streamgraph Script -->
     <script src="Streamgraph/streamgraph.js"></script>
 
@@ -790,7 +821,6 @@
         }).change();
 
         // Call Visa Chart Function
-        // drawVisaChart("#visaChart", "Visa/acceptanceRateByClass.csv", "Admission Class", "Percentage-Certified");
         $("#visaChartOption").change(function () {
             d3.select('#visaChart').remove();
 
@@ -827,6 +857,23 @@
                 }
             });
         }).change();
+
+        // Call Job Chart
+        d3.select('#jobRank').remove();
+        d3.select('#jobRank-container').append('div').attr('id', 'jobRank');
+        drawJobByStateChart('#jobRank', "Alabama", 'name', 'Certified');
+
+        populateStateOption();
+
+        $("#jobRankOption").change(function () {
+            d3.select('#jobRank').remove();
+            d3.select('#jobRank-container').append('div').attr('id', 'jobRank');
+
+            $(this).find("option:selected").each(function () {
+                var optionValue = $(this).attr("value");
+                drawJobByStateChart('#jobRank', optionValue, 'name', 'Certified');
+            })
+        });
     </script>
 </body>
 

@@ -77,8 +77,8 @@ function drawVisaChart(id, file, key, value) {
                     .attr("class", "mainVisaGroupWrapper")
                     .attr("transform", "translate(" + main_margin.left + "," + main_margin.top + ")")
                     .append("g") //another one for the clip path - due to not wanting to clip the labels
-                    .attr("clip-path", "url(#clip)")
-                    .style("clip-path", "url(#clip)")
+                    .attr("clip-path", "url(#visaclip)")
+                    .style("clip-path", "url(#visaclip)")
                     .attr("class", "mainVisaGroup");
 
                 var miniVisaGroup = svg.append("g")
@@ -159,7 +159,7 @@ function drawVisaChart(id, file, key, value) {
                 /////////////////////////////////////////////////////////////
 
                 //What should the first extent of the brush become - a bit arbitrary this
-                var brushExtent = Math.max(1, Math.min(20, Math.round(5)));
+                var brushExtent = Math.max(1, Math.min(20, Math.round(data.length * 0.5)));
 
                 brush = d3.svg.brush()
                     .y(mini_yScale)
@@ -203,7 +203,7 @@ function drawVisaChart(id, file, key, value) {
 
                 //Add the clip path for the main bar chart
                 defs.append("clipPath")
-                    .attr("id", "clip")
+                    .attr("id", "visaclip")
                     .append("rect")
                     .attr("x", -main_margin.left)
                     .attr("width", main_width + main_margin.left)
@@ -482,8 +482,8 @@ function drawVisaChart(id, file, key, value) {
                     .attr("class", "mainVisaGroupWrapper")
                     .attr("transform", "translate(" + main_margin.left + "," + main_margin.top + ")")
                     .append("g") //another one for the clip path - due to not wanting to clip the labels
-                    .attr("clip-path", "url(#clip)")
-                    .style("clip-path", "url(#clip)")
+                    .attr("clip-path", "url(#visaclip)")
+                    .style("clip-path", "url(#visaclip)")
                     .attr("class", "mainVisaGroup");
 
                 var miniVisaGroup = svg.append("g")
@@ -608,7 +608,7 @@ function drawVisaChart(id, file, key, value) {
 
                 //Add the clip path for the main bar chart
                 defs.append("clipPath")
-                    .attr("id", "clip")
+                    .attr("id", "visaclip")
                     .append("rect")
                     .attr("x", -main_margin.left)
                     .attr("width", main_width + main_margin.left)
