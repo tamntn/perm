@@ -137,7 +137,8 @@ function main(o, data) {
     // This is to make sure that the main group has the same color across multilpe visualizations
     // The color for subgroup and each job is generate randomly
     function pickcolor(k) {
-        var colorrange = ['#00008b', '#280a8c', '#3b158d', '#4a1f8d', '#58298e', '#64328f', '#703b8f', '#7a4490', '#844e90', '#8f5791', '#996191', '#a36b91', '#ad7491', '#b57e91', '#bf8791', '#c89191', '#d19c90', '#dba690', '#e3af8f', '#edbb8e', '#f6c58d', '#ffcf8c'];
+        // var colorrange = ['#00008b', '#280a8c', '#3b158d', '#4a1f8d', '#58298e', '#64328f', '#703b8f', '#7a4490', '#844e90', '#8f5791', '#996191', '#a36b91', '#ad7491', '#b57e91', '#bf8791', '#c89191', '#d19c90', '#dba690', '#e3af8f', '#edbb8e', '#f6c58d', '#ffcf8c'];
+        var colorrange = ['#e6194b', '#3cb44b', '#ffe119', '#0082c8', '#f58231', '#911eb4', '#46f0f0', '#f032e6', '#d2f53c', '#fabebe', '#008080', '#e6beff', '#aa6e28', '#fffac8', '#800000', '#aaffc3', '#808000', '#ffd8b1', '#000080', '#808080', '#808080', '#808080'];        
         var jobGroup = [
             "Computer and Mathematical Occupations",
             "Architecture and Engineering Occupations",
@@ -180,17 +181,17 @@ function main(o, data) {
         data.values.forEach(function(element){
             if(element.key == id) {
                 value = element.value.toString();
-                groupType = "<strong style='color:red'>Main Sector </strong><i class='fa fa-long-arrow-right' aria-hidden='true'></i> Sub Sector <i class='fa fa-long-arrow-right' aria-hidden='true'></i> Jobs";
+                groupType = "<strong style='color:red'>Major Group </strong><i class='fa fa-long-arrow-right' aria-hidden='true'></i> Minor Group <i class='fa fa-long-arrow-right' aria-hidden='true'></i> Detailed Occupations";
             }
             element._children.forEach(function(subgroup){
                 if(subgroup.key == id && subgroup.key != "N/A") {
                     value = subgroup.value.toString();
-                    groupType = "Main Sector <i class='fa fa-long-arrow-right' aria-hidden='true'></i><strong style='color:red'> Sub Sector </strong><i class='fa fa-long-arrow-right' aria-hidden='true'></i> Jobs";
+                    groupType = "Major Group <i class='fa fa-long-arrow-right' aria-hidden='true'></i><strong style='color:red'> Minor Group </strong><i class='fa fa-long-arrow-right' aria-hidden='true'></i> Detailed Occupations";
                 }
                 subgroup._children.forEach(function(jobTitle){
                     if(jobTitle.key == id && jobTitle.key != "N/A") {
                         value = jobTitle.value.toString();
-                        groupType = "Main Sector <i class='fa fa-long-arrow-right' aria-hidden='true'></i> Sub Sector <i class='fa fa-long-arrow-right' aria-hidden='true'></i><strong style='color:red'> Jobs</strong>";
+                        groupType = "Major Group <i class='fa fa-long-arrow-right' aria-hidden='true'></i> Minor Group <i class='fa fa-long-arrow-right' aria-hidden='true'></i><strong style='color:red'> Detailed Occupations</strong>";
                     }
                 })
             });
@@ -201,7 +202,7 @@ function main(o, data) {
             groupType =  "<strong style='color:red'>All Cases With Missing Job Title</strong>";
         }
         if(id == "N/A"){
-            groupType = "<strong style='color:red'>N/A is a <strong>sub sector</strong> containing jobs that are not categorized into sub-sectors in our dataset due to inconsistency in job titles.</strong>"
+            groupType = "<strong style='color:red'>N/A is a <strong>Minor Group</strong> containing jobs that are not categorized in our dataset due to inconsistency in job titles.</strong>"
         }
 
         if (document.getElementById('treemap-radio-total').checked) {

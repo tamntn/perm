@@ -37,27 +37,6 @@
     <link href="css/style.css" rel="stylesheet">
     <!-- Brushable Bar Chart -->
     <link href="World/CountryProcessingTime/barchart.css" rel="stylesheet" />
-
-    <style>
-        .box {
-            color: #fff;
-            padding: 20px;
-            display: none;
-            margin-top: 20px;
-        }
-
-        .red {
-            background: #ff0000;
-        }
-
-        .green {
-            background: #228B22;
-        }
-
-        .blue {
-            background: #0000ff;
-        }
-    </style>
 </head>
 
 <!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
@@ -105,7 +84,7 @@
             <div class="row">
                 <div class="col-lg-2"></div>
                 <div class="col-lg-8">
-                    <h1 class="title">U.S. Permanent Visa</h1>
+                    <h1 class="title">An Overview on U.S. Permanent Visa Application</h1>
                     <h3>Project by
                         <a href="https://github.com/tamntn/VisaDataVisualization" target="_blank" class="link-white">
                             <strong>Team ANTS</strong>
@@ -113,7 +92,9 @@
                     </h3>
                     <p>
                         <small>for</small>
-                        <strong>Dr. Naeemul Hassan</strong>'s
+                        <a class="link-white" href="https://john.cs.olemiss.edu/~nhassan/" target="_blank">
+                            <strong>Dr. Naeemul Hassan</strong>
+                        </a>'s
                         <a class="link-white" href="https://john.cs.olemiss.edu/~nhassan/teaching/csci444/fall2017/#top" target="_blank">
                             <strong>CSCI 444 - Data Visualization</strong>
                         </a>
@@ -137,32 +118,217 @@
             <div class="row">
                 <div class="col-lg-2"></div>
                 <div class="col-lg-8">
-                    <p class="paragraph">For the past 6 years, more and more foreigners have been coming to the US to work and reside. In order
-                        for a foreigner to work in the US legally, they need to obtain a permanent work visa.
+                    <p class="paragraph">For the past 6 years, more and more foreigners have been coming to the US to work and reside. PERM is
+                        the process for obtaining a permanent labor certification, the first step of the green card process
+                        for foreign nationals seeking permanent residence through their employment.
                     </p>
-                    <h3>Why?</h3>
+                    <br>
+                    <h3>Why PERM?</h3>
                     <p class="paragraph">A permanent labor certification issued by the Department of Labor (DOL) allows an employer to hire a
                         foreign worker to work permanently in the United States. In most instances, before the U.S. employer
                         can submit an immigration petition to the Department of Homeland Security's U.S. Citizenship and
                         Immigration Services (USCIS), the employer must obtain a certified labor certification application
-                        from the DOL's Employment and Training Administration (ETA). The DOL must certify to the USCIS that
-                        there are not sufficient U.S. workers able, willing, qualified and available to accept the job opportunity
-                        in the area of intended employment and that employment of the foreign worker will not adversely affect
-                        the wages and working conditions of similarly employed U.S. workers.
+                        from the DOL's Employment and Training Administration (ETA).
+                        <strong>The DOL must certify to the USCIS that there are not sufficient U.S. workers able, willing, qualified
+                            and available to accept the job opportunity in the area of intended employment and that employment
+                            of the foreign worker will not adversely affect the wages and working conditions of similarly
+                            employed U.S. workers.</strong>
                     </p>
+                    <br>
                     <h3>Questions we're trying to answer:</h3>
                     <p class="paragraph">Which country, state have the highest acceptance rate?
                         <br/> What is the average processing time for each country? average salary for each job?
+                        <br/> What are the jobs with the most certified cases in each state?
                         <br/> What is the most demanded job?
-                        <br/>
+                        <br/> What are the job trends over the years?
+                        <br/> Will we be able to "predict" a PERM application outcome based on our observation?
                     </p>
-                    <h3>How?</h3>
+                    <br>
+                    <h3>How are we answering our questions?</h3>
                     <p class="paragraph">We are going to answer the above questions by providing visualizations regarding each country (
                         <a href="#world" class="page-scroll link-black">world map</a>), state (
-                        <a href="#usmap-top" class="page-scroll link-black">U.S. map</a>), job and job sectors (
+                        <a href="#usmap-top" class="page-scroll link-black">U.S. map</a>), occupation and occupation group (
                         <a href="#job" class="page-scroll link-black">stream graph & tree map</a>), and admission class / visa types (
                         <a href="#visa" class="page-scroll link-black">brushable bar chart</a>).
                     </p>
+                    <br>
+                    <h3 id="dataset">Understanding our data:</h3>
+                    <p class="paragraph">The dataset we're using is available
+                        <a href="https://www.kaggle.com/jboysen/us-perm-visas" class="link-black" target="_blank">here</a>. We have intensively processed the dataset by filtering out unnecessary attributes, normalizing
+                        and deriving multiple attributes for our visualizations. Below is a list describing the main columns
+                        in our final dataset.</p>
+                    <div class="panel-group" id="accordion">
+                        <div class="panel panel-info">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                                        Case Status</a>
+                                </h4>
+                            </div>
+                            <div id="collapse1" class="panel-collapse collapse in">
+                                <div class="panel-body">
+                                    <p style="color: red">Original Attribute - Unchanged</p>
+                                    <p class="paragraph">Once a person applied for a permanent labor certification, their application can be decided
+                                        as: "Certified", "Certified-Expired", "Denied" and "Withdrawn." We mainly focused
+                                        on Certified and Denied cases.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-info">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+                                        Class of Admission (Visa Type)</a>
+                                </h4>
+                            </div>
+                            <div id="collapse2" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <p style="color: red">Original Attribute - Unchanged</p>
+                                    <p class="paragraph">Info regarding the visa classification that the person applying were admitted into the
+                                        U.S. on their last arrival.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-info">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+                                        Country of Citizenship</a>
+                                </h4>
+                            </div>
+                            <div id="collapse3" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <p style="color: red">Original Attribute - Normalized</p>
+                                    <p class="paragraph">The country in which the person was born and has not renounced or lost citizenship. We
+                                        have process to make all values uppercase in our dataset to prevent duplicates.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-info">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">
+                                        Processing Time</a>
+                                </h4>
+                            </div>
+                            <div id="collapse4" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <p style="color: red">Derived Attribute</p>
+                                    <p class="paragraph">Info regarding the duration from when an application is received to when the application
+                                        status is decided. We simply calculated this value from "Received Date" and "Decision
+                                        Date" attribues.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-info">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">
+                                        Work State</a>
+                                </h4>
+                            </div>
+                            <div id="collapse5" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <p style="color: red">Original Attribute - Normalized</p>
+                                    <p class="paragraph">The state where the offered job is located.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-info">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse6">
+                                        SOC Code</a>
+                                </h4>
+                            </div>
+                            <div id="collapse6" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <p style="color: red">Original Attribute - Normalized</p>
+                                    <p class="paragraph">The 2000 Standard Occupational Classification (SOC) System was developed in response
+                                        to a growing need for a universal occupational classification system. It classifies
+                                        workers at four levels of aggregation: 1) major group; 2) minor group; 3) broad occupation;
+                                        and 4) detailed occupation. Each item in this hierarchy is designated by a six-digit
+                                        code - an SOC Code.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-info">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse7">
+                                        Detailed Occupation</a>
+                                </h4>
+                            </div>
+                            <div id="collapse7" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <p style="color: red">Original Attribute - Partially Normalized</p>
+                                    <p class="paragraph">All together, there are
+                                        <a href="https://www.bls.gov/soc/2000/soc-structure-2000.pdf" class="link-black" target="_blank">821 detailed occupations</a>. Even though this data is presented in the dataset,
+                                        there are many inconsistencies in the value. Since there are also inconsistencies
+                                        in the SOC Code, we had to manually check each job with
+                                        <a href="https://www.bls.gov/soc/2000/soc-structure-2000.pdf" class="link-black" target="_blank">this file</a> from Bureau of Labor Statistics, which is why the values in this attribute
+                                        are "partially normalized". We were able to determined the major groups of all occupations.
+                                        However, we marked the minor groups of those that are not normalized as "N/A".</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-info">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse8">
+                                        Major Group</a>
+                                </h4>
+                            </div>
+                            <div id="collapse8" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <p style="color: red">Derived Attribute</p>
+                                    <p class="paragraph">All occupations are clustered into
+                                        <a href="https://www.bls.gov/soc/socguide.htm" class="link-black" target="_blank">23 major groups</a>. Since the dataset doesn't include this info, we have used the
+                                        SOC Code to obtain it. The major group information is presented by the first two
+                                        digits of the SOC Code. Major groups of jobs that are missing "job title - detailed
+                                        occupation attribute" are marked as "N/A".</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-info">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse9">
+                                        Minor Group</a>
+                                </h4>
+                            </div>
+                            <div id="collapse9" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <p style="color: red">Derived Attribute</p>
+                                    <p class="paragraph">Within all major groups are 96 minor groups. We also used the SOC Code and Python scripting
+                                        to obtain this data. The third digit of the SOC Code represents the minor groups
+                                        and all minor groups SOC Code ends with 000.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-info">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse10">
+                                        Annual Wage</a>
+                                </h4>
+                            </div>
+                            <div id="collapse10" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <p style="color: red">Derived Attribute</p>
+                                    <p class="paragraph">Info regarding the offered annual wage of an application. We simply calculated this attribute
+                                        from the "wage offered" amount and "wage offered unit of pay". During this process, we made
+                                        assumptions regarding the number of weeks (52) and hours (2080) of work in a year
+                                        to calculate the yearly amount based off unit of pay.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <br/>
                     <br/>
                 </div>
@@ -194,13 +360,18 @@
             <div class="row">
                 <div class="col-lg-2"></div>
                 <div class="col-lg-8">
-                    <p class="paragraph">This heat world map shows data regarding the case status of all people from each country who applied
-                        to be certified over the past 6 years (2011 - 2016). Once a person applies for a permanent labor
-                        certification, his/her case status will be decided as "Certified", "Certified-Expired", "Denied"
-                        or "Withdrawn".
-                    </p>
-                    <p class="paragraph">This map provides 2 color scale: one is for the percentage of certified cases in each country, and one
-                        is for the total number of certified cases. Hover over each country for details.
+                    <p class="paragraph">This
+                        <strong>heat world map</strong> shows data regarding the case status of all applications from each country
+                        over the past 6 years (2011 - 2016). The map provides 2 color scale: one is for the percentage of
+                        certified cases in each country, and one is for the total number of certified cases. Hover over each
+                        country for details.</p>
+                    <h3>World Map Interactivity:</h3>
+                    <p class="paragraph">
+                        <i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+                        <strong> Select </strong>an option from the radio button to change color scale.
+                        <br>
+                        <i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+                        <strong> Hover </strong>over a country to view details regarding case status.
                         <br/>
                         <br/>
                     </p>
@@ -227,7 +398,7 @@
     </section>
 
     <!-- Visualization -->
-    <section class="visualization-section">
+    <section class="visualization-section-narrow">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-2"></div>
@@ -248,10 +419,32 @@
                 <div class="col-lg-8">
                     <p class="paragraph">
                         As we can see, most countries' certified rate is around 30-50%. India is the country with the most certifed cases (as well
-                        as total cases). China comes second, but still almost 90,000 cases less than India. This might seem
-                        unrealistic. However, it is a reasonable number as we will later on discover that "Computer and Mathematical
-                        Occupations" account for the most of the economy job sectors, and India is known for having many
-                        people who are good in this area.
+                        as total cases). China comes second, but still almost 90,000 total cases less than India. This might
+                        seem unrealistic. However, it is a reasonable number as we will later on discover that "Computer
+                        and Mathematical Occupations" account for the most of the certified cases of all major occupation
+                        groups, and India is known for having many people who are good in this field.
+                    </p>
+                    <hr>
+                    <p class="paragraph">The chart below is currently showing the average processing time in days for each country, where
+                        <strong>only certified cases</strong> were taken into consideration. However, different options are also
+                        available: Total certified cases and average processing time for all cases. With this visualization,
+                        you can compare the average processing time/total certified cases between countries as the values
+                        are in descending order.</p>
+                    <h3>Brushable Bar Chart Interactivity:</h3>
+                    <p class="paragraph">
+                        <i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+                        <strong> Select </strong>an option in the dropdown box to view the chart in different data.
+                        <br>
+                        <i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+                        <strong> Drag </strong>the box in the mini chart,
+                        <strong>scroll</strong> your mouse or
+                        <strong>click</strong> anywhere in the mini chart to see different areas of the total bar chart.
+                        <br>
+                        <i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+                        <strong> Resize </strong>the box in the mini chart to adjust your view size.
+                        <br/>
+                        <i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+                        The x axis will update automatically based on the viewable items.
                     </p>
                 </div>
             </div>
@@ -294,13 +487,6 @@
             <div class="row">
                 <div class="col-lg-2"></div>
                 <div class="col-lg-8">
-                    <p class="paragraph">The chart above shows the average processing time in days for each country, where
-                        <strong>only certified cases</strong> were taken into consideration. You can see more or less of the total
-                        bar chart on the left by either dragging the box in the mini chart on the right or by scrolling your
-                        mouse. You can also click anywhere in the mini chart to center the box on that region. And you can
-                        increase and decrease the size of the box by dragging the top or bottom handle up or down.</p>
-                    <br/>
-                    <br/>
                     <br/>
                 </div>
                 <div class="col-lg-2"></div>
@@ -340,13 +526,27 @@
                 <div class="col-lg-2"></div>
                 <div class="col-lg-8">
                     <p class="paragraph">
-                        Let's now take a look at the overview of different U.S States.
+                        Let's now take a look at the overview of PERM applications where the jobs are located in different U.S. States.
                     </p>
                     <p class="paragraph">
-                        This heat map works just as how the world map works. It also provides 2 different scales, one for the percentage of certified
-                        cases over all cases, the one is for the total number of certified cases in each state. You can click
-                        into one of the state to view a correspoding bar graph of that state. You also have the option to
-                        compare the total number of diffrent case status between the "clicked" state and any other state.
+                        This heat map behaves just as the world map. It also provides 2 different scales: one for the percentage of certified cases
+                        in each state, and another for the total number of certified cases.
+                    </p>
+                    <h3>U.S. Map Interactivity:</h3>
+                    <p class="paragraph">
+                        <i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+                        <strong> Select </strong>an option from the radio button to change color scale.
+                        <br>
+                        <i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+                        <strong> Hover </strong>over each state for information in corresponding to the scale.
+                        <br>
+                        <i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+                        <strong> Click </strong>on a state to enter a modal which contains a bar chart of case status corresponding
+                        to the scale.
+                        <br/>
+                        <i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+                        While in the modal,
+                        <strong>compare</strong> the total number of each case status by selecting another state.
                     </p>
                 </div>
                 <div class="col-lg-2"></div>
@@ -355,7 +555,7 @@
     </section>
 
     <!-- US Map Visualization -->
-    <section class="visualization-section">
+    <section class="visualization-section-narrow">
         <div class="container-fluid">
             <div class="row">
                 <!-- <div class="col-lg-2"></div> -->
@@ -404,24 +604,37 @@
                 <div class="col-lg-2"></div>
                 <div class="col-lg-8">
                     <p class="paragraph">
-                        As we can clearly see, Mississippi has the lowest certified rate at just above 36%, while state like New Hampshire, Oregon
-                        and Missouri top the category, all of which have over 50% certified rate.
+                        By looking at the map showing certified percentage, it's clear that Mississippi has the lowest certified rate at just above
+                        36%, while state like New Hampshire, Oregon and Missouri top the category, all of which have over
+                        50% certified rate. Most states sit at around 48-50% certified rate.
                     </p>
                     <p class="paragraph">
-                        Regarding the total number certified cases, California accounts for a huge amount, at about 43,000 certified cases. Texas
-                        comes second at about 23,000 certified cases and the state of New York is third with just over 14,000
-                        cases.
+                        Regarding the total number certified cases, California accounts for a very large amount, at about 43,000 certified cases.
+                        Texas comes second at about 23,000 certified cases and the state of New York is third with over 14,000
+                        cases. This is again, very understandable when we take into account the fact that California is the
+                        technology hub, "Computer and Mathematical Occupations" are the majority of all major occupation
+                        groups and India tops all countries with most certified cases.
                     </p>
-                    <br/>
-                    <br/>
+                    <hr>
+                    <p class="paragraph">Here, we use another brushable bar chart to rank the top major occupation groups with in terms of certified
+                        cases in each state. While most states have "Computer and Mathematical" as their top major group,
+                        Mississippi, the state with the lowest certified rate, have "Production", "Education, Training and
+                        Library" and "Healthcare Practitioners and Technical" Occupations as its top 3.
+                    </p>
+                    <h3>Top Major Occupation Group Bar Chart Interactivity:</h3>
+                    <p class="paragraph">
+                        <i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+                        <strong> Select </strong>a state.
+                        <br>
+                        <i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+                        <strong> Adjust </strong>the size of the brush to view all major occupation groups. The chart shows top 7
+                        groups by default.
+                        <br>
+                        <br>
+                    </p>
                 </div>
                 <div class="col-lg-2"></div>
             </div>
-        </div>
-    </section>
-
-    <section class="visualization-section">
-        <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-5"></div>
                 <div class="col-lg-2" style="text-align: center">
@@ -435,14 +648,16 @@
             </div>
             <div class="row">
                 <div class="col-lg-12" style="text-align: center" id="jobRank-container">
-                    <div id="jobRank" style="height: 600"></div>
                     <h4>
-                        <strong id="jobRankTitle"></strong>
+                        <strong id="jobRankTitle">Top Certified Major Groups in Alabama</strong>
                     </h4>
+                    <div id="jobRank" style="height: 600"></div>
                 </div>
             </div>
         </div>
     </section>
+
+    <section class="text-sub-section"></section>
 
     <!-- ################################################################################### -->
     <!-- ################################### JOB SECTION ################################### -->
@@ -465,11 +680,26 @@
                 <div class="col-lg-2"></div>
                 <div class="col-lg-8">
                     <p class="paragraph">
-                        In order to understand the data regarding job sectors, a stream graph is used to show the trend over 6 years of the total
-                        number of certified cases for each main job sectors.
-                        <br/> From the graph, there are two clear observations:
-                        <br/> - The total number of certified cases increases considerably every year.
-                        <br/> - The job sector that has the most certified cases is "Computer and Mathematical Occupations."
+                        In order to understand the data regarding occupations, a stream graph is used to show the trend over 6 years of the total
+                        number of certified cases for each major groups. There are 22 stacks, representing each of the 22
+                        major groups with
+                        <strong>22 distinct colors</strong>. The order of the stacks is that the major groups with the smallest total
+                        of certified cases (over all years) will be on top, while groups with the largest total of certified
+                        cases (over all years) will be in the bottom.
+                        <br/> From the graph, there are
+                        <strong>three clear observations:</strong>
+                        <br/> - &nbsp;The total number of certified cases is on the rise over the years.
+                        <br/> - &nbsp;The major group that has the most certified cases is always "Computer and Mathematical Occupations".
+                        <br/> - &nbsp;Since 2012, there is a period of a few consecutive months every year (From October - March)
+                        where no applications are processed.
+                    </p>
+                    <h3>Stream Graph Interactivity:</h3>
+                    <p class="paragraph">
+                        <i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+                        <strong> Hover </strong>over a stack to view the number of certified cases of a group in a certain month/year.
+                        <br>
+                        <i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+                        <strong> Move </strong>your mouse to see the changes in certified cases in different time periods.
                     </p>
                 </div>
                 <div class="col-lg-2"></div>
@@ -477,7 +707,7 @@
         </div>
     </section>
 
-    <section class="visualization-section">
+    <section class="visualization-section-narrow">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-1"></div>
@@ -485,15 +715,53 @@
                     <div class="streamchart" id="streamgraph"></div>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8" style="text-align: center">
+                    <h4>
+                        <strong>Trend in Each Major Occupation Group's Total Certified Cases (1/2011 - 12/2016)</strong>
+                    </h4>
+                    <br><hr>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section class="text-sub-section">
+    <section>
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-2"></div>
                 <div class="col-lg-8">
-                    <p></p>
+                    <p class="paragraph">Another visualization we use to understand occupations is a treemap. The treemap provides a hierarchical
+                        view of our occupation data, showing the major groups, minor groups and all detailed occupations
+                        within each group. With each treemap, we can also easily spot a pattern. For example, within major
+                        group "Business and Financial Operations Occupations", minor group "Financial Specialists" accounts
+                        for half of the total certified cases.</p>
+                    <p class="paragraph">
+                        One interesting observation from the "Total Annual Wage" treemap is that: even though "Architecture and Engineering Occupations", 
+                        "Management Occupations" and "Business & Financial Occupations" all have higher numbers of certified cases,
+                        <strong>"Healthcare Practitioners and Technical Occupations"</strong> account for a much larger amount of annual wage 
+                        (double the amount of Management Occupations which come right after it).
+                    </p>
+                    <h3>Treemap Interactivity:</h3>
+                    <p class="paragraph">
+                        <i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+                        <strong>Select</strong> an option from the radio button to change the map data.
+                        <br>
+                        <i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+                        <strong>Use the stream graph legend as reference</strong> to look up for major groups. Don't use it for minor groups and detailed occupations.
+                        <br>
+                        <i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+                        <strong>Click</strong> on the rectangulars to enter the next hierarchical level. The 3 levels are Major Groups - Minor Groups - Detailed Occupations.
+                        <br>
+                        <i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+                        <strong>Click</strong> on the top rectangular to exit to the previous hierarchical level.
+                        <br>
+                        <i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+                        <strong>Hover</strong> over a rectangular does 2 things:
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;Show you a sneak peak of what items are inside the next hierarchical level.
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;Provide you a tooltip that tells you the item's name, value, and what hierarchical level you're in.
+                    </p>
                 </div>
                 <div class="col-lg-2"></div>
             </div>
@@ -506,11 +774,11 @@
                 <div class="col-lg-2"></div>
                 <div class="col-lg-8" id="treemap-container" style="text-align: center">
                     <div class="radio-inline">
-                        <input type="radio" name='treemap-radio' id='treemap-radio-total' onclick="updateTreeMap()" checked>
+                        <input type="radio" name='treemap-radio' id='treemap-radio-total' onclick="updateTreeMap()">
                         <label for="treemap-radio-total" style="color: black"> Total Cases</label>
                     </div>
                     <div class="radio-inline">
-                        <input type="radio" name='treemap-radio' id='treemap-radio-certified' onclick="updateTreeMap()">
+                        <input type="radio" name='treemap-radio' id='treemap-radio-certified' onclick="updateTreeMap()" checked>
                         <label for="treemap-radio-certified" style="color: black"> Total Certified Cases</label>
                     </div>
                     <div class="radio-inline">
@@ -518,26 +786,8 @@
                         <label for="treemap-radio-wage" style="color: black"> Total Annual Wage</label>
                     </div>
                     <div id="treemap"></div>
+                    <br><br>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="text-sub-section">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-2"></div>
-                <div class="col-lg-8">
-                    <p class="paragraph">
-                        One interesting observation from the "Total Annual Wage" tree map is that: even though Engineering, Management and Business
-                        & Financial Occupations all have a higher number of certified cases,
-                        <strong>Healthcare related occupations</strong>
-                        account for a much larger amount of annual wage (double the amount of Management Occupations which come right after it.
-                    </p>
-                    <br/>
-                    <br/>
-                </div>
-                <div class="col-lg-2"></div>
             </div>
         </div>
     </section>
@@ -557,13 +807,18 @@
         </div>
     </section>
 
-    <section class="text-sub-section" style="text-align: center">
+    <section class="text-sub-section">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-2"></div>
                 <div class="col-lg-8">
-                    <p class="paragraph">This section will include brushable bar chart for different visa types.
-                        <br/> It will also include an area to explain what each visa type is to users.
+                    <p class="paragraph">
+                        In the last section, we will explore the data regarding "Class of Admission", or type of visa. We will only be using our familiar 
+                        brushable bar chart. The interactivities of the chart stay the same, while there are 4 different options: Certified Percentage, 
+                        Certified Total, Denied Percentage and Denied Total.
+                        <br>
+                        H-1B is clearly the top of the admission class with almost 140,000 people who got certified. Additionally, most visa types have a 
+                        certified rate of around 45-50%.
                     </p>
                 </div>
                 <div class="col-lg-2"></div>
@@ -577,7 +832,7 @@
                 <div class="col-lg-5"></div>
                 <div class="col-lg-2" style="text-align: center">
                     <div class="form-group">
-                        <label for="visaChartOption">Select an option:</label>
+                        <label for="visaChartOption">Rank class of admission by:</label>
                         <select class="form-control" id="visaChartOption">
                             <option value="visaChart1">Total Certified Cases</option>
                             <option value="visaChart2">Total Denied Cases</option>
@@ -620,10 +875,14 @@
             <div class="row">
                 <div class="col-lg-2"></div>
                 <div class="col-lg-8">
-                    <p class="paragraph">Provided information regarding country of citizenship, job, offered salary and state of job position,
-                        we will query our dataset to find out how many cases have the same data as you, and what the certified
-                        rate is. This can potentially help you figure out the best way to apply for a permanent labor certification
-                        with the highest chance to be certified.
+                    <p class="paragraph">
+                        One of our main question when we first decided to do this project is that whether or not we can use these dataset 
+                        and visualizations to predict a PERM application outcome.
+                        <br>
+                        Provided information regarding country of citizenship, job, offered salary, time of application and job location,
+                        we can query our dataset to get the matching records, and from there determine what the certified
+                        rate is. This can potentially help users figure out a way to optimize their permanent visa application 
+                        for the highest chance to be certified.
                         <br/>
                     </p>
                 </div>
@@ -638,7 +897,7 @@
                 <div class="col-lg-2"></div>
                 <div class="col-lg-8">
                     <h3>
-                        <i class="fa fa-info-circle" aria-hidden="true"></i> Stay tuned! This section is coming soon...</h3>
+                        <i class="fa fa-info-circle" aria-hidden="true"></i> Stay tuned! This section is being implemented...</h3>
                     <br/>
                     <br/>
                 </div>
@@ -668,7 +927,13 @@
                     <h2>Resources</h2>
                     <br/>
                     <h4>
-                        <a href="#" class="link-white">Documentation</a>
+                        <a href="documentation.html" class="link-white">Documentation</a>
+                    </h4>
+                    <h4>
+                        <a href="#dataset" class="link-white page-scroll">Dataset</a>
+                    </h4>
+                    <h4>
+                        <a href="http://www.datasketch.es/march/" class="link-white" target="_blank">Inspiration</a>
                     </h4>
                 </div>
                 <div class="col-sm-2">
@@ -693,6 +958,11 @@
             </div>
         </div>
     </section>
+
+    <a href="#intro" id="back-to-top" class="btn btn-primary page-scroll back-to-top" role="button" title="Return to top of page"
+        data-toggle="tooltip" data-placement="left">
+        <span class="glyphicon glyphicon-chevron-up"></span>
+    </a>
 
     <!-- jQuery -->
     <!-- <script src="js/jquery.js"></script> -->
@@ -727,6 +997,21 @@
     <script src="Visa/visachart.js"></script>
 
     <script>
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 1500) {
+                $('#back-to-top').fadeIn();
+            } else {
+                $('#back-to-top').fadeOut();
+            }
+        });
+        // scroll body to 0px on click
+        $('#back-to-top').click(function () {
+            $('#back-to-top').tooltip('hide');
+            return false;
+        });
+
+        $('#back-to-top').tooltip('show');
+
         var sentence1 = ' more than <strong>374,000</strong> foreigners have applied to be certified for an U.S. Permanent Visa.',
             sentence2 = ' nearly <strong>45%</strong> of people who applied got certified.',
             sentence3 = ' <strong>93 and a half billion </strong> U.S Dollars of annual salary were offered to certified employees.',
@@ -872,6 +1157,7 @@
             $(this).find("option:selected").each(function () {
                 var optionValue = $(this).attr("value");
                 drawJobByStateChart('#jobRank', optionValue, 'name', 'Certified');
+                document.getElementById('jobRankTitle').innerHTML = "Top Certified Major Groups in " + optionValue;
             })
         });
     </script>

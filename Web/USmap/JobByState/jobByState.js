@@ -76,7 +76,7 @@ function drawJobByStateChart(id, state, key, value) {
 
             var mini_job_margin = { top: 10, right: 160, bottom: 30, left: 10 },
                 mini_job_height = 400 - mini_job_margin.top - mini_job_margin.bottom,
-                mini_job_width = 260 - mini_job_margin.left - mini_job_margin.right;
+                mini_job_width = 250 - mini_job_margin.left - mini_job_margin.right;
 
             // d3.select(id).remove();
             // d3.select('#barchart-container').append('div').attr('id', id);

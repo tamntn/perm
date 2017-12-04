@@ -68,8 +68,9 @@ function createStreamGraph() {
     //PATH TO THE CSV FILE
     var csvpath = "Streamgraph/jobByMonth.csv";
     //COLOR SCHEME
-    var colorrange = ['#00008b', '#280a8c', '#3b158d', '#4a1f8d', '#58298e', '#64328f', '#703b8f', '#7a4490', '#844e90', '#8f5791', '#996191', '#a36b91', '#ad7491', '#b57e91', '#bf8791', '#c89191', '#d19c90', '#dba690', '#e3af8f', '#edbb8e', '#f6c58d', '#ffcf8c'];
-    strokecolor = colorrange[0];
+    // var colorrange = ['#00008b', '#280a8c', '#3b158d', '#4a1f8d', '#58298e', '#64328f', '#703b8f', '#7a4490', '#844e90', '#8f5791', '#996191', '#a36b91', '#ad7491', '#b57e91', '#bf8791', '#c89191', '#d19c90', '#dba690', '#e3af8f', '#edbb8e', '#f6c58d', '#ffcf8c'];
+    var colorrange = ['#e6194b', '#3cb44b', '#ffe119', '#0082c8', '#f58231', '#911eb4', '#46f0f0', '#f032e6', '#d2f53c', '#fabebe', '#008080', '#e6beff', '#aa6e28', '#fffac8', '#800000', '#aaffc3', '#808000', '#ffd8b1', '#000080', '#D3D3D3', '#808080', '#000000'];
+    // strokecolor = "white";
 
     var format = d3.time.format("%m/%d/%y");
 
@@ -188,7 +189,7 @@ function createStreamGraph() {
                 svg.selectAll(".layer").transition()
                     .duration(100)
                     .attr("opacity", function (d, j) {
-                        return j != i ? 0.6 : 1;
+                        return j != i ? 0.3 : 1;
                     })
             })
             //TOOPLTIP UPDATE
@@ -214,7 +215,7 @@ function createStreamGraph() {
 
                 d3.select(this)
                     .classed("hover", true)
-                    .attr("stroke", strokecolor)
+                    .attr("stroke", color)
                     .attr("stroke-width", "0.5px");
                 // tooltip.html("<p>" + d.key + "<br>" + pro + "</p>").style("visibility", "visible")
                 //     .style("left", d3.event.pageX + 10 + "px").style("top", d3.event.pageY - 40 + "px")

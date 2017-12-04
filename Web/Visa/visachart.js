@@ -52,8 +52,8 @@ function drawVisaChart(id, file, key, value) {
                     main_height = 600 - main_margin.top - main_margin.bottom;
 
                 var mini_margin = { top: 10, right: 50, bottom: 30, left: 10 },
-                    mini_height = 600 - mini_margin.top - mini_margin.bottom;
-                mini_width = 140 - mini_margin.left - mini_margin.right;
+                    mini_height = 600 - mini_margin.top - mini_margin.bottom,
+                    mini_width = 140 - mini_margin.left - mini_margin.right;
 
                 // d3.select(id).remove();
                 // d3.select('#barchart-container').append('div').attr('id', id);
@@ -457,8 +457,8 @@ function drawVisaChart(id, file, key, value) {
                     main_height = 600 - main_margin.top - main_margin.bottom;
 
                 var mini_margin = { top: 10, right: 50, bottom: 30, left: 10 },
-                    mini_height = 600 - mini_margin.top - mini_margin.bottom;
-                mini_width = 140 - mini_margin.left - mini_margin.right;
+                    mini_height = 600 - mini_margin.top - mini_margin.bottom,
+                    mini_width = 140 - mini_margin.left - mini_margin.right;
 
                 // d3.select(id).remove();
                 // d3.select('#barchart-container').append('div').attr('id', id);

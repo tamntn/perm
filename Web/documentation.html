@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>PERM - Documentation</title>
+
+    <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+    <!-- Font Awesome Library -->
+    <script src="https://use.fontawesome.com/ec7c0f9206.js"></script>
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body data-spy="scroll">
+    <section id="intro" class="top-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8">
+                    <h1 class="title">An Overview on U.S. Permanent Visa Application</h1>
+                    <br>
+                    <h1>Documentation</h1>
+                    <br/>
+                    <br/>
+                    <i class="fa fa-long-arrow-down fa-2x" aria-hidden="true"></i>
+                    <p style="font-style: italic;">Keep reading or</p>
+                    <a class="link-white page-scroll" style="font-style: italic;" href="index.html">Back to project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="text-documentation">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8">
+                    <h2>Introduction</h2>
+                    <p class="document-paragraph">The topic of our project is "An Overview on United States Permanent Visa Applications". We found this
+                        theme relevant to our group because each of us is an international student. Since we attend the university
+                        in the United States, we understand the concern of international students about their further employment.
+                        We know that some international students are interested in working in the United States after graduating
+                        from the university, which requires them to receive some type of permanent work visa. We know from
+                        our experience that there is a lot of uncertainty with the application process, especially for visas
+                        like H1B, for which the final decision is made based on computer picking certain number of applicants
+                        from the pool as a part of so-called “H1B Visa Lottery”. In order to shed some light on the application
+                        process we decided to explore the dataset containing application information of permanent visa applicants.
+                        Our main goal for the project was to provide insight to potential permanent visa applicants on how
+                        likely their application is to be approved given their occupation, country of citizenship and state
+                        where they are applying for job, among other attributes.</p>
+                    <br>
+                    <h2>What is PERM?</h2>
+                    <p class="document-paragraph">PERM is the process for obtaining a permanent labor certification, the first step of the green card process
+                        for foreign nationals seeking permanent residence through their employment.</p>
+                    <p class="document-paragraph">A permanent labor certification issued by the Department of Labor (DOL) allows an employer to hire a
+                        foreign worker to work permanently in the United States. In most instances, before the U.S. employer
+                        can submit an immigration petition to the Department of Homeland Security's U.S. Citizenship and
+                        Immigration Services (USCIS), the employer must obtain a certified labor certification application
+                        from the DOL's Employment and Training Administration (ETA). The DOL must certify to the USCIS that
+                        there are not sufficient U.S. workers able, willing, qualified and available to accept the job opportunity
+                        in the area of intended employment and that employment of the foreign worker will not adversely affect
+                        the wages and working conditions of similarly employed U.S. workers.</p>
+                    <br>
+                    <h2>Data Abstraction</h2>
+                    <p class="document-paragraph">Our
+                        <a href="https://www.kaggle.com/jboysen/us-perm-visas" class="link-black" target="_blank">dataset</a> is a 2-dimensional table consisting of permanent visa application information. Initially
+                        it had 156 attributes, 374 thousand items and had size of about 300 megabytes. We chose 21 attribute
+                        of interest and normalized field values. Empty fields are kept and included during data processing
+                        and derivation. Among these attributes there are quantitative as well as categorical attributes.</p>
+                    <p class="document-paragraph">
+                        A description of the main attributes are available
+                        <a href="index.html#dataset" class="link-black" target="_blank">here</a>.
+                    </p>
+                    <br>
+                    <h2>Task Abstraction</h2>
+                    <p class="document-paragraph">The main goals of our project was to
+                        <strong>analyze</strong> and
+                        <strong>discover</strong>. The outcomes we were looking for was generating new hypotheses about permanent
+                        visa applications as well as testing some of our own beliefs about the process. For instance, we
+                        were interested whether IT sector is really comprising the majority of applications, which country
+                        has the most people applying and so on.
+                    </p>
+                    <p class="document-paragraph">The users of our visualisation can search for information in a variety of ways:
+                        <strong>lookup and compare</strong> acceptance rate of a particular country or state on the map,
+                        <strong>locate</strong> which country has the longest processing time, locate the top demanded job within
+                        a state,
+                        <strong>discover</strong> a trend in major occupation groups over the year,
+                        <strong>explore</strong> the occupation hierarchical order and locate the the highest certified visa types.</p>
+                    <br>
+                    <h2>Implementation</h2>
+                    <p class="document-paragraph">We used D3.js for all of our visualisations on a website built using Bootstrap. We added a story element
+                        to our website. Starting from top to the bottom, the text guides the user through our visualizations,
+                        explaining how to interact with the visualizations and highlighting some of the interesting facts
+                        that we noticed that the user can start his or her exploration from.</p>
+                    <br>
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                World Map - by Sameer Djohu
+                            </h4>
+                        </div>
+                        <div class="panel-body">
+                            <p class="document-paragraph">
+                                The world map was implemented using
+                                <a href="http://datamaps.github.io" class="link-black" target="_blank">DataMaps</a>, a "customizable SVG map visualizations for the web", which also uses D3.js.
+                                The map provides 2 color scales based on 2 factors: the total number of certified cases and
+                                the certifed percentage in each country. When user hovers on a country, it will show the
+                                detailed info of that country, regarding certified percentage, total certified, certified-expired,
+                                denied and withdrawn cases.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                U.S. Map - by Aishwant Ghimire
+                            </h4>
+                        </div>
+                        <div class="panel-body">
+                            <p class="document-paragraph">
+                                We used D3.js for making this interactive map. The map was solely build upon javascript. The data for each coordinates were
+                                imported from a package but further implementation was written by our team. The states were
+                                colored based on two factors: the total number of certified cases and the certified percentage
+                                in each state. The colors were given by using the quantile scale based on 9 bins. The states,
+                                when clicked, zoom in and open up a modal which displays a bar graph and an option to chose
+                                another state for comparison. The comparison is done based on number of certified, denied,
+                                withdrawal and certified-expired cases of that state to the the state the user chooses. Regarding
+                                the data, the data for the graph is imported from our csv file, which has the state and corresponding
+                                values of the categories. The x-axis consist of the categories and the y-axis has either
+                                number scale or percentage scale based on the user chosen input. The difficult part for this
+                                part of the program was mainly displaying the values based on the user selected states and
+                                getting the graph to update on each interactions. The data imported for the coordinates had
+                                different ids assigned to it which was not there in our files so we manually had to hard
+                                code the ids in order for the map and the modal to work. In addition, refreshing the graphs
+                                and the maps on selection was difficult at start until one of our teammates figure out the
+                                solution by removing the graph and calling the methods to add a new one.
+                            </p>
+                            <p class="document-paragraph">
+                                This particular approach was taken so that user could clearly see the acceptance rate from the map rather than using different
+                                graphs for all 50 states. Moreover, users are able to compare when they interact with each
+                                state.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                Stream Graph - by Nikita Drozdovskii
+                            </h4>
+                        </div>
+                        <div class="panel-body">
+                            <p class="document-paragraph">
+                                We chose streamgraph as one of the visualisations for our dataset because the way it represents information can provide user
+                                with important insights about timing of applications as well as proportions of applications
+                                at certain times. Our streamgraph shows application decision time (month and year) on X-axis
+                                and the number of certified cases for various occupation groups of Y-axis. For instance,
+                                user can learn what proportion of applications for his or her economic sector of interest
+                                was on a given month/year. This information is important to the process of visa application
+                                because in order to be certified your job title must be in scarcity inside the US. For instance,
+                                looking at “Computer and Mathematical Occupations” we can see that they comprise almost half
+                                of all certified application at all times. The fact that such a large amount gets certified
+                                means that there is a shortage of workers in this area in the US. Another useful insight
+                                that user can learn from this graph is what times of the year most application decisions
+                                are issued. This will give user some idea of when to expect the decision and plan other paperworks
+                                around it.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                Treemap - by Tam Nguyen
+                            </h4>
+                        </div>
+                        <div class="panel-body">
+                            <p class="document-paragraph">
+                                In order to explore all occupations, we have decided to use a treemap as it can be beneficial in providing an effective hierarchical
+                                view of our large occupation data (23 major groups, 96 minor groups and a total of 821 detailed
+                                occupations). We provide the option for user to view the occupations treemap with 3 different
+                                criteria: total number of cases, total number of certified cases and total annual wage (all
+                                for each job group and detailed job). We first have to process our data to create a json
+                                file to be used for the visualizations. The "Major Occupation Group" colors of the treemap
+                                are the same as those in the stream graph, which makes it easy for users to reference. Using
+                                this visualization, users can explore the hierarchy of all occupations (from major groups
+                                to minor groups to detailed jobs), and see the distribution of each occupations in terms
+                                of the criteria they choose. Furthermore, they can discover patterns within the treemap.
+                                For example, we see that even though "Architecture and Engineering Occupations", "Management
+                                Occupations" and "Business & Financial Occupations" all have higher numbers of certified
+                                cases, "Healthcare Practitioners and Technical Occupations" account for a much larger amount
+                                of annual wage (double the amount of Management Occupations which come right after it). This
+                                suggests that healthcare occupations may not be highly demanded as engineering, management
+                                and business jobs. However, healthcare occupations get paid much more.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                Brushable Bar Charts - by Tam Nguyen
+                            </h4>
+                        </div>
+                        <div class="panel-body">
+                            <p class="document-paragraph">
+                                Through out our whole project, we're constantly trying our different visualisation to see which would best fit our purpose
+                                of visualizing a large amount items (country, state, job and visa type in particular). We
+                                feel like this bar chart serves the purpose really well for a couple reasons. First, users
+                                have the option to adjust their view with the brush, choosing how large their view of the
+                                chart is and what section of the chart to be viewed. Second, all items are ordered by descending
+                                values, making it easy for users to make comparison. Therefore, we use this bar chart through
+                                out our whole project to visualize many data files that are relatively difficult to be visualized
+                                in a pretty way, such as all countries' average processing time, each state's top major job
+                                group with the highest to lowest number of certified cases, as well as the certified/denied
+                                total and percentage of all visa types.
+                            </p>
+                        </div>
+                    </div>
+                    <br>
+                    <h2>Challenges</h2>
+                    <p class="document-paragraph">
+                        The biggest challenge we faced is definitely using D3.js for all our visualizations. It's very challenging to create one
+                        D3.js visualizations, yet having to add tooltip, transition, interaction and view them all in one
+                        single html page is much more difficult. On the other hand, we definitely learned a lot about D3.js
+                        as well as about Javascript and data visualization concepts.
+                    </p>
+                    <p class="document-paragraph">
+                        Other challenges included dealing with the dataset and choosing what and how to visualize. Our dataset is pretty big and
+                        contains main inconsistencies in the values of attributes. In order for the website to run fast,
+                        we have to process our data and create many individually smaller files to be used for each visualization.
+                        We also need to understand every column in the dataset because it is a new and complicated subject
+                        to all of us.
+                    </p>
+                    <p class="document-paragraph">
+                        I believed our group has worked well together in embracing the challenges and helping each other find the solutions to those
+                        challenges.
+                    </p>
+                    <br>
+                    <h2>Validation</h2>
+                    <p class="document-paragraph">
+                        For the validation of visuals we made sure we followed principles of good visualization as much as possible. For example,
+                        our maps and graphs use color scheme that depends solely on color saturation/lightness, which allows
+                        it to be readable by most people with color deficiency. In case of the streamgraph, we used a tooltip,
+                        that makes it possible to understand the visualisation without depending on colors. In our number
+                        based map we grouped countries by bins based on population to ensure even use of color range between
+                        countries with high and low population. For the validation of how well our visuals reflect reality
+                        we showed them to Brandon S. McLeod, International Programs Advisor at the University of Mississippi.
+                        Mr. McLeod gave us further insight on the nature of our dataset. He said that all of our information
+                        is from two public access forms 9035 and 9089. These forms are made public for various purposes,
+                        mainly to prevent foreign workers from accepting lower wages and therefore bringing down the wages
+                        offered to American workers. Mr.McLeod could not comment on all aspects of our visualizations because
+                        he only sees the process from the perspective of applicant and oversees process in the public university
+                        which has some exceptions from the general procedure. However, he is aware of some trends of the
+                        process for industry as well and here are his notable comments about our visualisations:
+                    </p>
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                Mr. Brandon S. McLeod Feedback
+                            </h4>
+                        </div>
+                        <br>
+                        <div class="panel-body">
+                            <h4>Stream Graph</h4>
+                            <p class="document-paragraph">
+                                On our streamgraph you can see that each year the total number of applications increases, and last year observed is nearly
+                                triple the first year. Mr. McLeod confirmed the general trend of increase in number of applications,
+                                but mentioned that incline was not as dramatic as in our visualisation. Our hypothesis explaining
+                                this phenomenon is that since our dataset was compiled from the pubic reports from multiple
+                                years, each year there was different amount of public records released. For our future work
+                                we need to test this hypothesis. Also on our streamgraph you can see that Computer and Mathematical
+                                occupations take up nearly half of total applications. Mr.McLeod confirmed that his is indeed
+                                a trend in industry, however, in universities the applications are more evenly spread out
+                                between different categories. There was one more surprising observation in our dataset. As
+                                you can see on streamgraph, for years 2013-2016 the time application decisions are made is
+                                from April (Application process starts on April 1st) through the end of the year. However,
+                                application decisions for year 2012 go from November through March. Mr.McLeod talked to his
+                                colleagues but was not able to explain this phenomenon. For our future work we need to do
+                                further investigation of what was different about application process in year 2012.
+                            </p>
+                            <h4>U.S. Map</h4>
+                            <p class="document-paragraph">
+                                Mr.McLeod confirmed that California, Washington, New York, New Jersey have the largest amount of applications as shown in
+                                our graph. His explanation of it is that these states have highly developed IT industry.
+                                He confirmed the observation we made from our world map that India, China and South Korea
+                                are leading in the number of applications.
+                            </p>
+                            <h4>World Map</h4>
+                            <p class="document-paragraph">
+                                Mr.McLeod further explained why on our world map United States have certain number of applications as well. People leaving
+                                in US Territories like American Samoa are not US Citizen and have to go through the process
+                                of visa applications just like foreigners.
+                            </p>
+                        </div>
+                    </div>
+                    <br>
+                    <h2>Future Work</h2>
+                    <h3>Improvement</h3>
+                    <p class="document-paragraph">
+                        The first improvement we want to make is updating the data. Our data stops at 12/2016 and we feel like with another year
+                        of 2017, we can confirm many trends and potentially discover further patterns. We also would like
+                        to create more visualizations since now that we're more comfortable with D3.js, we're confident that
+                        we can make improvements by creating visualizations that are more intuitive, contain more information
+                        and allow us to deploy deeper into the original dataset of 156 attributes, not just our small files
+                        of 22 chosen attributes.
+                    </p>
+                    <h3>Predictions?</h3>
+                    <p class="document-paragraph">
+                        One of the ideas that we would like to work on in future is implementation of database and a tool that would allow user to
+                        interact more directly with data. This tool would ask user to choose information that applies to
+                        him/her like country of origin, job title, offered wage and so on. Then the tool would query our
+                        database for the records matching these selections and build a visualisation telling the user how
+                        many people like him or her got certified or denied. This tool would not mislead the user by making
+                        predictions, but would give user an idea of what his or her chances to be certified are.
+                    </p>
+                    <h3>AI and Real Time</h3>
+                    <p class="document-paragraph">
+                        A more ambitious idea would be making the data update in real time and develop an AI model to predict the application outcome
+                        from user inputs.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ################################################################################### -->
+    <!-- #################################### FOOTER ####################################### -->
+    <!-- ################################################################################### -->
+    <section id="footer" class="footer-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-2">
+                    <h2>Team</h4>
+                        <br/>
+                        <h4>
+                            <a href="https://www.tamntn.com" class="link-white">Tam Nguyen</a>
+                        </h4>
+                        <h4>Aishwant Ghimire</h4>
+                        <h4>Sameer Djohu</h4>
+                        <h4>Nikita Drozdovskii</h4>
+                </div>
+                <div class="col-sm-2">
+                    <h2>Resources</h2>
+                    <br/>
+                    <h4>
+                        <a href="documentation.html" class="link-white">Documentation</a>
+                    </h4>
+                    <h4>
+                        <a href="index.html#dataset" class="link-white page-scroll">Dataset</a>
+                    </h4>
+                    <h4>
+                        <a href="http://www.datasketch.es/march/" class="link-white" target="_blank">Inspiration</a>
+                    </h4>
+                </div>
+                <div class="col-sm-2">
+                    <h2>Contact</h2>
+                    <br/>
+                    <a href="https://github.com/tamntn" class="icon">
+                        <i class="fa fa-github fa-2x" aria-hidden="true"></i>
+                    </a>
+                    &nbsp;&nbsp;&nbsp;
+                    <a href="#" class="icon">
+                        <i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i>
+                    </a>
+                    &nbsp;&nbsp;&nbsp;
+                    <a href="#" class="icon">
+                        <i class="fa fa-facebook fa-2x" aria-hidden="true"></i>
+                    </a>
+                    &nbsp;&nbsp;&nbsp;
+                    <a href="#" class="icon">
+                        <i class="fa fa-linkedin fa-2x" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <a href="#intro" id="back-to-top" class="btn btn-primary page-scroll back-to-top" role="button" title="Return to top of page"
+        data-toggle="tooltip" data-placement="left">
+        <span class="glyphicon glyphicon-chevron-up"></span>
+    </a>
+
+</body>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+
+<!-- Scrolling Nav JavaScript -->
+<script src="js/jquery.easing.min.js"></script>
+<!-- <script src="jquery-easing/jquery.easing.min.js"></script> -->
+<script src="js/scrolling-nav.js"></script>
+<script>
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 1500) {
+            $('#back-to-top').fadeIn();
+        } else {
+            $('#back-to-top').fadeOut();
+        }
+    });
+    // scroll body to 0px on click
+    $('#back-to-top').click(function () {
+        $('#back-to-top').tooltip('hide');
+        return false;
+    });
+
+    $('#back-to-top').tooltip('show');
+</script>
+
+</html>
