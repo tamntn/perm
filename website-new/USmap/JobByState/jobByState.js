@@ -425,4 +425,4 @@ function drawJobByStateChart(id, state, key, value) {
                 .attr("stop-color", function (d) { return d; });
         }//createGradient
     });
-};
+}
