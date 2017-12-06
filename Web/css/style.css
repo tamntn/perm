@@ -139,6 +139,7 @@ of those sections to manage the look and feel of the site. */
   padding-top: 50px;
   padding-bottom: 20px;
   background: #fff;
+  text-align: justify;
 }
 
 .text-sub-section strong{
