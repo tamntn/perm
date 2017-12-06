@@ -149,7 +149,7 @@ var data = d3.csv('World/acceptanceRateByCountry.csv', function (data) {
 				snd: "20-100",
 				thrd: '100-2,000',
 				frth: '2,000-10,000',
-				fifth: '10,000-10,0000',
+				fifth: '10,000-100,000',
 				sixth: '>100,000'
 
 			},
